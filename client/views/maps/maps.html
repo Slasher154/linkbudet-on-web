@@ -1,0 +1,36 @@
+<template name="maps">
+    <div class="row">
+        <div class="col-lg-9">
+            {{# panelPrimary title="Maps" icon="map-marker"}}
+            <div id="map" style="height:500px"></div>
+            {{/panelPrimary}}
+        </div>
+        <div class="col-lg-3">
+            <div id="beamSelection">
+            {{# panelPrimary title="Add beams" icon=""}}
+            <form role="form">
+                <div class="form-group">
+                    <label>Satellite</label>
+                    <select id="satellitePicker" class="form-control">
+                        <option value="">Select satellite</option>
+                        {{#each satellites}}
+                        <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Path</label>
+                    <select id="pathPicker" class="form-control">
+                        <option value="">Select path</option>
+                        <option value="Uplink">Uplink</option>
+                        <option value="Downlink">Downlink</option>
+                    </select>
+                </div>
+
+            </form>
+            {{/panelPrimary}}
+            </div>
+        </div>
+    </div>
+
+</template>

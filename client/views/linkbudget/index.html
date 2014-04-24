@@ -1,0 +1,30 @@
+<template name="index">
+    <!-- The panel for satellite and channels -->
+    {{#panelPrimary title="Satellites and channels" icon="send"}}
+    <form class="form-horizontal" role="form">
+    {{> satellites}}
+    {{> channels}}
+        </form>
+    {{/panelPrimary}}
+
+    <!-- End panel for satellite and channels -->
+
+    <!-- The panel for ground segments -->
+    {{#panelPrimary title="Ground Segments" icon="home"}}
+        <div class="row">
+            <div class="col-sm-3">
+                {{> hub}}
+            </div>
+            <div class="col-sm-3">
+                {{> remote}}
+            </div>
+            <div class="col-sm-3">
+                {{> platform}}
+            </div>
+            <div class="col-sm-3">
+                {{> bandwidth}}
+            </div>
+        </div>
+    {{/panelPrimary}}
+    <!-- End panel for ground segments -->
+</template>

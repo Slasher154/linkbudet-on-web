@@ -1,0 +1,41 @@
+<template name="panelPrimary">
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title"><span class="glyphicon glyphicon-{{icon}}"></span> {{title}}</h3>
+        </div>
+        <div class="panel-body">
+            {{> UI.contentBlock}}
+        </div>
+    </div>
+</template>
+
+<template name="radioButtonGroups">
+
+    <div class="btn-group" data-toggle="buttons">
+        {{#each value}}
+        <label class="btn btn-default">
+            <input type="radio" value="{{this}}"> {{this}}
+        </label>
+        {{/each}}
+    </div>
+</template>
+
+<template name="checkboxButtonGroups">
+
+    <div class="btn-group" data-toggle="buttons">
+        {{#each value}}
+        <label class="btn btn-default">
+            <input type="checkbox" value="{{this}}"> {{this}}
+        </label>
+        {{/each}}
+    </div>
+</template>
+
+<template name="inputAppend">
+    <div class="input-group">
+        <input type="{{type}}" id="{{id}}" class="form-control" placeholder="{{placeholder}}" value="{{value}}">
+        <span class="input-group-addon">{{text}}</span>
+    </div>
+</template>
+

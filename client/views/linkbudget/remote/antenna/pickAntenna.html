@@ -1,0 +1,13 @@
+<template name="pickAntenna">
+    <div class="form-group">
+        {{#if isBroadband}}
+        <label>Antenna Size</label>
+        <br/>
+        {{> checkboxButtonGroups sizeList}}
+        {{/if}}
+        {{#if isConventional}}
+        <label>Antenna Size</label>
+        {{> inputAppend text="m" type="number" id="remote-size" placeholder="Input antenna size"}}
+        {{/if}}
+    </div>
+</template>
