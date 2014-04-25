@@ -42,4 +42,10 @@ if (Meteor.isClient){
         }
         return false;
     })
+    UI.registerHelper('hasSelectedLocs', function(){
+        return Session.get('selectedLocations') && Session.get('selectedLocations').length > 0;
+    })
+    UI.registerHelper('selectedLocs', function(){
+        return Session.get('selectedLocations');
+    })
 }

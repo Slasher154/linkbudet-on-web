@@ -26,6 +26,10 @@
     {{> findLocationByName}}
     {{#if isBroadband}}
     {{> findLocationByLatlon}}
+    <!-- Show selected locations panel only if there is any selected locations -->
+    {{#if hasSelectedLocs}}
+    {{> selectedLocations}}
+    {{/if}}
     {{/if}}
     {{/if}}
 
