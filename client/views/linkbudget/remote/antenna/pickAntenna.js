@@ -2,9 +2,8 @@
  * Created by Dome on 4/22/14 AD.
  */
 Template.pickAntenna.sizeList = function () {
-    return {
-        value: [1, 2, 3, 4]
-    }
+    return ["0.84 m","1 m","1.2 m","1.8 m"];
+
 }
 
 Template.pickAntenna.events({
@@ -19,3 +18,7 @@ Template.pickAntenna.events({
 
     }
 })
+
+Template.pickAntenna.rendered = function(){
+    $('.selectpicker').selectpicker();
+}

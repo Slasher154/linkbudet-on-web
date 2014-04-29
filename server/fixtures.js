@@ -108,10 +108,11 @@ if (Satellites.find().count() === 0) {
     // insert sample modem
     Modems.insert({
         name: "Standard DVB-S2",
-        vendor: "",
+        vendor: "Standard",
         applications: [
             {
                 name: "DVB-S2",
+                acm: false,
                 minimum_symbol_rate: 1000,
                 maximum_symbol_rate: 30000,
                 roll_off_factor: [1.2, 1.35],
@@ -240,6 +241,7 @@ if (Satellites.find().count() === 0) {
                 minimum_symbol_rate: 128,
                 maximum_symbol_rate: 2560,
                 symbol_rates: [128, 256, 512, 1024, 1536, 2048, 2560],
+                roll_off_factor: [1.2],
                 mcgs: [
                     {"name": "QPSK 1/2", "spectral_efficiency": 1, "es_no": 4.9},
                     {"name": "QPSK 2/3", "spectral_efficiency": 1.334, "es_no": 5},

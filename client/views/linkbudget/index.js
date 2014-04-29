@@ -3,8 +3,7 @@
  */
 
 Template.index.events({
-    'click submit': function(e){
+    'submit form': function(e){
         e.preventDefault();
-
     }
 })

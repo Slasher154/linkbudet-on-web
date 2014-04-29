@@ -2,36 +2,59 @@
     <form role="form">
         <fieldset>
             <legend>Bandwidth</legend>
+            {{#if isAnyPlatformSelected}}
             <div class="form-group">
-                <label>Data Rate</label>
-                <div class="input-group">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default">kbps</button>
-                        <button class="btn btn-default active">Mbps</button>
-                    </span>
-                </div>
+                <label>Unit</label>
+                <select class="selectpicker form-control">
+                    <option value="">Please select unit</option>
+                    <option value="kbps">Data rate (kbps)</option>
+                    <option value="Mbps">Data rate (Mbps)</option>
+                    <option value="ksps">Symbol rate (ksps)</option>
+                    <option value="Msps">Symbol rate (Msps)</option>
+                    <option value="kHz">Bandwidth (kHz)</option>
+                    <option value="MHz">Bandwidth (MHz)</option>
+                </select>
+
             </div>
+
             <div class="form-group">
-                <label>Symbol Rate</label>
-                <div class="input-group">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default">ksps</button>
-                        <button class="btn btn-default active">Msps</button>
-                    </span>
+                <label>Value (FWD/RTN)</label>
+
+                <div id="bwValue">
+                    {{#if isBcPlatformSelected}}
+                    <input type="number" class="form-control" placeholder="Input your value">
+                    {{/if}}
+                    {{#if isModemSelected}}
+
+                    <div class="rowBw">
+                        <div class="col-xs-4 " style="padding-right:2px;padding-left: 2px">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-xs-2 " style="padding-right:0px;padding-left: 0px">
+                            <input type="text" class="form-control" placeholder="/" disabled>
+                        </div>
+                        <div class="col-xs-4" style="padding-right:2px;padding-left: 2px">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+
+
+                    {{/if}}
                 </div>
+
             </div>
+            <br/>
+            <br/>
+            {{#if isModemSelected}}
             <div class="form-group">
-                <label>Bandwidth</label>
-                <div class="input-group">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default">kHz</button>
-                        <button class="btn btn-default active">MHz</button>
-                    </span>
-                </div>
+                <button class="btn btn-success btn-sm" id="addBw"><span class="glyphicon glyphicon-plus"> Add</span></button>
+                {{#if showRemove}}
+                <button class="btn btn-danger btn-sm" id="removeBw"><span class="glyphicon glyphicon-minus"> Remove</span></button>
+                {{/if}}
+
             </div>
+            {{/if}}
+            {{/if}}
         </fieldset>
     </form>
 </template>

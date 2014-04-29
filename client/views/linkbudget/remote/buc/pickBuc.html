@@ -1,9 +1,13 @@
 <template name="pickBuc">
     <div class="form-group">
 
-        <label>Select BUC size (W)</label>
+        <label>Select BUC size</label>
         <br/>
-        {{> checkboxButtonGroups sizeList}}
+        <select class="form-control selectpicker" multiple>
+            {{#each sizeList}}
+            <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select>
 
     </div>
 </template>

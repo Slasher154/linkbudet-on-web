@@ -7,6 +7,7 @@
     "accounts-ui-bootstrap-3": {},
     "accounts-admin-ui-bootstrap-3": {},
     "leaflet": {},
-    "Bootstrap3-Typeahead": {}
+    "Bootstrap3-Typeahead": {},
+    "bootstrap-select": {}
   }
 }

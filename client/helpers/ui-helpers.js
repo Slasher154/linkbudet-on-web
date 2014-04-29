@@ -48,4 +48,14 @@ if (Meteor.isClient){
     UI.registerHelper('selectedLocs', function(){
         return Session.get('selectedLocations');
     })
+    UI.registerHelper('isModemSelected', function(){
+        if(Session.get('modemId')){
+            return true;
+        }
+        return false;
+    })
+    UI.registerHelper('isAnyPlatformSelected', function(){
+        // return true if any broadcast platform (DVB-S1, DVB-S2) or modems (conventional VSAT, broadband satellites is selected
+        return Session.get('selectedBcPlatform') || Session.get('modemId');
+    })
 }

@@ -1,11 +1,19 @@
 <template name="modemSelector">
     <div class="form-group">
         <label>Select Modem</label>
-        <select id="modem" class="form-control col-sm-3">
+        <select id="modemPicker" class="form-control selectpicker col-sm-3">
             <option value="">Select Modem</option>
             {{#each modems}}
-            <option value="{{this}}">{{this}}</option>
+            <optgroup label="{{vendor}}">
+                {{#each modem}}
+                <option value="{{_id}}">{{name}}</option>
+                {{/each}}
+            </optgroup>
             {{/each}}
+
         </select>
     </div>
+    {{#if isModemSelected}}
+    {{> modemDetails}}
+    {{/if}}
 </template>

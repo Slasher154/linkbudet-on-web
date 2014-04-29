@@ -1,0 +1,25 @@
+<template name="modemDetails">
+    <div class="form-group">
+        <label>Detail</label>
+        <div>
+            <ul id="modem-detail">
+                {{#each apps}}
+                <li>{{type}}</li>
+                <ul>
+                    <li>{{app.name}}</li>
+                    <li>ACM: {{app.acm}}</li>
+                    <li>Link margin: {{app.link_margin}}</li>
+                    <li>Roll-off: {{app.roll_off_factor.[0]}}</li>
+                </ul>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    {{#if isAcm}}
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" id="recommendAntenna" value=""> Calculate at fixed MCG
+        </label>
+    </div>
+    {{/if}}
+</template>

@@ -13,8 +13,6 @@ Template.linkMargin.events({
         var link_margin = $(e.currentTarget).val();
         if(!isNaN(link_margin)){
             // alert if link margin less than 2 for C-Band
-            console.log(Session.get('isCBand'));
-            console.log("LM is " + link_margin);
             if(Session.get('isCBand') && link_margin < 2){
                 alert('We do not recommend link margin < 2dB for C-Band')
             }

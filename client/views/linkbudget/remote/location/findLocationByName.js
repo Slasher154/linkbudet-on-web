@@ -16,6 +16,7 @@ Template.findLocationByName.events({
                 loc_arr.push(loc);
                 Session.set('selectedLocations',loc_arr);
             }
+            $(e.currentTarget).val('');
         }
     }
 })

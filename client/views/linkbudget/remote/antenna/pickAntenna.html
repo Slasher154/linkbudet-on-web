@@ -1,9 +1,13 @@
 <template name="pickAntenna">
     <div class="form-group">
         {{#if isBroadband}}
-        <label>Antenna Size</label>
+        <label>Select Antenna</label>
         <br/>
-        {{> checkboxButtonGroups sizeList}}
+        <select class="form-control selectpicker" multiple>
+            {{#each sizeList}}
+            <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select>
         {{/if}}
         {{#if isConventional}}
         <label>Antenna Size</label>

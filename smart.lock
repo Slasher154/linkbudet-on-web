@@ -9,7 +9,8 @@
       "accounts-ui-bootstrap-3": {},
       "accounts-admin-ui-bootstrap-3": {},
       "leaflet": {},
-      "Bootstrap3-Typeahead": {}
+      "Bootstrap3-Typeahead": {},
+      "bootstrap-select": {}
     },
     "packages": {
       "iron-router": {
@@ -51,6 +52,11 @@
         "git": "https://github.com/JustinSGray/meteor-Bootstrap-3-Typeahead.git",
         "tag": "v3.0.3",
         "commit": "1438ed827fc3ca16c9ae04062c1122002151c7d6"
+      },
+      "bootstrap-select": {
+        "git": "https://github.com/amrali/bootstrap-select-meteor.git",
+        "tag": "v1.5.2",
+        "commit": "61588ec8326987ded204724d85843eb6997cfcfb"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

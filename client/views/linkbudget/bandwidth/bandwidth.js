@@ -2,13 +2,25 @@
  * Created by Dome on 4/24/14 AD.
  */
 Template.bandwidth.events({
-    'click button': function(e){
+    'click #addBw': function(e){
         e.preventDefault();
-        //Find which input the clicked button belongs to
-        var $input = $(e.currentTarget).parent('');
-        //Remove the active class for all the buttons
-        $input.find('button').removeClass('active');
-        //Toggle the active class for clicked button
-        $(e.currentTarget).addClass('active');
+        Session.set('bwRowCount', Session.get('bwRowCount') + 1);
+        //Add row
+        $('.rowBw:first').clone().appendTo('#bwValue');
+
+    },
+    'click #removeBw': function(e){
+        e.preventDefault();
+        Session.set('bwRowCount', Session.get('bwRowCount') - 1)
+        //Remove last row
+        $('.rowBw:last').remove();
     }
 })
+
+Template.bandwidth.showRemove = function(){
+    return Session.get('bwRowCount') > 1;
+}
+
+Template.bandwidth.rendered = function(){
+    Session.set('bwRowCount',1);
+}
