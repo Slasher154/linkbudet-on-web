@@ -6,7 +6,7 @@ Template.bandwidth.events({
         e.preventDefault();
         Session.set('bwRowCount', Session.get('bwRowCount') + 1);
         //Add row
-        $('.rowBw:first').clone().appendTo('#bwValue');
+        $('.rowBw:first').clone().appendTo('#bwRows');
 
     },
     'click #removeBw': function(e){

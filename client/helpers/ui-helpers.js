@@ -36,6 +36,9 @@ if (Meteor.isClient){
         }
         return false;
     })
+    UI.registerHelper('isBc',function(){
+        return Session.get('selectedConventionalPlatform') === 'BC';
+    })
     UI.registerHelper('isBcPlatformSelected', function(){
         if(Session.get('selectedBcPlatform')){
             return true;

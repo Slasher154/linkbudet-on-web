@@ -12,16 +12,16 @@ Template.index.events({
 
         // Validate the input
 
-        var linkInput = {};
-        var bwUnit;
-        var bandwidth = [];
-
         // check if any satellite is selected
         var satellite = Session.get('satellite');
         if (!satellite) {
             Errors.throw('Please select satellite.');
             return false;
         }
+
+        var assumptions = {
+            satellite: satellite
+        };
 
         // check if broadband or conventional
 
@@ -44,7 +44,6 @@ Template.index.events({
             var selectedBt;
             var selectedVsatModem;
             var linkMargin;
-
 
             // check if any channel is selected
             channels = $('.conventionalChannels').find('label.active').map(function () {
@@ -138,6 +137,22 @@ Template.index.events({
                     return false;
                 }
             }
+
+            // add elements into assumption object
+            _.extend(assumptions,{
+                beam: beam,
+                channels: channels,
+                hubSize: hubSize,
+                hubLocation: hubLocation,
+                remoteSize: remoteSize,
+                locations: selectedLocs,
+                platform: selectedConventionalPlatform,
+                bcApplication: selectedBcPlatform,
+                mcgs: selectedMcgs,
+                btProduct: selectedBt,
+                modem: selectedVsatModem,
+                linkMargin: linkMargin
+            })
         }
 
         if (Session.get('isBroadband')) {
@@ -159,6 +174,9 @@ Template.index.events({
             var selectedBucs = [];
             var modem;
             var fixMcg;
+
+            console.log("Find best channel: " + findBestChannel);
+            console.log("Find max contour: " + findMaxContour);
 
             // check if best beam option is selected
             if (!findBestChannel) {
@@ -222,6 +240,7 @@ Template.index.events({
 
             // check if recommend antenna is selected
             recommendAntenna = Session.get('recommendAntenna');
+            console.log("Recommend Antenna: " + recommendAntenna);
 
             // check if any antenna is selected
             if (!recommendAntenna) {
@@ -237,6 +256,7 @@ Template.index.events({
 
             // check if any BUC is selected
             recommendBuc = Session.get('recommendBuc');
+            console.log("Recommend BUC: " + recommendBuc)
 
             // check if any buc is selected
             if (!recommendBuc) {
@@ -261,30 +281,71 @@ Template.index.events({
             // check if calculate at fixed MCG is selected
             fixMcg = $('#fixMcg').is(':checked');
             console.log('Fix MCG: ' + fixMcg)
+
+            // add elements into assumption object
+            _.extend(assumptions,{
+                country: country,
+                findBestChannel: findBestChannel,
+                findMaxContour: findMaxContour,
+                channels: selectedChannels,
+                definedContours: selectedDefinedContours,
+                latlon: selectedLatLon,
+                recommendAntenna: recommendAntenna,
+                antennas: selectedAntennas,
+                recommendBuc: recommendBuc,
+                bucs: selectedBucs,
+                modem: modem,
+                fixMcg: fixMcg
+            })
         }
 
         // get the bandwidth
+        var bwUnit;
+        var bandwidth = [];
 
         // check if bandwidth unit is selected
         bwUnit = $('#bwUnitPicker').find('option:selected').val();
-        console.log("Bandwidth unit: " + bwUnit);
         if(bwUnit===''){
             Errors.throw('Please select bandwidth unit.');
             return false;
         }
 
-        // check if at least 1 bandwidth is input
-        var $bwRows = $('.rowBw');
-        $bwRows.each(function(){
-            var bwFwd = $(this).find('.fwd').val();
-            var bwRtn = $(this).find('.rtn').val();
-            if(!(bwFwd==='' || bwRtn==='')){
-                bandwidth.push({'fwd':bwFwd,'rtn':bwRtn});
+        // check if at least 1 bandwidth is input for the case of FWD/RTN value
+        // (broadband satellite or conventional VSAT platform)
+        if(Session.get('isBroadband') || Session.get('selectedConventionalPlatform')==='VSAT') {
+            var $bwRows = $('.rowBw');
+            $bwRows.each(function () {
+                var bwFwd = $(this).find('.fwd').val();
+                var bwRtn = $(this).find('.rtn').val();
+                if (!(bwFwd === '' || bwRtn === '')) {
+                    bandwidth.push({'fwd': bwFwd, 'rtn': bwRtn});
+                }
+            })
+            console.log("Bandwidth");
+            _.each(bandwidth, function (item) {
+                console.log(item.fwd + "/" + item.rtn + " " + bwUnit);
+            })
+            if (bandwidth.length <= 0) {
+                Errors.throw('Please input at least 1 bandwidth.');
             }
-        })
-        if(bandwidth.length<=0){
-            Errors.throw('Please input at least 1 bandwidth.');
         }
+        // broadcast platform
+        else{
+            bandwidth.push($('.oneWayBw').val());
+            console.log("Bandwidth: " + bandwidth.join(',') + " " + bwUnit);
+        }
+        _.extend(assumptions,{
+            bwUnit: bwUnit,
+            bandwidth: bandwidth
+        })
+
+        Meteor.call('add_assumption', assumptions, function(error, assumptionId) {
+            if (error){
+                Errors.throw(error.reason);
+            } else {
+                console.log(assumptionId);
+            }
+        });
 
     }
 
