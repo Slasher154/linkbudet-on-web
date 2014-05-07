@@ -1,8 +1,22 @@
 /**
  * Created by Dome on 4/22/14 AD.
  */
-Template.pickAntenna.sizeList = function () {
-    return ["0.84 m","1 m","1.2 m","1.8 m"];
+Template.pickAntenna.antennas = function () {
+    //TODO: Change to set value to ID
+    return [{
+        _id: "xxx",
+        name: "0.84 m"
+    },{
+        _id: "yyy",
+        name: "1.2 m"
+    },{
+        _id: "zzz",
+        name: "1.8 m"
+    },{
+        _id: "aaa",
+        name: "E7000"
+    }
+    ]
 
 }
 

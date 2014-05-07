@@ -3,15 +3,15 @@
         {{#if isBroadband}}
         <label>Select Antenna</label>
         <br/>
-        <select class="form-control selectpicker" multiple>
-            {{#each sizeList}}
-            <option value="{{this}}">{{this}}</option>
+        <select class="form-control selectpicker" id="antennaPicker" multiple>
+            {{#each antennas}}
+            <option value="{{_id}}">{{name}}</option>
             {{/each}}
         </select>
         {{/if}}
         {{#if isConventional}}
         <label>Antenna Size</label>
-        {{> inputAppend text="m" type="number" id="remote-size" placeholder="Input antenna size"}}
+        {{> inputAppend text="m" type="number" id="remote-size" value=3.8 placeholder="Input antenna size"}}
         {{/if}}
     </div>
 </template>

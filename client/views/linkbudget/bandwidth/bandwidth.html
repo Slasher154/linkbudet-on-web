@@ -5,7 +5,7 @@
             {{#if isAnyPlatformSelected}}
             <div class="form-group">
                 <label>Unit</label>
-                <select class="selectpicker form-control">
+                <select class="selectpicker form-control" id="bwUnitPicker">
                     <option value="">Please select unit</option>
                     <option value="kbps">Data rate (kbps)</option>
                     <option value="Mbps">Data rate (Mbps)</option>
@@ -28,15 +28,15 @@
 
                     <div class="rowBw">
                         <div class="col-xs-4 " style="padding-right:2px;padding-left: 2px">
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="text" class="form-control fwd" placeholder="">
                         </div>
                         <div class="col-xs-2 " style="padding-right:0px;padding-left: 0px">
                             <input type="text" class="form-control" placeholder="/" disabled>
                         </div>
                         <div class="col-xs-4" style="padding-right:2px;padding-left: 2px">
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="text" class="form-control rtn" placeholder="">
                         </div>
-                    </div>
+             </div>
 
 
                     {{/if}}
