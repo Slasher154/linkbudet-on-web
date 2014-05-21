@@ -17,3 +17,6 @@ Meteor.publish('contours', function(){
     return Contours.find();
 })
 
+Meteor.publish('locations', function(){
+    return Locations.find();
+})

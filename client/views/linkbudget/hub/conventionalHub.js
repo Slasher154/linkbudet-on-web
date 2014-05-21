@@ -16,5 +16,6 @@ Template.conventionalHub.events({
 
 Template.conventionalHub.rendered = function(){
     // render typeahead for hub locations from location database
-    $(this.find('#hub-location')).typeahead({source:["Bangkok","Jakarta"]});
+    var locations = _.pluck(Locations.find().fetch(),'display_name');
+    //$(this.find('#hub-location')).typeahead({source: locations});
 }

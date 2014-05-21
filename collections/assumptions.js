@@ -7,5 +7,10 @@ Assumptions = new Meteor.Collection('assumptions');
 Meteor.methods({
     add_assumption: function(assumption){
         return Assumptions.insert(assumption);
+    },
+    run_assumption: function(assumption){
+        return "";
     }
+
 })
+

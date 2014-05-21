@@ -346,6 +346,13 @@ Template.index.events({
                 console.log(assumptionId);
             }
         });
+        Meteor.call('run_linkcalc', assumptions, function(error, message) {
+            if (error){
+                Errors.throw(error.reason);
+            } else {
+                console.log(message);
+            }
+        });
 
     }
 

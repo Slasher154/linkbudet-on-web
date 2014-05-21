@@ -3,6 +3,9 @@
  */
 
 if (Meteor.isClient){
+    UI.registerHelper('isSatelliteSelected', function(){
+        return Session.get('isConventional') || Session.get('isBroadband');
+    })
     UI.registerHelper('isConventional', function(){
         return Session.get('isConventional');
     })
