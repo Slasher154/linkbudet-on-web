@@ -3,3 +3,4 @@
  */
 
 Constants = new Meteor.Collection('constants');
+

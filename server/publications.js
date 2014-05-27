@@ -20,3 +20,7 @@ Meteor.publish('contours', function(){
 Meteor.publish('locations', function(){
     return Locations.find();
 })
+
+Meteor.publish('constants', function(){
+    return Constants.find();
+})
