@@ -3,13 +3,13 @@
  */
 
 Meteor.methods({
-    'link_calc': function(){
-        var antenna1 = {size:8}
-        var antenna2 = {size:1.2,rx_gain: {value:41.6, freq:12}}
-        var channel1 = Channels.findOne({name:"1E"});
-        var ul_location = {name:"Bangkok",contour:-1, lat:13.75, lon:100.46};
-        var dl_location = {name:"Bangkok",contour:-1, lat:13.75, lon:100.46};
-        var hpa = {size:500,obo:-0.5, intermod:30};
+    'link_calc': function () {
+        var antenna1 = {size: 8}
+        var antenna2 = {size: 1.2, rx_gain: {value: 41.6, freq: 12}}
+        var channel1 = Channels.findOne({name: "1E"});
+        var ul_location = {name: "Bangkok", contour: -1, lat: 13.75, lon: 100.46};
+        var dl_location = {name: "Bangkok", contour: -1, lat: 13.75, lon: 100.46};
+        var hpa = {size: 500, obo: -0.5, intermod: 30};
         var bandwidth = 30;
         var app = {
             name: "DVB-S2",
@@ -92,13 +92,13 @@ Meteor.methods({
                 }
             ]
         };
-        var mcg  = {
+        var mcg = {
             name: "QPSK 1/2",
             spectral_efficiency: 1,
             es_no: 1.8
         };
-        var clear_sky = {uplink:"clear",downlink:"clear"};
-        var rain = {uplink:"rain",downlink:"rain"};
+        var clear_sky = {uplink: "clear", downlink: "clear"};
+        var rain = {uplink: "rain", downlink: "rain"};
         var lm = 2;
         var overused = 0;
         var bt = 1.2;
@@ -134,28 +134,280 @@ link = new Link();
 
 // Class that manages the link input and call the Link() for each input
 
-function LinkBudget(){
+function LinkBudget() {
 
     // Manage the input parameters, loop them and run each link
-    function run(data){
+    function run(data) {
 
     }
 
-    function hub_to_remote(data){
+    // Calculates the link from hub to remote
+    function hub_to_remote(data) {
+
+        var uplink_ant = {}, uplink_hpa = {}, uplink_loc = {}, uplink_avail = 99.5;
+        var downlink_ant = {}, downlink_loc = {}, downlink_avail = 99.5;
+
+        // ------------------------- Channel -----------------------------------------------
+
+        // Find associated channel for the link.
+        // If the input is "1G", "C01" or other conventional transponders, grab that transponder
+        // If the input is "207, "514" or other IPSTAR transponders, search the name for forward channel
+
+        // The following query find the channel for the given satellite name, channel name and only channel which type is forward (IPSTAR) or broadcast (conventional)
+        var channel = Channels.findOne({satellite: data.satellite, type: {$in: ['forward', 'broadcast']}, name: data.channel});
+
+        if (!channel) {
+            console.log('Channel is not found.');
+        }
+
+        // ------------------------- Uplink Parameters -------------------------------------
+
+        // Check if channel has default gateway, if yes, set the uplink parameters to that gateway
+
+        if (_.has(channel, 'default_gateway')) {
+            var gateway = Gateways.findOne({name: channel.default_gateway});
+            uplink_ant.size = gateway.ant_size, uplink_hpa = gateway.hpa;
+            uplink_loc = {lat: gateway.lat, lon: gateway.lon, contour: -1, name: gateway.city}; // Assume -1 dB relative contour at this stage
+            uplink_avail = gateway.gateway_availability; // default availability from database
+            downlink_avail = gateway.remote_availability; // default availability from database
+
+        }
+        // Else, the uplink parameters come from user input (such as for conventional)
+        else {
+            uplink_ant = data.hub_ant, uplink_hpa.size = 2000, uplink_hpa.type = "hpa"; // assume there is enough HPA
+
+            // Find the relative contour from satellite and given location
+            uplink_loc = GetLocationObject(channel, data.hub_location, "uplink");
+
+            // Set the default link availability based on C or Ku-Band
+            if (IsCBand(channel.uplink_cf)) {
+                uplink_avail = Constants.findOne({name: "c_band_uplink_availability"});
+                downlink_avail = Constants.findOne({name: "c_band_downlink_availability"})
+            }
+            else if (IsKuBand(channel.uplink_cf)) {
+                uplink_avail = Constants.findOne({name: "ku_band_uplink_availability"});
+                downlink_avail = Constants.findOne({name: "ku_band_downlink_availability"});
+            }
+            else {
+                console.log('No default link avail is found, set to 99.5');
+            }
+        }
+
+
+        // ------------------------- Downlink Parameters -------------------------------------
+
+        downlink_ant = data.remote_antenna;
+        downlink_loc = GetLocationObject(channel, data.remote_location, "downlink");
+
+        // ------------------------- Modem Parameters ----------------------------------------
+
+        // set the application of this link to the forward one (for outbound-inbound systems)
+        // if it's SCPC or broadcast DVB-S2 app, just use that app right away
+        var fwd_app = _.where(data.platform.applications, {type: 'forward'});
+        // if forward app is found, use that app, otherwise use an only app in that platform
+        var app = fwd_app.length != 0 ? fwd_app[0] : data.platform.applications[0];
+
+        // check if user fix mcg, if yes, calculate on this fix mcg. If not, try all MCGs available in that application
+        var mcgs = [];
+        if (_.has(data, 'fix_mcg')) {
+            mcgs.push(data.fix_mcg); // push a fix mcg to an array
+        }
+        else {
+            // set mcg to all MCG in reverse order (try best mcg first, in order to break when find the first mcg which pass the margin)
+            mcgs = _.sortBy(app.mcgs, function (num) {
+                return -(num.spectral_efficiency);
+            });
+        }
+
+        // check if user specifies the required link margin at clear sky, if not, use the app default link margin
+        var link_margin = _.has(data, 'link_margin') ? data.link_margin : app.link_margin;
+
+        // loop through all MCG
+        _.each(mcgs, function (mcg) {
+
+            var bw = get_bandwidth(app, mcg, data.unit, data.bw, data.bt);
+
+            var link_data = {
+                uplink_antenna: uplink_ant,
+                uplink_hpa: uplink_hpa,
+                uplink_location: uplink_loc,
+                downlink_antenna: downlink_ant,
+                downlink_location: downlink_loc,
+                channel: channel,
+                app: app,
+                bandwidth: bw,
+                mcg: mcg,
+                link_margin: link_margin,
+                overused_power: 0, // as of now, not consider overused power yet
+                uplink_availability: uplink_avail,
+                downlink_availability: downlink_avail
+            }
+
+            var results = run_link(link_data);
+
+            // if fix mcg (run 1 code) return the result right away
+            if (_.has(data, 'fix_mcg')) {
+                return results;
+            }
+
+            // if not fix mcg (run all codes), check if the clear sky result and both fade pass condition
+            var clr_result = _.filter(results, function (re) {
+                return re.condition.uplink === "clear" && re.condition.downlink === "clear";
+            })[0];
+            var rain_result = _.filter(results, function (re) {
+                return re.condition.uplink === "rain" && re.condition.downlink === "rain";
+            })[0];
+
+            // if both clear and rain pass condition, return the result (not continue for remaining mcgs as we find the pass one)
+            if (clr_result.pass && rain_result.pass) {
+                return results;
+            }
+
+        })
+
+        // if the code reaches here, it means that no result is returned (run all codes, but any MCG cannot pass condition)
+        return false;
 
     }
 
-    function remote_to_hub(data){
+// Calculates the link from remote to hub
+    function remote_to_hub(data) {
+
+        var uplink_ant = {}, uplink_hpa = {}, uplink_loc = {}, uplink_avail = 99.5;
+        var downlink_ant = {}, downlink_loc = {}, downlink_avail = 99.5;
+
+        // ------------------------- Channel -----------------------------------------------
+
+        // Find associated channel for the link.
+        // If the input is "1G", "C01" or other conventional transponders, grab that transponder
+        // If the input is "207, "514" or other IPSTAR transponders, search the name for return channel
+
+        // The following query find the channel for the given satellite name, channel name and only channel which type is forward (IPSTAR) or broadcast (conventional)
+        var channel = Channels.findOne({satellite: data.satellite, type: {$in: ['return', 'broadcast']}, name: data.channel});
+
+        if (!channel) {
+            console.log('Channel is not found.');
+        }
+
+        // ------------------------- Uplink Parameters -------------------------------------
+
+        uplink_ant = data.remote_antenna;
+
+        // check if user specifies BUC size
+        if (_.has(data, 'buc')) {
+            uplink_hpa = data.buc;
+        }
+
+        uplink_loc = GetLocationObject(channel, data.remote_location, "uplink");
+
+        // ------------------------- Downlink Parameters -------------------------------------
+
+        // Check if channel has default gateway, if yes, set the downlink parameters to that gateway
+
+        if (_.has(channel, 'default_gateway')) {
+            var gateway = Gateways.findOne({name: channel.default_gateway});
+            downlink_ant.size = gateway.ant_size;
+            downlink_loc = {lat: gateway.lat, lon: gateway.lon, contour: -1, name: gateway.city}; // Assume -1 dB relative contour at this stage
+            uplink_avail = gateway.remote_availability; // default availability from database
+            downlink_avail = gateway.gateway_availability; // default availability from database
+        }
+        // Else, the uplink parameters come from user input (such as for conventional)
+        else {
+            downlink_ant.size = data.hub_size; // assume there is enough HPA
+
+            // Find the relative contour from satellite and given location
+            downlink_loc = GetLocationObject(channel, data.hub_location, "downlink");
+            // Set the default link availability based on C or Ku-Band
+            if (IsCBand(channel.downlink_cf)) {
+                uplink_avail = Constants.findOne({name: "c_band_uplink_availability"});
+                downlink_avail = Constants.findOne({name: "c_band_downlink_availability"})
+            }
+            else if (IsKuBand(channel.downlink_cf)) {
+                uplink_avail = Constants.findOne({name: "ku_band_uplink_availability"});
+                downlink_avail = Constants.findOne({name: "ku_band_downlink_availability"});
+            }
+            else {
+                console.log('No default link avail is found, set to 99.5');
+            }
+        }
+
+        // set the application of this link to the forward one (for outbound-inbound systems)
+        // if it's SCPC or broadcast DVB-S2 app, just use that app right away
+        var rtn_app = _.where(data.platform.applications, {type: 'return'});
+        // if forward app is found, use that app, otherwise use an only app in that platform
+        var app = rtn_app.length != 0 ? rtn_app[0] : data.platform.applications[0];
+
+        // check if user fix mcg, if yes, calculate on this fix mcg. If not, try all MCGs available in that application
+        var mcgs = [];
+        if (_.has(data, 'fix_mcg')) {
+            mcgs.push(data.fix_mcg); // push a fix mcg to an array
+        }
+        else {
+            // set mcg to all MCG in reverse order (try best mcg first, in order to break when find the first mcg which pass the margin)
+            mcgs = _.sortBy(app.mcgs, function (num) {
+                return -(num.spectral_efficiency);
+            });
+        }
+
+        // check if user specifies the required link margin at clear sky, if not, use the app default link margin
+        var link_margin = _.has(data, 'link_margin') ? data.link_margin : app.link_margin;
+
+        // loop through all MCG
+        _.each(mcgs, function (mcg) {
+
+            var bw = get_bandwidth(app, mcg, data.unit, data.bw, data.bt);
+
+            var link_data = {
+                uplink_antenna: uplink_ant,
+                uplink_hpa: uplink_hpa,
+                uplink_location: uplink_loc,
+                downlink_antenna: downlink_ant,
+                downlink_location: downlink_loc,
+                channel: channel,
+                app: app,
+                bandwidth: bw,
+                mcg: mcg,
+                link_margin: link_margin,
+                overused_power: 0, // as of now, not consider overused power yet
+                uplink_availability: uplink_avail,
+                downlink_availability: downlink_avail
+            }
+
+            var results = run_link(link_data);
+
+            // if fix mcg (run 1 code) return the result right away
+            if (_.has(data, 'fix_mcg')) {
+                return results;
+            }
+
+            // if not fix mcg (run all codes), check if the clear sky result and both fade pass condition
+            var clr_result = _.filter(results, function (re) {
+                return re.condition.uplink === "clear" && re.condition.downlink === "clear";
+            })[0];
+            var rain_result = _.filter(results, function (re) {
+                return re.condition.uplink === "rain" && re.condition.downlink === "rain";
+            })[0];
+
+            // if both clear and rain pass condition, return the result (not continue for remaining mcgs as we find the pass one)
+            if (clr_result.pass && rain_result.pass) {
+                return results;
+            }
+
+        })
+
+        // if the code reaches here, it means that no result is returned (run all codes, but any MCG cannot pass condition)
+        return false;
 
     }
 
-    // for one set of assumptions, run the link 4 times (clear sky, up fade, down fade, both fade)
-    function run_link(data){
 
-        var clear_sky = {uplink:"clear", downlink:"clear"};
-        var up_fade = {uplink:"rain", downlink:"clear"};
-        var down_fade = {uplink:"clear",downlink:"rain"};
-        var both_fade = {uplink:"rain", downlink:"rain"};
+// for one set of assumptions, run the link 4 times (clear sky, up fade, down fade, both fade)
+    function run_link(data) {
+
+        var clear_sky = {uplink: "clear", downlink: "clear"};
+        var up_fade = {uplink: "rain", downlink: "clear"};
+        var down_fade = {uplink: "clear", downlink: "rain"};
+        var both_fade = {uplink: "rain", downlink: "rain"};
 
         var results = [];
         var mylink = new Link();
@@ -189,6 +441,60 @@ function LinkBudget(){
         results.push(mylink.run());
 
         return results;
+
+    }
+
+// return an occupied bandwidth for this link
+    function get_bandwidth(app, mcg, unit, value, bt) {
+
+        // if user input data rate, find the bandwidth from data rate / current mcg ebe
+        var sr = 0;
+        if (_.contains(["Mbps", "kbps"], unit)) {
+            // if Mbps, convert to kbps
+            var dr = unit === "Mbps" ? value * 1024 : value;
+            sr = dr / mcg.spectral_efficiency; // calculate symbol rate in ksps
+        }
+        else if (_.contains(["MHz", "kHz"], unit)) {
+            // convert to symbol rate in ksps
+            var bw = unit === "MHz" ? value * 1024 : value;
+            sr = bw / bt;
+        }
+        else if (_.contains(["Msps", "ksps"], unit)) {
+            sr = unit === "Msps" ? value * 1024 : value;
+        }
+        else {
+            console.log("Unit of bandwidth error.");
+            return false;
+        }
+
+        // check if symbol rate is higher than the max symbol rate
+        var sr_2 = 0;
+        if (_.has(app, 'maximum_symbol_rate') && sr > app.maximum_symbol_rate) {
+            console.log('Symbol rate of ' + sr + ' ksps is higher than max symbol rate of this app (' + app.maximum_symbol_rate + ' ksps)');
+            sr_2 = app.maximum_symbol_rate;
+        }
+
+        // check if symbol rate is lower than the min symbol rate
+        else if (_.has(app, 'minimum_symbol_rate') && sr < app.minimum_symbol_rate) {
+            console.log('Symbol rate of ' + sr + ' ksps is lower than minimum symbol rate of this app (' + app.minimum_symbol_rate + ' ksps)');
+            sr_2 = app.minimum_symbol_rate;
+        }
+
+        // check if symbol rate is among the list of available symbol rates in the app
+        else {
+            if (_.contains(app.symbol_rates, sr)) {
+                sr_2 = sr;
+            }
+            else {
+                // find the lowest symbol rate available in the app which is higher than that value
+                sr_2 = _.min(_.filter(app.symbol_rates, function (num) {
+                    return num > sr;
+                }));
+            }
+        }
+
+        // return the occupied bandwidth in MHz
+        return (sr_2 / 1024) * bt;
 
     }
 }
@@ -243,7 +549,7 @@ function Link() {
                         results.push(calculate());
                     })
                     // Filter result with 2 requirements, pass margin and max data rate
-                    return _.max(_.where(results,{pass:true}),function(item){
+                    return _.max(_.where(results, {pass: true}), function (item) {
                         return item.data_rate;
                     })[0];
                 }
@@ -267,7 +573,7 @@ function Link() {
                     })
                 })
                 // Filter result with 2 requirements, pass margin and max data rate
-                return _.max(_.where(results,{pass:true}),function(item){
+                return _.max(_.where(results, {pass: true}), function (item) {
                     return item.data_rate;
                 })[0];
             }
@@ -282,7 +588,7 @@ function Link() {
 
     var calculate = function () {
 
-        record('channel',channel.name);
+        record('channel', channel.name);
         record('channel_mode', channel.mode);
 
         var orbital_slot = Satellites.findOne({name: channel.satellite}).orbital_slot;
@@ -335,27 +641,31 @@ function Link() {
 
             // Find EIRP Up
 
-            if (condition.uplink === "rain") {
-                eirp_up = operating_pfd + uplink_spreadingLoss - uplink_otherLoss - uplink_atmLoss;
-
-                // Increase EIRP Up at rain if the HPA has UPC
-                if (_.has(uplink_station.hpa, 'upc')) {
-                    eirp_up += uplink_station.hpa.upc;
-                }
-            }
-            else {
-                eirp_up = operating_pfd + uplink_spreadingLoss - uplink_otherLoss;
-            }
+            // Find EIRP Up at clear sky
+            var eirp_up_clear = operating_pfd + uplink_spreadingLoss - uplink_otherLoss;
 
             // Apply overused power (for normal case, overused power = 0). It will be more than 0 when we're goal seeking
             // the amount of power-utilization to pass the margin
-            eirp_up += overused_power;
+            eirp_up_clear += overused_power;
+
+            if (condition.uplink === "rain") {
+                eirp_up = eirp_up_clear - uplink_atmLoss;
+
+                // Increase EIRP Up at rain if the HPA has UPC, but not higher than EIRP up at clear sky
+                if (_.has(uplink_station.hpa, 'upc')) {
+                    eirp_up = eirp_up + uplink_station.hpa.upc > eirp_up_clear ? eirp_up_clear : eirp_up + uplink_station.hpa.upc;
+                }
+            }
+            else {
+                eirp_up = eirp_up_clear;
+            }
+
 
             // Check if the uplink HPA is BUC type. If yes, use the uplink power of that BUC (use 100% of BUC power instead of show the result of desired EIRP level)
-            if (_.has(uplink_station.hpa,'type') && uplink_station.type.toLowerCase() == 'buc'){
+            if (_.has(uplink_station.hpa, 'type') && uplink_station.type.toLowerCase() === 'buc') {
                 // check if eirp of this buc & antenna can reach the desired level
                 var eirp_up_from_buc = eirp_uplink(uplink_station.hpa, uplink_station.antenna, uplink_freq);
-                if(eirp_up > eirp_up_from_buc){
+                if (eirp_up_clear > eirp_up_from_buc) {
                     eirp_up = eirp_up_from_buc;
                 }
             }
@@ -404,10 +714,10 @@ function Link() {
             eirp_up += overused_power;
 
             // Check if the uplink HPA is BUC type. If yes, use the uplink power of that BUC (use 100% of BUC power instead of show the result of desired EIRP level)
-            if (_.has(uplink_station.hpa,'type') && uplink_station.type.toLowerCase() == 'buc'){
+            if (_.has(uplink_station.hpa, 'type') && uplink_station.type.toLowerCase() == 'buc') {
                 // check if eirp of this buc & antenna can reach the desired level
                 var eirp_up_from_buc = eirp_uplink(uplink_station.hpa, uplink_station.antenna, uplink_freq);
-                if(eirp_up > eirp_up_from_buc){
+                if (eirp_up > eirp_up_from_buc) {
                     eirp_up = eirp_up_from_buc;
                 }
             }
@@ -428,7 +738,7 @@ function Link() {
             record('operating_pfd', operating_pfd);
             record('channel_pfd', channel_pfd);
             record('channel_deepin', channel_deepin);
-            record('carrier_obo',carrier_output_backoff);
+            record('carrier_obo', carrier_output_backoff);
             record('carrier_pfd', carrier_pfd);
 
         }
@@ -630,19 +940,19 @@ function Link() {
         console.log("Gas Atten: " + gas + " dB");
         console.log("Cloud Atten: " + cloud + " dB");
         console.log("Scin Atten: " + scin + " dB");
-        if(data.condition==="clear"){
+        if (data.condition === "clear") {
 
-            if(ele_angle>10){
+            if (ele_angle > 10) {
                 return gas + cloud;
             }
-            else{
-                return gas + Math.sqrt(Math.pow(cloud,2) + Math.pow(scin,2));
+            else {
+                return gas + Math.sqrt(Math.pow(cloud, 2) + Math.pow(scin, 2));
             }
         }
-        else{
+        else {
             var rain = rainAtten(data.location, data.freq, data.orbital_slot, data.polarization, data.availability);
             console.log("Rain Atten: " + rain + " dB");
-            return gas + Math.sqrt(Math.pow((rain + cloud),2) + Math.pow(scin,2));
+            return gas + Math.sqrt(Math.pow((rain + cloud), 2) + Math.pow(scin, 2));
         }
     }
 
@@ -727,14 +1037,14 @@ function Link() {
     }
 
     // Calculate eirp uplink from given antenna and hpa
-    function eirp_uplink(hpa, antenna, freq){
-        var ifl = _.has(hpa,'ifl') ? hpa.ifl : 0.3;
-        var obo = _.has(hpa,'obo') ? hpa.obo : 0.5;
+    function eirp_uplink(hpa, antenna, freq) {
+        var ifl = _.has(hpa, 'ifl') ? hpa.ifl : 0.3;
+        var obo = _.has(hpa, 'obo') ? hpa.obo : 0.5;
         var ant_gain = 0;
-        if (_.has(antenna,'tx_gain')){
+        if (_.has(antenna, 'tx_gain')) {
             ant_gain = antenna_gain_at_frequency(antenna.tx_gain.value, antenna.tx_gain.freq, freq, antenna.size);
         }
-        else{
+        else {
             ant_gain = antenna_gain(antenna.size, freq);
         }
         return 10 * log10(hpa.size) - ifl - obo + ant_gain;
@@ -900,7 +1210,7 @@ function Link() {
         var sw2 = 0.95 * r_p * Math.pow(r_t, 0.64) + 0.0067 * rho;
         var sw3 = 0.9561 * r_p * Math.pow(r_t, 0.67) + 0.0059 * rho;
         var sw4 = 0.9543 * r_p * Math.pow(r_t, 0.68) + 0.0061 * rho;
-        var sw5 = 0.955 * r_p * Math.pow(r_t,0.68) + 0.006 * rho;
+        var sw5 = 0.955 * r_p * Math.pow(r_t, 0.68) + 0.006 * rho;
         var g22 = 1 + Math.pow((freq - 22.235), 2) / Math.pow((freq + 22.235), 2);
         var g557 = 1 + Math.pow((freq - 557), 2) / Math.pow((freq + 557), 2);
         var g752 = 1 + Math.pow((freq - 752), 2) / Math.pow((freq + 752), 2);
@@ -1036,18 +1346,17 @@ function Link() {
         // Rainfall rate in mm/hr as obtain from digital map table in ITU-R P.837-2
         var r_100;
 
-        Meteor.apply('get_rain_points', [stat_lat, stat_lon],{wait:true},function(error, value){
+        Meteor.apply('get_rain_points', [stat_lat, stat_lon], {wait: true}, function (error, value) {
             console.log('-------------------Get rain points is called -----------')
-            if(error){
+            if (error) {
                 logError(error.reason);
                 return false;
             }
-            else{
+            else {
                 console.log('Rain rate = ' + value);
                 r_100 = value;
             }
         });
-
 
 
         // unavailability, (100 percent - given availability)
@@ -1234,7 +1543,7 @@ function Link() {
         return obj;
     }
 
-    function log10(num){
+    function log10(num) {
         return Math.log(num) / Math.LN10;
     }
 
@@ -1245,7 +1554,7 @@ function Link() {
     }
 
     // Record the result into the result object
-    function record(title, variable){
+    function record(title, variable) {
         result[title] = variable;
     }
 
@@ -1320,5 +1629,92 @@ DownlinkStation.prototype = {
     location: {}
 }
 
+// -------------------------- Other functions ---------------------------
+
+function IsCBand(freq) {
+    if (freq < 8 && freq > 3) {
+        return true;
+    }
+    return false;
+}
+
+function IsKuBand(freq) {
+    if (freq < 15 && freq > 9) {
+        return true;
+    }
+    return false;
+}
+
+// Return an location object in the form of {name:"Bangkok", lat:5, lon: 100, contour:-1}
+function GetLocationObject(channel, location, path) {
+    var sat = Satellites.findOne({name: channel.satellite});
+    if (sat.type === 'Broadband') {
+        if (typeof location === 'string') {
+            // check if the given location is a defined contour
+            if (_.contains(['Peak', '50%', 'EOC', 'EOC-2'], location)) {
+                var contour = 0;
+                if (location === '50%') {
+                    contour = channel.contour_50;
+                }
+                else if (location === 'EOC') {
+                    contour = channel.contour_eoc;
+                }
+                else if (location === 'EOC-2') {
+                    contour = channel.contour_eoc - 2;
+                }
+                else {
+                    console.log('Cannot find ' + location + ' contour of channel ' + channel.name);
+                }
+
+                // Make up lat/lon point for this defined contour (use the lat/lon of the channel in the database
+                return {lat: channel.lat, lon: channel.lon, name: location, contour: contour};
+            }
+            // check if it's lat/lon type
+            else if (_.has(location, 'lat') && _.has(location, 'lon')) {
+                // find the contour from the exported gxt file
+                // TODO: Write this function when Meteor support mongodb 2.6 (2.4 has bugs with Polygon objects not valid)
+                var contour = 0;
+                return {lat: location.lat, lon: location.lon, name: location.lat + "," + location.lon, contour: contour};
+            }
+            else {
+                console.log('Location type is not valid.');
+                return false;
+            }
+        }
+    }
+
+    if (sat.type === 'Conventional') {
+        // find the contour from location database
+        // given location is the string of location name
+        if (typeof location === 'string') {
+            var loc = Locations.findOne({display_name: location});
+            // If loc is found, find the contour from the value in the database
+            // The value in locations database is stored in EIRP and G/T value
+            if (loc) {
+                // Retrieve the data object for our desired beam
+                var data = _.where(loc.data, {beam: channel.uplink_beam, type: path});
+                var contour = 0;
+                if (path === "uplink") { // G/T
+                    contour = -(channel.gt_peak - data.value);
+                }
+                else { // EIRP
+                    contour = -(channel.saturated_eirp_peak - data.value);
+                }
+                return {lat: loc.lat, lon: loc.lon, name: loc.display_name, contour: contour};
+            }
+            else {
+                console.log('Location not found.')
+                return {};
+            }
+        }
+        // given location is lat/lon object
+        if (_.has(location, 'lat') && _.has(location, 'lon')) {
+            // no algorithm for this yet
+            console.log('Cannot find contour from given lat/lon for conventional satellite.');
+            return {};
+        }
+    }
+
+}
 
 

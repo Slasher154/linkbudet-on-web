@@ -7,7 +7,7 @@ Meteor.methods({
 
         (function(){
             var locations = [
-                {"display_name": "AFGHANISTAN, KABUL", "country": "AFGHANISTAN", "city": "KABUL", "Lon": 69.2, "Lat": 34.52, "data": [
+                {"display_name": "AFGHANISTAN, KABUL", "country": "AFGHANISTAN", "city": "KABUL", "lon": 69.2, "lat": 34.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.31},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.58},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.01},
@@ -29,7 +29,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.32},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.32}
                 ]},
-                {"display_name": "AFGHANISTAN, Qandahar", "country": "AFGHANISTAN", "city": "Qandahar", "Lon": 65.75, "Lat": 31.58, "data": [
+                {"display_name": "AFGHANISTAN, Qandahar", "country": "AFGHANISTAN", "city": "Qandahar", "lon": 65.75, "lat": 31.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 37.88},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.04},
@@ -51,7 +51,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.87},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.87}
                 ]},
-                {"display_name": "AFGHANISTAN, Herat", "country": "AFGHANISTAN", "city": "Herat", "Lon": 62.2, "Lat": 34.33, "data": [
+                {"display_name": "AFGHANISTAN, Herat", "country": "AFGHANISTAN", "city": "Herat", "lon": 62.2, "lat": 34.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 35.84},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.85},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.86},
@@ -73,7 +73,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4}
                 ]},
-                {"display_name": "AFGHANISTAN, Mazar-i-Sharif", "country": "AFGHANISTAN", "city": "Mazar-i-Sharif", "Lon": 67.1, "Lat": 36.7, "data": [
+                {"display_name": "AFGHANISTAN, Mazar-i-Sharif", "country": "AFGHANISTAN", "city": "Mazar-i-Sharif", "lon": 67.1, "lat": 36.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 37.03},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 37.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.9},
@@ -95,7 +95,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.61},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.61}
                 ]},
-                {"display_name": "AFGHANISTAN, Jalalabad", "country": "AFGHANISTAN", "city": "Jalalabad", "Lon": 70.47, "Lat": 34.43, "data": [
+                {"display_name": "AFGHANISTAN, Jalalabad", "country": "AFGHANISTAN", "city": "Jalalabad", "lon": 70.47, "lat": 34.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.63},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.76},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.04},
@@ -117,7 +117,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.28},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.28}
                 ]},
-                {"display_name": "AFGHANISTAN, Qonduz", "country": "AFGHANISTAN", "city": "Qonduz", "Lon": 68.85, "Lat": 36.75, "data": [
+                {"display_name": "AFGHANISTAN, Qonduz", "country": "AFGHANISTAN", "city": "Qonduz", "lon": 68.85, "lat": 36.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 37.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.05},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.91},
@@ -139,7 +139,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.54},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.54}
                 ]},
-                {"display_name": "AFGHANISTAN, Baghlan", "country": "AFGHANISTAN", "city": "Baghlan", "Lon": 68.73, "Lat": 36.18, "data": [
+                {"display_name": "AFGHANISTAN, Baghlan", "country": "AFGHANISTAN", "city": "Baghlan", "lon": 68.73, "lat": 36.18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 37.67},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.16},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.93},
@@ -161,7 +161,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.45},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.45}
                 ]},
-                {"display_name": "AFGHANISTAN, Maymana", "country": "AFGHANISTAN", "city": "Maymana", "Lon": 64.63, "Lat": 35.88, "data": [
+                {"display_name": "AFGHANISTAN, Maymana", "country": "AFGHANISTAN", "city": "Maymana", "lon": 64.63, "lat": 35.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 36.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 37.32},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.88},
@@ -183,7 +183,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.78},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.78}
                 ]},
-                {"display_name": "AFGHANISTAN, Pul-i-Khomri", "country": "AFGHANISTAN", "city": "Pul-i-Khomri", "Lon": 68.75, "Lat": 35.92, "data": [
+                {"display_name": "AFGHANISTAN, Pul-i-Khomri", "country": "AFGHANISTAN", "city": "Pul-i-Khomri", "lon": 68.75, "lat": 35.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 37.76},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.22},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.94},
@@ -205,7 +205,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.42},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.42}
                 ]},
-                {"display_name": "AFGHANISTAN, Ghazni", "country": "AFGHANISTAN", "city": "Ghazni", "Lon": 68.43, "Lat": 33.55, "data": [
+                {"display_name": "AFGHANISTAN, Ghazni", "country": "AFGHANISTAN", "city": "Ghazni", "lon": 68.43, "lat": 33.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.37},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.04},
@@ -227,7 +227,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.4},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.4}
                 ]},
-                {"display_name": "ALBANIA, TIRANE", "country": "ALBANIA", "city": "TIRANE", "Lon": 19.82, "Lat": 41.33, "data": [
+                {"display_name": "ALBANIA, TIRANE", "country": "ALBANIA", "city": "TIRANE", "lon": 19.82, "lat": 41.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.02},
@@ -249,7 +249,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALBANIA, Durres", "country": "ALBANIA", "city": "Durres", "Lon": 19.47, "Lat": 41.3, "data": [
+                {"display_name": "ALBANIA, Durres", "country": "ALBANIA", "city": "Durres", "lon": 19.47, "lat": 41.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.01},
@@ -271,7 +271,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALBANIA, Elbasan", "country": "ALBANIA", "city": "Elbasan", "Lon": 20.08, "Lat": 41.12, "data": [
+                {"display_name": "ALBANIA, Elbasan", "country": "ALBANIA", "city": "Elbasan", "lon": 20.08, "lat": 41.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.56},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.03},
@@ -293,7 +293,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALBANIA, Shkoder", "country": "ALBANIA", "city": "Shkoder", "Lon": 19.02, "Lat": 42.05, "data": [
+                {"display_name": "ALBANIA, Shkoder", "country": "ALBANIA", "city": "Shkoder", "lon": 19.02, "lat": 42.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.6},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.99},
@@ -315,7 +315,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALBANIA, Vlore", "country": "ALBANIA", "city": "Vlore", "Lon": 19.48, "Lat": 40.48, "data": [
+                {"display_name": "ALBANIA, Vlore", "country": "ALBANIA", "city": "Vlore", "lon": 19.48, "lat": 40.48, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.54},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.02},
@@ -337,7 +337,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALBANIA, Korce", "country": "ALBANIA", "city": "Korce", "Lon": 20.73, "Lat": 40.63, "data": [
+                {"display_name": "ALBANIA, Korce", "country": "ALBANIA", "city": "Korce", "lon": 20.73, "lat": 40.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.53},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.05},
@@ -359,7 +359,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALBANIA, Berat", "country": "ALBANIA", "city": "Berat", "Lon": 19.77, "Lat": 40.72, "data": [
+                {"display_name": "ALBANIA, Berat", "country": "ALBANIA", "city": "Berat", "lon": 19.77, "lat": 40.72, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.25},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.54},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.03},
@@ -381,7 +381,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALBANIA, Fier", "country": "ALBANIA", "city": "Fier", "Lon": 19.55, "Lat": 40.72, "data": [
+                {"display_name": "ALBANIA, Fier", "country": "ALBANIA", "city": "Fier", "lon": 19.55, "lat": 40.72, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.25},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.55},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.02},
@@ -403,7 +403,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALBANIA, Lushnje", "country": "ALBANIA", "city": "Lushnje", "Lon": 19.68, "Lat": 40.92, "data": [
+                {"display_name": "ALBANIA, Lushnje", "country": "ALBANIA", "city": "Lushnje", "lon": 19.68, "lat": 40.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.55},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.02},
@@ -425,7 +425,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALGERIA, ALGIERS", "country": "ALGERIA", "city": "ALGIERS", "Lon": 3, "Lat": 36.83, "data": [
+                {"display_name": "ALGERIA, ALGIERS", "country": "ALGERIA", "city": "ALGIERS", "lon": 3, "lat": 36.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.38},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.38},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.61},
@@ -447,7 +447,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALGERIA, Oran", "country": "ALGERIA", "city": "Oran", "Lon": -0.63, "Lat": 35.75, "data": [
+                {"display_name": "ALGERIA, Oran", "country": "ALGERIA", "city": "Oran", "lon": -0.63, "lat": 35.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.04},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.21},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.57},
@@ -469,7 +469,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALGERIA, Constantine", "country": "ALGERIA", "city": "Constantine", "Lon": 6.67, "Lat": 36.37, "data": [
+                {"display_name": "ALGERIA, Constantine", "country": "ALGERIA", "city": "Constantine", "lon": 6.67, "lat": 36.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.42},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.35},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -491,7 +491,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALGERIA, Annaba", "country": "ALGERIA", "city": "Annaba", "Lon": 7.78, "Lat": 36.92, "data": [
+                {"display_name": "ALGERIA, Annaba", "country": "ALGERIA", "city": "Annaba", "lon": 7.78, "lat": 36.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.57},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.41},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -513,7 +513,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALGERIA, Batna", "country": "ALGERIA", "city": "Batna", "Lon": 6.18, "Lat": 35.57, "data": [
+                {"display_name": "ALGERIA, Batna", "country": "ALGERIA", "city": "Batna", "lon": 6.18, "lat": 35.57, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.25},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.64},
@@ -535,7 +535,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALGERIA, Blida", "country": "ALGERIA", "city": "Blida", "Lon": 2.83, "Lat": 36.5, "data": [
+                {"display_name": "ALGERIA, Blida", "country": "ALGERIA", "city": "Blida", "lon": 2.83, "lat": 36.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.31},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.34},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.6},
@@ -557,7 +557,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALGERIA, Setif", "country": "ALGERIA", "city": "Setif", "Lon": 5.4, "Lat": 36.18, "data": [
+                {"display_name": "ALGERIA, Setif", "country": "ALGERIA", "city": "Setif", "lon": 5.4, "lat": 36.18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.33},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.32},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.64},
@@ -579,7 +579,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALGERIA, Sidi-Bel-Abbes", "country": "ALGERIA", "city": "Sidi-Bel-Abbes", "Lon": -0.65, "Lat": 35.25, "data": [
+                {"display_name": "ALGERIA, Sidi-Bel-Abbes", "country": "ALGERIA", "city": "Sidi-Bel-Abbes", "lon": -0.65, "lat": 35.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.92},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.14},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.56},
@@ -601,7 +601,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALGERIA, Ech-Cheliff", "country": "ALGERIA", "city": "Ech-Cheliff", "Lon": 1.33, "Lat": 36.17, "data": [
+                {"display_name": "ALGERIA, Ech-Cheliff", "country": "ALGERIA", "city": "Ech-Cheliff", "lon": 1.33, "lat": 36.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.19},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.58},
@@ -623,7 +623,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALGERIA, Skikda", "country": "ALGERIA", "city": "Skikda", "Lon": 6.9, "Lat": 36.88, "data": [
+                {"display_name": "ALGERIA, Skikda", "country": "ALGERIA", "city": "Skikda", "lon": 6.9, "lat": 36.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.4},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -645,7 +645,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ALGERIA, Bejaia", "country": "ALGERIA", "city": "Bejaia", "Lon": 5.05, "Lat": 36.82, "data": [
+                {"display_name": "ALGERIA, Bejaia", "country": "ALGERIA", "city": "Bejaia", "lon": 5.05, "lat": 36.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.39},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.64},
@@ -667,7 +667,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ANDORRA, ANDORRA_LA_VELLA", "country": "ANDORRA", "city": "ANDORRA_LA_VELLA", "Lon": 1.5, "Lat": 42.5, "data": [
+                {"display_name": "ANDORRA, ANDORRA_LA_VELLA", "country": "ANDORRA", "city": "ANDORRA_LA_VELLA", "lon": 1.5, "lat": 42.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.05},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -689,7 +689,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ANDORRA, Les_Escaldes", "country": "ANDORRA", "city": "Les_Escaldes", "Lon": 1.53, "Lat": 42.5, "data": [
+                {"display_name": "ANDORRA, Les_Escaldes", "country": "ANDORRA", "city": "Les_Escaldes", "lon": 1.53, "lat": 42.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.05},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -711,7 +711,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ANDORRA, Canillo", "country": "ANDORRA", "city": "Canillo", "Lon": 1.6, "Lat": 42.55, "data": [
+                {"display_name": "ANDORRA, Canillo", "country": "ANDORRA", "city": "Canillo", "lon": 1.6, "lat": 42.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.06},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -733,7 +733,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ANDORRA, Encamp", "country": "ANDORRA", "city": "Encamp", "Lon": 1.58, "Lat": 42.53, "data": [
+                {"display_name": "ANDORRA, Encamp", "country": "ANDORRA", "city": "Encamp", "lon": 1.58, "lat": 42.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.06},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -755,7 +755,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ANDORRA, La_Massana", "country": "ANDORRA", "city": "La_Massana", "Lon": 1.52, "Lat": 42.53, "data": [
+                {"display_name": "ANDORRA, La_Massana", "country": "ANDORRA", "city": "La_Massana", "lon": 1.52, "lat": 42.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.06},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -777,7 +777,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ANDORRA, Ordino", "country": "ANDORRA", "city": "Ordino", "Lon": 1.53, "Lat": 42.55, "data": [
+                {"display_name": "ANDORRA, Ordino", "country": "ANDORRA", "city": "Ordino", "lon": 1.53, "lat": 42.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.06},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -799,7 +799,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ANDORRA, Sant_Julia", "country": "ANDORRA", "city": "Sant_Julia", "Lon": 1.5, "Lat": 42.47, "data": [
+                {"display_name": "ANDORRA, Sant_Julia", "country": "ANDORRA", "city": "Sant_Julia", "lon": 1.5, "lat": 42.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.05},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -821,7 +821,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ANGOLA, LUANDA", "country": "ANGOLA", "city": "LUANDA", "Lon": 13.25, "Lat": -8.83, "data": [
+                {"display_name": "ANGOLA, LUANDA", "country": "ANGOLA", "city": "LUANDA", "lon": 13.25, "lat": -8.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.91},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.37},
@@ -843,7 +843,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ANGOLA, Lubango", "country": "ANGOLA", "city": "Lubango", "Lon": 13.5, "Lat": -14.92, "data": [
+                {"display_name": "ANGOLA, Lubango", "country": "ANGOLA", "city": "Lubango", "lon": 13.5, "lat": -14.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.62},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.8},
@@ -865,7 +865,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ANGOLA, Namibe", "country": "ANGOLA", "city": "Namibe", "Lon": 12.15, "Lat": -15.17, "data": [
+                {"display_name": "ANGOLA, Namibe", "country": "ANGOLA", "city": "Namibe", "lon": 12.15, "lat": -15.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.25},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.93},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.76},
@@ -887,7 +887,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ANGOLA, Huambo", "country": "ANGOLA", "city": "Huambo", "Lon": 15.78, "Lat": -12.73, "data": [
+                {"display_name": "ANGOLA, Huambo", "country": "ANGOLA", "city": "Huambo", "lon": 15.78, "lat": -12.73, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.98},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.84},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.74},
@@ -909,7 +909,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ANGOLA, Lobito", "country": "ANGOLA", "city": "Lobito", "Lon": 13.57, "Lat": -12.33, "data": [
+                {"display_name": "ANGOLA, Lobito", "country": "ANGOLA", "city": "Lobito", "lon": 13.57, "lat": -12.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.59},
@@ -931,7 +931,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ANGOLA, Benguela", "country": "ANGOLA", "city": "Benguela", "Lon": 13.4, "Lat": -12.57, "data": [
+                {"display_name": "ANGOLA, Benguela", "country": "ANGOLA", "city": "Benguela", "lon": 13.4, "lat": -12.57, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.56},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.8},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.6},
@@ -953,7 +953,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ANGOLA, Malanje", "country": "ANGOLA", "city": "Malanje", "Lon": 13.33, "Lat": -9.53, "data": [
+                {"display_name": "ANGOLA, Malanje", "country": "ANGOLA", "city": "Malanje", "lon": 13.33, "lat": -9.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.77},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.11},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.4},
@@ -975,7 +975,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "AUSTRALIA, Sydney", "country": "AUSTRALIA", "city": "Sydney", "Lon": 151.17, "Lat": -33.88, "data": [
+                {"display_name": "AUSTRALIA, Sydney", "country": "AUSTRALIA", "city": "Sydney", "lon": 151.17, "lat": -33.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.8},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 15.48},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -997,7 +997,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.33},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.33}
                 ]},
-                {"display_name": "AUSTRALIA, Melbourne", "country": "AUSTRALIA", "city": "Melbourne", "Lon": 144.97, "Lat": -37.75, "data": [
+                {"display_name": "AUSTRALIA, Melbourne", "country": "AUSTRALIA", "city": "Melbourne", "lon": 144.97, "lat": -37.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 19.44},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 16.91},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.33},
@@ -1019,7 +1019,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.91},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.91}
                 ]},
-                {"display_name": "AUSTRALIA, Brisbane", "country": "AUSTRALIA", "city": "Brisbane", "Lon": 153, "Lat": -27.5, "data": [
+                {"display_name": "AUSTRALIA, Brisbane", "country": "AUSTRALIA", "city": "Brisbane", "lon": 153, "lat": -27.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 17.61},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 20.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.95},
@@ -1041,7 +1041,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.62},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.62}
                 ]},
-                {"display_name": "AUSTRALIA, Perth", "country": "AUSTRALIA", "city": "Perth", "Lon": 115.87, "Lat": -31.95, "data": [
+                {"display_name": "AUSTRALIA, Perth", "country": "AUSTRALIA", "city": "Perth", "lon": 115.87, "lat": -31.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 20.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 17.21},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.58},
@@ -1063,7 +1063,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.63},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.63}
                 ]},
-                {"display_name": "AUSTRALIA, Adelaide", "country": "AUSTRALIA", "city": "Adelaide", "Lon": 138.6, "Lat": -34.93, "data": [
+                {"display_name": "AUSTRALIA, Adelaide", "country": "AUSTRALIA", "city": "Adelaide", "lon": 138.6, "lat": -34.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 18.65},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 15.77},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.72},
@@ -1085,7 +1085,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.16},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.16}
                 ]},
-                {"display_name": "AUSTRALIA, Newcastle", "country": "AUSTRALIA", "city": "Newcastle", "Lon": 151.92, "Lat": -33, "data": [
+                {"display_name": "AUSTRALIA, Newcastle", "country": "AUSTRALIA", "city": "Newcastle", "lon": 151.92, "lat": -33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.32},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 16.07},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.81},
@@ -1107,7 +1107,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.41},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.41}
                 ]},
-                {"display_name": "AUSTRALIA, CANBERRA", "country": "AUSTRALIA", "city": "CANBERRA", "Lon": 149.13, "Lat": -35.3, "data": [
+                {"display_name": "AUSTRALIA, CANBERRA", "country": "AUSTRALIA", "city": "CANBERRA", "lon": 149.13, "lat": -35.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 17.75},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 15.23},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.64},
@@ -1129,7 +1129,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.22},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.22}
                 ]},
-                {"display_name": "AUSTRALIA, Wollongong", "country": "AUSTRALIA", "city": "Wollongong", "Lon": 151.08, "Lat": -34.43, "data": [
+                {"display_name": "AUSTRALIA, Wollongong", "country": "AUSTRALIA", "city": "Wollongong", "lon": 151.08, "lat": -34.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 17.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 15.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.71},
@@ -1151,7 +1151,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.34},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.34}
                 ]},
-                {"display_name": "AUSTRALIA, Gold_Coast", "country": "AUSTRALIA", "city": "Gold_Coast", "Lon": 153.37, "Lat": -27.98, "data": [
+                {"display_name": "AUSTRALIA, Gold_Coast", "country": "AUSTRALIA", "city": "Gold_Coast", "lon": 153.37, "lat": -27.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 17.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 20.21},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.95},
@@ -1173,7 +1173,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.73},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.73}
                 ]},
-                {"display_name": "AUSTRALIA, Hobart", "country": "AUSTRALIA", "city": "Hobart", "Lon": 147.3, "Lat": -42.9, "data": [
+                {"display_name": "AUSTRALIA, Hobart", "country": "AUSTRALIA", "city": "Hobart", "lon": 147.3, "lat": -42.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 20.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 20.14},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.43},
@@ -1195,7 +1195,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.72},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.72}
                 ]},
-                {"display_name": "AUSTRALIA, Geelong", "country": "AUSTRALIA", "city": "Geelong", "Lon": 144.43, "Lat": -38.17, "data": [
+                {"display_name": "AUSTRALIA, Geelong", "country": "AUSTRALIA", "city": "Geelong", "lon": 144.43, "lat": -38.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 19.65},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 17.31},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.27},
@@ -1217,7 +1217,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.86},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.86}
                 ]},
-                {"display_name": "AUSTRALIA, Townsville", "country": "AUSTRALIA", "city": "Townsville", "Lon": 146.8, "Lat": -19.27, "data": [
+                {"display_name": "AUSTRALIA, Townsville", "country": "AUSTRALIA", "city": "Townsville", "lon": 146.8, "lat": -19.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 23.56},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.91},
@@ -1239,7 +1239,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.35},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.35}
                 ]},
-                {"display_name": "AUSTRALIA, Darwin", "country": "AUSTRALIA", "city": "Darwin", "Lon": 130.83, "Lat": -12.47, "data": [
+                {"display_name": "AUSTRALIA, Darwin", "country": "AUSTRALIA", "city": "Darwin", "lon": 130.83, "lat": -12.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.8},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.98},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.74},
@@ -1261,7 +1261,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.54},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.54}
                 ]},
-                {"display_name": "AUSTRIA, VIENNA", "country": "AUSTRIA", "city": "VIENNA", "Lon": 16.37, "Lat": 48.22, "data": [
+                {"display_name": "AUSTRIA, VIENNA", "country": "AUSTRIA", "city": "VIENNA", "lon": 16.37, "lat": 48.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.03},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.83},
@@ -1283,7 +1283,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "AUSTRIA, Graz", "country": "AUSTRIA", "city": "Graz", "Lon": 15.37, "Lat": 47.08, "data": [
+                {"display_name": "AUSTRIA, Graz", "country": "AUSTRIA", "city": "Graz", "lon": 15.37, "lat": 47.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.84},
@@ -1305,7 +1305,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "AUSTRIA, Linz", "country": "AUSTRIA", "city": "Linz", "Lon": 14.3, "Lat": 48.32, "data": [
+                {"display_name": "AUSTRIA, Linz", "country": "AUSTRIA", "city": "Linz", "lon": 14.3, "lat": 48.32, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.03},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.8},
@@ -1327,7 +1327,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "AUSTRIA, Salzburg", "country": "AUSTRIA", "city": "Salzburg", "Lon": 13.05, "Lat": 47.8, "data": [
+                {"display_name": "AUSTRIA, Salzburg", "country": "AUSTRIA", "city": "Salzburg", "lon": 13.05, "lat": 47.8, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.06},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.79},
@@ -1349,7 +1349,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "AUSTRIA, Innsbruck", "country": "AUSTRIA", "city": "Innsbruck", "Lon": 11.42, "Lat": 47.28, "data": [
+                {"display_name": "AUSTRIA, Innsbruck", "country": "AUSTRIA", "city": "Innsbruck", "lon": 11.42, "lat": 47.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.08},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.77},
@@ -1371,7 +1371,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "AUSTRIA, Klagenfurt", "country": "AUSTRIA", "city": "Klagenfurt", "Lon": 14.33, "Lat": 46.63, "data": [
+                {"display_name": "AUSTRIA, Klagenfurt", "country": "AUSTRIA", "city": "Klagenfurt", "lon": 14.33, "lat": 46.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.83},
@@ -1393,7 +1393,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "AUSTRIA, Villach", "country": "AUSTRIA", "city": "Villach", "Lon": 13.85, "Lat": 46.62, "data": [
+                {"display_name": "AUSTRIA, Villach", "country": "AUSTRIA", "city": "Villach", "lon": 13.85, "lat": 46.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.82},
@@ -1415,7 +1415,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "AUSTRIA, Wels", "country": "AUSTRIA", "city": "Wels", "Lon": 14.03, "Lat": 48.17, "data": [
+                {"display_name": "AUSTRIA, Wels", "country": "AUSTRIA", "city": "Wels", "lon": 14.03, "lat": 48.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.04},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.8},
@@ -1437,7 +1437,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "AUSTRIA, Sankt_Poelten", "country": "AUSTRIA", "city": "Sankt_Poelten", "Lon": 15.62, "Lat": 48.22, "data": [
+                {"display_name": "AUSTRIA, Sankt_Poelten", "country": "AUSTRIA", "city": "Sankt_Poelten", "lon": 15.62, "lat": 48.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.03},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.82},
@@ -1459,7 +1459,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "AUSTRIA, Steyr", "country": "AUSTRIA", "city": "Steyr", "Lon": 14.42, "Lat": 48.07, "data": [
+                {"display_name": "AUSTRIA, Steyr", "country": "AUSTRIA", "city": "Steyr", "lon": 14.42, "lat": 48.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.04},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.8},
@@ -1481,7 +1481,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BAHRAIN, MANAMA", "country": "BAHRAIN", "city": "MANAMA", "Lon": 50.63, "Lat": 26.2, "data": [
+                {"display_name": "BAHRAIN, MANAMA", "country": "BAHRAIN", "city": "MANAMA", "lon": 50.63, "lat": 26.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.05},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -1503,7 +1503,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.95},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.95}
                 ]},
-                {"display_name": "BAHRAIN, Muharraq", "country": "BAHRAIN", "city": "Muharraq", "Lon": 50.65, "Lat": 26.25, "data": [
+                {"display_name": "BAHRAIN, Muharraq", "country": "BAHRAIN", "city": "Muharraq", "lon": 50.65, "lat": 26.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.08},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -1525,7 +1525,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.95},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.95}
                 ]},
-                {"display_name": "BAHRAIN, Jidhafs", "country": "BAHRAIN", "city": "Jidhafs", "Lon": 50.55, "Lat": 26.23, "data": [
+                {"display_name": "BAHRAIN, Jidhafs", "country": "BAHRAIN", "city": "Jidhafs", "lon": 50.55, "lat": 26.23, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.05},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.02},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -1547,7 +1547,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.96},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.96}
                 ]},
-                {"display_name": "BAHRAIN, Isa_Town", "country": "BAHRAIN", "city": "Isa_Town", "Lon": 50.05, "Lat": 26.17, "data": [
+                {"display_name": "BAHRAIN, Isa_Town", "country": "BAHRAIN", "city": "Isa_Town", "lon": 50.05, "lat": 26.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.71},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.71},
@@ -1569,7 +1569,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6.02},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6.02}
                 ]},
-                {"display_name": "BAHRAIN, Hidd", "country": "BAHRAIN", "city": "Hidd", "Lon": 50.7, "Lat": 26.23, "data": [
+                {"display_name": "BAHRAIN, Hidd", "country": "BAHRAIN", "city": "Hidd", "lon": 50.7, "lat": 26.23, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.15},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.1},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -1591,7 +1591,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.94},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.94}
                 ]},
-                {"display_name": "BANGLADESH, DACCA", "country": "BANGLADESH", "city": "DACCA", "Lon": 90.37, "Lat": 23.7, "data": [
+                {"display_name": "BANGLADESH, DACCA", "country": "BANGLADESH", "city": "DACCA", "lon": 90.37, "lat": 23.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.89},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.17},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.75},
@@ -1613,7 +1613,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.13},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.13}
                 ]},
-                {"display_name": "BANGLADESH, Chittagong", "country": "BANGLADESH", "city": "Chittagong", "Lon": 91.8, "Lat": 22.33, "data": [
+                {"display_name": "BANGLADESH, Chittagong", "country": "BANGLADESH", "city": "Chittagong", "lon": 91.8, "lat": 22.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.08},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.36},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.84},
@@ -1635,7 +1635,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.8},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.8}
                 ]},
-                {"display_name": "BANGLADESH, Khulna", "country": "BANGLADESH", "city": "Khulna", "Lon": 89.57, "Lat": 22.82, "data": [
+                {"display_name": "BANGLADESH, Khulna", "country": "BANGLADESH", "city": "Khulna", "lon": 89.57, "lat": 22.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.95},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.15},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.94},
@@ -1657,7 +1657,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.28},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.28}
                 ]},
-                {"display_name": "BANGLADESH, Narayanganj", "country": "BANGLADESH", "city": "Narayanganj", "Lon": 90.47, "Lat": 23.6, "data": [
+                {"display_name": "BANGLADESH, Narayanganj", "country": "BANGLADESH", "city": "Narayanganj", "lon": 90.47, "lat": 23.6, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.91},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.18},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.75},
@@ -1679,7 +1679,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.11},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.11}
                 ]},
-                {"display_name": "BANGLADESH, Rajshahi", "country": "BANGLADESH", "city": "Rajshahi", "Lon": 88.67, "Lat": 24.4, "data": [
+                {"display_name": "BANGLADESH, Rajshahi", "country": "BANGLADESH", "city": "Rajshahi", "lon": 88.67, "lat": 24.4, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.8},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.99},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.78},
@@ -1701,7 +1701,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.37},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.37}
                 ]},
-                {"display_name": "BANGLADESH, Mymensingh", "country": "BANGLADESH", "city": "Mymensingh", "Lon": 90.4, "Lat": 24.75, "data": [
+                {"display_name": "BANGLADESH, Mymensingh", "country": "BANGLADESH", "city": "Mymensingh", "lon": 90.4, "lat": 24.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.78},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.08},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.6},
@@ -1723,7 +1723,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.05},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.05}
                 ]},
-                {"display_name": "BANGLADESH, Comilla", "country": "BANGLADESH", "city": "Comilla", "Lon": 91.17, "Lat": 23.47, "data": [
+                {"display_name": "BANGLADESH, Comilla", "country": "BANGLADESH", "city": "Comilla", "lon": 91.17, "lat": 23.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.94},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.25},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.72},
@@ -1745,7 +1745,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.96},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.96}
                 ]},
-                {"display_name": "BANGLADESH, Barisal", "country": "BANGLADESH", "city": "Barisal", "Lon": 90.33, "Lat": 22.68, "data": [
+                {"display_name": "BANGLADESH, Barisal", "country": "BANGLADESH", "city": "Barisal", "lon": 90.33, "lat": 22.68, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.22},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.9},
@@ -1767,7 +1767,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.14},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.14}
                 ]},
-                {"display_name": "BANGLADESH, Sylhet", "country": "BANGLADESH", "city": "Sylhet", "Lon": 91.85, "Lat": 24.88, "data": [
+                {"display_name": "BANGLADESH, Sylhet", "country": "BANGLADESH", "city": "Sylhet", "lon": 91.85, "lat": 24.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.8},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.17},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.47},
@@ -1789,7 +1789,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.7},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.7}
                 ]},
-                {"display_name": "BANGLADESH, Rangpur", "country": "BANGLADESH", "city": "Rangpur", "Lon": 89.35, "Lat": 25.75, "data": [
+                {"display_name": "BANGLADESH, Rangpur", "country": "BANGLADESH", "city": "Rangpur", "lon": 89.35, "lat": 25.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.65},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.92},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.54},
@@ -1811,7 +1811,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.11},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.11}
                 ]},
-                {"display_name": "BANGLADESH, Jessore", "country": "BANGLADESH", "city": "Jessore", "Lon": 89.2, "Lat": 23.17, "data": [
+                {"display_name": "BANGLADESH, Jessore", "country": "BANGLADESH", "city": "Jessore", "lon": 89.2, "lat": 23.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.91},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.1},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.92},
@@ -1833,7 +1833,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.34},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.34}
                 ]},
-                {"display_name": "BANGLADESH, Saidpur", "country": "BANGLADESH", "city": "Saidpur", "Lon": 89, "Lat": 25.8, "data": [
+                {"display_name": "BANGLADESH, Saidpur", "country": "BANGLADESH", "city": "Saidpur", "lon": 89, "lat": 25.8, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.65},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.9},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.55},
@@ -1855,7 +1855,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.17},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.17}
                 ]},
-                {"display_name": "BELGIUM, BRUSSELS", "country": "BELGIUM", "city": "BRUSSELS", "Lon": 4.35, "Lat": 50.83, "data": [
+                {"display_name": "BELGIUM, BRUSSELS", "country": "BELGIUM", "city": "BRUSSELS", "lon": 4.35, "lat": 50.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.89},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -1877,7 +1877,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BELGIUM, Antwerp", "country": "BELGIUM", "city": "Antwerp", "Lon": 4.42, "Lat": 51.22, "data": [
+                {"display_name": "BELGIUM, Antwerp", "country": "BELGIUM", "city": "Antwerp", "lon": 4.42, "lat": 51.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.86},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -1899,7 +1899,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BELGIUM, Ghent", "country": "BELGIUM", "city": "Ghent", "Lon": 3.7, "Lat": 51.03, "data": [
+                {"display_name": "BELGIUM, Ghent", "country": "BELGIUM", "city": "Ghent", "lon": 3.7, "lat": 51.03, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.88},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -1921,7 +1921,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BELGIUM, Charleroi", "country": "BELGIUM", "city": "Charleroi", "Lon": 4.45, "Lat": 50.42, "data": [
+                {"display_name": "BELGIUM, Charleroi", "country": "BELGIUM", "city": "Charleroi", "lon": 4.45, "lat": 50.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.92},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.69},
@@ -1943,7 +1943,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BELGIUM, Liege", "country": "BELGIUM", "city": "Liege", "Lon": 5.58, "Lat": 50.63, "data": [
+                {"display_name": "BELGIUM, Liege", "country": "BELGIUM", "city": "Liege", "lon": 5.58, "lat": 50.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.9},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.69},
@@ -1965,7 +1965,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BELGIUM, Bruges", "country": "BELGIUM", "city": "Bruges", "Lon": 3.23, "Lat": 51.22, "data": [
+                {"display_name": "BELGIUM, Bruges", "country": "BELGIUM", "city": "Bruges", "lon": 3.23, "lat": 51.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.87},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -1987,7 +1987,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BELGIUM, Namur", "country": "BELGIUM", "city": "Namur", "Lon": 4.87, "Lat": 50.47, "data": [
+                {"display_name": "BELGIUM, Namur", "country": "BELGIUM", "city": "Namur", "lon": 4.87, "lat": 50.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.91},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.69},
@@ -2009,7 +2009,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BELGIUM, Mons", "country": "BELGIUM", "city": "Mons", "Lon": 3.97, "Lat": 50.47, "data": [
+                {"display_name": "BELGIUM, Mons", "country": "BELGIUM", "city": "Mons", "lon": 3.97, "lat": 50.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.92},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.69},
@@ -2031,7 +2031,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BELGIUM, Leuven", "country": "BELGIUM", "city": "Leuven", "Lon": 4.7, "Lat": 50.88, "data": [
+                {"display_name": "BELGIUM, Leuven", "country": "BELGIUM", "city": "Leuven", "lon": 4.7, "lat": 50.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.88},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -2053,7 +2053,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BELGIUM, Aalst", "country": "BELGIUM", "city": "Aalst", "Lon": 4.03, "Lat": 50.93, "data": [
+                {"display_name": "BELGIUM, Aalst", "country": "BELGIUM", "city": "Aalst", "lon": 4.03, "lat": 50.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.89},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -2075,7 +2075,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BELGIUM, Kortrijk", "country": "BELGIUM", "city": "Kortrijk", "Lon": 3.28, "Lat": 50.83, "data": [
+                {"display_name": "BELGIUM, Kortrijk", "country": "BELGIUM", "city": "Kortrijk", "lon": 3.28, "lat": 50.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.9},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -2097,7 +2097,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BELGIUM, Mechelen", "country": "BELGIUM", "city": "Mechelen", "Lon": 4.48, "Lat": 51.03, "data": [
+                {"display_name": "BELGIUM, Mechelen", "country": "BELGIUM", "city": "Mechelen", "lon": 4.48, "lat": 51.03, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.87},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -2119,7 +2119,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BELGIUM, Oostende", "country": "BELGIUM", "city": "Oostende", "Lon": 2.92, "Lat": 51.22, "data": [
+                {"display_name": "BELGIUM, Oostende", "country": "BELGIUM", "city": "Oostende", "lon": 2.92, "lat": 51.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.87},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -2141,7 +2141,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BENIN, Cotonou", "country": "BENIN", "city": "Cotonou", "Lon": 2.52, "Lat": 6.4, "data": [
+                {"display_name": "BENIN, Cotonou", "country": "BENIN", "city": "Cotonou", "lon": 2.52, "lat": 6.4, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.91},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.54},
@@ -2163,7 +2163,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BENIN, PORTO_NOVO", "country": "BENIN", "city": "PORTO_NOVO", "Lon": 2.78, "Lat": 6.5, "data": [
+                {"display_name": "BENIN, PORTO_NOVO", "country": "BENIN", "city": "PORTO_NOVO", "lon": 2.78, "lat": 6.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.44},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.93},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.55},
@@ -2185,7 +2185,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BENIN, Parakou", "country": "BENIN", "city": "Parakou", "Lon": 2.67, "Lat": 9.38, "data": [
+                {"display_name": "BENIN, Parakou", "country": "BENIN", "city": "Parakou", "lon": 2.67, "lat": 9.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.54},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.56},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.61},
@@ -2207,7 +2207,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BENIN, Natitingou", "country": "BENIN", "city": "Natitingou", "Lon": 1.48, "Lat": 10.28, "data": [
+                {"display_name": "BENIN, Natitingou", "country": "BENIN", "city": "Natitingou", "lon": 1.48, "lat": 10.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.61},
@@ -2229,7 +2229,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BENIN, Abomey", "country": "BENIN", "city": "Abomey", "Lon": 2, "Lat": 7.23, "data": [
+                {"display_name": "BENIN, Abomey", "country": "BENIN", "city": "Abomey", "lon": 2, "lat": 7.23, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.3},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.24},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.55},
@@ -2251,7 +2251,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BHUTAN, THIMPHU", "country": "BHUTAN", "city": "THIMPHU", "Lon": 89.75, "Lat": 27.53, "data": [
+                {"display_name": "BHUTAN, THIMPHU", "country": "BHUTAN", "city": "THIMPHU", "lon": 89.75, "lat": 27.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.39},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.75},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.27},
@@ -2273,7 +2273,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.62},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.62}
                 ]},
-                {"display_name": "BHUTAN, Taga_Dzong", "country": "BHUTAN", "city": "Taga_Dzong", "Lon": 89.92, "Lat": 27.08, "data": [
+                {"display_name": "BHUTAN, Taga_Dzong", "country": "BHUTAN", "city": "Taga_Dzong", "lon": 89.92, "lat": 27.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.46},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.81},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.32},
@@ -2295,7 +2295,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.7},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.7}
                 ]},
-                {"display_name": "BHUTAN, Phuntsholing", "country": "BHUTAN", "city": "Phuntsholing", "Lon": 89.38, "Lat": 26.88, "data": [
+                {"display_name": "BHUTAN, Phuntsholing", "country": "BHUTAN", "city": "Phuntsholing", "lon": 89.38, "lat": 26.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.81},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.37},
@@ -2317,7 +2317,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.87},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.87}
                 ]},
-                {"display_name": "BHUTAN, Punakha", "country": "BHUTAN", "city": "Punakha", "Lon": 89.83, "Lat": 27.63, "data": [
+                {"display_name": "BHUTAN, Punakha", "country": "BHUTAN", "city": "Punakha", "lon": 89.83, "lat": 27.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.38},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.25},
@@ -2339,7 +2339,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.58},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.58}
                 ]},
-                {"display_name": "BHUTAN, Bumthang", "country": "BHUTAN", "city": "Bumthang", "Lon": 90.88, "Lat": 26.92, "data": [
+                {"display_name": "BHUTAN, Bumthang", "country": "BHUTAN", "city": "Bumthang", "lon": 90.88, "lat": 26.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.47},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.87},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.29},
@@ -2361,7 +2361,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.51},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.51}
                 ]},
-                {"display_name": "BHUTAN, Paro", "country": "BHUTAN", "city": "Paro", "Lon": 89.52, "Lat": 27.38, "data": [
+                {"display_name": "BHUTAN, Paro", "country": "BHUTAN", "city": "Paro", "lon": 89.52, "lat": 27.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.42},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.76},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.3},
@@ -2383,7 +2383,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.71},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.71}
                 ]},
-                {"display_name": "BHUTAN, Tongsa_Dzong", "country": "BHUTAN", "city": "Tongsa_Dzong", "Lon": 90.5, "Lat": 27.55, "data": [
+                {"display_name": "BHUTAN, Tongsa_Dzong", "country": "BHUTAN", "city": "Tongsa_Dzong", "lon": 90.5, "lat": 27.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.37},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.77},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.23},
@@ -2405,7 +2405,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.44},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.44}
                 ]},
-                {"display_name": "BOTSWANA, GABORONE", "country": "BOTSWANA", "city": "GABORONE", "Lon": 25.92, "Lat": -24.75, "data": [
+                {"display_name": "BOTSWANA, GABORONE", "country": "BOTSWANA", "city": "GABORONE", "lon": 25.92, "lat": -24.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.69},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.36},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.99},
@@ -2427,7 +2427,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BOTSWANA, Mahalapye", "country": "BOTSWANA", "city": "Mahalapye", "Lon": 26.85, "Lat": -23.08, "data": [
+                {"display_name": "BOTSWANA, Mahalapye", "country": "BOTSWANA", "city": "Mahalapye", "lon": 26.85, "lat": -23.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.39},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.03},
@@ -2449,7 +2449,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BOTSWANA, Serowe", "country": "BOTSWANA", "city": "Serowe", "Lon": 26.73, "Lat": -22.42, "data": [
+                {"display_name": "BOTSWANA, Serowe", "country": "BOTSWANA", "city": "Serowe", "lon": 26.73, "lat": -22.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.34},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.02},
@@ -2471,7 +2471,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BOTSWANA, Tutume", "country": "BOTSWANA", "city": "Tutume", "Lon": 27.03, "Lat": -20.43, "data": [
+                {"display_name": "BOTSWANA, Tutume", "country": "BOTSWANA", "city": "Tutume", "lon": 27.03, "lat": -20.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.21},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.83},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.98},
@@ -2493,7 +2493,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BOTSWANA, Bobonong", "country": "BOTSWANA", "city": "Bobonong", "Lon": 28.43, "Lat": -21.97, "data": [
+                {"display_name": "BOTSWANA, Bobonong", "country": "BOTSWANA", "city": "Bobonong", "lon": 28.43, "lat": -21.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.68},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.07},
@@ -2515,7 +2515,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BOTSWANA, Francistown", "country": "BOTSWANA", "city": "Francistown", "Lon": 27.53, "Lat": -21.12, "data": [
+                {"display_name": "BOTSWANA, Francistown", "country": "BOTSWANA", "city": "Francistown", "lon": 27.53, "lat": -21.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.78},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.03},
@@ -2537,7 +2537,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BOTSWANA, Selebi-Phikwe", "country": "BOTSWANA", "city": "Selebi-Phikwe", "Lon": 27.8, "Lat": -21.97, "data": [
+                {"display_name": "BOTSWANA, Selebi-Phikwe", "country": "BOTSWANA", "city": "Selebi-Phikwe", "lon": 27.8, "lat": -21.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.69},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.79},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.05},
@@ -2559,7 +2559,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BOTSWANA, Lobatse", "country": "BOTSWANA", "city": "Lobatse", "Lon": 25.67, "Lat": -25.18, "data": [
+                {"display_name": "BOTSWANA, Lobatse", "country": "BOTSWANA", "city": "Lobatse", "lon": 25.67, "lat": -25.18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.57},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.62},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.97},
@@ -2581,7 +2581,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BOTSWANA, Molepolole", "country": "BOTSWANA", "city": "Molepolole", "Lon": 25.5, "Lat": -24.42, "data": [
+                {"display_name": "BOTSWANA, Molepolole", "country": "BOTSWANA", "city": "Molepolole", "lon": 25.5, "lat": -24.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.76},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.41},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.98},
@@ -2603,7 +2603,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BOTSWANA, Kanye", "country": "BOTSWANA", "city": "Kanye", "Lon": 25.32, "Lat": -24.98, "data": [
+                {"display_name": "BOTSWANA, Kanye", "country": "BOTSWANA", "city": "Kanye", "lon": 25.32, "lat": -24.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.6},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.96},
@@ -2625,7 +2625,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BOTSWANA, Mochudi", "country": "BOTSWANA", "city": "Mochudi", "Lon": 26.08, "Lat": -24.47, "data": [
+                {"display_name": "BOTSWANA, Mochudi", "country": "BOTSWANA", "city": "Mochudi", "lon": 26.08, "lat": -24.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.78},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.19},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37},
@@ -2647,7 +2647,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BOTSWANA, Maun", "country": "BOTSWANA", "city": "Maun", "Lon": 23.42, "Lat": -20, "data": [
+                {"display_name": "BOTSWANA, Maun", "country": "BOTSWANA", "city": "Maun", "lon": 23.42, "lat": -20, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.31},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.78},
@@ -2669,7 +2669,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BOTSWANA, Ramotswa", "country": "BOTSWANA", "city": "Ramotswa", "Lon": 25.83, "Lat": -24.93, "data": [
+                {"display_name": "BOTSWANA, Ramotswa", "country": "BOTSWANA", "city": "Ramotswa", "lon": 25.83, "lat": -24.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.64},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.47},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.98},
@@ -2691,7 +2691,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BRUNEI, BANDAR_SERI_BEGAWAN", "country": "BRUNEI", "city": "BANDAR_SERI_BEGAWAN", "Lon": 114.97, "Lat": 4.93, "data": [
+                {"display_name": "BRUNEI, BANDAR_SERI_BEGAWAN", "country": "BRUNEI", "city": "BANDAR_SERI_BEGAWAN", "lon": 114.97, "lat": 4.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 35.54},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.33},
@@ -2713,7 +2713,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.09},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.09}
                 ]},
-                {"display_name": "BRUNEI, Seria", "country": "BRUNEI", "city": "Seria", "Lon": 114.38, "Lat": 4.65, "data": [
+                {"display_name": "BRUNEI, Seria", "country": "BRUNEI", "city": "Seria", "lon": 114.38, "lat": 4.65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 35.86},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.75},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.33},
@@ -2735,7 +2735,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.19},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.19}
                 ]},
-                {"display_name": "BRUNEI, Kuala_Belait", "country": "BRUNEI", "city": "Kuala_Belait", "Lon": 114.2, "Lat": 4.63, "data": [
+                {"display_name": "BRUNEI, Kuala_Belait", "country": "BRUNEI", "city": "Kuala_Belait", "lon": 114.2, "lat": 4.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 35.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.82},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.33},
@@ -2757,7 +2757,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.2},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.2}
                 ]},
-                {"display_name": "BULGARIA, SOFIA", "country": "BULGARIA", "city": "SOFIA", "Lon": 23.3, "Lat": 42.67, "data": [
+                {"display_name": "BULGARIA, SOFIA", "country": "BULGARIA", "city": "SOFIA", "lon": 23.3, "lat": 42.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.59},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.09},
@@ -2779,7 +2779,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BULGARIA, Plovdiv", "country": "BULGARIA", "city": "Plovdiv", "Lon": 24.75, "Lat": 42.13, "data": [
+                {"display_name": "BULGARIA, Plovdiv", "country": "BULGARIA", "city": "Plovdiv", "lon": 24.75, "lat": 42.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.56},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.13},
@@ -2801,7 +2801,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BULGARIA, Varna", "country": "BULGARIA", "city": "Varna", "Lon": 27.95, "Lat": 43.2, "data": [
+                {"display_name": "BULGARIA, Varna", "country": "BULGARIA", "city": "Varna", "lon": 27.95, "lat": 43.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.18},
@@ -2823,7 +2823,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BULGARIA, Burgas", "country": "BULGARIA", "city": "Burgas", "Lon": 27.48, "Lat": 42.5, "data": [
+                {"display_name": "BULGARIA, Burgas", "country": "BULGARIA", "city": "Burgas", "lon": 27.48, "lat": 42.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.19},
@@ -2845,7 +2845,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BULGARIA, Ruse", "country": "BULGARIA", "city": "Ruse", "Lon": 27.98, "Lat": 43.83, "data": [
+                {"display_name": "BULGARIA, Ruse", "country": "BULGARIA", "city": "Ruse", "lon": 27.98, "lat": 43.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.22},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.16},
@@ -2867,7 +2867,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BULGARIA, Stara_Zagora", "country": "BULGARIA", "city": "Stara_Zagora", "Lon": 25.62, "Lat": 42.42, "data": [
+                {"display_name": "BULGARIA, Stara_Zagora", "country": "BULGARIA", "city": "Stara_Zagora", "lon": 25.62, "lat": 42.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.59},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.15},
@@ -2889,7 +2889,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BULGARIA, Pleven", "country": "BULGARIA", "city": "Pleven", "Lon": 24.67, "Lat": 43.42, "data": [
+                {"display_name": "BULGARIA, Pleven", "country": "BULGARIA", "city": "Pleven", "lon": 24.67, "lat": 43.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.25},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.1},
@@ -2911,7 +2911,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BULGARIA, Tolbukhin", "country": "BULGARIA", "city": "Tolbukhin", "Lon": 27.85, "Lat": 43.57, "data": [
+                {"display_name": "BULGARIA, Tolbukhin", "country": "BULGARIA", "city": "Tolbukhin", "lon": 27.85, "lat": 43.57, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.17},
@@ -2933,7 +2933,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BULGARIA, Sliven", "country": "BULGARIA", "city": "Sliven", "Lon": 26.32, "Lat": 42.67, "data": [
+                {"display_name": "BULGARIA, Sliven", "country": "BULGARIA", "city": "Sliven", "lon": 26.32, "lat": 42.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.25},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.16},
@@ -2955,7 +2955,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BULGARIA, Shumen", "country": "BULGARIA", "city": "Shumen", "Lon": 26.92, "Lat": 43.28, "data": [
+                {"display_name": "BULGARIA, Shumen", "country": "BULGARIA", "city": "Shumen", "lon": 26.92, "lat": 43.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.16},
@@ -2977,7 +2977,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BULGARIA, Pernik", "country": "BULGARIA", "city": "Pernik", "Lon": 23.05, "Lat": 42.6, "data": [
+                {"display_name": "BULGARIA, Pernik", "country": "BULGARIA", "city": "Pernik", "lon": 23.05, "lat": 42.6, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.59},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.08},
@@ -2999,7 +2999,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BURKINA_FASO, OUAGADOUGOU", "country": "BURKINA_FASO", "city": "OUAGADOUGOU", "Lon": -1.67, "Lat": 12.33, "data": [
+                {"display_name": "BURKINA_FASO, OUAGADOUGOU", "country": "BURKINA_FASO", "city": "OUAGADOUGOU", "lon": -1.67, "lat": 12.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.69},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.97},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.59},
@@ -3021,7 +3021,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BURKINA_FASO, Koudougou", "country": "BURKINA_FASO", "city": "Koudougou", "Lon": -2.38, "Lat": 12.25, "data": [
+                {"display_name": "BURKINA_FASO, Koudougou", "country": "BURKINA_FASO", "city": "Koudougou", "lon": -2.38, "lat": 12.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.73},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.87},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.59},
@@ -3043,7 +3043,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BURKINA_FASO, Ouahigouya", "country": "BURKINA_FASO", "city": "Ouahigouya", "Lon": -2.33, "Lat": 13.52, "data": [
+                {"display_name": "BURKINA_FASO, Ouahigouya", "country": "BURKINA_FASO", "city": "Ouahigouya", "lon": -2.33, "lat": 13.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.36},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 16.04},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.59},
@@ -3065,7 +3065,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BURKINA_FASO, Kaya", "country": "BURKINA_FASO", "city": "Kaya", "Lon": -1.15, "Lat": 13.07, "data": [
+                {"display_name": "BURKINA_FASO, Kaya", "country": "BURKINA_FASO", "city": "Kaya", "lon": -1.15, "lat": 13.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 15.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.59},
@@ -3087,7 +3087,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BURKINA_FASO, Fada_N'Gourma", "country": "BURKINA_FASO", "city": "Fada_N'Gourma", "Lon": 0.43, "Lat": 12.07, "data": [
+                {"display_name": "BURKINA_FASO, Fada_N'Gourma", "country": "BURKINA_FASO", "city": "Fada_N'Gourma", "lon": 0.43, "lat": 12.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.69},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.83},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.61},
@@ -3109,7 +3109,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BURKINA_FASO, Tenkodogo", "country": "BURKINA_FASO", "city": "Tenkodogo", "Lon": -0.37, "Lat": 11.9, "data": [
+                {"display_name": "BURKINA_FASO, Tenkodogo", "country": "BURKINA_FASO", "city": "Tenkodogo", "lon": -0.37, "lat": 11.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.79},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.6},
@@ -3131,7 +3131,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BURUNDI, BUJUMBURA", "country": "BURUNDI", "city": "BUJUMBURA", "Lon": 29.32, "Lat": -3.37, "data": [
+                {"display_name": "BURUNDI, BUJUMBURA", "country": "BURUNDI", "city": "BUJUMBURA", "lon": 29.32, "lat": -3.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.6},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.43},
@@ -3153,7 +3153,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BURUNDI, Gitega", "country": "BURUNDI", "city": "Gitega", "Lon": 29.93, "Lat": -3.4, "data": [
+                {"display_name": "BURUNDI, Gitega", "country": "BURUNDI", "city": "Gitega", "lon": 29.93, "lat": -3.4, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.92},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.47},
@@ -3175,7 +3175,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BURUNDI, Bururi", "country": "BURUNDI", "city": "Bururi", "Lon": 29.58, "Lat": -3.95, "data": [
+                {"display_name": "BURUNDI, Bururi", "country": "BURUNDI", "city": "Bururi", "lon": 29.58, "lat": -3.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.65},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.35},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.43},
@@ -3197,7 +3197,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BURUNDI, Rumonge", "country": "BURUNDI", "city": "Rumonge", "Lon": 29.43, "Lat": -3.97, "data": [
+                {"display_name": "BURUNDI, Rumonge", "country": "BURUNDI", "city": "Rumonge", "lon": 29.43, "lat": -3.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.74},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.23},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.42},
@@ -3219,7 +3219,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "BURUNDI, Ngozi", "country": "BURUNDI", "city": "Ngozi", "Lon": 29.8, "Lat": -2.9, "data": [
+                {"display_name": "BURUNDI, Ngozi", "country": "BURUNDI", "city": "Ngozi", "lon": 29.8, "lat": -2.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.11},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.48},
@@ -3241,7 +3241,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CAMBODIA, PHNOM_PENH", "country": "CAMBODIA", "city": "PHNOM_PENH", "Lon": 104.92, "Lat": 11.58, "data": [
+                {"display_name": "CAMBODIA, PHNOM_PENH", "country": "CAMBODIA", "city": "PHNOM_PENH", "lon": 104.92, "lat": 11.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.35},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -3263,7 +3263,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.69},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.69}
                 ]},
-                {"display_name": "CAMBODIA, Kompong_Cham", "country": "CAMBODIA", "city": "Kompong_Cham", "Lon": 104.65, "Lat": 12.27, "data": [
+                {"display_name": "CAMBODIA, Kompong_Cham", "country": "CAMBODIA", "city": "Kompong_Cham", "lon": 104.65, "lat": 12.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.37},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -3285,7 +3285,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.72},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.72}
                 ]},
-                {"display_name": "CAMBODIA, Battambang", "country": "CAMBODIA", "city": "Battambang", "Lon": 103.2, "Lat": 13.1, "data": [
+                {"display_name": "CAMBODIA, Battambang", "country": "CAMBODIA", "city": "Battambang", "lon": 103.2, "lat": 13.1, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.34},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.46},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.54},
@@ -3307,7 +3307,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.2},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.2}
                 ]},
-                {"display_name": "CAMBODIA, Pursat", "country": "CAMBODIA", "city": "Pursat", "Lon": 103.92, "Lat": 12.53, "data": [
+                {"display_name": "CAMBODIA, Pursat", "country": "CAMBODIA", "city": "Pursat", "lon": 103.92, "lat": 12.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.42},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.48},
@@ -3329,7 +3329,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.92},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.92}
                 ]},
-                {"display_name": "CAMBODIA, Siem_Reap", "country": "CAMBODIA", "city": "Siem_Reap", "Lon": 103.85, "Lat": 13.37, "data": [
+                {"display_name": "CAMBODIA, Siem_Reap", "country": "CAMBODIA", "city": "Siem_Reap", "lon": 103.85, "lat": 13.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.25},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.42},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.45},
@@ -3351,7 +3351,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.06},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.06}
                 ]},
-                {"display_name": "CAMBODIA, Kompong_Chhang", "country": "CAMBODIA", "city": "Kompong_Chhang", "Lon": 104.67, "Lat": 12.25, "data": [
+                {"display_name": "CAMBODIA, Kompong_Chhang", "country": "CAMBODIA", "city": "Kompong_Chhang", "lon": 104.67, "lat": 12.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.37},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -3373,7 +3373,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.71},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.71}
                 ]},
-                {"display_name": "CAMBODIA, Kampot", "country": "CAMBODIA", "city": "Kampot", "Lon": 104.18, "Lat": 10.62, "data": [
+                {"display_name": "CAMBODIA, Kampot", "country": "CAMBODIA", "city": "Kampot", "lon": 104.18, "lat": 10.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.41},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.49},
@@ -3395,7 +3395,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.94},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.94}
                 ]},
-                {"display_name": "CAMBODIA, Kratie", "country": "CAMBODIA", "city": "Kratie", "Lon": 106.02, "Lat": 12.48, "data": [
+                {"display_name": "CAMBODIA, Kratie", "country": "CAMBODIA", "city": "Kratie", "lon": 106.02, "lat": 12.48, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.9},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.23},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.26},
@@ -3417,7 +3417,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.45},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.45}
                 ]},
-                {"display_name": "CAMBODIA, Svay_Rieng", "country": "CAMBODIA", "city": "Svay_Rieng", "Lon": 103.2, "Lat": 13.1, "data": [
+                {"display_name": "CAMBODIA, Svay_Rieng", "country": "CAMBODIA", "city": "Svay_Rieng", "lon": 103.2, "lat": 13.1, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.34},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.46},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.54},
@@ -3439,7 +3439,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.2},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.2}
                 ]},
-                {"display_name": "CAMEROON, Douala", "country": "CAMEROON", "city": "Douala", "Lon": 9.72, "Lat": 4.07, "data": [
+                {"display_name": "CAMEROON, Douala", "country": "CAMEROON", "city": "Douala", "lon": 9.72, "lat": 4.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.44},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.15},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -3461,7 +3461,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CAMEROON, YAOUNDE", "country": "CAMEROON", "city": "YAOUNDE", "Lon": 11.52, "Lat": 3.85, "data": [
+                {"display_name": "CAMEROON, YAOUNDE", "country": "CAMEROON", "city": "YAOUNDE", "lon": 11.52, "lat": 3.85, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.64},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -3483,7 +3483,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CAMEROON, Nkongsamba", "country": "CAMEROON", "city": "Nkongsamba", "Lon": 9.88, "Lat": 4.98, "data": [
+                {"display_name": "CAMEROON, Nkongsamba", "country": "CAMEROON", "city": "Nkongsamba", "lon": 9.88, "lat": 4.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.21},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.48},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.74},
@@ -3505,7 +3505,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CAMEROON, Maroua", "country": "CAMEROON", "city": "Maroua", "Lon": 14.33, "Lat": 10.58, "data": [
+                {"display_name": "CAMEROON, Maroua", "country": "CAMEROON", "city": "Maroua", "lon": 14.33, "lat": 10.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.4},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 15.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.11},
@@ -3527,7 +3527,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CAMEROON, Garoua", "country": "CAMEROON", "city": "Garoua", "Lon": 13.37, "Lat": 9.28, "data": [
+                {"display_name": "CAMEROON, Garoua", "country": "CAMEROON", "city": "Garoua", "lon": 13.37, "lat": 9.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.41},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.03},
@@ -3549,7 +3549,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CAMEROON, Bafoussam", "country": "CAMEROON", "city": "Bafoussam", "Lon": 10.42, "Lat": 5.52, "data": [
+                {"display_name": "CAMEROON, Bafoussam", "country": "CAMEROON", "city": "Bafoussam", "lon": 10.42, "lat": 5.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.98},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.79},
@@ -3571,7 +3571,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CAMEROON, Kumba", "country": "CAMEROON", "city": "Kumba", "Lon": 9.43, "Lat": 4.65, "data": [
+                {"display_name": "CAMEROON, Kumba", "country": "CAMEROON", "city": "Kumba", "lon": 9.43, "lat": 4.65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.35},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.41},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -3593,7 +3593,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CAMEROON, Bamenda", "country": "CAMEROON", "city": "Bamenda", "Lon": 10.15, "Lat": 5.92, "data": [
+                {"display_name": "CAMEROON, Bamenda", "country": "CAMEROON", "city": "Bamenda", "lon": 10.15, "lat": 5.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.89},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.03},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.79},
@@ -3615,7 +3615,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CAMEROON, Foumban", "country": "CAMEROON", "city": "Foumban", "Lon": 10.92, "Lat": 5.72, "data": [
+                {"display_name": "CAMEROON, Foumban", "country": "CAMEROON", "city": "Foumban", "lon": 10.92, "lat": 5.72, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.83},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.85},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.82},
@@ -3637,7 +3637,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CAMEROON, Limbe", "country": "CAMEROON", "city": "Limbe", "Lon": 9.17, "Lat": 4.02, "data": [
+                {"display_name": "CAMEROON, Limbe", "country": "CAMEROON", "city": "Limbe", "lon": 9.17, "lat": 4.02, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.66},
@@ -3659,7 +3659,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CENTRAL_AFRICAN_REP., BANGUI", "country": "CENTRAL_AFRICAN_REP.", "city": "BANGUI", "Lon": 18.62, "Lat": 4.38, "data": [
+                {"display_name": "CENTRAL_AFRICAN_REP., BANGUI", "country": "CENTRAL_AFRICAN_REP.", "city": "BANGUI", "lon": 18.62, "lat": 4.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.17},
@@ -3681,7 +3681,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CENTRAL_AFRICAN_REP., Berber", "country": "CENTRAL_AFRICAN_REP.", "city": "Berber", "Lon": 15.25, "Lat": 4.32, "data": [
+                {"display_name": "CENTRAL_AFRICAN_REP., Berber", "country": "CENTRAL_AFRICAN_REP.", "city": "Berber", "lon": 15.25, "lat": 4.32, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.4},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.97},
@@ -3703,7 +3703,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CENTRAL_AFRICAN_REP., Bouar", "country": "CENTRAL_AFRICAN_REP.", "city": "Bouar", "Lon": 15.58, "Lat": 5.97, "data": [
+                {"display_name": "CENTRAL_AFRICAN_REP., Bouar", "country": "CENTRAL_AFRICAN_REP.", "city": "Bouar", "lon": 15.58, "lat": 5.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.08},
@@ -3725,7 +3725,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CENTRAL_AFRICAN_REP., Bambar", "country": "CENTRAL_AFRICAN_REP.", "city": "Bambar", "Lon": 20.62, "Lat": 5.67, "data": [
+                {"display_name": "CENTRAL_AFRICAN_REP., Bambar", "country": "CENTRAL_AFRICAN_REP.", "city": "Bambar", "lon": 20.62, "lat": 5.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.2},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.35},
@@ -3747,7 +3747,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CENTRAL_AFRICAN_REP., Bangas", "country": "CENTRAL_AFRICAN_REP.", "city": "Bangas", "Lon": 22.8, "Lat": 4.68, "data": [
+                {"display_name": "CENTRAL_AFRICAN_REP., Bangas", "country": "CENTRAL_AFRICAN_REP.", "city": "Bangas", "lon": 22.8, "lat": 4.68, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.26},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.44},
@@ -3769,7 +3769,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CENTRAL_AFRICAN_REP., Mbaiki", "country": "CENTRAL_AFRICAN_REP.", "city": "Mbaiki", "Lon": 18.02, "Lat": 3.88, "data": [
+                {"display_name": "CENTRAL_AFRICAN_REP., Mbaiki", "country": "CENTRAL_AFRICAN_REP.", "city": "Mbaiki", "lon": 18.02, "lat": 3.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.69},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.84},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.11},
@@ -3791,7 +3791,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CHAD, N'DJAMENA", "country": "CHAD", "city": "N'DJAMENA", "Lon": 14.98, "Lat": 12.17, "data": [
+                {"display_name": "CHAD, N'DJAMENA", "country": "CHAD", "city": "N'DJAMENA", "lon": 14.98, "lat": 12.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.89},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 16.9},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.15},
@@ -3813,7 +3813,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CHAD, Sarh", "country": "CHAD", "city": "Sarh", "Lon": 18.37, "Lat": 9.13, "data": [
+                {"display_name": "CHAD, Sarh", "country": "CHAD", "city": "Sarh", "lon": 18.37, "lat": 9.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.89},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.32},
@@ -3835,7 +3835,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CHAD, Moundou", "country": "CHAD", "city": "Moundou", "Lon": 16.02, "Lat": 8.88, "data": [
+                {"display_name": "CHAD, Moundou", "country": "CHAD", "city": "Moundou", "lon": 16.02, "lat": 8.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.99},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.17},
@@ -3857,7 +3857,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CHAD, Abeche", "country": "CHAD", "city": "Abeche", "Lon": 20.82, "Lat": 13.82, "data": [
+                {"display_name": "CHAD, Abeche", "country": "CHAD", "city": "Abeche", "lon": 20.82, "lat": 13.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.86},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 19.13},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.47},
@@ -3879,7 +3879,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CHAD, Bongor", "country": "CHAD", "city": "Bongor", "Lon": 15.33, "Lat": 10.3, "data": [
+                {"display_name": "CHAD, Bongor", "country": "CHAD", "city": "Bongor", "lon": 15.33, "lat": 10.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 15.23},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.16},
@@ -3901,7 +3901,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CHAD, Doba", "country": "CHAD", "city": "Doba", "Lon": 16.83, "Lat": 8.67, "data": [
+                {"display_name": "CHAD, Doba", "country": "CHAD", "city": "Doba", "lon": 16.83, "lat": 8.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.01},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.22},
@@ -3923,7 +3923,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CHAD, Lai", "country": "CHAD", "city": "Lai", "Lon": 16.23, "Lat": 9.37, "data": [
+                {"display_name": "CHAD, Lai", "country": "CHAD", "city": "Lai", "lon": 16.23, "lat": 9.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.55},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.2},
@@ -3945,7 +3945,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CHAD, Koumra", "country": "CHAD", "city": "Koumra", "Lon": 17.53, "Lat": 8.93, "data": [
+                {"display_name": "CHAD, Koumra", "country": "CHAD", "city": "Koumra", "lon": 17.53, "lat": 8.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.47},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.27},
@@ -3967,7 +3967,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CHAD, Kelo", "country": "CHAD", "city": "Kelo", "Lon": 15.83, "Lat": 9.35, "data": [
+                {"display_name": "CHAD, Kelo", "country": "CHAD", "city": "Kelo", "lon": 15.83, "lat": 9.35, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.32},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.42},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.17},
@@ -3989,7 +3989,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CHINA, Shanghai", "country": "CHINA", "city": "Shanghai", "Lon": 121.37, "Lat": 31.1, "data": [
+                {"display_name": "CHINA, Shanghai", "country": "CHINA", "city": "Shanghai", "lon": 121.37, "lat": 31.1, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 31.55},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 32.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.43},
@@ -4011,7 +4011,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.09},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.09}
                 ]},
-                {"display_name": "CHINA, BEIJING", "country": "CHINA", "city": "BEIJING", "Lon": 116.43, "Lat": 39.92, "data": [
+                {"display_name": "CHINA, BEIJING", "country": "CHINA", "city": "BEIJING", "lon": 116.43, "lat": 39.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.96},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.6},
@@ -4033,7 +4033,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.73},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.73}
                 ]},
-                {"display_name": "CHINA, Tianjin", "country": "CHINA", "city": "Tianjin", "Lon": 117.2, "Lat": 39.13, "data": [
+                {"display_name": "CHINA, Tianjin", "country": "CHINA", "city": "Tianjin", "lon": 117.2, "lat": 39.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.46},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.17},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.63},
@@ -4055,7 +4055,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.65},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.65}
                 ]},
-                {"display_name": "CHINA, Shenyang", "country": "CHINA", "city": "Shenyang", "Lon": 123.43, "Lat": 41.83, "data": [
+                {"display_name": "CHINA, Shenyang", "country": "CHINA", "city": "Shenyang", "lon": 123.43, "lat": 41.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.59},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.36},
@@ -4077,7 +4077,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -0.98},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -0.98}
                 ]},
-                {"display_name": "CHINA, Wuhan", "country": "CHINA", "city": "Wuhan", "Lon": 114.25, "Lat": 36.75, "data": [
+                {"display_name": "CHINA, Wuhan", "country": "CHINA", "city": "Wuhan", "lon": 114.25, "lat": 36.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.23},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.67},
@@ -4099,7 +4099,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.28},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.28}
                 ]},
-                {"display_name": "CHINA, Guangzhou", "country": "CHINA", "city": "Guangzhou", "Lon": 113.33, "Lat": 23.13, "data": [
+                {"display_name": "CHINA, Guangzhou", "country": "CHINA", "city": "Guangzhou", "lon": 113.33, "lat": 23.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 36.79},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.93},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.78},
@@ -4121,7 +4121,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.74},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.74}
                 ]},
-                {"display_name": "CHINA, Harbin", "country": "CHINA", "city": "Harbin", "Lon": 126.68, "Lat": 45.75, "data": [
+                {"display_name": "CHINA, Harbin", "country": "CHINA", "city": "Harbin", "lon": 126.68, "lat": 45.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 20.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.59},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.99},
@@ -4143,7 +4143,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.67},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.67}
                 ]},
-                {"display_name": "CHINA, Chongqing", "country": "CHINA", "city": "Chongqing", "Lon": 106.58, "Lat": 29.5, "data": [
+                {"display_name": "CHINA, Chongqing", "country": "CHINA", "city": "Chongqing", "lon": 106.58, "lat": 29.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 37.57},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 37.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.94},
@@ -4165,7 +4165,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -0.87},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -0.87}
                 ]},
-                {"display_name": "CHINA, Nanjing", "country": "CHINA", "city": "Nanjing", "Lon": 118.78, "Lat": 32.05, "data": [
+                {"display_name": "CHINA, Nanjing", "country": "CHINA", "city": "Nanjing", "lon": 118.78, "lat": 32.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.58},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.47},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.57},
@@ -4187,7 +4187,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.01},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.01}
                 ]},
-                {"display_name": "CHINA, Xi'an", "country": "CHINA", "city": "Xi'an", "Lon": 108.9, "Lat": 34.27, "data": [
+                {"display_name": "CHINA, Xi'an", "country": "CHINA", "city": "Xi'an", "lon": 108.9, "lat": 34.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 35.01},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 35.62},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.42},
@@ -4209,7 +4209,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.56},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.56}
                 ]},
-                {"display_name": "CHINA, Dalian", "country": "CHINA", "city": "Dalian", "Lon": 121.58, "Lat": 38.88, "data": [
+                {"display_name": "CHINA, Dalian", "country": "CHINA", "city": "Dalian", "lon": 121.58, "lat": 38.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.01},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.9},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.54},
@@ -4231,7 +4231,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.25},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.25}
                 ]},
-                {"display_name": "CHINA, Chengdu", "country": "CHINA", "city": "Chengdu", "Lon": 104.1, "Lat": 30.62, "data": [
+                {"display_name": "CHINA, Chengdu", "country": "CHINA", "city": "Chengdu", "lon": 104.1, "lat": 30.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 37.63},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 37.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.79},
@@ -4253,7 +4253,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -0.34},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -0.34}
                 ]},
-                {"display_name": "CHINA, Changchun", "country": "CHINA", "city": "Changchun", "Lon": 125.32, "Lat": 43.88, "data": [
+                {"display_name": "CHINA, Changchun", "country": "CHINA", "city": "Changchun", "lon": 125.32, "lat": 43.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 22.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.55},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.17},
@@ -4275,7 +4275,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.16},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.16}
                 ]},
-                {"display_name": "CHINA, Taiyuan", "country": "CHINA", "city": "Taiyuan", "Lon": 112.5, "Lat": 37.92, "data": [
+                {"display_name": "CHINA, Taiyuan", "country": "CHINA", "city": "Taiyuan", "lon": 112.5, "lat": 37.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 31.87},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.14},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.62},
@@ -4297,7 +4297,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.11},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.11}
                 ]},
-                {"display_name": "CHINA, Jinan", "country": "CHINA", "city": "Jinan", "Lon": 116.95, "Lat": 36.67, "data": [
+                {"display_name": "CHINA, Jinan", "country": "CHINA", "city": "Jinan", "lon": 116.95, "lat": 36.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 31.21},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 32.46},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.68},
@@ -4319,7 +4319,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.08},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.08}
                 ]},
-                {"display_name": "COMOROS, MORONI", "country": "COMOROS", "city": "MORONI", "Lon": 43.27, "Lat": -11.67, "data": [
+                {"display_name": "COMOROS, MORONI", "country": "COMOROS", "city": "MORONI", "lon": 43.27, "lat": -11.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.03},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.19},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.92},
@@ -4341,7 +4341,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -16.83},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -16.83}
                 ]},
-                {"display_name": "COMOROS, Mutsamudu", "country": "COMOROS", "city": "Mutsamudu", "Lon": 44.42, "Lat": -12.17, "data": [
+                {"display_name": "COMOROS, Mutsamudu", "country": "COMOROS", "city": "Mutsamudu", "lon": 44.42, "lat": -12.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 6.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.9},
@@ -4363,7 +4363,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -17.9},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -17.9}
                 ]},
-                {"display_name": "COMOROS, Fomboni", "country": "COMOROS", "city": "Fomboni", "Lon": 43.77, "Lat": -12.3, "data": [
+                {"display_name": "COMOROS, Fomboni", "country": "COMOROS", "city": "Fomboni", "lon": 43.77, "lat": -12.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 6.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.92},
@@ -4385,7 +4385,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -18.22},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -18.22}
                 ]},
-                {"display_name": "COMOROS, Mitsamiouli", "country": "COMOROS", "city": "Mitsamiouli", "Lon": 43.35, "Lat": -11.37, "data": [
+                {"display_name": "COMOROS, Mitsamiouli", "country": "COMOROS", "city": "Mitsamiouli", "lon": 43.35, "lat": -11.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.03},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.23},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.91},
@@ -4407,7 +4407,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -16.27},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -16.27}
                 ]},
-                {"display_name": "CONGO, BRAZZAVILLE", "country": "CONGO", "city": "BRAZZAVILLE", "Lon": 15.23, "Lat": -4.23, "data": [
+                {"display_name": "CONGO, BRAZZAVILLE", "country": "CONGO", "city": "BRAZZAVILLE", "lon": 15.23, "lat": -4.23, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.29},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.5},
@@ -4429,7 +4429,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CONGO, Pointe-Noire", "country": "CONGO", "city": "Pointe-Noire", "Lon": 11.88, "Lat": -4.77, "data": [
+                {"display_name": "CONGO, Pointe-Noire", "country": "CONGO", "city": "Pointe-Noire", "lon": 11.88, "lat": -4.77, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.08},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.13},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.31},
@@ -4451,7 +4451,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CONGO, Nkayi", "country": "CONGO", "city": "Nkayi", "Lon": 13.28, "Lat": -4.12, "data": [
+                {"display_name": "CONGO, Nkayi", "country": "CONGO", "city": "Nkayi", "lon": 13.28, "lat": -4.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.03},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.4},
@@ -4473,7 +4473,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CONGO, Loubomo", "country": "CONGO", "city": "Loubomo", "Lon": 12.78, "Lat": -4.15, "data": [
+                {"display_name": "CONGO, Loubomo", "country": "CONGO", "city": "Loubomo", "lon": 12.78, "lat": -4.15, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.25},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.36},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.37},
@@ -4495,7 +4495,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CONGO, Ngamaba-Mfilou", "country": "CONGO", "city": "Ngamaba-Mfilou", "Lon": 15.08, "Lat": -4.1, "data": [
+                {"display_name": "CONGO, Ngamaba-Mfilou", "country": "CONGO", "city": "Ngamaba-Mfilou", "lon": 15.08, "lat": -4.1, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.31},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.76},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.5},
@@ -4517,7 +4517,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CONGO, Loandjili", "country": "CONGO", "city": "Loandjili", "Lon": 11.87, "Lat": -4.73, "data": [
+                {"display_name": "CONGO, Loandjili", "country": "CONGO", "city": "Loandjili", "lon": 11.87, "lat": -4.73, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.12},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.31},
@@ -4539,7 +4539,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CONGO, Mossendjo", "country": "CONGO", "city": "Mossendjo", "Lon": 12.8, "Lat": -2.92, "data": [
+                {"display_name": "CONGO, Mossendjo", "country": "CONGO", "city": "Mossendjo", "lon": 12.8, "lat": -2.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.43},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.78},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.43},
@@ -4561,7 +4561,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CYPRUS, NICOSIA", "country": "CYPRUS", "city": "NICOSIA", "Lon": 33.35, "Lat": 35.15, "data": [
+                {"display_name": "CYPRUS, NICOSIA", "country": "CYPRUS", "city": "NICOSIA", "lon": 33.35, "lat": 35.15, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.97},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -4583,7 +4583,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CYPRUS, Limassol", "country": "CYPRUS", "city": "Limassol", "Lon": 33.05, "Lat": 34.67, "data": [
+                {"display_name": "CYPRUS, Limassol", "country": "CYPRUS", "city": "Limassol", "lon": 33.05, "lat": 34.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.66},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.87},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -4605,7 +4605,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CYPRUS, Larnaca", "country": "CYPRUS", "city": "Larnaca", "Lon": 33.65, "Lat": 34.9, "data": [
+                {"display_name": "CYPRUS, Larnaca", "country": "CYPRUS", "city": "Larnaca", "lon": 33.65, "lat": 34.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.66},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.95},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -4627,7 +4627,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CYPRUS, Famagusta", "country": "CYPRUS", "city": "Famagusta", "Lon": 33.95, "Lat": 35.12, "data": [
+                {"display_name": "CYPRUS, Famagusta", "country": "CYPRUS", "city": "Famagusta", "lon": 33.95, "lat": 35.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.01},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -4649,7 +4649,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CZECHOSLOVAKIA, PRAGUE", "country": "CZECHOSLOVAKIA", "city": "PRAGUE", "Lon": 14.43, "Lat": 50.1, "data": [
+                {"display_name": "CZECHOSLOVAKIA, PRAGUE", "country": "CZECHOSLOVAKIA", "city": "PRAGUE", "lon": 14.43, "lat": 50.1, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.9},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.76},
@@ -4671,7 +4671,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CZECHOSLOVAKIA, Bratislava", "country": "CZECHOSLOVAKIA", "city": "Bratislava", "Lon": 17.17, "Lat": 48.17, "data": [
+                {"display_name": "CZECHOSLOVAKIA, Bratislava", "country": "CZECHOSLOVAKIA", "city": "Bratislava", "lon": 17.17, "lat": 48.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.03},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.84},
@@ -4693,7 +4693,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CZECHOSLOVAKIA, Brno", "country": "CZECHOSLOVAKIA", "city": "Brno", "Lon": 16.67, "Lat": 49.22, "data": [
+                {"display_name": "CZECHOSLOVAKIA, Brno", "country": "CZECHOSLOVAKIA", "city": "Brno", "lon": 16.67, "lat": 49.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.96},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.81},
@@ -4715,7 +4715,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CZECHOSLOVAKIA, Ostrava", "country": "CZECHOSLOVAKIA", "city": "Ostrava", "Lon": 18.25, "Lat": 49.83, "data": [
+                {"display_name": "CZECHOSLOVAKIA, Ostrava", "country": "CZECHOSLOVAKIA", "city": "Ostrava", "lon": 18.25, "lat": 49.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.91},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.81},
@@ -4737,7 +4737,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CZECHOSLOVAKIA, Kosice", "country": "CZECHOSLOVAKIA", "city": "Kosice", "Lon": 21.25, "Lat": 48.73, "data": [
+                {"display_name": "CZECHOSLOVAKIA, Kosice", "country": "CZECHOSLOVAKIA", "city": "Kosice", "lon": 21.25, "lat": 48.73, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.75},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.89},
@@ -4759,7 +4759,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CZECHOSLOVAKIA, Plzen", "country": "CZECHOSLOVAKIA", "city": "Plzen", "Lon": 13.42, "Lat": 49.75, "data": [
+                {"display_name": "CZECHOSLOVAKIA, Plzen", "country": "CZECHOSLOVAKIA", "city": "Plzen", "lon": 13.42, "lat": 49.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.93},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.76},
@@ -4781,7 +4781,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CZECHOSLOVAKIA, Olomouc", "country": "CZECHOSLOVAKIA", "city": "Olomouc", "Lon": 17.25, "Lat": 49.63, "data": [
+                {"display_name": "CZECHOSLOVAKIA, Olomouc", "country": "CZECHOSLOVAKIA", "city": "Olomouc", "lon": 17.25, "lat": 49.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.93},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.81},
@@ -4803,7 +4803,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CZECHOSLOVAKIA, Ust?_nad_Lab", "country": "CZECHOSLOVAKIA", "city": "Ust?_nad_Lab", "Lon": 14.03, "Lat": 50.67, "data": [
+                {"display_name": "CZECHOSLOVAKIA, Ust?_nad_Lab", "country": "CZECHOSLOVAKIA", "city": "Ust?_nad_Lab", "lon": 14.03, "lat": 50.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.85},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.74},
@@ -4825,7 +4825,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CZECHOSLOVAKIA, Liberec", "country": "CZECHOSLOVAKIA", "city": "Liberec", "Lon": 15.08, "Lat": 50.8, "data": [
+                {"display_name": "CZECHOSLOVAKIA, Liberec", "country": "CZECHOSLOVAKIA", "city": "Liberec", "lon": 15.08, "lat": 50.8, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.84},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -4847,7 +4847,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CZECHOSLOVAKIA, Hradec_Kralo", "country": "CZECHOSLOVAKIA", "city": "Hradec_Kralo", "Lon": 15.83, "Lat": 50.22, "data": [
+                {"display_name": "CZECHOSLOVAKIA, Hradec_Kralo", "country": "CZECHOSLOVAKIA", "city": "Hradec_Kralo", "lon": 15.83, "lat": 50.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.88},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.77},
@@ -4869,7 +4869,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CZECHOSLOVAKIA, Pardubice", "country": "CZECHOSLOVAKIA", "city": "Pardubice", "Lon": 15.75, "Lat": 50.05, "data": [
+                {"display_name": "CZECHOSLOVAKIA, Pardubice", "country": "CZECHOSLOVAKIA", "city": "Pardubice", "lon": 15.75, "lat": 50.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.9},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.78},
@@ -4891,7 +4891,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "CZECHOSLOVAKIA, Ceske_Budejo", "country": "CZECHOSLOVAKIA", "city": "Ceske_Budejo", "Lon": 14.48, "Lat": 48.97, "data": [
+                {"display_name": "CZECHOSLOVAKIA, Ceske_Budejo", "country": "CZECHOSLOVAKIA", "city": "Ceske_Budejo", "lon": 14.48, "lat": 48.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.98},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.79},
@@ -4913,7 +4913,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DENMARK, COPENHAGEN", "country": "DENMARK", "city": "COPENHAGEN", "Lon": 12.58, "Lat": 55.67, "data": [
+                {"display_name": "DENMARK, COPENHAGEN", "country": "DENMARK", "city": "COPENHAGEN", "lon": 12.58, "lat": 55.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.66},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.55},
@@ -4935,7 +4935,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DENMARK, Aarhus", "country": "DENMARK", "city": "Aarhus", "Lon": 10.22, "Lat": 56.17, "data": [
+                {"display_name": "DENMARK, Aarhus", "country": "DENMARK", "city": "Aarhus", "lon": 10.22, "lat": 56.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.42},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.53},
@@ -4957,7 +4957,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DENMARK, Odense", "country": "DENMARK", "city": "Odense", "Lon": 10.42, "Lat": 55.4, "data": [
+                {"display_name": "DENMARK, Odense", "country": "DENMARK", "city": "Odense", "lon": 10.42, "lat": 55.4, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.56},
@@ -4979,7 +4979,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DENMARK, Aalborg", "country": "DENMARK", "city": "Aalborg", "Lon": 9.93, "Lat": 57.05, "data": [
+                {"display_name": "DENMARK, Aalborg", "country": "DENMARK", "city": "Aalborg", "lon": 9.93, "lat": 57.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.35},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.64},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.49},
@@ -5001,7 +5001,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DENMARK, Esbjerg", "country": "DENMARK", "city": "Esbjerg", "Lon": 8.47, "Lat": 55.47, "data": [
+                {"display_name": "DENMARK, Esbjerg", "country": "DENMARK", "city": "Esbjerg", "lon": 8.47, "lat": 55.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.49},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.56},
@@ -5023,7 +5023,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DENMARK, Randers", "country": "DENMARK", "city": "Randers", "Lon": 10.05, "Lat": 56.47, "data": [
+                {"display_name": "DENMARK, Randers", "country": "DENMARK", "city": "Randers", "lon": 10.05, "lat": 56.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.39},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.52},
@@ -5045,7 +5045,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DENMARK, Helsingor", "country": "DENMARK", "city": "Helsingor", "Lon": 12.63, "Lat": 56.05, "data": [
+                {"display_name": "DENMARK, Helsingor", "country": "DENMARK", "city": "Helsingor", "lon": 12.63, "lat": 56.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.42},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.66},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.53},
@@ -5067,7 +5067,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DENMARK, Kolding", "country": "DENMARK", "city": "Kolding", "Lon": 9.5, "Lat": 55.48, "data": [
+                {"display_name": "DENMARK, Kolding", "country": "DENMARK", "city": "Kolding", "lon": 9.5, "lat": 55.48, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.56},
@@ -5089,7 +5089,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DENMARK, Herning", "country": "DENMARK", "city": "Herning", "Lon": 8.98, "Lat": 56.13, "data": [
+                {"display_name": "DENMARK, Herning", "country": "DENMARK", "city": "Herning", "lon": 8.98, "lat": 56.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.43},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.64},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.53},
@@ -5111,7 +5111,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DENMARK, Horsens", "country": "DENMARK", "city": "Horsens", "Lon": 9.87, "Lat": 55.87, "data": [
+                {"display_name": "DENMARK, Horsens", "country": "DENMARK", "city": "Horsens", "lon": 9.87, "lat": 55.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.54},
@@ -5133,7 +5133,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DENMARK, Vejle", "country": "DENMARK", "city": "Vejle", "Lon": 9.55, "Lat": 55.72, "data": [
+                {"display_name": "DENMARK, Vejle", "country": "DENMARK", "city": "Vejle", "lon": 9.55, "lat": 55.72, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.46},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.55},
@@ -5155,7 +5155,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DENMARK, Roskilde", "country": "DENMARK", "city": "Roskilde", "Lon": 12.12, "Lat": 55.65, "data": [
+                {"display_name": "DENMARK, Roskilde", "country": "DENMARK", "city": "Roskilde", "lon": 12.12, "lat": 55.65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.66},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.55},
@@ -5177,7 +5177,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DENMARK, Naestved", "country": "DENMARK", "city": "Naestved", "Lon": 11.77, "Lat": 55.23, "data": [
+                {"display_name": "DENMARK, Naestved", "country": "DENMARK", "city": "Naestved", "lon": 11.77, "lat": 55.23, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.49},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.66},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.57},
@@ -5199,7 +5199,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DJIBOUTI, DJIBOUTI", "country": "DJIBOUTI", "city": "DJIBOUTI", "Lon": 43.15, "Lat": 11.6, "data": [
+                {"display_name": "DJIBOUTI, DJIBOUTI", "country": "DJIBOUTI", "city": "DJIBOUTI", "lon": 43.15, "lat": 11.6, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 17.22},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 22.12},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.48},
@@ -5221,7 +5221,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -8.9},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -8.9}
                 ]},
-                {"display_name": "DJIBOUTI, Dikhil", "country": "DJIBOUTI", "city": "Dikhil", "Lon": 42.33, "Lat": 11.13, "data": [
+                {"display_name": "DJIBOUTI, Dikhil", "country": "DJIBOUTI", "city": "Dikhil", "lon": 42.33, "lat": 11.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.4},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 21.43},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.56},
@@ -5243,7 +5243,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.12},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.12}
                 ]},
-                {"display_name": "DJIBOUTI, Tadjourah", "country": "DJIBOUTI", "city": "Tadjourah", "Lon": 42.93, "Lat": 11.82, "data": [
+                {"display_name": "DJIBOUTI, Tadjourah", "country": "DJIBOUTI", "city": "Tadjourah", "lon": 42.93, "lat": 11.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 17.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 22.1},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.48},
@@ -5265,7 +5265,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -8.85},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -8.85}
                 ]},
-                {"display_name": "DJIBOUTI, Ali-Sabiah", "country": "DJIBOUTI", "city": "Ali-Sabiah", "Lon": 42.73, "Lat": 11.17, "data": [
+                {"display_name": "DJIBOUTI, Ali-Sabiah", "country": "DJIBOUTI", "city": "Ali-Sabiah", "lon": 42.73, "lat": 11.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.64},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 21.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.53},
@@ -5287,7 +5287,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.08},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.08}
                 ]},
-                {"display_name": "DJIBOUTI, Obock", "country": "DJIBOUTI", "city": "Obock", "Lon": 43.33, "Lat": 11.98, "data": [
+                {"display_name": "DJIBOUTI, Obock", "country": "DJIBOUTI", "city": "Obock", "lon": 43.33, "lat": 11.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 17.63},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 22.39},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.45},
@@ -5309,7 +5309,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -8.76},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -8.76}
                 ]},
-                {"display_name": "EGYPT, CAIRO", "country": "EGYPT", "city": "CAIRO", "Lon": 31.25, "Lat": 30.05, "data": [
+                {"display_name": "EGYPT, CAIRO", "country": "EGYPT", "city": "CAIRO", "lon": 31.25, "lat": 30.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.92},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.82},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.45},
@@ -5331,7 +5331,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EGYPT, Alexandria", "country": "EGYPT", "city": "Alexandria", "Lon": 29.92, "Lat": 31.22, "data": [
+                {"display_name": "EGYPT, Alexandria", "country": "EGYPT", "city": "Alexandria", "lon": 29.92, "lat": 31.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.12},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.42},
@@ -5353,7 +5353,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EGYPT, Giza", "country": "EGYPT", "city": "Giza", "Lon": 31.17, "Lat": 30.02, "data": [
+                {"display_name": "EGYPT, Giza", "country": "EGYPT", "city": "Giza", "lon": 31.17, "lat": 30.02, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.92},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.82},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.45},
@@ -5375,7 +5375,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EGYPT, Al-Mahallah_al_Kubra", "country": "EGYPT", "city": "Al-Mahallah_al_Kubra", "Lon": 31.17, "Lat": 30.97, "data": [
+                {"display_name": "EGYPT, Al-Mahallah_al_Kubra", "country": "EGYPT", "city": "Al-Mahallah_al_Kubra", "lon": 31.17, "lat": 30.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.06},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.44},
@@ -5397,7 +5397,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EGYPT, Port_Said", "country": "EGYPT", "city": "Port_Said", "Lon": 32.3, "Lat": 31.28, "data": [
+                {"display_name": "EGYPT, Port_Said", "country": "EGYPT", "city": "Port_Said", "lon": 32.3, "lat": 31.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.16},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.44},
@@ -5419,7 +5419,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EGYPT, Tanta", "country": "EGYPT", "city": "Tanta", "Lon": 31, "Lat": 30.8, "data": [
+                {"display_name": "EGYPT, Tanta", "country": "EGYPT", "city": "Tanta", "lon": 31, "lat": 30.8, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.01},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.44},
@@ -5441,7 +5441,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EGYPT, Al-Mansurah", "country": "EGYPT", "city": "Al-Mansurah", "Lon": 31.38, "Lat": 31.05, "data": [
+                {"display_name": "EGYPT, Al-Mansurah", "country": "EGYPT", "city": "Al-Mansurah", "lon": 31.38, "lat": 31.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.08},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.44},
@@ -5463,7 +5463,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EGYPT, Helwan", "country": "EGYPT", "city": "Helwan", "Lon": 31.33, "Lat": 29.85, "data": [
+                {"display_name": "EGYPT, Helwan", "country": "EGYPT", "city": "Helwan", "lon": 31.33, "lat": 29.85, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.87},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.77},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.45},
@@ -5485,7 +5485,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EGYPT, Asyut", "country": "EGYPT", "city": "Asyut", "Lon": 31.18, "Lat": 27.18, "data": [
+                {"display_name": "EGYPT, Asyut", "country": "EGYPT", "city": "Asyut", "lon": 31.18, "lat": 27.18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.03},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.48},
@@ -5507,7 +5507,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EGYPT, Zagazig", "country": "EGYPT", "city": "Zagazig", "Lon": 31.5, "Lat": 30.58, "data": [
+                {"display_name": "EGYPT, Zagazig", "country": "EGYPT", "city": "Zagazig", "lon": 31.5, "lat": 30.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.03},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.96},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.44},
@@ -5529,7 +5529,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EGYPT, Suez", "country": "EGYPT", "city": "Suez", "Lon": 32.55, "Lat": 29.98, "data": [
+                {"display_name": "EGYPT, Suez", "country": "EGYPT", "city": "Suez", "lon": 32.55, "lat": 29.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.83},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.84},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.45},
@@ -5551,7 +5551,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EGYPT, Aswan", "country": "EGYPT", "city": "Aswan", "Lon": 32.88, "Lat": 24.08, "data": [
+                {"display_name": "EGYPT, Aswan", "country": "EGYPT", "city": "Aswan", "lon": 32.88, "lat": 24.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.8},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 24},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.53},
@@ -5573,7 +5573,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EQUATORIAL_GUINEA, MALABO", "country": "EQUATORIAL_GUINEA", "city": "MALABO", "Lon": 8.8, "Lat": 3.75, "data": [
+                {"display_name": "EQUATORIAL_GUINEA, MALABO", "country": "EQUATORIAL_GUINEA", "city": "MALABO", "lon": 8.8, "lat": 3.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.58},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.31},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.63},
@@ -5595,7 +5595,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EQUATORIAL_GUINEA, Bata", "country": "EQUATORIAL_GUINEA", "city": "Bata", "Lon": 9.77, "Lat": 1.85, "data": [
+                {"display_name": "EQUATORIAL_GUINEA, Bata", "country": "EQUATORIAL_GUINEA", "city": "Bata", "lon": 9.77, "lat": 1.85, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.55},
@@ -5617,7 +5617,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EQUATORIAL_GUINEA, Luba", "country": "EQUATORIAL_GUINEA", "city": "Luba", "Lon": 8.55, "Lat": 3.45, "data": [
+                {"display_name": "EQUATORIAL_GUINEA, Luba", "country": "EQUATORIAL_GUINEA", "city": "Luba", "lon": 8.55, "lat": 3.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.64},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.35},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.6},
@@ -5639,7 +5639,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EQUATORIAL_GUINEA, Mbini", "country": "EQUATORIAL_GUINEA", "city": "Mbini", "Lon": 9.63, "Lat": 1.57, "data": [
+                {"display_name": "EQUATORIAL_GUINEA, Mbini", "country": "EQUATORIAL_GUINEA", "city": "Mbini", "lon": 9.63, "lat": 1.57, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.72},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.1},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.53},
@@ -5661,7 +5661,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EQUATORIAL_GUINEA, Evinayong", "country": "EQUATORIAL_GUINEA", "city": "Evinayong", "Lon": 10.65, "Lat": 1.43, "data": [
+                {"display_name": "EQUATORIAL_GUINEA, Evinayong", "country": "EQUATORIAL_GUINEA", "city": "Evinayong", "lon": 10.65, "lat": 1.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.67},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.57},
@@ -5683,7 +5683,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EQUATORIAL_GUINEA, Ebebiyin", "country": "EQUATORIAL_GUINEA", "city": "Ebebiyin", "Lon": 11.3, "Lat": 2.13, "data": [
+                {"display_name": "EQUATORIAL_GUINEA, Ebebiyin", "country": "EQUATORIAL_GUINEA", "city": "Ebebiyin", "lon": 11.3, "lat": 2.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.58},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.36},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.64},
@@ -5705,7 +5705,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "EQUATORIAL_GUINEA, Mongomo", "country": "EQUATORIAL_GUINEA", "city": "Mongomo", "Lon": 11.25, "Lat": 1.67, "data": [
+                {"display_name": "EQUATORIAL_GUINEA, Mongomo", "country": "EQUATORIAL_GUINEA", "city": "Mongomo", "lon": 11.25, "lat": 1.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.62},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.39},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.61},
@@ -5727,7 +5727,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ETHIOPIA, ADDIS_ABABA", "country": "ETHIOPIA", "city": "ADDIS_ABABA", "Lon": 38.83, "Lat": 9.05, "data": [
+                {"display_name": "ETHIOPIA, ADDIS_ABABA", "country": "ETHIOPIA", "city": "ADDIS_ABABA", "lon": 38.83, "lat": 9.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.52},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 18.16},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.83},
@@ -5749,7 +5749,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.95},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.95}
                 ]},
-                {"display_name": "ETHIOPIA, Asmera", "country": "ETHIOPIA", "city": "Asmera", "Lon": 38.88, "Lat": 15.33, "data": [
+                {"display_name": "ETHIOPIA, Asmera", "country": "ETHIOPIA", "city": "Asmera", "lon": 38.88, "lat": 15.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 18.91},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 21.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.56},
@@ -5771,7 +5771,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ETHIOPIA, Dire_Dawa", "country": "ETHIOPIA", "city": "Dire_Dawa", "Lon": 41.83, "Lat": 9.58, "data": [
+                {"display_name": "ETHIOPIA, Dire_Dawa", "country": "ETHIOPIA", "city": "Dire_Dawa", "lon": 41.83, "lat": 9.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.94},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 20.33},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.65},
@@ -5793,7 +5793,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.67},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.67}
                 ]},
-                {"display_name": "ETHIOPIA, Gondar", "country": "ETHIOPIA", "city": "Gondar", "Lon": 37.48, "Lat": 12.65, "data": [
+                {"display_name": "ETHIOPIA, Gondar", "country": "ETHIOPIA", "city": "Gondar", "lon": 37.48, "lat": 12.65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.59},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 19.45},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.74},
@@ -5815,7 +5815,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ETHIOPIA, Dessye", "country": "ETHIOPIA", "city": "Dessye", "Lon": 39.67, "Lat": 11.08, "data": [
+                {"display_name": "ETHIOPIA, Dessye", "country": "ETHIOPIA", "city": "Dessye", "lon": 39.67, "lat": 11.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.47},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 19.77},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.71},
@@ -5837,7 +5837,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.27},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.27}
                 ]},
-                {"display_name": "ETHIOPIA, Nazret", "country": "ETHIOPIA", "city": "Nazret", "Lon": 39.32, "Lat": 8.65, "data": [
+                {"display_name": "ETHIOPIA, Nazret", "country": "ETHIOPIA", "city": "Nazret", "lon": 39.32, "lat": 8.65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.3},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 18.22},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.82},
@@ -5859,7 +5859,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -10.07},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -10.07}
                 ]},
-                {"display_name": "ETHIOPIA, Jimma", "country": "ETHIOPIA", "city": "Jimma", "Lon": 36.78, "Lat": 7.65, "data": [
+                {"display_name": "ETHIOPIA, Jimma", "country": "ETHIOPIA", "city": "Jimma", "lon": 36.78, "lat": 7.65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 16.47},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.92},
@@ -5881,7 +5881,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ETHIOPIA, Harar", "country": "ETHIOPIA", "city": "Harar", "Lon": 42.17, "Lat": 9.33, "data": [
+                {"display_name": "ETHIOPIA, Harar", "country": "ETHIOPIA", "city": "Harar", "lon": 42.17, "lat": 9.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.91},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 20.41},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.64},
@@ -5903,7 +5903,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.72},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.72}
                 ]},
-                {"display_name": "ETHIOPIA, Mekele", "country": "ETHIOPIA", "city": "Mekele", "Lon": 39.5, "Lat": 13.55, "data": [
+                {"display_name": "ETHIOPIA, Mekele", "country": "ETHIOPIA", "city": "Mekele", "lon": 39.5, "lat": 13.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 17.51},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 20.95},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.6},
@@ -5925,7 +5925,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -8.48},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -8.48}
                 ]},
-                {"display_name": "ETHIOPIA, Bahr_Dar", "country": "ETHIOPIA", "city": "Bahr_Dar", "Lon": 37.17, "Lat": 11.62, "data": [
+                {"display_name": "ETHIOPIA, Bahr_Dar", "country": "ETHIOPIA", "city": "Bahr_Dar", "lon": 37.17, "lat": 11.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.6},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 18.77},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.79},
@@ -5947,7 +5947,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ETHIOPIA, Debre_Markos", "country": "ETHIOPIA", "city": "Debre_Markos", "Lon": 37.75, "Lat": 10.33, "data": [
+                {"display_name": "ETHIOPIA, Debre_Markos", "country": "ETHIOPIA", "city": "Debre_Markos", "lon": 37.75, "lat": 10.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 18.31},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.82},
@@ -5969,7 +5969,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FINLAND, HELSINKI", "country": "FINLAND", "city": "HELSINKI", "Lon": 25, "Lat": 60.13, "data": [
+                {"display_name": "FINLAND, HELSINKI", "country": "FINLAND", "city": "HELSINKI", "lon": 25, "lat": 60.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.53},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.22},
@@ -5991,7 +5991,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FINLAND, Tampere", "country": "FINLAND", "city": "Tampere", "Lon": 23.75, "Lat": 61.53, "data": [
+                {"display_name": "FINLAND, Tampere", "country": "FINLAND", "city": "Tampere", "lon": 23.75, "lat": 61.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.4},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.1},
@@ -6013,7 +6013,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FINLAND, Espoo", "country": "FINLAND", "city": "Espoo", "Lon": 24.7, "Lat": 60.17, "data": [
+                {"display_name": "FINLAND, Espoo", "country": "FINLAND", "city": "Espoo", "lon": 24.7, "lat": 60.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.53},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.21},
@@ -6035,7 +6035,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FINLAND, Turku", "country": "FINLAND", "city": "Turku", "Lon": 22.25, "Lat": 60.45, "data": [
+                {"display_name": "FINLAND, Turku", "country": "FINLAND", "city": "Turku", "lon": 22.25, "lat": 60.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.53},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.21},
@@ -6057,7 +6057,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FINLAND, Vantaa", "country": "FINLAND", "city": "Vantaa", "Lon": 24.95, "Lat": 60.3, "data": [
+                {"display_name": "FINLAND, Vantaa", "country": "FINLAND", "city": "Vantaa", "lon": 24.95, "lat": 60.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.2},
@@ -6079,7 +6079,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FINLAND, Oulu", "country": "FINLAND", "city": "Oulu", "Lon": 25.43, "Lat": 65, "data": [
+                {"display_name": "FINLAND, Oulu", "country": "FINLAND", "city": "Oulu", "lon": 25.43, "lat": 65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.43},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.78},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.7},
@@ -6101,7 +6101,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FINLAND, Lahti", "country": "FINLAND", "city": "Lahti", "Lon": 25.67, "Lat": 61, "data": [
+                {"display_name": "FINLAND, Lahti", "country": "FINLAND", "city": "Lahti", "lon": 25.67, "lat": 61, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.02},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.43},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.13},
@@ -6123,7 +6123,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FINLAND, Pori", "country": "FINLAND", "city": "Pori", "Lon": 21.75, "Lat": 61.47, "data": [
+                {"display_name": "FINLAND, Pori", "country": "FINLAND", "city": "Pori", "lon": 21.75, "lat": 61.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.44},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.12},
@@ -6145,7 +6145,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FINLAND, Kuopio", "country": "FINLAND", "city": "Kuopio", "Lon": 27.67, "Lat": 62.9, "data": [
+                {"display_name": "FINLAND, Kuopio", "country": "FINLAND", "city": "Kuopio", "lon": 27.67, "lat": 62.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.73},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.09},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.9},
@@ -6167,7 +6167,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FINLAND, Jyvaskyla", "country": "FINLAND", "city": "Jyvaskyla", "Lon": 25.83, "Lat": 62.27, "data": [
+                {"display_name": "FINLAND, Jyvaskyla", "country": "FINLAND", "city": "Jyvaskyla", "lon": 25.83, "lat": 62.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.86},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.25},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35},
@@ -6189,7 +6189,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FINLAND, Kotka", "country": "FINLAND", "city": "Kotka", "Lon": 26.92, "Lat": 60.43, "data": [
+                {"display_name": "FINLAND, Kotka", "country": "FINLAND", "city": "Kotka", "lon": 26.92, "lat": 60.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.08},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.47},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.17},
@@ -6211,7 +6211,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FRANCE, PARIS", "country": "FRANCE", "city": "PARIS", "Lon": 2.33, "Lat": 48.87, "data": [
+                {"display_name": "FRANCE, PARIS", "country": "FRANCE", "city": "PARIS", "lon": 2.33, "lat": 48.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.02},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -6233,7 +6233,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FRANCE, Lyon", "country": "FRANCE", "city": "Lyon", "Lon": 4.83, "Lat": 45.77, "data": [
+                {"display_name": "FRANCE, Lyon", "country": "FRANCE", "city": "Lyon", "lon": 4.83, "lat": 45.77, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.71},
@@ -6255,7 +6255,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FRANCE, Marseille", "country": "FRANCE", "city": "Marseille", "Lon": 5.37, "Lat": 43.3, "data": [
+                {"display_name": "FRANCE, Marseille", "country": "FRANCE", "city": "Marseille", "lon": 5.37, "lat": 43.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -6277,7 +6277,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FRANCE, Lille", "country": "FRANCE", "city": "Lille", "Lon": 3.07, "Lat": 50.63, "data": [
+                {"display_name": "FRANCE, Lille", "country": "FRANCE", "city": "Lille", "lon": 3.07, "lat": 50.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.92},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.69},
@@ -6299,7 +6299,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FRANCE, Toulouse", "country": "FRANCE", "city": "Toulouse", "Lon": 1.45, "Lat": 43.62, "data": [
+                {"display_name": "FRANCE, Toulouse", "country": "FRANCE", "city": "Toulouse", "lon": 1.45, "lat": 43.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -6321,7 +6321,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FRANCE, Nice", "country": "FRANCE", "city": "Nice", "Lon": 7.27, "Lat": 43.7, "data": [
+                {"display_name": "FRANCE, Nice", "country": "FRANCE", "city": "Nice", "lon": 7.27, "lat": 43.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -6343,7 +6343,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FRANCE, Strasbourg", "country": "FRANCE", "city": "Strasbourg", "Lon": 7.75, "Lat": 48.58, "data": [
+                {"display_name": "FRANCE, Strasbourg", "country": "FRANCE", "city": "Strasbourg", "lon": 7.75, "lat": 48.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.02},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.72},
@@ -6365,7 +6365,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FRANCE, Saint-Etienne", "country": "FRANCE", "city": "Saint-Etienne", "Lon": 4.38, "Lat": 45.43, "data": [
+                {"display_name": "FRANCE, Saint-Etienne", "country": "FRANCE", "city": "Saint-Etienne", "lon": 4.38, "lat": 45.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -6387,7 +6387,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FRANCE, Montpellier", "country": "FRANCE", "city": "Montpellier", "Lon": 3.88, "Lat": 43.6, "data": [
+                {"display_name": "FRANCE, Montpellier", "country": "FRANCE", "city": "Montpellier", "lon": 3.88, "lat": 43.6, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.69},
@@ -6409,7 +6409,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FRANCE, Reims", "country": "FRANCE", "city": "Reims", "Lon": 4.03, "Lat": 49.25, "data": [
+                {"display_name": "FRANCE, Reims", "country": "FRANCE", "city": "Reims", "lon": 4.03, "lat": 49.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -6431,7 +6431,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FRANCE, Toulon", "country": "FRANCE", "city": "Toulon", "Lon": 5.93, "Lat": 43.12, "data": [
+                {"display_name": "FRANCE, Toulon", "country": "FRANCE", "city": "Toulon", "lon": 5.93, "lat": 43.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.71},
@@ -6453,7 +6453,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FRANCE, Grenoble", "country": "FRANCE", "city": "Grenoble", "Lon": 5.72, "Lat": 45.17, "data": [
+                {"display_name": "FRANCE, Grenoble", "country": "FRANCE", "city": "Grenoble", "lon": 5.72, "lat": 45.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.71},
@@ -6475,7 +6475,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FRANCE, Dijon", "country": "FRANCE", "city": "Dijon", "Lon": 5.02, "Lat": 47.32, "data": [
+                {"display_name": "FRANCE, Dijon", "country": "FRANCE", "city": "Dijon", "lon": 5.02, "lat": 47.32, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.08},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.71},
@@ -6497,7 +6497,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "FRANCE, Aix-en-Provence", "country": "FRANCE", "city": "Aix-en-Provence", "Lon": 5.43, "Lat": 43.53, "data": [
+                {"display_name": "FRANCE, Aix-en-Provence", "country": "FRANCE", "city": "Aix-en-Provence", "lon": 5.43, "lat": 43.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.71},
@@ -6519,7 +6519,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GABON, LIBREVILLE", "country": "GABON", "city": "LIBREVILLE", "Lon": 9.42, "Lat": 0.38, "data": [
+                {"display_name": "GABON, LIBREVILLE", "country": "GABON", "city": "LIBREVILLE", "lon": 9.42, "lat": 0.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.45},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.45},
@@ -6541,7 +6541,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GABON, Port_Gentil", "country": "GABON", "city": "Port_Gentil", "Lon": 8.83, "Lat": -0.67, "data": [
+                {"display_name": "GABON, Port_Gentil", "country": "GABON", "city": "Port_Gentil", "lon": 8.83, "lat": -0.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.62},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.01},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.37},
@@ -6563,7 +6563,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GABON, Lambarene", "country": "GABON", "city": "Lambarene", "Lon": 10.22, "Lat": -0.68, "data": [
+                {"display_name": "GABON, Lambarene", "country": "GABON", "city": "Lambarene", "lon": 10.22, "lat": -0.68, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.62},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.39},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.43},
@@ -6585,7 +6585,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GABON, Mouila", "country": "GABON", "city": "Mouila", "Lon": 11.03, "Lat": -1.83, "data": [
+                {"display_name": "GABON, Mouila", "country": "GABON", "city": "Mouila", "lon": 11.03, "lat": -1.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.52},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.36},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.41},
@@ -6607,7 +6607,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GABON, Tchibanga", "country": "GABON", "city": "Tchibanga", "Lon": 11, "Lat": -2.82, "data": [
+                {"display_name": "GABON, Tchibanga", "country": "GABON", "city": "Tchibanga", "lon": 11, "lat": -2.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.42},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.78},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.35},
@@ -6629,7 +6629,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GABON, Oyem", "country": "GABON", "city": "Oyem", "Lon": 11.52, "Lat": 1.57, "data": [
+                {"display_name": "GABON, Oyem", "country": "GABON", "city": "Oyem", "lon": 11.52, "lat": 1.57, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.61},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.28},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.62},
@@ -6651,7 +6651,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, BERLIN", "country": "GERMANY", "city": "BERLIN", "Lon": 13.42, "Lat": 52.53, "data": [
+                {"display_name": "GERMANY, BERLIN", "country": "GERMANY", "city": "BERLIN", "lon": 13.42, "lat": 52.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -6673,7 +6673,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, Hamburg", "country": "GERMANY", "city": "Hamburg", "Lon": 10, "Lat": 53.55, "data": [
+                {"display_name": "GERMANY, Hamburg", "country": "GERMANY", "city": "Hamburg", "lon": 10, "lat": 53.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.63},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.63},
@@ -6695,7 +6695,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, Munich", "country": "GERMANY", "city": "Munich", "Lon": 11.58, "Lat": 48.13, "data": [
+                {"display_name": "GERMANY, Munich", "country": "GERMANY", "city": "Munich", "lon": 11.58, "lat": 48.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.04},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.77},
@@ -6717,7 +6717,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, Cologne", "country": "GERMANY", "city": "Cologne", "Lon": 6.95, "Lat": 50.93, "data": [
+                {"display_name": "GERMANY, Cologne", "country": "GERMANY", "city": "Cologne", "lon": 6.95, "lat": 50.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.86},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.69},
@@ -6739,7 +6739,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, Essen", "country": "GERMANY", "city": "Essen", "Lon": 6.98, "Lat": 51.43, "data": [
+                {"display_name": "GERMANY, Essen", "country": "GERMANY", "city": "Essen", "lon": 6.98, "lat": 51.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.83},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -6761,7 +6761,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, Frankfurt", "country": "GERMANY", "city": "Frankfurt", "Lon": 8.68, "Lat": 50.1, "data": [
+                {"display_name": "GERMANY, Frankfurt", "country": "GERMANY", "city": "Frankfurt", "lon": 8.68, "lat": 50.1, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.92},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.71},
@@ -6783,7 +6783,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, Dortmund", "country": "GERMANY", "city": "Dortmund", "Lon": 7.45, "Lat": 51.53, "data": [
+                {"display_name": "GERMANY, Dortmund", "country": "GERMANY", "city": "Dortmund", "lon": 7.45, "lat": 51.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.81},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -6805,7 +6805,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, Stuttgart", "country": "GERMANY", "city": "Stuttgart", "Lon": 9.2, "Lat": 48.78, "data": [
+                {"display_name": "GERMANY, Stuttgart", "country": "GERMANY", "city": "Stuttgart", "lon": 9.2, "lat": 48.78, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -6827,7 +6827,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, Dusseldorf", "country": "GERMANY", "city": "Dusseldorf", "Lon": 6.78, "Lat": 51.22, "data": [
+                {"display_name": "GERMANY, Dusseldorf", "country": "GERMANY", "city": "Dusseldorf", "lon": 6.78, "lat": 51.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.84},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -6849,7 +6849,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, Leipzig", "country": "GERMANY", "city": "Leipzig", "Lon": 12.42, "Lat": 51.33, "data": [
+                {"display_name": "GERMANY, Leipzig", "country": "GERMANY", "city": "Leipzig", "lon": 12.42, "lat": 51.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.8},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.71},
@@ -6871,7 +6871,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, Bremen", "country": "GERMANY", "city": "Bremen", "Lon": 8.8, "Lat": 53.08, "data": [
+                {"display_name": "GERMANY, Bremen", "country": "GERMANY", "city": "Bremen", "lon": 8.8, "lat": 53.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.64},
@@ -6893,7 +6893,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, Dresden", "country": "GERMANY", "city": "Dresden", "Lon": 13.75, "Lat": 51.05, "data": [
+                {"display_name": "GERMANY, Dresden", "country": "GERMANY", "city": "Dresden", "lon": 13.75, "lat": 51.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.82},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -6915,7 +6915,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, Duisburg", "country": "GERMANY", "city": "Duisburg", "Lon": 6.77, "Lat": 51.42, "data": [
+                {"display_name": "GERMANY, Duisburg", "country": "GERMANY", "city": "Duisburg", "lon": 6.77, "lat": 51.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.83},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -6937,7 +6937,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, Hannover", "country": "GERMANY", "city": "Hannover", "Lon": 9.73, "Lat": 52.4, "data": [
+                {"display_name": "GERMANY, Hannover", "country": "GERMANY", "city": "Hannover", "lon": 9.73, "lat": 52.4, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.73},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -6959,7 +6959,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GERMANY, Nurnberg", "country": "GERMANY", "city": "Nurnberg", "Lon": 11.07, "Lat": 49.45, "data": [
+                {"display_name": "GERMANY, Nurnberg", "country": "GERMANY", "city": "Nurnberg", "lon": 11.07, "lat": 49.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.96},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.74},
@@ -6981,7 +6981,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GHANA, ACCRA", "country": "GHANA", "city": "ACCRA", "Lon": -0.25, "Lat": 5.55, "data": [
+                {"display_name": "GHANA, ACCRA", "country": "GHANA", "city": "ACCRA", "lon": -0.25, "lat": 5.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.71},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.9},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.47},
@@ -7003,7 +7003,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GHANA, Kumasi", "country": "GHANA", "city": "Kumasi", "Lon": -1.58, "Lat": 6.68, "data": [
+                {"display_name": "GHANA, Kumasi", "country": "GHANA", "city": "Kumasi", "lon": -1.58, "lat": 6.68, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.16},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.49},
@@ -7025,7 +7025,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GHANA, Tamale", "country": "GHANA", "city": "Tamale", "Lon": -0.82, "Lat": 9.43, "data": [
+                {"display_name": "GHANA, Tamale", "country": "GHANA", "city": "Tamale", "lon": -0.82, "lat": 9.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.71},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.56},
@@ -7047,7 +7047,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GHANA, Tema", "country": "GHANA", "city": "Tema", "Lon": -0.02, "Lat": 5.67, "data": [
+                {"display_name": "GHANA, Tema", "country": "GHANA", "city": "Tema", "lon": -0.02, "lat": 5.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.69},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.91},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.47},
@@ -7069,7 +7069,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GHANA, Sekondi-Takoradi", "country": "GHANA", "city": "Sekondi-Takoradi", "Lon": -1.72, "Lat": 4.98, "data": [
+                {"display_name": "GHANA, Sekondi-Takoradi", "country": "GHANA", "city": "Sekondi-Takoradi", "lon": -1.72, "lat": 4.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.79},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.92},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.43},
@@ -7091,7 +7091,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GHANA, Cape_Coast", "country": "GHANA", "city": "Cape_Coast", "Lon": -1.22, "Lat": 5.08, "data": [
+                {"display_name": "GHANA, Cape_Coast", "country": "GHANA", "city": "Cape_Coast", "lon": -1.22, "lat": 5.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.78},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.91},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.44},
@@ -7113,7 +7113,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GHANA, Koforidua", "country": "GHANA", "city": "Koforidua", "Lon": -0.28, "Lat": 6.05, "data": [
+                {"display_name": "GHANA, Koforidua", "country": "GHANA", "city": "Koforidua", "lon": -0.28, "lat": 6.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.63},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.98},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.48},
@@ -7135,7 +7135,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GHANA, Sunyani", "country": "GHANA", "city": "Sunyani", "Lon": -2.33, "Lat": 7.33, "data": [
+                {"display_name": "GHANA, Sunyani", "country": "GHANA", "city": "Sunyani", "lon": -2.33, "lat": 7.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.39},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.37},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.51},
@@ -7157,7 +7157,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GHANA, Ho", "country": "GHANA", "city": "Ho", "Lon": 0.5, "Lat": 6.58, "data": [
+                {"display_name": "GHANA, Ho", "country": "GHANA", "city": "Ho", "lon": 0.5, "lat": 6.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.51},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.08},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.51},
@@ -7179,7 +7179,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GHANA, Bolgatanga", "country": "GHANA", "city": "Bolgatanga", "Lon": -0.87, "Lat": 10.77, "data": [
+                {"display_name": "GHANA, Bolgatanga", "country": "GHANA", "city": "Bolgatanga", "lon": -0.87, "lat": 10.77, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.22},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.6},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.59},
@@ -7201,7 +7201,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GREECE, ATHENS", "country": "GREECE", "city": "ATHENS", "Lon": 23.73, "Lat": 38, "data": [
+                {"display_name": "GREECE, ATHENS", "country": "GREECE", "city": "ATHENS", "lon": 23.73, "lat": 38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.17},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.19},
@@ -7223,7 +7223,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GREECE, Thessaloniki", "country": "GREECE", "city": "Thessaloniki", "Lon": 22.97, "Lat": 40.63, "data": [
+                {"display_name": "GREECE, Thessaloniki", "country": "GREECE", "city": "Thessaloniki", "lon": 22.97, "lat": 40.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.5},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.11},
@@ -7245,7 +7245,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GREECE, Piraeus", "country": "GREECE", "city": "Piraeus", "Lon": 23.7, "Lat": 37.95, "data": [
+                {"display_name": "GREECE, Piraeus", "country": "GREECE", "city": "Piraeus", "lon": 23.7, "lat": 37.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.17},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.19},
@@ -7267,7 +7267,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GREECE, Patras", "country": "GREECE", "city": "Patras", "Lon": 21.73, "Lat": 38.23, "data": [
+                {"display_name": "GREECE, Patras", "country": "GREECE", "city": "Patras", "lon": 21.73, "lat": 38.23, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.17},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.35},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.12},
@@ -7289,7 +7289,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GREECE, Larissa", "country": "GREECE", "city": "Larissa", "Lon": 22.42, "Lat": 39.63, "data": [
+                {"display_name": "GREECE, Larissa", "country": "GREECE", "city": "Larissa", "lon": 22.42, "lat": 39.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.45},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.12},
@@ -7311,7 +7311,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GREECE, Iraklion", "country": "GREECE", "city": "Iraklion", "Lon": 25.2, "Lat": 35.33, "data": [
+                {"display_name": "GREECE, Iraklion", "country": "GREECE", "city": "Iraklion", "lon": 25.2, "lat": 35.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.94},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.96},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.26},
@@ -7333,7 +7333,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GREECE, Volos", "country": "GREECE", "city": "Volos", "Lon": 22.95, "Lat": 39.37, "data": [
+                {"display_name": "GREECE, Volos", "country": "GREECE", "city": "Volos", "lon": 22.95, "lat": 39.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.42},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.14},
@@ -7355,7 +7355,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GREECE, Kavalla", "country": "GREECE", "city": "Kavalla", "Lon": 24.42, "Lat": 40.93, "data": [
+                {"display_name": "GREECE, Kavalla", "country": "GREECE", "city": "Kavalla", "lon": 24.42, "lat": 40.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.5},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.15},
@@ -7377,7 +7377,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GREECE, Canea", "country": "GREECE", "city": "Canea", "Lon": 24.02, "Lat": 35.52, "data": [
+                {"display_name": "GREECE, Canea", "country": "GREECE", "city": "Canea", "lon": 24.02, "lat": 35.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.96},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.02},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.22},
@@ -7399,7 +7399,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GREECE, Serres", "country": "GREECE", "city": "Serres", "Lon": 23.52, "Lat": 41.08, "data": [
+                {"display_name": "GREECE, Serres", "country": "GREECE", "city": "Serres", "lon": 23.52, "lat": 41.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.12},
@@ -7421,7 +7421,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "GUAM, Dededo", "country": "GUAM", "city": "Dededo", "Lon": 144.82, "Lat": 13.52, "data": [
+                {"display_name": "GUAM, Dededo", "country": "GUAM", "city": "Dededo", "lon": 144.82, "lat": 13.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 21.06},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.52},
@@ -7443,7 +7443,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.3},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.3}
                 ]},
-                {"display_name": "GUAM, Tamuning", "country": "GUAM", "city": "Tamuning", "Lon": 144.77, "Lat": 13.48, "data": [
+                {"display_name": "GUAM, Tamuning", "country": "GUAM", "city": "Tamuning", "lon": 144.77, "lat": 13.48, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.52},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 21.05},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.53},
@@ -7465,7 +7465,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.3},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.3}
                 ]},
-                {"display_name": "GUAM, Santa_Rita", "country": "GUAM", "city": "Santa_Rita", "Lon": 144.67, "Lat": 13.38, "data": [
+                {"display_name": "GUAM, Santa_Rita", "country": "GUAM", "city": "Santa_Rita", "lon": 144.67, "lat": 13.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.51},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 21.03},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.53},
@@ -7487,7 +7487,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.29},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.29}
                 ]},
-                {"display_name": "GUAM, Taloffo", "country": "GUAM", "city": "Taloffo", "Lon": 144.77, "Lat": 13.33, "data": [
+                {"display_name": "GUAM, Taloffo", "country": "GUAM", "city": "Taloffo", "lon": 144.77, "lat": 13.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.54},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 21.12},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.52},
@@ -7509,7 +7509,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.29},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.29}
                 ]},
-                {"display_name": "GUAM, AGANA", "country": "GUAM", "city": "AGANA", "Lon": 144.75, "Lat": 13.47, "data": [
+                {"display_name": "GUAM, AGANA", "country": "GUAM", "city": "AGANA", "lon": 144.75, "lat": 13.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.52},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 21.04},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.53},
@@ -7531,7 +7531,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.3},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.3}
                 ]},
-                {"display_name": "HONG_KONG, VICTORIA", "country": "HONG_KONG", "city": "VICTORIA", "Lon": 114.15, "Lat": 22.27, "data": [
+                {"display_name": "HONG_KONG, VICTORIA", "country": "HONG_KONG", "city": "VICTORIA", "lon": 114.15, "lat": 22.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 36.47},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.7},
@@ -7553,7 +7553,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.87},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.87}
                 ]},
-                {"display_name": "HONG_KONG, Kowloon", "country": "HONG_KONG", "city": "Kowloon", "Lon": 114.17, "Lat": 22.33, "data": [
+                {"display_name": "HONG_KONG, Kowloon", "country": "HONG_KONG", "city": "Kowloon", "lon": 114.17, "lat": 22.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 36.46},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.71},
@@ -7575,7 +7575,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.87},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.87}
                 ]},
-                {"display_name": "HONG_KONG, Aberdeen", "country": "HONG_KONG", "city": "Aberdeen", "Lon": 114.15, "Lat": 22.25, "data": [
+                {"display_name": "HONG_KONG, Aberdeen", "country": "HONG_KONG", "city": "Aberdeen", "lon": 114.15, "lat": 22.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 36.47},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.7},
@@ -7597,7 +7597,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.88},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.88}
                 ]},
-                {"display_name": "HONG_KONG, Kwun_Tong", "country": "HONG_KONG", "city": "Kwun_Tong", "Lon": 114.2, "Lat": 22.32, "data": [
+                {"display_name": "HONG_KONG, Kwun_Tong", "country": "HONG_KONG", "city": "Kwun_Tong", "lon": 114.2, "lat": 22.32, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 36.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.71},
@@ -7619,7 +7619,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.87},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.87}
                 ]},
-                {"display_name": "HONG_KONG, New_Kowloon", "country": "HONG_KONG", "city": "New_Kowloon", "Lon": 114.17, "Lat": 22.33, "data": [
+                {"display_name": "HONG_KONG, New_Kowloon", "country": "HONG_KONG", "city": "New_Kowloon", "lon": 114.17, "lat": 22.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 36.46},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.71},
@@ -7641,7 +7641,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.87},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.87}
                 ]},
-                {"display_name": "HONG_KONG, Tsuen_Wan", "country": "HONG_KONG", "city": "Tsuen_Wan", "Lon": 114.12, "Lat": 22.37, "data": [
+                {"display_name": "HONG_KONG, Tsuen_Wan", "country": "HONG_KONG", "city": "Tsuen_Wan", "lon": 114.12, "lat": 22.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 36.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.72},
@@ -7663,7 +7663,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.86},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.86}
                 ]},
-                {"display_name": "HUNGARY, BUDAPEST", "country": "HUNGARY", "city": "BUDAPEST", "Lon": 19.05, "Lat": 47.5, "data": [
+                {"display_name": "HUNGARY, BUDAPEST", "country": "HUNGARY", "city": "BUDAPEST", "lon": 19.05, "lat": 47.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.08},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.89},
@@ -7685,7 +7685,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "HUNGARY, Debrecen", "country": "HUNGARY", "city": "Debrecen", "Lon": 21.62, "Lat": 47.5, "data": [
+                {"display_name": "HUNGARY, Debrecen", "country": "HUNGARY", "city": "Debrecen", "lon": 21.62, "lat": 47.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.08},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.93},
@@ -7707,7 +7707,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "HUNGARY, Miskolc", "country": "HUNGARY", "city": "Miskolc", "Lon": 20.78, "Lat": 48.12, "data": [
+                {"display_name": "HUNGARY, Miskolc", "country": "HUNGARY", "city": "Miskolc", "lon": 20.78, "lat": 48.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.03},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.9},
@@ -7729,7 +7729,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "HUNGARY, Szeged", "country": "HUNGARY", "city": "Szeged", "Lon": 20.15, "Lat": 46.25, "data": [
+                {"display_name": "HUNGARY, Szeged", "country": "HUNGARY", "city": "Szeged", "lon": 20.15, "lat": 46.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.15},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.94},
@@ -7751,7 +7751,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "HUNGARY, Pecs", "country": "HUNGARY", "city": "Pecs", "Lon": 18.25, "Lat": 46.07, "data": [
+                {"display_name": "HUNGARY, Pecs", "country": "HUNGARY", "city": "Pecs", "lon": 18.25, "lat": 46.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.15},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.91},
@@ -7773,7 +7773,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "HUNGARY, Gyor", "country": "HUNGARY", "city": "Gyor", "Lon": 17.67, "Lat": 47.68, "data": [
+                {"display_name": "HUNGARY, Gyor", "country": "HUNGARY", "city": "Gyor", "lon": 17.67, "lat": 47.68, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.06},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.86},
@@ -7795,7 +7795,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "HUNGARY, Nyiregyhaza", "country": "HUNGARY", "city": "Nyiregyhaza", "Lon": 21.72, "Lat": 47.95, "data": [
+                {"display_name": "HUNGARY, Nyiregyhaza", "country": "HUNGARY", "city": "Nyiregyhaza", "lon": 21.72, "lat": 47.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.05},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.92},
@@ -7817,7 +7817,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "HUNGARY, Szekesfehervar", "country": "HUNGARY", "city": "Szekesfehervar", "Lon": 18.37, "Lat": 47.18, "data": [
+                {"display_name": "HUNGARY, Szekesfehervar", "country": "HUNGARY", "city": "Szekesfehervar", "lon": 18.37, "lat": 47.18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.89},
@@ -7839,7 +7839,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "HUNGARY, Kecskemet", "country": "HUNGARY", "city": "Kecskemet", "Lon": 19.72, "Lat": 46.93, "data": [
+                {"display_name": "HUNGARY, Kecskemet", "country": "HUNGARY", "city": "Kecskemet", "lon": 19.72, "lat": 46.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.92},
@@ -7861,7 +7861,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "HUNGARY, Szombathely", "country": "HUNGARY", "city": "Szombathely", "Lon": 16.63, "Lat": 47.23, "data": [
+                {"display_name": "HUNGARY, Szombathely", "country": "HUNGARY", "city": "Szombathely", "lon": 16.63, "lat": 47.23, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.86},
@@ -7883,7 +7883,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "HUNGARY, Szolnok", "country": "HUNGARY", "city": "Szolnok", "Lon": 20.17, "Lat": 47.17, "data": [
+                {"display_name": "HUNGARY, Szolnok", "country": "HUNGARY", "city": "Szolnok", "lon": 20.17, "lat": 47.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.92},
@@ -7905,7 +7905,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "INDIA, Bombay", "country": "INDIA", "city": "Bombay", "Lon": 72.85, "Lat": 18.93, "data": [
+                {"display_name": "INDIA, Bombay", "country": "INDIA", "city": "Bombay", "lon": 72.85, "lat": 18.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.81},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.38},
@@ -7927,7 +7927,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -0.64},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -0.64}
                 ]},
-                {"display_name": "INDIA, NEW_DELHI", "country": "INDIA", "city": "NEW_DELHI", "Lon": 77.22, "Lat": 28.62, "data": [
+                {"display_name": "INDIA, NEW_DELHI", "country": "INDIA", "city": "NEW_DELHI", "lon": 77.22, "lat": 28.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.33},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.37},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.67},
@@ -7949,7 +7949,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.69},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.69}
                 ]},
-                {"display_name": "INDIA, Calcutta", "country": "INDIA", "city": "Calcutta", "Lon": 88.33, "Lat": 22.5, "data": [
+                {"display_name": "INDIA, Calcutta", "country": "INDIA", "city": "Calcutta", "lon": 88.33, "lat": 22.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.94},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.07},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.08},
@@ -7971,7 +7971,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.36},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.36}
                 ]},
-                {"display_name": "INDIA, Madras", "country": "INDIA", "city": "Madras", "Lon": 80.3, "Lat": 13.08, "data": [
+                {"display_name": "INDIA, Madras", "country": "INDIA", "city": "Madras", "lon": 80.3, "lat": 13.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.73},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.84},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.52},
@@ -7993,7 +7993,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.2},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.2}
                 ]},
-                {"display_name": "INDIA, Bangalore", "country": "INDIA", "city": "Bangalore", "Lon": 77.58, "Lat": 12.97, "data": [
+                {"display_name": "INDIA, Bangalore", "country": "INDIA", "city": "Bangalore", "lon": 77.58, "lat": 12.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.49},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.76},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.4},
@@ -8015,7 +8015,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.05},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.05}
                 ]},
-                {"display_name": "INDIA, Hyderabad", "country": "INDIA", "city": "Hyderabad", "Lon": 78.43, "Lat": 17.37, "data": [
+                {"display_name": "INDIA, Hyderabad", "country": "INDIA", "city": "Hyderabad", "lon": 78.43, "lat": 17.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.94},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.64},
@@ -8037,7 +8037,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.01},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.01}
                 ]},
-                {"display_name": "INDIA, Ahmedabad", "country": "INDIA", "city": "Ahmedabad", "Lon": 72.67, "Lat": 23, "data": [
+                {"display_name": "INDIA, Ahmedabad", "country": "INDIA", "city": "Ahmedabad", "lon": 72.67, "lat": 23, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.02},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.25},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.17},
@@ -8059,7 +8059,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.32},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.32}
                 ]},
-                {"display_name": "INDIA, Kanpur", "country": "INDIA", "city": "Kanpur", "Lon": 80.23, "Lat": 26.45, "data": [
+                {"display_name": "INDIA, Kanpur", "country": "INDIA", "city": "Kanpur", "lon": 80.23, "lat": 26.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.1},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.93},
@@ -8081,7 +8081,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.63},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.63}
                 ]},
-                {"display_name": "INDIA, Nagpur", "country": "INDIA", "city": "Nagpur", "Lon": 79.2, "Lat": 21.17, "data": [
+                {"display_name": "INDIA, Nagpur", "country": "INDIA", "city": "Nagpur", "lon": 79.2, "lat": 21.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.04},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.51},
@@ -8103,7 +8103,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.34},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.34}
                 ]},
-                {"display_name": "INDIA, Pune", "country": "INDIA", "city": "Pune", "Lon": 73.97, "Lat": 18.57, "data": [
+                {"display_name": "INDIA, Pune", "country": "INDIA", "city": "Pune", "lon": 73.97, "lat": 18.57, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.65},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.88},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.45},
@@ -8125,7 +8125,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -0.59},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -0.59}
                 ]},
-                {"display_name": "INDIA, Jaipur", "country": "INDIA", "city": "Jaipur", "Lon": 75.82, "Lat": 26.92, "data": [
+                {"display_name": "INDIA, Jaipur", "country": "INDIA", "city": "Jaipur", "lon": 75.82, "lat": 26.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.42},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.46},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.87},
@@ -8147,7 +8147,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.97},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.97}
                 ]},
-                {"display_name": "INDIA, Lucknow", "country": "INDIA", "city": "Lucknow", "Lon": 80.92, "Lat": 26.85, "data": [
+                {"display_name": "INDIA, Lucknow", "country": "INDIA", "city": "Lucknow", "lon": 80.92, "lat": 26.85, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.18},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.04},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.86},
@@ -8169,7 +8169,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.84},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.84}
                 ]},
-                {"display_name": "INDIA, Indore", "country": "INDIA", "city": "Indore", "Lon": 75.83, "Lat": 22.72, "data": [
+                {"display_name": "INDIA, Indore", "country": "INDIA", "city": "Indore", "lon": 75.83, "lat": 22.72, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.32},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.32},
@@ -8191,7 +8191,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.1},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.1}
                 ]},
-                {"display_name": "INDIA, Madurai", "country": "INDIA", "city": "Madurai", "Lon": 78.12, "Lat": 9.93, "data": [
+                {"display_name": "INDIA, Madurai", "country": "INDIA", "city": "Madurai", "lon": 78.12, "lat": 9.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.58},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.02},
@@ -8213,7 +8213,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.48},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.48}
                 ]},
-                {"display_name": "INDIA, Chandigarh", "country": "INDIA", "city": "Chandigarh", "Lon": 76.36, "Lat": 30.73, "data": [
+                {"display_name": "INDIA, Chandigarh", "country": "INDIA", "city": "Chandigarh", "lon": 76.36, "lat": 30.73, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.35},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.43},
@@ -8235,7 +8235,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.77},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.77}
                 ]},
-                {"display_name": "INDIA, Surat", "country": "INDIA", "city": "Surat", "Lon": 72.83, "Lat": 21.17, "data": [
+                {"display_name": "INDIA, Surat", "country": "INDIA", "city": "Surat", "lon": 72.83, "lat": 21.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.84},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.08},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.31},
@@ -8257,7 +8257,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -0.78},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -0.78}
                 ]},
-                {"display_name": "INDONESIA, JAKARTA", "country": "INDONESIA", "city": "JAKARTA", "Lon": 106.75, "Lat": -6.13, "data": [
+                {"display_name": "INDONESIA, JAKARTA", "country": "INDONESIA", "city": "JAKARTA", "lon": 106.75, "lat": -6.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 33.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 35.01},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.03},
@@ -8279,7 +8279,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6.67},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6.67}
                 ]},
-                {"display_name": "INDONESIA, Surabaya", "country": "INDONESIA", "city": "Surabaya", "Lon": 112.75, "Lat": -7.23, "data": [
+                {"display_name": "INDONESIA, Surabaya", "country": "INDONESIA", "city": "Surabaya", "lon": 112.75, "lat": -7.23, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 30.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 32.76},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.57},
@@ -8301,7 +8301,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.6},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.6}
                 ]},
-                {"display_name": "INDONESIA, Bandung", "country": "INDONESIA", "city": "Bandung", "Lon": 107.57, "Lat": -6.95, "data": [
+                {"display_name": "INDONESIA, Bandung", "country": "INDONESIA", "city": "Bandung", "lon": 107.57, "lat": -6.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.56},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 34.32},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.07},
@@ -8323,7 +8323,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6.88},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6.88}
                 ]},
-                {"display_name": "INDONESIA, Medan", "country": "INDONESIA", "city": "Medan", "Lon": 98.65, "Lat": 3.58, "data": [
+                {"display_name": "INDONESIA, Medan", "country": "INDONESIA", "city": "Medan", "lon": 98.65, "lat": 3.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.58},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.57},
@@ -8345,7 +8345,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.82},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.82}
                 ]},
-                {"display_name": "INDONESIA, Semarang", "country": "INDONESIA", "city": "Semarang", "Lon": 110.48, "Lat": -6.97, "data": [
+                {"display_name": "INDONESIA, Semarang", "country": "INDONESIA", "city": "Semarang", "lon": 110.48, "lat": -6.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 31.65},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.37},
@@ -8367,7 +8367,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.22},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.22}
                 ]},
-                {"display_name": "INDONESIA, Palembang", "country": "INDONESIA", "city": "Palembang", "Lon": 104.75, "Lat": -2.98, "data": [
+                {"display_name": "INDONESIA, Palembang", "country": "INDONESIA", "city": "Palembang", "lon": 104.75, "lat": -2.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 36.46},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 37.02},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.02},
@@ -8389,7 +8389,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.27},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.27}
                 ]},
-                {"display_name": "INDONESIA, Ujung_Pandang", "country": "INDONESIA", "city": "Ujung_Pandang", "Lon": 119.47, "Lat": -5.15, "data": [
+                {"display_name": "INDONESIA, Ujung_Pandang", "country": "INDONESIA", "city": "Ujung_Pandang", "lon": 119.47, "lat": -5.15, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.41},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.85},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.98},
@@ -8411,7 +8411,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -8.37},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -8.37}
                 ]},
-                {"display_name": "INDONESIA, Malang", "country": "INDONESIA", "city": "Malang", "Lon": 112.75, "Lat": -7.98, "data": [
+                {"display_name": "INDONESIA, Malang", "country": "INDONESIA", "city": "Malang", "lon": 112.75, "lat": -7.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.84},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 32.21},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.55},
@@ -8433,7 +8433,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.54},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.54}
                 ]},
-                {"display_name": "INDONESIA, Padang", "country": "INDONESIA", "city": "Padang", "Lon": 100.35, "Lat": -0.95, "data": [
+                {"display_name": "INDONESIA, Padang", "country": "INDONESIA", "city": "Padang", "lon": 100.35, "lat": -0.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 37.91},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 37.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.91},
@@ -8455,7 +8455,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.36},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.36}
                 ]},
-                {"display_name": "INDONESIA, Surakarta", "country": "INDONESIA", "city": "Surakarta", "Lon": 110.83, "Lat": -7.53, "data": [
+                {"display_name": "INDONESIA, Surakarta", "country": "INDONESIA", "city": "Surakarta", "lon": 110.83, "lat": -7.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 31},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.18},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.38},
@@ -8477,7 +8477,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.35},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.35}
                 ]},
-                {"display_name": "INDONESIA, Kupang", "country": "INDONESIA", "city": "Kupang", "Lon": 123.58, "Lat": -10.17, "data": [
+                {"display_name": "INDONESIA, Kupang", "country": "INDONESIA", "city": "Kupang", "lon": 123.58, "lat": -10.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.88},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.95},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.97},
@@ -8499,7 +8499,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.08},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.08}
                 ]},
-                {"display_name": "INDONESIA, Yogyakarta", "country": "INDONESIA", "city": "Yogyakarta", "Lon": 110.4, "Lat": -7.8, "data": [
+                {"display_name": "INDONESIA, Yogyakarta", "country": "INDONESIA", "city": "Yogyakarta", "lon": 110.4, "lat": -7.8, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 30.89},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.09},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.33},
@@ -8521,7 +8521,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.3},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.3}
                 ]},
-                {"display_name": "INDONESIA, Banjarmasin", "country": "INDONESIA", "city": "Banjarmasin", "Lon": 114.58, "Lat": -3.33, "data": [
+                {"display_name": "INDONESIA, Banjarmasin", "country": "INDONESIA", "city": "Banjarmasin", "lon": 114.58, "lat": -3.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 34.31},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.71},
@@ -8543,7 +8543,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.97},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.97}
                 ]},
-                {"display_name": "INDONESIA, Pontianak", "country": "INDONESIA", "city": "Pontianak", "Lon": 109.33, "Lat": -0.03, "data": [
+                {"display_name": "INDONESIA, Pontianak", "country": "INDONESIA", "city": "Pontianak", "lon": 109.33, "lat": -0.03, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 36.9},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 37.47},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.3},
@@ -8565,7 +8565,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.31},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.31}
                 ]},
-                {"display_name": "INDONESIA, Manado", "country": "INDONESIA", "city": "Manado", "Lon": 124.85, "Lat": 1.48, "data": [
+                {"display_name": "INDONESIA, Manado", "country": "INDONESIA", "city": "Manado", "lon": 124.85, "lat": 1.48, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.32},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.39},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.73},
@@ -8587,7 +8587,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -10.89},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -10.89}
                 ]},
-                {"display_name": "INDONESIA, Jayapura", "country": "INDONESIA", "city": "Jayapura", "Lon": 140.7, "Lat": -2.53, "data": [
+                {"display_name": "INDONESIA, Jayapura", "country": "INDONESIA", "city": "Jayapura", "lon": 140.7, "lat": -2.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.51},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 22.1},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.88},
@@ -8609,7 +8609,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.78},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.78}
                 ]},
-                {"display_name": "IRAN, TEHRAN", "country": "IRAN", "city": "TEHRAN", "Lon": 51.43, "Lat": 35.67, "data": [
+                {"display_name": "IRAN, TEHRAN", "country": "IRAN", "city": "TEHRAN", "lon": 51.43, "lat": 35.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 30.31},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 32.11},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.98},
@@ -8631,7 +8631,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.9},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.9}
                 ]},
-                {"display_name": "IRAN, Mashad", "country": "IRAN", "city": "Mashad", "Lon": 59.57, "Lat": 36.26, "data": [
+                {"display_name": "IRAN, Mashad", "country": "IRAN", "city": "Mashad", "lon": 59.57, "lat": 36.26, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 34.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 35.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.85},
@@ -8653,7 +8653,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.36},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.36}
                 ]},
-                {"display_name": "IRAN, Isfahan", "country": "IRAN", "city": "Isfahan", "Lon": 51.68, "Lat": 32.68, "data": [
+                {"display_name": "IRAN, Isfahan", "country": "IRAN", "city": "Isfahan", "lon": 51.68, "lat": 32.68, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 30.41},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 32.3},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.85},
@@ -8675,7 +8675,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.98},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.98}
                 ]},
-                {"display_name": "IRAN, Tabriz", "country": "IRAN", "city": "Tabriz", "Lon": 46.3, "Lat": 38.08, "data": [
+                {"display_name": "IRAN, Tabriz", "country": "IRAN", "city": "Tabriz", "lon": 46.3, "lat": 38.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.97},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.19},
@@ -8697,7 +8697,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.43},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.43}
                 ]},
-                {"display_name": "IRAN, Shiraz", "country": "IRAN", "city": "Shiraz", "Lon": 52.57, "Lat": 29.63, "data": [
+                {"display_name": "IRAN, Shiraz", "country": "IRAN", "city": "Shiraz", "lon": 52.57, "lat": 29.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 30.77},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 32.59},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -8719,7 +8719,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.4},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.4}
                 ]},
-                {"display_name": "IRAN, Ahwaz", "country": "IRAN", "city": "Ahwaz", "Lon": 48.72, "Lat": 31.28, "data": [
+                {"display_name": "IRAN, Ahwaz", "country": "IRAN", "city": "Ahwaz", "lon": 48.72, "lat": 31.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.78},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.76},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.9},
@@ -8741,7 +8741,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.37},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.37}
                 ]},
-                {"display_name": "IRAN, Bakhtaran", "country": "IRAN", "city": "Bakhtaran", "Lon": 47.07, "Lat": 34.32, "data": [
+                {"display_name": "IRAN, Bakhtaran", "country": "IRAN", "city": "Bakhtaran", "lon": 47.07, "lat": 34.32, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.51},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.21},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.07},
@@ -8763,7 +8763,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.1},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.1}
                 ]},
-                {"display_name": "IRAN, Qom", "country": "IRAN", "city": "Qom", "Lon": 50.95, "Lat": 34.65, "data": [
+                {"display_name": "IRAN, Qom", "country": "IRAN", "city": "Qom", "lon": 50.95, "lat": 34.65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 30.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.93},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.95},
@@ -8785,7 +8785,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.9},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.9}
                 ]},
-                {"display_name": "IRAN, Karaj", "country": "IRAN", "city": "Karaj", "Lon": 50.97, "Lat": 35.8, "data": [
+                {"display_name": "IRAN, Karaj", "country": "IRAN", "city": "Karaj", "lon": 50.97, "lat": 35.8, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 30.11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.9},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.99},
@@ -8807,7 +8807,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.94},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.94}
                 ]},
-                {"display_name": "IRAN, Orumiyeh", "country": "IRAN", "city": "Orumiyeh", "Lon": 45.07, "Lat": 37.55, "data": [
+                {"display_name": "IRAN, Orumiyeh", "country": "IRAN", "city": "Orumiyeh", "lon": 45.07, "lat": 37.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.4},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.55},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.22},
@@ -8829,7 +8829,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.35},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.35}
                 ]},
-                {"display_name": "IRAN, Abadan", "country": "IRAN", "city": "Abadan", "Lon": 48.27, "Lat": 30.33, "data": [
+                {"display_name": "IRAN, Abadan", "country": "IRAN", "city": "Abadan", "lon": 48.27, "lat": 30.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.42},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.45},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.88},
@@ -8851,7 +8851,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.57},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.57}
                 ]},
-                {"display_name": "IRAN, Rasht", "country": "IRAN", "city": "Rasht", "Lon": 49.6, "Lat": 37.27, "data": [
+                {"display_name": "IRAN, Rasht", "country": "IRAN", "city": "Rasht", "lon": 49.6, "lat": 37.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.59},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.24},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.08},
@@ -8873,7 +8873,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.19},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.19}
                 ]},
-                {"display_name": "IRAN, Kerman", "country": "IRAN", "city": "Kerman", "Lon": 57.08, "Lat": 30.28, "data": [
+                {"display_name": "IRAN, Kerman", "country": "IRAN", "city": "Kerman", "lon": 57.08, "lat": 30.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 33.59},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 34.96},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.77},
@@ -8895,7 +8895,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.83},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.83}
                 ]},
-                {"display_name": "IRAN, Yazd", "country": "IRAN", "city": "Yazd", "Lon": 54.42, "Lat": 31.88, "data": [
+                {"display_name": "IRAN, Yazd", "country": "IRAN", "city": "Yazd", "lon": 54.42, "lat": 31.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 31.96},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.66},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.77},
@@ -8917,7 +8917,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.87},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.87}
                 ]},
-                {"display_name": "IRAN, Bandar_'Abbas", "country": "IRAN", "city": "Bandar_'Abbas", "Lon": 56.28, "Lat": 27.18, "data": [
+                {"display_name": "IRAN, Bandar_'Abbas", "country": "IRAN", "city": "Bandar_'Abbas", "lon": 56.28, "lat": 27.18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.95},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 34.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.74},
@@ -8939,7 +8939,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.19},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.19}
                 ]},
-                {"display_name": "IRAQ, BAGHDAD", "country": "IRAQ", "city": "BAGHDAD", "Lon": 44.43, "Lat": 33.33, "data": [
+                {"display_name": "IRAQ, BAGHDAD", "country": "IRAQ", "city": "BAGHDAD", "lon": 44.43, "lat": 33.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.64},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.05},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.14},
@@ -8961,7 +8961,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.25},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.25}
                 ]},
-                {"display_name": "IRAQ, Basra", "country": "IRAQ", "city": "Basra", "Lon": 47.78, "Lat": 30.5, "data": [
+                {"display_name": "IRAQ, Basra", "country": "IRAQ", "city": "Basra", "lon": 47.78, "lat": 30.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.22},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.23},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.91},
@@ -8983,7 +8983,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.56},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.56}
                 ]},
-                {"display_name": "IRAQ, Mosul", "country": "IRAQ", "city": "Mosul", "Lon": 43.13, "Lat": 36.35, "data": [
+                {"display_name": "IRAQ, Mosul", "country": "IRAQ", "city": "Mosul", "lon": 43.13, "lat": 36.35, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.95},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.88},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.25},
@@ -9005,7 +9005,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.23},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.23}
                 ]},
-                {"display_name": "IRAQ, Kirkuk", "country": "IRAQ", "city": "Kirkuk", "Lon": 44.43, "Lat": 35.47, "data": [
+                {"display_name": "IRAQ, Kirkuk", "country": "IRAQ", "city": "Kirkuk", "lon": 44.43, "lat": 35.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.01},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.25},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.19},
@@ -9027,7 +9027,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.17},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.17}
                 ]},
-                {"display_name": "IRAQ, Irbil", "country": "IRAQ", "city": "Irbil", "Lon": 44.02, "Lat": 36.18, "data": [
+                {"display_name": "IRAQ, Irbil", "country": "IRAQ", "city": "Irbil", "lon": 44.02, "lat": 36.18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.05},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.15},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.22},
@@ -9049,7 +9049,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.21},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.21}
                 ]},
-                {"display_name": "IRAQ, As-Sulaymaniyah", "country": "IRAQ", "city": "As-Sulaymaniyah", "Lon": 45.43, "Lat": 35.55, "data": [
+                {"display_name": "IRAQ, As-Sulaymaniyah", "country": "IRAQ", "city": "As-Sulaymaniyah", "lon": 45.43, "lat": 35.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.16},
@@ -9071,7 +9071,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.15},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.15}
                 ]},
-                {"display_name": "IRAQ, An-Najaf", "country": "IRAQ", "city": "An-Najaf", "Lon": 44.33, "Lat": 31.98, "data": [
+                {"display_name": "IRAQ, An-Najaf", "country": "IRAQ", "city": "An-Najaf", "lon": 44.33, "lat": 31.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.34},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.86},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.11},
@@ -9093,7 +9093,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.43},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.43}
                 ]},
-                {"display_name": "IRAQ, Al-Hillah", "country": "IRAQ", "city": "Al-Hillah", "Lon": 44.42, "Lat": 32.48, "data": [
+                {"display_name": "IRAQ, Al-Hillah", "country": "IRAQ", "city": "Al-Hillah", "lon": 44.42, "lat": 32.48, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.47},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.95},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.12},
@@ -9115,7 +9115,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.35},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.35}
                 ]},
-                {"display_name": "IRAQ, Karbala", "country": "IRAQ", "city": "Karbala", "Lon": 44.03, "Lat": 32.6, "data": [
+                {"display_name": "IRAQ, Karbala", "country": "IRAQ", "city": "Karbala", "lon": 44.03, "lat": 32.6, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.41},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.81},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.14},
@@ -9137,7 +9137,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.35},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.35}
                 ]},
-                {"display_name": "IRAQ, An-Nasiriyah", "country": "IRAQ", "city": "An-Nasiriyah", "Lon": 46.27, "Lat": 31.03, "data": [
+                {"display_name": "IRAQ, An-Nasiriyah", "country": "IRAQ", "city": "An-Nasiriyah", "lon": 46.27, "lat": 31.03, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.99},
@@ -9159,7 +9159,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.53},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.53}
                 ]},
-                {"display_name": "IRAQ, Ar-Ramadi", "country": "IRAQ", "city": "Ar-Ramadi", "Lon": 43.28, "Lat": 33.42, "data": [
+                {"display_name": "IRAQ, Ar-Ramadi", "country": "IRAQ", "city": "Ar-Ramadi", "lon": 43.28, "lat": 33.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.64},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.19},
@@ -9181,7 +9181,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.27},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.27}
                 ]},
-                {"display_name": "IRAQ, Al-Amarah", "country": "IRAQ", "city": "Al-Amarah", "Lon": 47.15, "Lat": 31.83, "data": [
+                {"display_name": "IRAQ, Al-Amarah", "country": "IRAQ", "city": "Al-Amarah", "lon": 47.15, "lat": 31.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.18},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.06},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.99},
@@ -9203,7 +9203,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.36},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.36}
                 ]},
-                {"display_name": "IRAQ, Ba'qubah", "country": "IRAQ", "city": "Ba'qubah", "Lon": 44.63, "Lat": 33.75, "data": [
+                {"display_name": "IRAQ, Ba'qubah", "country": "IRAQ", "city": "Ba'qubah", "lon": 44.63, "lat": 33.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.76},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.17},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.15},
@@ -9225,7 +9225,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.21},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.21}
                 ]},
-                {"display_name": "IRAQ, Samarra", "country": "IRAQ", "city": "Samarra", "Lon": 43.87, "Lat": 34.2, "data": [
+                {"display_name": "IRAQ, Samarra", "country": "IRAQ", "city": "Samarra", "lon": 43.87, "lat": 34.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.93},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.19},
@@ -9247,7 +9247,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.19},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.19}
                 ]},
-                {"display_name": "ISRAEL, JERUSALEM", "country": "ISRAEL", "city": "JERUSALEM", "Lon": 35.22, "Lat": 31.78, "data": [
+                {"display_name": "ISRAEL, JERUSALEM", "country": "ISRAEL", "city": "JERUSALEM", "lon": 35.22, "lat": 31.78, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.05},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.46},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -9269,7 +9269,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ISRAEL, Tel_Aviv", "country": "ISRAEL", "city": "Tel_Aviv", "Lon": 34.77, "Lat": 32.08, "data": [
+                {"display_name": "ISRAEL, Tel_Aviv", "country": "ISRAEL", "city": "Tel_Aviv", "lon": 34.77, "lat": 32.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.48},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -9291,7 +9291,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ISRAEL, Haifa", "country": "ISRAEL", "city": "Haifa", "Lon": 34.98, "Lat": 32.82, "data": [
+                {"display_name": "ISRAEL, Haifa", "country": "ISRAEL", "city": "Haifa", "lon": 34.98, "lat": 32.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -9313,7 +9313,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ISRAEL, Holon", "country": "ISRAEL", "city": "Holon", "Lon": 34.78, "Lat": 32.03, "data": [
+                {"display_name": "ISRAEL, Holon", "country": "ISRAEL", "city": "Holon", "lon": 34.78, "lat": 32.03, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.47},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -9335,7 +9335,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ISRAEL, Petach-Tikva", "country": "ISRAEL", "city": "Petach-Tikva", "Lon": 34.92, "Lat": 32.08, "data": [
+                {"display_name": "ISRAEL, Petach-Tikva", "country": "ISRAEL", "city": "Petach-Tikva", "lon": 34.92, "lat": 32.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -9357,7 +9357,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ISRAEL, Ramat_Gan", "country": "ISRAEL", "city": "Ramat_Gan", "Lon": 34.8, "Lat": 32.07, "data": [
+                {"display_name": "ISRAEL, Ramat_Gan", "country": "ISRAEL", "city": "Ramat_Gan", "lon": 34.8, "lat": 32.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.48},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -9379,7 +9379,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ISRAEL, Beersheba", "country": "ISRAEL", "city": "Beersheba", "Lon": 34.78, "Lat": 31.25, "data": [
+                {"display_name": "ISRAEL, Beersheba", "country": "ISRAEL", "city": "Beersheba", "lon": 34.78, "lat": 31.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.3},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.42},
@@ -9401,7 +9401,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ISRAEL, Bene_Beraq", "country": "ISRAEL", "city": "Bene_Beraq", "Lon": 34.87, "Lat": 32.08, "data": [
+                {"display_name": "ISRAEL, Bene_Beraq", "country": "ISRAEL", "city": "Bene_Beraq", "lon": 34.87, "lat": 32.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -9423,7 +9423,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ISRAEL, Elat", "country": "ISRAEL", "city": "Elat", "Lon": 34.95, "Lat": 29.55, "data": [
+                {"display_name": "ISRAEL, Elat", "country": "ISRAEL", "city": "Elat", "lon": 34.95, "lat": 29.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.54},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.9},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.43},
@@ -9445,7 +9445,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ISRAEL, Hebron", "country": "ISRAEL", "city": "Hebron", "Lon": 35.1, "Lat": 31.53, "data": [
+                {"display_name": "ISRAEL, Hebron", "country": "ISRAEL", "city": "Hebron", "lon": 35.1, "lat": 31.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.39},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -9467,7 +9467,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ISRAEL, Bethlehem", "country": "ISRAEL", "city": "Bethlehem", "Lon": 35.2, "Lat": 31.7, "data": [
+                {"display_name": "ISRAEL, Bethlehem", "country": "ISRAEL", "city": "Bethlehem", "lon": 35.2, "lat": 31.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.03},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.44},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -9489,7 +9489,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ISRAEL, Jericho", "country": "ISRAEL", "city": "Jericho", "Lon": 35.45, "Lat": 31.85, "data": [
+                {"display_name": "ISRAEL, Jericho", "country": "ISRAEL", "city": "Jericho", "lon": 35.45, "lat": 31.85, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.05},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.5},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -9511,7 +9511,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ISRAEL, Nablus", "country": "ISRAEL", "city": "Nablus", "Lon": 35.27, "Lat": 32.22, "data": [
+                {"display_name": "ISRAEL, Nablus", "country": "ISRAEL", "city": "Nablus", "lon": 35.27, "lat": 32.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.56},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -9533,7 +9533,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, ROME", "country": "ITALY", "city": "ROME", "Lon": 12.5, "Lat": 41.88, "data": [
+                {"display_name": "ITALY, ROME", "country": "ITALY", "city": "ROME", "lon": 12.5, "lat": 41.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.18},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.82},
@@ -9555,7 +9555,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Milan", "country": "ITALY", "city": "Milan", "Lon": 9.2, "Lat": 45.47, "data": [
+                {"display_name": "ITALY, Milan", "country": "ITALY", "city": "Milan", "lon": 9.2, "lat": 45.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -9577,7 +9577,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Naples", "country": "ITALY", "city": "Naples", "Lon": 14.25, "Lat": 41.83, "data": [
+                {"display_name": "ITALY, Naples", "country": "ITALY", "city": "Naples", "lon": 14.25, "lat": 41.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.2},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.87},
@@ -9599,7 +9599,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Turin", "country": "ITALY", "city": "Turin", "Lon": 7.67, "Lat": 45.07, "data": [
+                {"display_name": "ITALY, Turin", "country": "ITALY", "city": "Turin", "lon": 7.67, "lat": 45.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -9621,7 +9621,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Palermo", "country": "ITALY", "city": "Palermo", "Lon": 13.38, "Lat": 38.13, "data": [
+                {"display_name": "ITALY, Palermo", "country": "ITALY", "city": "Palermo", "lon": 13.38, "lat": 38.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.95},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.48},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.86},
@@ -9643,7 +9643,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Genoa", "country": "ITALY", "city": "Genoa", "Lon": 8.93, "Lat": 44.4, "data": [
+                {"display_name": "ITALY, Genoa", "country": "ITALY", "city": "Genoa", "lon": 8.93, "lat": 44.4, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -9665,7 +9665,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Bologna", "country": "ITALY", "city": "Bologna", "Lon": 11.33, "Lat": 44.5, "data": [
+                {"display_name": "ITALY, Bologna", "country": "ITALY", "city": "Bologna", "lon": 11.33, "lat": 44.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.18},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.79},
@@ -9687,7 +9687,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Florence", "country": "ITALY", "city": "Florence", "Lon": 11.25, "Lat": 43.78, "data": [
+                {"display_name": "ITALY, Florence", "country": "ITALY", "city": "Florence", "lon": 11.25, "lat": 43.78, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.18},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.79},
@@ -9709,7 +9709,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Catania", "country": "ITALY", "city": "Catania", "Lon": 15.07, "Lat": 37.52, "data": [
+                {"display_name": "ITALY, Catania", "country": "ITALY", "city": "Catania", "lon": 15.07, "lat": 37.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.94},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.41},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.91},
@@ -9731,7 +9731,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Bari", "country": "ITALY", "city": "Bari", "Lon": 16.87, "Lat": 41.12, "data": [
+                {"display_name": "ITALY, Bari", "country": "ITALY", "city": "Bari", "lon": 16.87, "lat": 41.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.6},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.94},
@@ -9753,7 +9753,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Venice", "country": "ITALY", "city": "Venice", "Lon": 12.33, "Lat": 45.43, "data": [
+                {"display_name": "ITALY, Venice", "country": "ITALY", "city": "Venice", "lon": 12.33, "lat": 45.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.8},
@@ -9775,7 +9775,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Messina", "country": "ITALY", "city": "Messina", "Lon": 15.55, "Lat": 38.18, "data": [
+                {"display_name": "ITALY, Messina", "country": "ITALY", "city": "Messina", "lon": 15.55, "lat": 38.18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.03},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.45},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.93},
@@ -9797,7 +9797,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Verona", "country": "ITALY", "city": "Verona", "Lon": 11, "Lat": 45.45, "data": [
+                {"display_name": "ITALY, Verona", "country": "ITALY", "city": "Verona", "lon": 11, "lat": 45.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.15},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.78},
@@ -9819,7 +9819,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Taranto", "country": "ITALY", "city": "Taranto", "Lon": 17.25, "Lat": 40.47, "data": [
+                {"display_name": "ITALY, Taranto", "country": "ITALY", "city": "Taranto", "lon": 17.25, "lat": 40.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.21},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.96},
@@ -9841,7 +9841,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Trieste", "country": "ITALY", "city": "Trieste", "Lon": 13.77, "Lat": 45.67, "data": [
+                {"display_name": "ITALY, Trieste", "country": "ITALY", "city": "Trieste", "lon": 13.77, "lat": 45.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.83},
@@ -9863,7 +9863,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ITALY, Cagliari", "country": "ITALY", "city": "Cagliari", "Lon": 9.12, "Lat": 39.22, "data": [
+                {"display_name": "ITALY, Cagliari", "country": "ITALY", "city": "Cagliari", "lon": 9.12, "lat": 39.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.93},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -9885,7 +9885,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "JAPAN, TOKYO", "country": "JAPAN", "city": "TOKYO", "Lon": 139.75, "Lat": 35.67, "data": [
+                {"display_name": "JAPAN, TOKYO", "country": "JAPAN", "city": "TOKYO", "lon": 139.75, "lat": 35.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 19.31},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 22.79},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.25},
@@ -9907,7 +9907,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.78},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.78}
                 ]},
-                {"display_name": "JAPAN, Yokohama", "country": "JAPAN", "city": "Yokohama", "Lon": 139.65, "Lat": 35.45, "data": [
+                {"display_name": "JAPAN, Yokohama", "country": "JAPAN", "city": "Yokohama", "lon": 139.65, "lat": 35.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 19.33},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 22.83},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.25},
@@ -9929,7 +9929,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.78},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.78}
                 ]},
-                {"display_name": "JAPAN, Osaka", "country": "JAPAN", "city": "Osaka", "Lon": 135.5, "Lat": 34.67, "data": [
+                {"display_name": "JAPAN, Osaka", "country": "JAPAN", "city": "Osaka", "lon": 135.5, "lat": 34.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 22.07},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.13},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.56},
@@ -9951,7 +9951,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.62},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.62}
                 ]},
-                {"display_name": "JAPAN, Nagoya", "country": "JAPAN", "city": "Nagoya", "Lon": 136.88, "Lat": 35.13, "data": [
+                {"display_name": "JAPAN, Nagoya", "country": "JAPAN", "city": "Nagoya", "lon": 136.88, "lat": 35.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 21.15},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 24.36},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.46},
@@ -9973,7 +9973,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.63},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.63}
                 ]},
-                {"display_name": "JAPAN, Sapporo", "country": "JAPAN", "city": "Sapporo", "Lon": 141.35, "Lat": 43.08, "data": [
+                {"display_name": "JAPAN, Sapporo", "country": "JAPAN", "city": "Sapporo", "lon": 141.35, "lat": 43.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 17.51},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 20.46},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -9995,7 +9995,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.82},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.82}
                 ]},
-                {"display_name": "JAPAN, Kyoto", "country": "JAPAN", "city": "Kyoto", "Lon": 135.75, "Lat": 35.03, "data": [
+                {"display_name": "JAPAN, Kyoto", "country": "JAPAN", "city": "Kyoto", "lon": 135.75, "lat": 35.03, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 21.92},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 24.98},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.55},
@@ -10017,7 +10017,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.59},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.59}
                 ]},
-                {"display_name": "JAPAN, Kobe", "country": "JAPAN", "city": "Kobe", "Lon": 135.2, "Lat": 34.67, "data": [
+                {"display_name": "JAPAN, Kobe", "country": "JAPAN", "city": "Kobe", "lon": 135.2, "lat": 34.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 22.29},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.58},
@@ -10039,7 +10039,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.6},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.6}
                 ]},
-                {"display_name": "JAPAN, Fukuoka", "country": "JAPAN", "city": "Fukuoka", "Lon": 130.35, "Lat": 33.65, "data": [
+                {"display_name": "JAPAN, Fukuoka", "country": "JAPAN", "city": "Fukuoka", "lon": 130.35, "lat": 33.65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.64},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.97},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.94},
@@ -10061,7 +10061,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.97},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.97}
                 ]},
-                {"display_name": "JAPAN, Kawasaki", "country": "JAPAN", "city": "Kawasaki", "Lon": 139.68, "Lat": 35.53, "data": [
+                {"display_name": "JAPAN, Kawasaki", "country": "JAPAN", "city": "Kawasaki", "lon": 139.68, "lat": 35.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 19.33},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 22.82},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.25},
@@ -10083,7 +10083,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.78},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.78}
                 ]},
-                {"display_name": "JAPAN, Hiroshima", "country": "JAPAN", "city": "Hiroshima", "Lon": 132.45, "Lat": 34.38, "data": [
+                {"display_name": "JAPAN, Hiroshima", "country": "JAPAN", "city": "Hiroshima", "lon": 132.45, "lat": 34.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.18},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.8},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.8},
@@ -10105,7 +10105,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.2},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.2}
                 ]},
-                {"display_name": "JAPAN, Kitakyushu", "country": "JAPAN", "city": "Kitakyushu", "Lon": 130.82, "Lat": 33.87, "data": [
+                {"display_name": "JAPAN, Kitakyushu", "country": "JAPAN", "city": "Kitakyushu", "lon": 130.82, "lat": 33.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.3},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.91},
@@ -10127,7 +10127,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.98},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.98}
                 ]},
-                {"display_name": "JAPAN, Sendai", "country": "JAPAN", "city": "Sendai", "Lon": 140.88, "Lat": 38.25, "data": [
+                {"display_name": "JAPAN, Sendai", "country": "JAPAN", "city": "Sendai", "lon": 140.88, "lat": 38.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 18.88},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 22.16},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.29},
@@ -10149,7 +10149,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.62},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.62}
                 ]},
-                {"display_name": "JAPAN, Kagoshima", "country": "JAPAN", "city": "Kagoshima", "Lon": 130.55, "Lat": 31.6, "data": [
+                {"display_name": "JAPAN, Kagoshima", "country": "JAPAN", "city": "Kagoshima", "lon": 130.55, "lat": 31.6, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.52},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.01},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.85},
@@ -10171,7 +10171,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.6},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.6}
                 ]},
-                {"display_name": "JAPAN, Niigata", "country": "JAPAN", "city": "Niigata", "Lon": 139.05, "Lat": 37.92, "data": [
+                {"display_name": "JAPAN, Niigata", "country": "JAPAN", "city": "Niigata", "lon": 139.05, "lat": 37.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 19.84},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.04},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -10193,7 +10193,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.42},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.42}
                 ]},
-                {"display_name": "JAPAN, Nagasaki", "country": "JAPAN", "city": "Nagasaki", "Lon": 129.92, "Lat": 32.8, "data": [
+                {"display_name": "JAPAN, Nagasaki", "country": "JAPAN", "city": "Nagasaki", "lon": 129.92, "lat": 32.8, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.95},
@@ -10215,7 +10215,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.18},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.18}
                 ]},
-                {"display_name": "JORDAN, AMMAN", "country": "JORDAN", "city": "AMMAN", "Lon": 35.93, "Lat": 31.95, "data": [
+                {"display_name": "JORDAN, AMMAN", "country": "JORDAN", "city": "AMMAN", "lon": 35.93, "lat": 31.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.04},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.58},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -10237,7 +10237,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "JORDAN, Zarqa", "country": "JORDAN", "city": "Zarqa", "Lon": 36.1, "Lat": 32.07, "data": [
+                {"display_name": "JORDAN, Zarqa", "country": "JORDAN", "city": "Zarqa", "lon": 36.1, "lat": 32.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.05},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -10259,7 +10259,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "JORDAN, Irbid", "country": "JORDAN", "city": "Irbid", "Lon": 35.85, "Lat": 32.55, "data": [
+                {"display_name": "JORDAN, Irbid", "country": "JORDAN", "city": "Irbid", "lon": 35.85, "lat": 32.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -10281,7 +10281,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "JORDAN, Salt", "country": "JORDAN", "city": "Salt", "Lon": 35.73, "Lat": 32.05, "data": [
+                {"display_name": "JORDAN, Salt", "country": "JORDAN", "city": "Salt", "lon": 35.73, "lat": 32.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.07},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -10303,7 +10303,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "JORDAN, Ajlun", "country": "JORDAN", "city": "Ajlun", "Lon": 35.75, "Lat": 32.33, "data": [
+                {"display_name": "JORDAN, Ajlun", "country": "JORDAN", "city": "Ajlun", "lon": 35.75, "lat": 32.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.64},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -10325,7 +10325,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "JORDAN, Jarash", "country": "JORDAN", "city": "Jarash", "Lon": 35.9, "Lat": 32.28, "data": [
+                {"display_name": "JORDAN, Jarash", "country": "JORDAN", "city": "Jarash", "lon": 35.9, "lat": 32.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.64},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -10347,7 +10347,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "JORDAN, Madaba", "country": "JORDAN", "city": "Madaba", "Lon": 35.8, "Lat": 31.73, "data": [
+                {"display_name": "JORDAN, Madaba", "country": "JORDAN", "city": "Madaba", "lon": 35.8, "lat": 31.73, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -10369,7 +10369,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "JORDAN, Aqaba", "country": "JORDAN", "city": "Aqaba", "Lon": 35, "Lat": 29.52, "data": [
+                {"display_name": "JORDAN, Aqaba", "country": "JORDAN", "city": "Aqaba", "lon": 35, "lat": 29.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.9},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.43},
@@ -10391,7 +10391,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "JORDAN, Maan", "country": "JORDAN", "city": "Maan", "Lon": 35.75, "Lat": 30.18, "data": [
+                {"display_name": "JORDAN, Maan", "country": "JORDAN", "city": "Maan", "lon": 35.75, "lat": 30.18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.64},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.16},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -10413,7 +10413,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "JORDAN, Karak", "country": "JORDAN", "city": "Karak", "Lon": 35.7, "Lat": 31.18, "data": [
+                {"display_name": "JORDAN, Karak", "country": "JORDAN", "city": "Karak", "lon": 35.7, "lat": 31.18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.88},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.38},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -10435,7 +10435,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "JORDAN, Mafraq", "country": "JORDAN", "city": "Mafraq", "Lon": 36.2, "Lat": 32.33, "data": [
+                {"display_name": "JORDAN, Mafraq", "country": "JORDAN", "city": "Mafraq", "lon": 36.2, "lat": 32.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -10457,7 +10457,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "JORDAN, Tafila", "country": "JORDAN", "city": "Tafila", "Lon": 35.6, "Lat": 30.87, "data": [
+                {"display_name": "JORDAN, Tafila", "country": "JORDAN", "city": "Tafila", "lon": 35.6, "lat": 30.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.82},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.3},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -10479,7 +10479,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "KENYA, NAIROBI", "country": "KENYA", "city": "NAIROBI", "Lon": 36.83, "Lat": -1.28, "data": [
+                {"display_name": "KENYA, NAIROBI", "country": "KENYA", "city": "NAIROBI", "lon": 36.83, "lat": -1.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 9.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.03},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.84},
@@ -10501,7 +10501,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "KENYA, Mombasa", "country": "KENYA", "city": "Mombasa", "Lon": 39.67, "Lat": -4.07, "data": [
+                {"display_name": "KENYA, Mombasa", "country": "KENYA", "city": "Mombasa", "lon": 39.67, "lat": -4.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 9.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.79},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.83},
@@ -10523,7 +10523,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -16.96},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -16.96}
                 ]},
-                {"display_name": "KENYA, Kisumu", "country": "KENYA", "city": "Kisumu", "Lon": 34.78, "Lat": -0.13, "data": [
+                {"display_name": "KENYA, Kisumu", "country": "KENYA", "city": "Kisumu", "lon": 34.78, "lat": -0.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 9.01},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.39},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.82},
@@ -10545,7 +10545,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "KENYA, Nakuru", "country": "KENYA", "city": "Nakuru", "Lon": 36.07, "Lat": -0.27, "data": [
+                {"display_name": "KENYA, Nakuru", "country": "KENYA", "city": "Nakuru", "lon": 36.07, "lat": -0.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 8.87},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.32},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.85},
@@ -10567,7 +10567,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "KENYA, Eldoret", "country": "KENYA", "city": "Eldoret", "Lon": 35.28, "Lat": 0.52, "data": [
+                {"display_name": "KENYA, Eldoret", "country": "KENYA", "city": "Eldoret", "lon": 35.28, "lat": 0.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 8.69},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.53},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.86},
@@ -10589,7 +10589,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "KENYA, Thika", "country": "KENYA", "city": "Thika", "Lon": 37.08, "Lat": -1.05, "data": [
+                {"display_name": "KENYA, Thika", "country": "KENYA", "city": "Thika", "lon": 37.08, "lat": -1.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 9.04},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.06},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.85},
@@ -10611,7 +10611,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "KENYA, Nyeri", "country": "KENYA", "city": "Nyeri", "Lon": 36.93, "Lat": -0.42, "data": [
+                {"display_name": "KENYA, Nyeri", "country": "KENYA", "city": "Nyeri", "lon": 36.93, "lat": -0.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 8.87},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.24},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.86},
@@ -10633,7 +10633,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "KENYA, Nanyuki", "country": "KENYA", "city": "Nanyuki", "Lon": 37.08, "Lat": 0.02, "data": [
+                {"display_name": "KENYA, Nanyuki", "country": "KENYA", "city": "Nanyuki", "lon": 37.08, "lat": 0.02, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 8.77},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.35},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.87},
@@ -10655,7 +10655,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "KENYA, Kitale", "country": "KENYA", "city": "Kitale", "Lon": 35.02, "Lat": 1.02, "data": [
+                {"display_name": "KENYA, Kitale", "country": "KENYA", "city": "Kitale", "lon": 35.02, "lat": 1.02, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 8.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.87},
@@ -10677,7 +10677,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "KENYA, Malindi", "country": "KENYA", "city": "Malindi", "Lon": 40.08, "Lat": -3.23, "data": [
+                {"display_name": "KENYA, Malindi", "country": "KENYA", "city": "Malindi", "lon": 40.08, "lat": -3.23, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 9.54},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.97},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.85},
@@ -10699,7 +10699,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -17.85},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -17.85}
                 ]},
-                {"display_name": "KENYA, Kericho", "country": "KENYA", "city": "Kericho", "Lon": 35.32, "Lat": -0.37, "data": [
+                {"display_name": "KENYA, Kericho", "country": "KENYA", "city": "Kericho", "lon": 35.32, "lat": -0.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 8.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.33},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.83},
@@ -10721,7 +10721,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "KUWAIT, Salmiya", "country": "KUWAIT", "city": "Salmiya", "Lon": 48, "Lat": 29.33, "data": [
+                {"display_name": "KUWAIT, Salmiya", "country": "KUWAIT", "city": "Salmiya", "lon": 48, "lat": 29.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.2},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.85},
@@ -10743,7 +10743,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.77},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.77}
                 ]},
-                {"display_name": "KUWAIT, Hawalli", "country": "KUWAIT", "city": "Hawalli", "Lon": 48, "Lat": 29.33, "data": [
+                {"display_name": "KUWAIT, Hawalli", "country": "KUWAIT", "city": "Hawalli", "lon": 48, "lat": 29.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.2},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.85},
@@ -10765,7 +10765,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.77},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.77}
                 ]},
-                {"display_name": "KUWAIT, Jahra", "country": "KUWAIT", "city": "Jahra", "Lon": 47.67, "Lat": 29.37, "data": [
+                {"display_name": "KUWAIT, Jahra", "country": "KUWAIT", "city": "Jahra", "lon": 47.67, "lat": 29.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.96},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.04},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.87},
@@ -10787,7 +10787,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.78},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.78}
                 ]},
-                {"display_name": "KUWAIT, KUWAIT", "country": "KUWAIT", "city": "KUWAIT", "Lon": 48, "Lat": 29.33, "data": [
+                {"display_name": "KUWAIT, KUWAIT", "country": "KUWAIT", "city": "KUWAIT", "lon": 48, "lat": 29.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.2},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.85},
@@ -10809,7 +10809,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.77},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.77}
                 ]},
-                {"display_name": "KUWAIT, Al-Ahmadi", "country": "KUWAIT", "city": "Al-Ahmadi", "Lon": 48.07, "Lat": 29.08, "data": [
+                {"display_name": "KUWAIT, Al-Ahmadi", "country": "KUWAIT", "city": "Al-Ahmadi", "lon": 48.07, "lat": 29.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.2},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.84},
@@ -10831,7 +10831,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.81},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.81}
                 ]},
-                {"display_name": "KUWAIT, Mina_Al-Ahmadi", "country": "KUWAIT", "city": "Mina_Al-Ahmadi", "Lon": 48.13, "Lat": 29.07, "data": [
+                {"display_name": "KUWAIT, Mina_Al-Ahmadi", "country": "KUWAIT", "city": "Mina_Al-Ahmadi", "lon": 48.13, "lat": 29.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.23},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.84},
@@ -10853,7 +10853,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.81},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.81}
                 ]},
-                {"display_name": "LAOS, VIENTIANE", "country": "LAOS", "city": "VIENTIANE", "Lon": 102.63, "Lat": 17.98, "data": [
+                {"display_name": "LAOS, VIENTIANE", "country": "LAOS", "city": "VIENTIANE", "lon": 102.63, "lat": 17.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.5},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.36},
@@ -10875,7 +10875,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.21},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.21}
                 ]},
-                {"display_name": "LAOS, Savannakhet", "country": "LAOS", "city": "Savannakhet", "Lon": 104.75, "Lat": 16.57, "data": [
+                {"display_name": "LAOS, Savannakhet", "country": "LAOS", "city": "Savannakhet", "lon": 104.75, "lat": 16.57, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.31},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.23},
@@ -10897,7 +10897,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.5},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.5}
                 ]},
-                {"display_name": "LAOS, Pakse", "country": "LAOS", "city": "Pakse", "Lon": 105.83, "Lat": 15.12, "data": [
+                {"display_name": "LAOS, Pakse", "country": "LAOS", "city": "Pakse", "lon": 105.83, "lat": 15.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.85},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.2},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.19},
@@ -10919,7 +10919,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.79},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.79}
                 ]},
-                {"display_name": "LAOS, Luang_Prabang", "country": "LAOS", "city": "Luang_Prabang", "Lon": 102.17, "Lat": 19.88, "data": [
+                {"display_name": "LAOS, Luang_Prabang", "country": "LAOS", "city": "Luang_Prabang", "lon": 102.17, "lat": 19.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.3},
@@ -10941,7 +10941,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.93},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.93}
                 ]},
-                {"display_name": "LAOS, Saya_Bury", "country": "LAOS", "city": "Saya_Bury", "Lon": 101.77, "Lat": 19.3, "data": [
+                {"display_name": "LAOS, Saya_Bury", "country": "LAOS", "city": "Saya_Bury", "lon": 101.77, "lat": 19.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.25},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.55},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.35},
@@ -10963,7 +10963,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.06},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.06}
                 ]},
-                {"display_name": "LAOS, Khammouane", "country": "LAOS", "city": "Khammouane", "Lon": 104.8, "Lat": 17.38, "data": [
+                {"display_name": "LAOS, Khammouane", "country": "LAOS", "city": "Khammouane", "lon": 104.8, "lat": 17.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.94},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.23},
@@ -10985,7 +10985,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.62},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.62}
                 ]},
-                {"display_name": "LEBANON, BEIRUT", "country": "LEBANON", "city": "BEIRUT", "Lon": 35.5, "Lat": 33.87, "data": [
+                {"display_name": "LEBANON, BEIRUT", "country": "LEBANON", "city": "BEIRUT", "lon": 35.5, "lat": 33.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.41},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.92},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -11007,7 +11007,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LEBANON, Tripoli", "country": "LEBANON", "city": "Tripoli", "Lon": 35.83, "Lat": 34.45, "data": [
+                {"display_name": "LEBANON, Tripoli", "country": "LEBANON", "city": "Tripoli", "lon": 35.83, "lat": 34.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.07},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -11029,7 +11029,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LEBANON, Zahle", "country": "LEBANON", "city": "Zahle", "Lon": 35.92, "Lat": 33.83, "data": [
+                {"display_name": "LEBANON, Zahle", "country": "LEBANON", "city": "Zahle", "lon": 35.92, "lat": 33.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.38},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.96},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -11051,7 +11051,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LEBANON, Sidon", "country": "LEBANON", "city": "Sidon", "Lon": 35.37, "Lat": 33.53, "data": [
+                {"display_name": "LEBANON, Sidon", "country": "LEBANON", "city": "Sidon", "lon": 35.37, "lat": 33.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.36},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.84},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -11073,7 +11073,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LEBANON, Tyre", "country": "LEBANON", "city": "Tyre", "Lon": 35.2, "Lat": 33.27, "data": [
+                {"display_name": "LEBANON, Tyre", "country": "LEBANON", "city": "Tyre", "lon": 35.2, "lat": 33.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.33},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.77},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -11095,7 +11095,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LESOTHO, MASERU", "country": "LESOTHO", "city": "MASERU", "Lon": 27.48, "Lat": -29.32, "data": [
+                {"display_name": "LESOTHO, MASERU", "country": "LESOTHO", "city": "MASERU", "lon": 27.48, "lat": -29.32, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.74},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.17},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.72},
@@ -11117,7 +11117,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LESOTHO, Teyateyaneng", "country": "LESOTHO", "city": "Teyateyaneng", "Lon": 27.75, "Lat": -29.15, "data": [
+                {"display_name": "LESOTHO, Teyateyaneng", "country": "LESOTHO", "city": "Teyateyaneng", "lon": 27.75, "lat": -29.15, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.74},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.13},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.74},
@@ -11139,7 +11139,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LESOTHO, Leribe", "country": "LESOTHO", "city": "Leribe", "Lon": 28.05, "Lat": -28.87, "data": [
+                {"display_name": "LESOTHO, Leribe", "country": "LESOTHO", "city": "Leribe", "lon": 28.05, "lat": -28.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.76},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.11},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.77},
@@ -11161,7 +11161,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LESOTHO, Mafeteng", "country": "LESOTHO", "city": "Mafeteng", "Lon": 27.23, "Lat": -29.82, "data": [
+                {"display_name": "LESOTHO, Mafeteng", "country": "LESOTHO", "city": "Mafeteng", "lon": 27.23, "lat": -29.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.72},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.1},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.67},
@@ -11183,7 +11183,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIBYA, TRIPOLI", "country": "LIBYA", "city": "TRIPOLI", "Lon": 13.12, "Lat": 32.82, "data": [
+                {"display_name": "LIBYA, TRIPOLI", "country": "LIBYA", "city": "TRIPOLI", "lon": 13.12, "lat": 32.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.96},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.87},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.83},
@@ -11205,7 +11205,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIBYA, Benghazi", "country": "LIBYA", "city": "Benghazi", "Lon": 20.07, "Lat": 32.12, "data": [
+                {"display_name": "LIBYA, Benghazi", "country": "LIBYA", "city": "Benghazi", "lon": 20.07, "lat": 32.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.25},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.64},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.11},
@@ -11227,7 +11227,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIBYA, Misurata", "country": "LIBYA", "city": "Misurata", "Lon": 15.1, "Lat": 32.38, "data": [
+                {"display_name": "LIBYA, Misurata", "country": "LIBYA", "city": "Misurata", "lon": 15.1, "lat": 32.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.98},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.78},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.91},
@@ -11249,7 +11249,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIBYA, Azzawiya", "country": "LIBYA", "city": "Azzawiya", "Lon": 12.73, "Lat": 32.75, "data": [
+                {"display_name": "LIBYA, Azzawiya", "country": "LIBYA", "city": "Azzawiya", "lon": 12.73, "lat": 32.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.91},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.86},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.81},
@@ -11271,7 +11271,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIBYA, Al-Beida", "country": "LIBYA", "city": "Al-Beida", "Lon": 21.75, "Lat": 32.82, "data": [
+                {"display_name": "LIBYA, Al-Beida", "country": "LIBYA", "city": "Al-Beida", "lon": 21.75, "lat": 32.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.49},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.17},
@@ -11293,7 +11293,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIBYA, Agedabia", "country": "LIBYA", "city": "Agedabia", "Lon": 20.25, "Lat": 30.8, "data": [
+                {"display_name": "LIBYA, Agedabia", "country": "LIBYA", "city": "Agedabia", "lon": 20.25, "lat": 30.8, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.92},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.39},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.13},
@@ -11315,7 +11315,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIBYA, Darna", "country": "LIBYA", "city": "Darna", "Lon": 22.58, "Lat": 32.77, "data": [
+                {"display_name": "LIBYA, Darna", "country": "LIBYA", "city": "Darna", "lon": 22.58, "lat": 32.77, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.52},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.66},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.2},
@@ -11337,7 +11337,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIBYA, Sebha", "country": "LIBYA", "city": "Sebha", "Lon": 14.48, "Lat": 27.15, "data": [
+                {"display_name": "LIBYA, Sebha", "country": "LIBYA", "city": "Sebha", "lon": 14.48, "lat": 27.15, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.84},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.91},
@@ -11359,7 +11359,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIBYA, Tubruq", "country": "LIBYA", "city": "Tubruq", "Lon": 23.98, "Lat": 32.08, "data": [
+                {"display_name": "LIBYA, Tubruq", "country": "LIBYA", "city": "Tubruq", "lon": 23.98, "lat": 32.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.42},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.26},
@@ -11381,7 +11381,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIBYA, Al-Marj", "country": "LIBYA", "city": "Al-Marj", "Lon": 20.9, "Lat": 32.42, "data": [
+                {"display_name": "LIBYA, Al-Marj", "country": "LIBYA", "city": "Al-Marj", "lon": 20.9, "lat": 32.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.37},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.66},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.14},
@@ -11403,7 +11403,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIBYA, Zlitan", "country": "LIBYA", "city": "Zlitan", "Lon": 14.57, "Lat": 32.47, "data": [
+                {"display_name": "LIBYA, Zlitan", "country": "LIBYA", "city": "Zlitan", "lon": 14.57, "lat": 32.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.8},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.89},
@@ -11425,7 +11425,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIECHTENSTEIN, VADUZ", "country": "LIECHTENSTEIN", "city": "VADUZ", "Lon": 9.53, "Lat": 47.13, "data": [
+                {"display_name": "LIECHTENSTEIN, VADUZ", "country": "LIECHTENSTEIN", "city": "VADUZ", "lon": 9.53, "lat": 47.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -11447,7 +11447,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIECHTENSTEIN, Schaan", "country": "LIECHTENSTEIN", "city": "Schaan", "Lon": 9.52, "Lat": 47.17, "data": [
+                {"display_name": "LIECHTENSTEIN, Schaan", "country": "LIECHTENSTEIN", "city": "Schaan", "lon": 9.52, "lat": 47.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -11469,7 +11469,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIECHTENSTEIN, Balzers", "country": "LIECHTENSTEIN", "city": "Balzers", "Lon": 9.53, "Lat": 47.07, "data": [
+                {"display_name": "LIECHTENSTEIN, Balzers", "country": "LIECHTENSTEIN", "city": "Balzers", "lon": 9.53, "lat": 47.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -11491,7 +11491,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIECHTENSTEIN, Triesen", "country": "LIECHTENSTEIN", "city": "Triesen", "Lon": 9.53, "Lat": 47.12, "data": [
+                {"display_name": "LIECHTENSTEIN, Triesen", "country": "LIECHTENSTEIN", "city": "Triesen", "lon": 9.53, "lat": 47.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -11513,7 +11513,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIECHTENSTEIN, Eschen", "country": "LIECHTENSTEIN", "city": "Eschen", "Lon": 9.53, "Lat": 47.22, "data": [
+                {"display_name": "LIECHTENSTEIN, Eschen", "country": "LIECHTENSTEIN", "city": "Eschen", "lon": 9.53, "lat": 47.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -11535,7 +11535,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIECHTENSTEIN, Mauren", "country": "LIECHTENSTEIN", "city": "Mauren", "Lon": 9.55, "Lat": 47.22, "data": [
+                {"display_name": "LIECHTENSTEIN, Mauren", "country": "LIECHTENSTEIN", "city": "Mauren", "lon": 9.55, "lat": 47.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -11557,7 +11557,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LIECHTENSTEIN, Triesenberg", "country": "LIECHTENSTEIN", "city": "Triesenberg", "Lon": 9.53, "Lat": 47.12, "data": [
+                {"display_name": "LIECHTENSTEIN, Triesenberg", "country": "LIECHTENSTEIN", "city": "Triesenberg", "lon": 9.53, "lat": 47.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -11579,7 +11579,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LUXEMBOURG, LUXEMBOURG", "country": "LUXEMBOURG", "city": "LUXEMBOURG", "Lon": 6.13, "Lat": 49.62, "data": [
+                {"display_name": "LUXEMBOURG, LUXEMBOURG", "country": "LUXEMBOURG", "city": "LUXEMBOURG", "lon": 6.13, "lat": 49.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.96},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -11601,7 +11601,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LUXEMBOURG, Esch", "country": "LUXEMBOURG", "city": "Esch", "Lon": 6, "Lat": 49.53, "data": [
+                {"display_name": "LUXEMBOURG, Esch", "country": "LUXEMBOURG", "city": "Esch", "lon": 6, "lat": 49.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -11623,7 +11623,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LUXEMBOURG, Differdange", "country": "LUXEMBOURG", "city": "Differdange", "Lon": 5.88, "Lat": 49.53, "data": [
+                {"display_name": "LUXEMBOURG, Differdange", "country": "LUXEMBOURG", "city": "Differdange", "lon": 5.88, "lat": 49.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -11645,7 +11645,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LUXEMBOURG, Dudelange", "country": "LUXEMBOURG", "city": "Dudelange", "Lon": 6.08, "Lat": 49.47, "data": [
+                {"display_name": "LUXEMBOURG, Dudelange", "country": "LUXEMBOURG", "city": "Dudelange", "lon": 6.08, "lat": 49.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -11667,7 +11667,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LUXEMBOURG, Petange", "country": "LUXEMBOURG", "city": "Petange", "Lon": 5.88, "Lat": 49.55, "data": [
+                {"display_name": "LUXEMBOURG, Petange", "country": "LUXEMBOURG", "city": "Petange", "lon": 5.88, "lat": 49.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -11689,7 +11689,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "LUXEMBOURG, Remich", "country": "LUXEMBOURG", "city": "Remich", "Lon": 6.38, "Lat": 49.55, "data": [
+                {"display_name": "LUXEMBOURG, Remich", "country": "LUXEMBOURG", "city": "Remich", "lon": 6.38, "lat": 49.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -11711,7 +11711,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MACAU, MACAU", "country": "MACAU", "city": "MACAU", "Lon": 113.58, "Lat": 22.2, "data": [
+                {"display_name": "MACAU, MACAU", "country": "MACAU", "city": "MACAU", "lon": 113.58, "lat": 22.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 36.75},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.91},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.68},
@@ -11733,7 +11733,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.81},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.81}
                 ]},
-                {"display_name": "MACAU, Coloane", "country": "MACAU", "city": "Coloane", "Lon": 113.55, "Lat": 22.12, "data": [
+                {"display_name": "MACAU, Coloane", "country": "MACAU", "city": "Coloane", "lon": 113.55, "lat": 22.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 36.77},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.93},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.67},
@@ -11755,7 +11755,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.81},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.81}
                 ]},
-                {"display_name": "MACAU, Taipa", "country": "MACAU", "city": "Taipa", "Lon": 113.55, "Lat": 22.15, "data": [
+                {"display_name": "MACAU, Taipa", "country": "MACAU", "city": "Taipa", "lon": 113.55, "lat": 22.15, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 36.77},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.93},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.67},
@@ -11777,7 +11777,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.81},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.81}
                 ]},
-                {"display_name": "MADAGASCAR, ANTANANARIVO", "country": "MADAGASCAR", "city": "ANTANANARIVO", "Lon": 47.5, "Lat": -18.87, "data": [
+                {"display_name": "MADAGASCAR, ANTANANARIVO", "country": "MADAGASCAR", "city": "ANTANANARIVO", "lon": 47.5, "lat": -18.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.86},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 6.11},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.46},
@@ -11799,7 +11799,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -21.56},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -21.56}
                 ]},
-                {"display_name": "MADAGASCAR, Toamasina", "country": "MADAGASCAR", "city": "Toamasina", "Lon": 49.38, "Lat": -18.17, "data": [
+                {"display_name": "MADAGASCAR, Toamasina", "country": "MADAGASCAR", "city": "Toamasina", "lon": 49.38, "lat": -18.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.94},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.93},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.27},
@@ -11821,7 +11821,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -22.27},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -22.27}
                 ]},
-                {"display_name": "MADAGASCAR, Mahajanga", "country": "MADAGASCAR", "city": "Mahajanga", "Lon": 46.32, "Lat": -15.72, "data": [
+                {"display_name": "MADAGASCAR, Mahajanga", "country": "MADAGASCAR", "city": "Mahajanga", "lon": 46.32, "lat": -15.72, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.54},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 4.98},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.8},
@@ -11843,7 +11843,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -25.31},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -25.31}
                 ]},
-                {"display_name": "MADAGASCAR, Fiarnarantsoa", "country": "MADAGASCAR", "city": "Fiarnarantsoa", "Lon": 47.08, "Lat": -21.45, "data": [
+                {"display_name": "MADAGASCAR, Fiarnarantsoa", "country": "MADAGASCAR", "city": "Fiarnarantsoa", "lon": 47.08, "lat": -21.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.63},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.06},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.22},
@@ -11865,7 +11865,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -25.64},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -25.64}
                 ]},
-                {"display_name": "MADAGASCAR, Antsirabe", "country": "MADAGASCAR", "city": "Antsirabe", "Lon": 47.02, "Lat": -19.85, "data": [
+                {"display_name": "MADAGASCAR, Antsirabe", "country": "MADAGASCAR", "city": "Antsirabe", "lon": 47.02, "lat": -19.85, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.8},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 6.13},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.43},
@@ -11887,7 +11887,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -22.1},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -22.1}
                 ]},
-                {"display_name": "MADAGASCAR, Toliary", "country": "MADAGASCAR", "city": "Toliary", "Lon": 43.68, "Lat": -23.33, "data": [
+                {"display_name": "MADAGASCAR, Toliary", "country": "MADAGASCAR", "city": "Toliary", "lon": 43.68, "lat": -23.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.03},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.97},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.44},
@@ -11909,7 +11909,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -34.39},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -34.39}
                 ]},
-                {"display_name": "MADAGASCAR, Antsiranana", "country": "MADAGASCAR", "city": "Antsiranana", "Lon": 49.33, "Lat": -12.27, "data": [
+                {"display_name": "MADAGASCAR, Antsiranana", "country": "MADAGASCAR", "city": "Antsiranana", "lon": 49.33, "lat": -12.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.32},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.45},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.54},
@@ -11931,7 +11931,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -17.69},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -17.69}
                 ]},
-                {"display_name": "MALAWI, Blantyre", "country": "MALAWI", "city": "Blantyre", "Lon": 35, "Lat": -15.77, "data": [
+                {"display_name": "MALAWI, Blantyre", "country": "MALAWI", "city": "Blantyre", "lon": 35, "lat": -15.77, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.38},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 6.64},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.02},
@@ -11953,7 +11953,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MALAWI, LILONGWE", "country": "MALAWI", "city": "LILONGWE", "Lon": 33.82, "Lat": -13.97, "data": [
+                {"display_name": "MALAWI, LILONGWE", "country": "MALAWI", "city": "LILONGWE", "lon": 33.82, "lat": -13.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.71},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.04},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.87},
@@ -11975,7 +11975,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MALAWI, Mzuzu", "country": "MALAWI", "city": "Mzuzu", "Lon": 34, "Lat": -11.52, "data": [
+                {"display_name": "MALAWI, Mzuzu", "country": "MALAWI", "city": "Mzuzu", "lon": 34, "lat": -11.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.22},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.83},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.75},
@@ -11997,7 +11997,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MALAWI, Zomba", "country": "MALAWI", "city": "Zomba", "Lon": 35.37, "Lat": -15.37, "data": [
+                {"display_name": "MALAWI, Zomba", "country": "MALAWI", "city": "Zomba", "lon": 35.37, "lat": -15.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.2},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 6.92},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.01},
@@ -12019,7 +12019,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MALAWI, Karonga", "country": "MALAWI", "city": "Karonga", "Lon": 35.92, "Lat": -9.9, "data": [
+                {"display_name": "MALAWI, Karonga", "country": "MALAWI", "city": "Karonga", "lon": 35.92, "lat": -9.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.01},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.34},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.77},
@@ -12041,7 +12041,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MALAWI, Nkhotakota", "country": "MALAWI", "city": "Nkhotakota", "Lon": 34.32, "Lat": -12.92, "data": [
+                {"display_name": "MALAWI, Nkhotakota", "country": "MALAWI", "city": "Nkhotakota", "lon": 34.32, "lat": -12.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.33},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.08},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.84},
@@ -12063,7 +12063,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MALAYSIA, KUALA_LUMPUR", "country": "MALAYSIA", "city": "KUALA_LUMPUR", "Lon": 101.7, "Lat": 3.13, "data": [
+                {"display_name": "MALAYSIA, KUALA_LUMPUR", "country": "MALAYSIA", "city": "KUALA_LUMPUR", "lon": 101.7, "lat": 3.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.58},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.95},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.45},
@@ -12085,7 +12085,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.71},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.71}
                 ]},
-                {"display_name": "MALAYSIA, Brunei", "country": "MALAYSIA", "city": "Brunei", "Lon": 114.97, "Lat": 4.93, "data": [
+                {"display_name": "MALAYSIA, Brunei", "country": "MALAYSIA", "city": "Brunei", "lon": 114.97, "lat": 4.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 35.54},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.33},
@@ -12107,7 +12107,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.09},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.09}
                 ]},
-                {"display_name": "MALAYSIA, Ipoh", "country": "MALAYSIA", "city": "Ipoh", "Lon": 101.03, "Lat": 4.6, "data": [
+                {"display_name": "MALAYSIA, Ipoh", "country": "MALAYSIA", "city": "Ipoh", "lon": 101.03, "lat": 4.6, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.94},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.11},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.64},
@@ -12129,7 +12129,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.01},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.01}
                 ]},
-                {"display_name": "MALAYSIA, Johore_Bahru", "country": "MALAYSIA", "city": "Johore_Bahru", "Lon": 103.73, "Lat": 1.48, "data": [
+                {"display_name": "MALAYSIA, Johore_Bahru", "country": "MALAYSIA", "city": "Johore_Bahru", "lon": 103.73, "lat": 1.48, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.91},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.66},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.29},
@@ -12151,7 +12151,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.63},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.63}
                 ]},
-                {"display_name": "MALAYSIA, Georgetown", "country": "MALAYSIA", "city": "Georgetown", "Lon": 100.33, "Lat": 5.42, "data": [
+                {"display_name": "MALAYSIA, Georgetown", "country": "MALAYSIA", "city": "Georgetown", "lon": 100.33, "lat": 5.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.08},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.14},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.74},
@@ -12173,7 +12173,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.83},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.83}
                 ]},
-                {"display_name": "MALAYSIA, Kuala_Trengganu", "country": "MALAYSIA", "city": "Kuala_Trengganu", "Lon": 103.12, "Lat": 5.33, "data": [
+                {"display_name": "MALAYSIA, Kuala_Trengganu", "country": "MALAYSIA", "city": "Kuala_Trengganu", "lon": 103.12, "lat": 5.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.98},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.26},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.55},
@@ -12195,7 +12195,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6.58},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6.58}
                 ]},
-                {"display_name": "MALAYSIA, Kota_Bahru", "country": "MALAYSIA", "city": "Kota_Bahru", "Lon": 102.25, "Lat": 6.12, "data": [
+                {"display_name": "MALAYSIA, Kota_Bahru", "country": "MALAYSIA", "city": "Kota_Bahru", "lon": 102.25, "lat": 6.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.31},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.65},
@@ -12217,7 +12217,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.36},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.36}
                 ]},
-                {"display_name": "MALAYSIA, Taiping", "country": "MALAYSIA", "city": "Taiping", "Lon": 100.73, "Lat": 4.85, "data": [
+                {"display_name": "MALAYSIA, Taiping", "country": "MALAYSIA", "city": "Taiping", "lon": 100.73, "lat": 4.85, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.11},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.67},
@@ -12239,7 +12239,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6.61},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6.61}
                 ]},
-                {"display_name": "MALAYSIA, Kuantan", "country": "MALAYSIA", "city": "Kuantan", "Lon": 103.32, "Lat": 3.83, "data": [
+                {"display_name": "MALAYSIA, Kuantan", "country": "MALAYSIA", "city": "Kuantan", "lon": 103.32, "lat": 3.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.67},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.09},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.43},
@@ -12261,7 +12261,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9}
                 ]},
-                {"display_name": "MALAYSIA, Seremban", "country": "MALAYSIA", "city": "Seremban", "Lon": 101.9, "Lat": 2.7, "data": [
+                {"display_name": "MALAYSIA, Seremban", "country": "MALAYSIA", "city": "Seremban", "lon": 101.9, "lat": 2.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.88},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -12283,7 +12283,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -10.53},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -10.53}
                 ]},
-                {"display_name": "MALAYSIA, Malacca", "country": "MALAYSIA", "city": "Malacca", "Lon": 102.23, "Lat": 2.23, "data": [
+                {"display_name": "MALAYSIA, Malacca", "country": "MALAYSIA", "city": "Malacca", "lon": 102.23, "lat": 2.23, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.29},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.81},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.34},
@@ -12305,7 +12305,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.31},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.31}
                 ]},
-                {"display_name": "MALAYSIA, Alor_Star", "country": "MALAYSIA", "city": "Alor_Star", "Lon": 100.37, "Lat": 6.12, "data": [
+                {"display_name": "MALAYSIA, Alor_Star", "country": "MALAYSIA", "city": "Alor_Star", "lon": 100.37, "lat": 6.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.19},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.2},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.79},
@@ -12327,7 +12327,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.05},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.05}
                 ]},
-                {"display_name": "MALAYSIA, Kuching", "country": "MALAYSIA", "city": "Kuching", "Lon": 110.33, "Lat": 1.53, "data": [
+                {"display_name": "MALAYSIA, Kuching", "country": "MALAYSIA", "city": "Kuching", "lon": 110.33, "lat": 1.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 37.13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 37.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.3},
@@ -12349,7 +12349,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.68},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.68}
                 ]},
-                {"display_name": "MALAYSIA, Kota_Kinabalu", "country": "MALAYSIA", "city": "Kota_Kinabalu", "Lon": 116.07, "Lat": 5.98, "data": [
+                {"display_name": "MALAYSIA, Kota_Kinabalu", "country": "MALAYSIA", "city": "Kota_Kinabalu", "lon": 116.07, "lat": 5.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 34.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.11},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.32},
@@ -12371,7 +12371,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -10.84},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -10.84}
                 ]},
-                {"display_name": "MALDIVES, MALE", "country": "MALDIVES", "city": "MALE", "Lon": 73.47, "Lat": 4.17, "data": [
+                {"display_name": "MALDIVES, MALE", "country": "MALDIVES", "city": "MALE", "lon": 73.47, "lat": 4.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 35.74},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.23},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.88},
@@ -12393,7 +12393,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.19},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.19}
                 ]},
-                {"display_name": "MALDIVES, Gan", "country": "MALDIVES", "city": "Gan", "Lon": 73.17, "Lat": -0.7, "data": [
+                {"display_name": "MALDIVES, Gan", "country": "MALDIVES", "city": "Gan", "lon": 73.17, "lat": -0.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 31.81},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.19},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 31.51},
@@ -12415,7 +12415,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -10.38},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -10.38}
                 ]},
-                {"display_name": "MALI, Gao", "country": "MALI", "city": "Gao", "Lon": -0.05, "Lat": 16.32, "data": [
+                {"display_name": "MALI, Gao", "country": "MALI", "city": "Gao", "lon": -0.05, "lat": 16.32, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 18.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.58},
@@ -12437,7 +12437,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MALTA, Birkirkara", "country": "MALTA", "city": "Birkirkara", "Lon": 14.48, "Lat": 35.9, "data": [
+                {"display_name": "MALTA, Birkirkara", "country": "MALTA", "city": "Birkirkara", "lon": 14.48, "lat": 35.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.89},
@@ -12459,7 +12459,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MALTA, Qormi", "country": "MALTA", "city": "Qormi", "Lon": 14.47, "Lat": 35.88, "data": [
+                {"display_name": "MALTA, Qormi", "country": "MALTA", "city": "Qormi", "lon": 14.47, "lat": 35.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.89},
@@ -12481,7 +12481,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MALTA, Sliema", "country": "MALTA", "city": "Sliema", "Lon": 14.52, "Lat": 35.92, "data": [
+                {"display_name": "MALTA, Sliema", "country": "MALTA", "city": "Sliema", "lon": 14.52, "lat": 35.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.28},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.89},
@@ -12503,7 +12503,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MALTA, VALLETTA", "country": "MALTA", "city": "VALLETTA", "Lon": 14.53, "Lat": 35.9, "data": [
+                {"display_name": "MALTA, VALLETTA", "country": "MALTA", "city": "VALLETTA", "lon": 14.53, "lat": 35.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.89},
@@ -12525,7 +12525,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MALTA, Victoria", "country": "MALTA", "city": "Victoria", "Lon": 14.23, "Lat": 36.05, "data": [
+                {"display_name": "MALTA, Victoria", "country": "MALTA", "city": "Victoria", "lon": 14.23, "lat": 36.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.88},
@@ -12547,7 +12547,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MAURITIUS, PORT_LOUIS", "country": "MAURITIUS", "city": "PORT_LOUIS", "Lon": 57.5, "Lat": -20.17, "data": [
+                {"display_name": "MAURITIUS, PORT_LOUIS", "country": "MAURITIUS", "city": "PORT_LOUIS", "lon": 57.5, "lat": -20.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.86},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.17},
@@ -12569,7 +12569,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -25.6},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -25.6}
                 ]},
-                {"display_name": "MAURITIUS, Beau_Bassin", "country": "MAURITIUS", "city": "Beau_Bassin", "Lon": 57.45, "Lat": -20.22, "data": [
+                {"display_name": "MAURITIUS, Beau_Bassin", "country": "MAURITIUS", "city": "Beau_Bassin", "lon": 57.45, "lat": -20.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.96},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.79},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.17},
@@ -12591,7 +12591,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -25.63},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -25.63}
                 ]},
-                {"display_name": "MAURITIUS, Quatre_Bornes", "country": "MAURITIUS", "city": "Quatre_Bornes", "Lon": 57.47, "Lat": -20.25, "data": [
+                {"display_name": "MAURITIUS, Quatre_Bornes", "country": "MAURITIUS", "city": "Quatre_Bornes", "lon": 57.47, "lat": -20.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.94},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.78},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.16},
@@ -12613,7 +12613,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -25.68},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -25.68}
                 ]},
-                {"display_name": "MAURITIUS, Curepipe", "country": "MAURITIUS", "city": "Curepipe", "Lon": 57.52, "Lat": -20.32, "data": [
+                {"display_name": "MAURITIUS, Curepipe", "country": "MAURITIUS", "city": "Curepipe", "lon": 57.52, "lat": -20.32, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.9},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.75},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.12},
@@ -12635,7 +12635,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -25.79},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -25.79}
                 ]},
-                {"display_name": "MAURITIUS, Vacoas-Phoenix", "country": "MAURITIUS", "city": "Vacoas-Phoenix", "Lon": 57.48, "Lat": -20.3, "data": [
+                {"display_name": "MAURITIUS, Vacoas-Phoenix", "country": "MAURITIUS", "city": "Vacoas-Phoenix", "lon": 57.48, "lat": -20.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.91},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.14},
@@ -12657,7 +12657,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -25.75},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -25.75}
                 ]},
-                {"display_name": "MONACO, Monte_Carlo", "country": "MONACO", "city": "Monte_Carlo", "Lon": 7.42, "Lat": 43.73, "data": [
+                {"display_name": "MONACO, Monte_Carlo", "country": "MONACO", "city": "Monte_Carlo", "lon": 7.42, "lat": 43.73, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -12679,7 +12679,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MONACO, MONACO", "country": "MONACO", "city": "MONACO", "Lon": 7.38, "Lat": 43.77, "data": [
+                {"display_name": "MONACO, MONACO", "country": "MONACO", "city": "MONACO", "lon": 7.38, "lat": 43.77, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -12701,7 +12701,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MONGOLIA, ULAN-BATOR", "country": "MONGOLIA", "city": "ULAN-BATOR", "Lon": 106.87, "Lat": 47.9, "data": [
+                {"display_name": "MONGOLIA, ULAN-BATOR", "country": "MONGOLIA", "city": "ULAN-BATOR", "lon": 106.87, "lat": 47.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.02},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.4},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.68},
@@ -12723,7 +12723,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.23},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.23}
                 ]},
-                {"display_name": "MONGOLIA, Darhan", "country": "MONGOLIA", "city": "Darhan", "Lon": 105.93, "Lat": 49.47, "data": [
+                {"display_name": "MONGOLIA, Darhan", "country": "MONGOLIA", "city": "Darhan", "lon": 105.93, "lat": 49.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.04},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.44},
@@ -12745,7 +12745,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6.24},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6.24}
                 ]},
-                {"display_name": "MONGOLIA, Erdenedalay", "country": "MONGOLIA", "city": "Erdenedalay", "Lon": 100.58, "Lat": 46.3, "data": [
+                {"display_name": "MONGOLIA, Erdenedalay", "country": "MONGOLIA", "city": "Erdenedalay", "lon": 100.58, "lat": 46.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.08},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.5},
@@ -12767,7 +12767,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.16},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.16}
                 ]},
-                {"display_name": "MONGOLIA, Choybalsan", "country": "MONGOLIA", "city": "Choybalsan", "Lon": 114.53, "Lat": 48.03, "data": [
+                {"display_name": "MONGOLIA, Choybalsan", "country": "MONGOLIA", "city": "Choybalsan", "lon": 114.53, "lat": 48.03, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 21.72},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.89},
@@ -12789,7 +12789,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.69},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.69}
                 ]},
-                {"display_name": "MONGOLIA, Nalayh", "country": "MONGOLIA", "city": "Nalayh", "Lon": 107.2, "Lat": 47.67, "data": [
+                {"display_name": "MONGOLIA, Nalayh", "country": "MONGOLIA", "city": "Nalayh", "lon": 107.2, "lat": 47.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.08},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.44},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.72},
@@ -12811,7 +12811,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.09},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.09}
                 ]},
-                {"display_name": "MONGOLIA, Ulaangom", "country": "MONGOLIA", "city": "Ulaangom", "Lon": 92, "Lat": 49.98, "data": [
+                {"display_name": "MONGOLIA, Ulaangom", "country": "MONGOLIA", "city": "Ulaangom", "lon": 92, "lat": 49.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.67},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.87},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.72},
@@ -12833,7 +12833,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.88},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.88}
                 ]},
-                {"display_name": "MONGOLIA, Uliastay", "country": "MONGOLIA", "city": "Uliastay", "Lon": 96.87, "Lat": 47.7, "data": [
+                {"display_name": "MONGOLIA, Uliastay", "country": "MONGOLIA", "city": "Uliastay", "lon": 96.87, "lat": 47.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.59},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.15},
@@ -12855,7 +12855,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.55},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.55}
                 ]},
-                {"display_name": "MOZAMBIQUE, MAPUTO", "country": "MOZAMBIQUE", "city": "MAPUTO", "Lon": 32.58, "Lat": -25.97, "data": [
+                {"display_name": "MOZAMBIQUE, MAPUTO", "country": "MOZAMBIQUE", "city": "MAPUTO", "lon": 32.58, "lat": -25.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.89},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.25},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.97},
@@ -12877,7 +12877,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MOZAMBIQUE, Beira", "country": "MOZAMBIQUE", "city": "Beira", "Lon": 34.87, "Lat": -19.82, "data": [
+                {"display_name": "MOZAMBIQUE, Beira", "country": "MOZAMBIQUE", "city": "Beira", "lon": 34.87, "lat": -19.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.3},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 6.83},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.15},
@@ -12899,7 +12899,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MOZAMBIQUE, Nampula", "country": "MOZAMBIQUE", "city": "Nampula", "Lon": 39.25, "Lat": -15.12, "data": [
+                {"display_name": "MOZAMBIQUE, Nampula", "country": "MOZAMBIQUE", "city": "Nampula", "lon": 39.25, "lat": -15.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.8},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.77},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.05},
@@ -12921,7 +12921,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -25.2},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -25.2}
                 ]},
-                {"display_name": "MOZAMBIQUE, Nacala", "country": "MOZAMBIQUE", "city": "Nacala", "Lon": 40.67, "Lat": -14.55, "data": [
+                {"display_name": "MOZAMBIQUE, Nacala", "country": "MOZAMBIQUE", "city": "Nacala", "lon": 40.67, "lat": -14.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.03},
@@ -12943,7 +12943,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -24.61},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -24.61}
                 ]},
-                {"display_name": "MOZAMBIQUE, Machaze", "country": "MOZAMBIQUE", "city": "Machaze", "Lon": 33.43, "Lat": -20.85, "data": [
+                {"display_name": "MOZAMBIQUE, Machaze", "country": "MOZAMBIQUE", "city": "Machaze", "lon": 33.43, "lat": -20.85, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.4},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.01},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.15},
@@ -12965,7 +12965,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MOZAMBIQUE, Mandie", "country": "MOZAMBIQUE", "city": "Mandie", "Lon": 33.52, "Lat": -16.5, "data": [
+                {"display_name": "MOZAMBIQUE, Mandie", "country": "MOZAMBIQUE", "city": "Mandie", "lon": 33.52, "lat": -16.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.95},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 5.97},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.01},
@@ -12987,7 +12987,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MOZAMBIQUE, Chibuto", "country": "MOZAMBIQUE", "city": "Chibuto", "Lon": 33.55, "Lat": -24.67, "data": [
+                {"display_name": "MOZAMBIQUE, Chibuto", "country": "MOZAMBIQUE", "city": "Chibuto", "lon": 33.55, "lat": -24.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.05},
@@ -13009,7 +13009,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "MYANMAR, YANGON", "country": "MYANMAR", "city": "YANGON", "Lon": 96.17, "Lat": 16.78, "data": [
+                {"display_name": "MYANMAR, YANGON", "country": "MYANMAR", "city": "YANGON", "lon": 96.17, "lat": 16.78, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.55},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.13},
@@ -13031,7 +13031,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.35},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.35}
                 ]},
-                {"display_name": "MYANMAR, Mandalay", "country": "MYANMAR", "city": "Mandalay", "Lon": 96.07, "Lat": 21.95, "data": [
+                {"display_name": "MYANMAR, Mandalay", "country": "MYANMAR", "city": "Mandalay", "lon": 96.07, "lat": 21.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.62},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.53},
@@ -13053,7 +13053,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.44},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.44}
                 ]},
-                {"display_name": "MYANMAR, Moulmein", "country": "MYANMAR", "city": "Moulmein", "Lon": 97.65, "Lat": 16.5, "data": [
+                {"display_name": "MYANMAR, Moulmein", "country": "MYANMAR", "city": "Moulmein", "lon": 97.65, "lat": 16.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.51},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.58},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.99},
@@ -13075,7 +13075,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.54},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.54}
                 ]},
-                {"display_name": "MYANMAR, Pegu", "country": "MYANMAR", "city": "Pegu", "Lon": 96.48, "Lat": 17.33, "data": [
+                {"display_name": "MYANMAR, Pegu", "country": "MYANMAR", "city": "Pegu", "lon": 96.48, "lat": 17.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.49},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.59},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.04},
@@ -13097,7 +13097,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.36},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.36}
                 ]},
-                {"display_name": "MYANMAR, Bassein", "country": "MYANMAR", "city": "Bassein", "Lon": 94.75, "Lat": 16.77, "data": [
+                {"display_name": "MYANMAR, Bassein", "country": "MYANMAR", "city": "Bassein", "lon": 94.75, "lat": 16.77, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.43},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.48},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.29},
@@ -13119,7 +13119,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.25},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.25}
                 ]},
-                {"display_name": "MYANMAR, Sittwe_(Akyab)", "country": "MYANMAR", "city": "Sittwe_(Akyab)", "Lon": 92.92, "Lat": 20.15, "data": [
+                {"display_name": "MYANMAR, Sittwe_(Akyab)", "country": "MYANMAR", "city": "Sittwe_(Akyab)", "lon": 92.92, "lat": 20.15, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.05},
@@ -13141,7 +13141,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.41},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.41}
                 ]},
-                {"display_name": "MYANMAR, Taunggye", "country": "MYANMAR", "city": "Taunggye", "Lon": 96.88, "Lat": 20.92, "data": [
+                {"display_name": "MYANMAR, Taunggye", "country": "MYANMAR", "city": "Taunggye", "lon": 96.88, "lat": 20.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.36},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.59},
@@ -13163,7 +13163,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.45},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.45}
                 ]},
-                {"display_name": "MYANMAR, Monywa", "country": "MYANMAR", "city": "Monywa", "Lon": 95.13, "Lat": 22.08, "data": [
+                {"display_name": "MYANMAR, Monywa", "country": "MYANMAR", "city": "Monywa", "lon": 95.13, "lat": 22.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.58},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.6},
@@ -13185,7 +13185,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.42},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.42}
                 ]},
-                {"display_name": "NAMIBIA, WINDHOEK", "country": "NAMIBIA", "city": "WINDHOEK", "Lon": 17.1, "Lat": -22.57, "data": [
+                {"display_name": "NAMIBIA, WINDHOEK", "country": "NAMIBIA", "city": "WINDHOEK", "lon": 17.1, "lat": -22.57, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.83},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.06},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.58},
@@ -13207,7 +13207,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NAMIBIA, Tsumeb", "country": "NAMIBIA", "city": "Tsumeb", "Lon": 17.7, "Lat": -19.22, "data": [
+                {"display_name": "NAMIBIA, Tsumeb", "country": "NAMIBIA", "city": "Tsumeb", "lon": 17.7, "lat": -19.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.04},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.22},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -13229,7 +13229,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NAMIBIA, Keetmanshoop", "country": "NAMIBIA", "city": "Keetmanshoop", "Lon": 18.13, "Lat": -26.6, "data": [
+                {"display_name": "NAMIBIA, Keetmanshoop", "country": "NAMIBIA", "city": "Keetmanshoop", "lon": 18.13, "lat": -26.6, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.43},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.18},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.67},
@@ -13251,7 +13251,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NAMIBIA, Otjiwarongo", "country": "NAMIBIA", "city": "Otjiwarongo", "Lon": 16.6, "Lat": -20.48, "data": [
+                {"display_name": "NAMIBIA, Otjiwarongo", "country": "NAMIBIA", "city": "Otjiwarongo", "lon": 16.6, "lat": -20.48, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.37},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.92},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.44},
@@ -13273,7 +13273,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NAMIBIA, Luderitz", "country": "NAMIBIA", "city": "Luderitz", "Lon": 15.17, "Lat": -26.63, "data": [
+                {"display_name": "NAMIBIA, Luderitz", "country": "NAMIBIA", "city": "Luderitz", "lon": 15.17, "lat": -26.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 9.96},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.66},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.55},
@@ -13295,7 +13295,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NAMIBIA, Swakopmund", "country": "NAMIBIA", "city": "Swakopmund", "Lon": 14.57, "Lat": -22.67, "data": [
+                {"display_name": "NAMIBIA, Swakopmund", "country": "NAMIBIA", "city": "Swakopmund", "lon": 14.57, "lat": -22.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.56},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.45},
@@ -13317,7 +13317,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NEPAL, KATHMANDU", "country": "NEPAL", "city": "KATHMANDU", "Lon": 85.32, "Lat": 27.7, "data": [
+                {"display_name": "NEPAL, KATHMANDU", "country": "NEPAL", "city": "KATHMANDU", "lon": 85.32, "lat": 27.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.66},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.52},
@@ -13339,7 +13339,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.18},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.18}
                 ]},
-                {"display_name": "NEPAL, Sallyan", "country": "NEPAL", "city": "Sallyan", "Lon": 82.18, "Lat": 28.35, "data": [
+                {"display_name": "NEPAL, Sallyan", "country": "NEPAL", "city": "Sallyan", "lon": 82.18, "lat": 28.35, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.96},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.9},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.61},
@@ -13361,7 +13361,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.13},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.13}
                 ]},
-                {"display_name": "NEPAL, Pyuthan", "country": "NEPAL", "city": "Pyuthan", "Lon": 82.88, "Lat": 28.08, "data": [
+                {"display_name": "NEPAL, Pyuthan", "country": "NEPAL", "city": "Pyuthan", "lon": 82.88, "lat": 28.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.9},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.84},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.61},
@@ -13383,7 +13383,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.14},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.14}
                 ]},
-                {"display_name": "NEPAL, Jumla", "country": "NEPAL", "city": "Jumla", "Lon": 82.17, "Lat": 29.28, "data": [
+                {"display_name": "NEPAL, Jumla", "country": "NEPAL", "city": "Jumla", "lon": 82.17, "lat": 29.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.88},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.87},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.48},
@@ -13405,7 +13405,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.13},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.13}
                 ]},
-                {"display_name": "NEPAL, Biratnagar", "country": "NEPAL", "city": "Biratnagar", "Lon": 87.28, "Lat": 26.45, "data": [
+                {"display_name": "NEPAL, Biratnagar", "country": "NEPAL", "city": "Biratnagar", "lon": 87.28, "lat": 26.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.63},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.78},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.56},
@@ -13427,7 +13427,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.26},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.26}
                 ]},
-                {"display_name": "NEPAL, Lalitpur", "country": "NEPAL", "city": "Lalitpur", "Lon": 85.4, "Lat": 27.38, "data": [
+                {"display_name": "NEPAL, Lalitpur", "country": "NEPAL", "city": "Lalitpur", "lon": 85.4, "lat": 27.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.68},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.55},
@@ -13449,7 +13449,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.21},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.21}
                 ]},
-                {"display_name": "NEPAL, Bhaktapur", "country": "NEPAL", "city": "Bhaktapur", "Lon": 85.45, "Lat": 27.7, "data": [
+                {"display_name": "NEPAL, Bhaktapur", "country": "NEPAL", "city": "Bhaktapur", "lon": 85.45, "lat": 27.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.65},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.51},
@@ -13471,7 +13471,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.18},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.18}
                 ]},
-                {"display_name": "NETHERLANDS, AMSTERDAM", "country": "NETHERLANDS", "city": "AMSTERDAM", "Lon": 4.9, "Lat": 52.35, "data": [
+                {"display_name": "NETHERLANDS, AMSTERDAM", "country": "NETHERLANDS", "city": "AMSTERDAM", "lon": 4.9, "lat": 52.35, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.77},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.66},
@@ -13493,7 +13493,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NETHERLANDS, Rotterdam", "country": "NETHERLANDS", "city": "Rotterdam", "Lon": 4.48, "Lat": 51.92, "data": [
+                {"display_name": "NETHERLANDS, Rotterdam", "country": "NETHERLANDS", "city": "Rotterdam", "lon": 4.48, "lat": 51.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.81},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -13515,7 +13515,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NETHERLANDS, The_Hague", "country": "NETHERLANDS", "city": "The_Hague", "Lon": 4.28, "Lat": 52.12, "data": [
+                {"display_name": "NETHERLANDS, The_Hague", "country": "NETHERLANDS", "city": "The_Hague", "lon": 4.28, "lat": 52.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.79},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.66},
@@ -13537,7 +13537,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NETHERLANDS, Utrecht", "country": "NETHERLANDS", "city": "Utrecht", "Lon": 5.12, "Lat": 52.1, "data": [
+                {"display_name": "NETHERLANDS, Utrecht", "country": "NETHERLANDS", "city": "Utrecht", "lon": 5.12, "lat": 52.1, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.79},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.66},
@@ -13559,7 +13559,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NETHERLANDS, Eindhoven", "country": "NETHERLANDS", "city": "Eindhoven", "Lon": 5.5, "Lat": 51.43, "data": [
+                {"display_name": "NETHERLANDS, Eindhoven", "country": "NETHERLANDS", "city": "Eindhoven", "lon": 5.5, "lat": 51.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.84},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -13581,7 +13581,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NETHERLANDS, Groningen", "country": "NETHERLANDS", "city": "Groningen", "Lon": 6.58, "Lat": 53.22, "data": [
+                {"display_name": "NETHERLANDS, Groningen", "country": "NETHERLANDS", "city": "Groningen", "lon": 6.58, "lat": 53.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.64},
@@ -13603,7 +13603,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NETHERLANDS, Tilburg", "country": "NETHERLANDS", "city": "Tilburg", "Lon": 5.08, "Lat": 51.57, "data": [
+                {"display_name": "NETHERLANDS, Tilburg", "country": "NETHERLANDS", "city": "Tilburg", "lon": 5.08, "lat": 51.57, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.83},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -13625,7 +13625,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NETHERLANDS, Haarlem", "country": "NETHERLANDS", "city": "Haarlem", "Lon": 4.63, "Lat": 52.38, "data": [
+                {"display_name": "NETHERLANDS, Haarlem", "country": "NETHERLANDS", "city": "Haarlem", "lon": 4.63, "lat": 52.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.77},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.66},
@@ -13647,7 +13647,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NETHERLANDS, Nijmegen", "country": "NETHERLANDS", "city": "Nijmegen", "Lon": 5.87, "Lat": 51.83, "data": [
+                {"display_name": "NETHERLANDS, Nijmegen", "country": "NETHERLANDS", "city": "Nijmegen", "lon": 5.87, "lat": 51.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.8},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -13669,7 +13669,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NETHERLANDS, Apeldoorn", "country": "NETHERLANDS", "city": "Apeldoorn", "Lon": 5.95, "Lat": 52.22, "data": [
+                {"display_name": "NETHERLANDS, Apeldoorn", "country": "NETHERLANDS", "city": "Apeldoorn", "lon": 5.95, "lat": 52.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.77},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.66},
@@ -13691,7 +13691,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NETHERLANDS, Enschede", "country": "NETHERLANDS", "city": "Enschede", "Lon": 6.92, "Lat": 52.22, "data": [
+                {"display_name": "NETHERLANDS, Enschede", "country": "NETHERLANDS", "city": "Enschede", "lon": 6.92, "lat": 52.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.76},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.66},
@@ -13713,7 +13713,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGER, NIAMEY", "country": "NIGER", "city": "NIAMEY", "Lon": 2.08, "Lat": 13.53, "data": [
+                {"display_name": "NIGER, NIAMEY", "country": "NIGER", "city": "NIAMEY", "lon": 2.08, "lat": 13.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 16.3},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.63},
@@ -13735,7 +13735,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGER, Zinder", "country": "NIGER", "city": "Zinder", "Lon": 8.97, "Lat": 13.77, "data": [
+                {"display_name": "NIGER, Zinder", "country": "NIGER", "city": "Zinder", "lon": 8.97, "lat": 13.77, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.32},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 17.32},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.85},
@@ -13757,7 +13757,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGER, Maradi", "country": "NIGER", "city": "Maradi", "Lon": 7.17, "Lat": 13.48, "data": [
+                {"display_name": "NIGER, Maradi", "country": "NIGER", "city": "Maradi", "lon": 7.17, "lat": 13.48, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.59},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 16.8},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.78},
@@ -13779,7 +13779,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGER, Tahoua", "country": "NIGER", "city": "Tahoua", "Lon": 5.32, "Lat": 14.95, "data": [
+                {"display_name": "NIGER, Tahoua", "country": "NIGER", "city": "Tahoua", "lon": 5.32, "lat": 14.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.9},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 17.94},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -13801,7 +13801,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGER, Agadez", "country": "NIGER", "city": "Agadez", "Lon": 7.93, "Lat": 17, "data": [
+                {"display_name": "NIGER, Agadez", "country": "NIGER", "city": "Agadez", "lon": 7.93, "lat": 17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.01},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 19.94},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.76},
@@ -13823,7 +13823,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGER, Birni_N'Konni", "country": "NIGER", "city": "Birni_N'Konni", "Lon": 5.32, "Lat": 13.82, "data": [
+                {"display_name": "NIGER, Birni_N'Konni", "country": "NIGER", "city": "Birni_N'Konni", "lon": 5.32, "lat": 13.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.81},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 16.89},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.71},
@@ -13845,7 +13845,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGER, Filingue", "country": "NIGER", "city": "Filingue", "Lon": 3.37, "Lat": 14.35, "data": [
+                {"display_name": "NIGER, Filingue", "country": "NIGER", "city": "Filingue", "lon": 3.37, "lat": 14.35, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.98},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 17.18},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.65},
@@ -13867,7 +13867,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGERIA, LAGOS", "country": "NIGERIA", "city": "LAGOS", "Lon": 3.47, "Lat": 6.45, "data": [
+                {"display_name": "NIGERIA, LAGOS", "country": "NIGERIA", "city": "LAGOS", "lon": 3.47, "lat": 6.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.42},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.86},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.56},
@@ -13889,7 +13889,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGERIA, Ibadan", "country": "NIGERIA", "city": "Ibadan", "Lon": 3.93, "Lat": 7.38, "data": [
+                {"display_name": "NIGERIA, Ibadan", "country": "NIGERIA", "city": "Ibadan", "lon": 3.93, "lat": 7.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.23},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.6},
@@ -13911,7 +13911,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGERIA, Ogbomosho", "country": "NIGERIA", "city": "Ogbomosho", "Lon": 4.18, "Lat": 8.08, "data": [
+                {"display_name": "NIGERIA, Ogbomosho", "country": "NIGERIA", "city": "Ogbomosho", "lon": 4.18, "lat": 8.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.9},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.62},
@@ -13933,7 +13933,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGERIA, Kano", "country": "NIGERIA", "city": "Kano", "Lon": 8.52, "Lat": 12, "data": [
+                {"display_name": "NIGERIA, Kano", "country": "NIGERIA", "city": "Kano", "lon": 8.52, "lat": 12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.63},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 15.58},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.83},
@@ -13955,7 +13955,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGERIA, Oshogbo", "country": "NIGERIA", "city": "Oshogbo", "Lon": 4.58, "Lat": 7.83, "data": [
+                {"display_name": "NIGERIA, Oshogbo", "country": "NIGERIA", "city": "Oshogbo", "lon": 4.58, "lat": 7.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.95},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.47},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.63},
@@ -13977,7 +13977,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGERIA, Ilorin", "country": "NIGERIA", "city": "Ilorin", "Lon": 4.57, "Lat": 8.53, "data": [
+                {"display_name": "NIGERIA, Ilorin", "country": "NIGERIA", "city": "Ilorin", "lon": 4.57, "lat": 8.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.95},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.64},
@@ -13999,7 +13999,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGERIA, Abeokuta", "country": "NIGERIA", "city": "Abeokuta", "Lon": 3.43, "Lat": 7.17, "data": [
+                {"display_name": "NIGERIA, Abeokuta", "country": "NIGERIA", "city": "Abeokuta", "lon": 3.43, "lat": 7.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.15},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.58},
@@ -14021,7 +14021,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGERIA, Port Harcourt", "country": "NIGERIA", "city": "Port Harcourt", "Lon": 7.17, "Lat": 4.72, "data": [
+                {"display_name": "NIGERIA, Port Harcourt", "country": "NIGERIA", "city": "Port Harcourt", "lon": 7.17, "lat": 4.72, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.86},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.61},
@@ -14043,7 +14043,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGERIA, Zaria", "country": "NIGERIA", "city": "Zaria", "Lon": 7.73, "Lat": 11.02, "data": [
+                {"display_name": "NIGERIA, Zaria", "country": "NIGERIA", "city": "Zaria", "lon": 7.73, "lat": 11.02, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.8},
@@ -14065,7 +14065,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGERIA, Ilesha", "country": "NIGERIA", "city": "Ilesha", "Lon": 4.63, "Lat": 7.65, "data": [
+                {"display_name": "NIGERIA, Ilesha", "country": "NIGERIA", "city": "Ilesha", "lon": 4.63, "lat": 7.65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.36},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.62},
@@ -14087,7 +14087,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NIGERIA, Onitsha", "country": "NIGERIA", "city": "Onitsha", "Lon": 6.78, "Lat": 6.17, "data": [
+                {"display_name": "NIGERIA, Onitsha", "country": "NIGERIA", "city": "Onitsha", "lon": 6.78, "lat": 6.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.44},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.66},
@@ -14109,7 +14109,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, PYONGYANG", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "PYONGYANG", "Lon": 125.78, "Lat": 39, "data": [
+                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, PYONGYANG", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "PYONGYANG", "lon": 125.78, "lat": 39, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.31},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.35},
@@ -14131,7 +14131,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -0.82},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -0.82}
                 ]},
-                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Chongjin", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Chongjin", "Lon": 129.92, "Lat": 41.83, "data": [
+                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Chongjin", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Chongjin", "lon": 129.92, "lat": 41.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 22.35},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.25},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.05},
@@ -14153,7 +14153,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -0.99},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -0.99}
                 ]},
-                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Nampo", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Nampo", "Lon": 125.38, "Lat": 38.75, "data": [
+                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Nampo", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Nampo", "lon": 125.38, "lat": 38.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.01},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.39},
@@ -14175,7 +14175,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -0.78},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -0.78}
                 ]},
-                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Sinuiju", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Sinuiju", "Lon": 124.42, "Lat": 40.07, "data": [
+                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Sinuiju", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Sinuiju", "lon": 124.42, "lat": 40.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.75},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.18},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.23},
@@ -14197,7 +14197,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -0.68},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -0.68}
                 ]},
-                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Hungnam", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Hungnam", "Lon": 127.67, "Lat": 39.82, "data": [
+                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Hungnam", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Hungnam", "lon": 127.67, "lat": 39.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.3},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.25},
@@ -14219,7 +14219,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -0.78},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -0.78}
                 ]},
-                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Wonsan", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Wonsan", "Lon": 127.43, "Lat": 39.12, "data": [
+                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Wonsan", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Wonsan", "lon": 127.43, "lat": 39.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.4},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.32},
@@ -14241,7 +14241,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.07},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.07}
                 ]},
-                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Kaesong", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Kaesong", "Lon": 126.5, "Lat": 37.98, "data": [
+                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Kaesong", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Kaesong", "lon": 126.5, "lat": 37.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.74},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.18},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.23},
@@ -14263,7 +14263,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -0.66},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -0.66}
                 ]},
-                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Hamhung", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Hamhung", "Lon": 127.58, "Lat": 39.9, "data": [
+                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Hamhung", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Hamhung", "lon": 127.58, "lat": 39.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 23.49},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.15},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.12},
@@ -14285,7 +14285,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -0.81},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -0.81}
                 ]},
-                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Kimchaek", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Kimchaek", "Lon": 129.2, "Lat": 40.68, "data": [
+                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Kimchaek", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Kimchaek", "lon": 129.2, "lat": 40.68, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.75},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.78},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.37},
@@ -14307,7 +14307,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.09},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.09}
                 ]},
-                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Haeju", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Haeju", "Lon": 125.7, "Lat": 38.03, "data": [
+                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Haeju", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Haeju", "lon": 125.7, "lat": 38.03, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.55},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.36},
@@ -14329,7 +14329,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -0.94},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -0.94}
                 ]},
-                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Sariwon", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Sariwon", "Lon": 125.73, "Lat": 38.52, "data": [
+                {"display_name": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA, Sariwon", "country": "DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA", "city": "Sariwon", "lon": 125.73, "lat": 38.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.32},
@@ -14351,7 +14351,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NORWAY, OSLO", "country": "NORWAY", "city": "OSLO", "Lon": 10.75, "Lat": 59.92, "data": [
+                {"display_name": "NORWAY, OSLO", "country": "NORWAY", "city": "OSLO", "lon": 10.75, "lat": 59.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.89},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.41},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.08},
@@ -14373,7 +14373,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NORWAY, Trondheim", "country": "NORWAY", "city": "Trondheim", "Lon": 10.38, "Lat": 63.42, "data": [
+                {"display_name": "NORWAY, Trondheim", "country": "NORWAY", "city": "Trondheim", "lon": 10.38, "lat": 63.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.41},
@@ -14395,7 +14395,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NORWAY, Stavanger", "country": "NORWAY", "city": "Stavanger", "Lon": 5.75, "Lat": 58.97, "data": [
+                {"display_name": "NORWAY, Stavanger", "country": "NORWAY", "city": "Stavanger", "lon": 5.75, "lat": 58.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.44},
@@ -14417,7 +14417,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NORWAY, Kristiansand", "country": "NORWAY", "city": "Kristiansand", "Lon": 8.02, "Lat": 58.13, "data": [
+                {"display_name": "NORWAY, Kristiansand", "country": "NORWAY", "city": "Kristiansand", "lon": 8.02, "lat": 58.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.15},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.34},
@@ -14439,7 +14439,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NORWAY, Drammen", "country": "NORWAY", "city": "Drammen", "Lon": 10.25, "Lat": 59.75, "data": [
+                {"display_name": "NORWAY, Drammen", "country": "NORWAY", "city": "Drammen", "lon": 10.25, "lat": 59.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.64},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.92},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.28},
@@ -14461,7 +14461,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NORWAY, Tromso", "country": "NORWAY", "city": "Tromso", "Lon": 18.97, "Lat": 69.67, "data": [
+                {"display_name": "NORWAY, Tromso", "country": "NORWAY", "city": "Tromso", "lon": 18.97, "lat": 69.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.35},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.64},
@@ -14483,7 +14483,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "NORWAY, Bodo", "country": "NORWAY", "city": "Bodo", "Lon": 14.38, "Lat": 67.28, "data": [
+                {"display_name": "NORWAY, Bodo", "country": "NORWAY", "city": "Bodo", "lon": 14.38, "lat": 67.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 33.82},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 34.75},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.02},
@@ -14505,7 +14505,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.35},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.35}
                 ]},
-                {"display_name": "OMAN, MUSCAT", "country": "OMAN", "city": "MUSCAT", "Lon": 58.63, "Lat": 23.62, "data": [
+                {"display_name": "OMAN, MUSCAT", "country": "OMAN", "city": "MUSCAT", "lon": 58.63, "lat": 23.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 33.78},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 34.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.01},
@@ -14527,7 +14527,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.37},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.37}
                 ]},
-                {"display_name": "OMAN, Matrah", "country": "OMAN", "city": "Matrah", "Lon": 58.57, "Lat": 23.62, "data": [
+                {"display_name": "OMAN, Matrah", "country": "OMAN", "city": "Matrah", "lon": 58.57, "lat": 23.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.04},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.75},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.97},
@@ -14549,7 +14549,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.36},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.36}
                 ]},
-                {"display_name": "OMAN, Salala", "country": "OMAN", "city": "Salala", "Lon": 54.07, "Lat": 17, "data": [
+                {"display_name": "OMAN, Salala", "country": "OMAN", "city": "Salala", "lon": 54.07, "lat": 17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.93},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.94},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.97},
@@ -14571,7 +14571,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.52},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.52}
                 ]},
-                {"display_name": "OMAN, Nizwa", "country": "OMAN", "city": "Nizwa", "Lon": 57.55, "Lat": 22.93, "data": [
+                {"display_name": "OMAN, Nizwa", "country": "OMAN", "city": "Nizwa", "lon": 57.55, "lat": 22.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.6},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.54},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.65},
@@ -14593,7 +14593,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.84},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.84}
                 ]},
-                {"display_name": "PAKISTAN, Karachi", "country": "PAKISTAN", "city": "Karachi", "Lon": 67.03, "Lat": 24.85, "data": [
+                {"display_name": "PAKISTAN, Karachi", "country": "PAKISTAN", "city": "Karachi", "lon": 67.03, "lat": 24.85, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.6},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.54},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.65},
@@ -14615,7 +14615,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.84},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.84}
                 ]},
-                {"display_name": "PAKISTAN, Lahore", "country": "PAKISTAN", "city": "Lahore", "Lon": 74.37, "Lat": 31.57, "data": [
+                {"display_name": "PAKISTAN, Lahore", "country": "PAKISTAN", "city": "Lahore", "lon": 74.37, "lat": 31.57, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.87},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.35},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.31},
@@ -14637,7 +14637,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.5},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.5}
                 ]},
-                {"display_name": "PAKISTAN, Faisalabad", "country": "PAKISTAN", "city": "Faisalabad", "Lon": 73.15, "Lat": 31.42, "data": [
+                {"display_name": "PAKISTAN, Faisalabad", "country": "PAKISTAN", "city": "Faisalabad", "lon": 73.15, "lat": 31.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.78},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.35},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.3},
@@ -14659,7 +14659,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.39},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.39}
                 ]},
-                {"display_name": "PAKISTAN, Rawalpindi", "country": "PAKISTAN", "city": "Rawalpindi", "Lon": 73.13, "Lat": 33.67, "data": [
+                {"display_name": "PAKISTAN, Rawalpindi", "country": "PAKISTAN", "city": "Rawalpindi", "lon": 73.13, "lat": 33.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.29},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.08},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.12},
@@ -14681,7 +14681,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.39},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.39}
                 ]},
-                {"display_name": "PAKISTAN, Hyderabad", "country": "PAKISTAN", "city": "Hyderabad", "Lon": 68.4, "Lat": 25.38, "data": [
+                {"display_name": "PAKISTAN, Hyderabad", "country": "PAKISTAN", "city": "Hyderabad", "lon": 68.4, "lat": 25.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.15},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.91},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.7},
@@ -14703,7 +14703,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.87},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.87}
                 ]},
-                {"display_name": "PAKISTAN, Multan", "country": "PAKISTAN", "city": "Multan", "Lon": 71.6, "Lat": 30.17, "data": [
+                {"display_name": "PAKISTAN, Multan", "country": "PAKISTAN", "city": "Multan", "lon": 71.6, "lat": 30.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.75},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.37},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.38},
@@ -14725,7 +14725,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.45},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.45}
                 ]},
-                {"display_name": "PAKISTAN, Gujranwala", "country": "PAKISTAN", "city": "Gujranwala", "Lon": 74.18, "Lat": 32.1, "data": [
+                {"display_name": "PAKISTAN, Gujranwala", "country": "PAKISTAN", "city": "Gujranwala", "lon": 74.18, "lat": 32.1, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.75},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.3},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.25},
@@ -14747,7 +14747,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.48},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.48}
                 ]},
-                {"display_name": "PAKISTAN, Peshawar", "country": "PAKISTAN", "city": "Peshawar", "Lon": 71.67, "Lat": 34.02, "data": [
+                {"display_name": "PAKISTAN, Peshawar", "country": "PAKISTAN", "city": "Peshawar", "lon": 71.67, "lat": 34.02, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.98},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.95},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.08},
@@ -14769,7 +14769,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.3},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.3}
                 ]},
-                {"display_name": "PAKISTAN, Sialkot", "country": "PAKISTAN", "city": "Sialkot", "Lon": 74.58, "Lat": 32.48, "data": [
+                {"display_name": "PAKISTAN, Sialkot", "country": "PAKISTAN", "city": "Sialkot", "lon": 74.58, "lat": 32.48, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.71},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.26},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.22},
@@ -14791,7 +14791,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.53},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.53}
                 ]},
-                {"display_name": "PAKISTAN, Sargodha", "country": "PAKISTAN", "city": "Sargodha", "Lon": 72.67, "Lat": 32.02, "data": [
+                {"display_name": "PAKISTAN, Sargodha", "country": "PAKISTAN", "city": "Sargodha", "lon": 72.67, "lat": 32.02, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.6},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.23},
@@ -14813,7 +14813,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.35},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.35}
                 ]},
-                {"display_name": "PAKISTAN, ISLAMABAD", "country": "PAKISTAN", "city": "ISLAMABAD", "Lon": 73.13, "Lat": 33.67, "data": [
+                {"display_name": "PAKISTAN, ISLAMABAD", "country": "PAKISTAN", "city": "ISLAMABAD", "lon": 73.13, "lat": 33.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.29},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.08},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.12},
@@ -14835,7 +14835,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.39},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.39}
                 ]},
-                {"display_name": "PALAU Island", "country": "PALAU", "city": "Island", "Lon": 134.5, "Lat": 7.5, "data": [
+                {"display_name": "PALAU Island", "country": "PALAU", "city": "Island", "lon": 134.5, "lat": 7.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 20.68},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 20.58},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.81},
@@ -14857,7 +14857,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -13.06},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -13.06}
                 ]},
-                {"display_name": "PAPUA_NEW_GUINEA, PORT_MORES", "country": "PAPUA_NEW_GUINEA", "city": "PORT_MORES", "Lon": 147.12, "Lat": -9.5, "data": [
+                {"display_name": "PAPUA_NEW_GUINEA, PORT_MORES", "country": "PAPUA_NEW_GUINEA", "city": "PORT_MORES", "lon": 147.12, "lat": -9.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.22},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.56},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.66},
@@ -14879,7 +14879,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.55},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.55}
                 ]},
-                {"display_name": "PAPUA_NEW_GUINEA, Lae", "country": "PAPUA_NEW_GUINEA", "city": "Lae", "Lon": 147, "Lat": -6.75, "data": [
+                {"display_name": "PAPUA_NEW_GUINEA, Lae", "country": "PAPUA_NEW_GUINEA", "city": "Lae", "lon": 147, "lat": -6.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.89},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.31},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.56},
@@ -14901,7 +14901,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.73},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.73}
                 ]},
-                {"display_name": "PAPUA_NEW_GUINEA, Madang", "country": "PAPUA_NEW_GUINEA", "city": "Madang", "Lon": 145.83, "Lat": -5.25, "data": [
+                {"display_name": "PAPUA_NEW_GUINEA, Madang", "country": "PAPUA_NEW_GUINEA", "city": "Madang", "lon": 145.83, "lat": -5.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.71},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.1},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.61},
@@ -14923,7 +14923,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.23},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.23}
                 ]},
-                {"display_name": "PAPUA_NEW_GUINEA, Wewak", "country": "PAPUA_NEW_GUINEA", "city": "Wewak", "Lon": 143.67, "Lat": -3.58, "data": [
+                {"display_name": "PAPUA_NEW_GUINEA, Wewak", "country": "PAPUA_NEW_GUINEA", "city": "Wewak", "lon": 143.67, "lat": -3.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.59},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 22.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.69},
@@ -14945,7 +14945,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6.16},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6.16}
                 ]},
-                {"display_name": "PAPUA_NEW_GUINEA, Goroka", "country": "PAPUA_NEW_GUINEA", "city": "Goroka", "Lon": 145.42, "Lat": -6.08, "data": [
+                {"display_name": "PAPUA_NEW_GUINEA, Goroka", "country": "PAPUA_NEW_GUINEA", "city": "Goroka", "lon": 145.42, "lat": -6.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.89},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.15},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.66},
@@ -14967,7 +14967,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6.28},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6.28}
                 ]},
-                {"display_name": "PAPUA_NEW_GUINEA, Rabaul", "country": "PAPUA_NEW_GUINEA", "city": "Rabaul", "Lon": 152.18, "Lat": -4.22, "data": [
+                {"display_name": "PAPUA_NEW_GUINEA, Rabaul", "country": "PAPUA_NEW_GUINEA", "city": "Rabaul", "lon": 152.18, "lat": -4.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.21},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.56},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.19},
@@ -14989,7 +14989,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.39},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.39}
                 ]},
-                {"display_name": "PAPUA_NEW_GUINEA, Mount_Hage", "country": "PAPUA_NEW_GUINEA", "city": "Mount_Hage", "Lon": 144.25, "Lat": -5.83, "data": [
+                {"display_name": "PAPUA_NEW_GUINEA, Mount_Hage", "country": "PAPUA_NEW_GUINEA", "city": "Mount_Hage", "lon": 144.25, "lat": -5.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.93},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.03},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -15011,7 +15011,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.06},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.06}
                 ]},
-                {"display_name": "PHILIPPINES, MANILA", "country": "PHILIPPINES", "city": "MANILA", "Lon": 120.97, "Lat": 14.62, "data": [
+                {"display_name": "PHILIPPINES, MANILA", "country": "PHILIPPINES", "city": "MANILA", "lon": 120.97, "lat": 14.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 31.54},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.26},
@@ -15033,7 +15033,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.33},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.33}
                 ]},
-                {"display_name": "PHILIPPINES, Quezon_City", "country": "PHILIPPINES", "city": "Quezon_City", "Lon": 121.03, "Lat": 14.65, "data": [
+                {"display_name": "PHILIPPINES, Quezon_City", "country": "PHILIPPINES", "city": "Quezon_City", "lon": 121.03, "lat": 14.65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 31.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.53},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.27},
@@ -15055,7 +15055,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.3},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.3}
                 ]},
-                {"display_name": "PHILIPPINES, Davao", "country": "PHILIPPINES", "city": "Davao", "Lon": 125.63, "Lat": 7.08, "data": [
+                {"display_name": "PHILIPPINES, Davao", "country": "PHILIPPINES", "city": "Davao", "lon": 125.63, "lat": 7.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.54},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.54},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.37},
@@ -15077,7 +15077,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.44},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.44}
                 ]},
-                {"display_name": "PHILIPPINES, Cebu", "country": "PHILIPPINES", "city": "Cebu", "Lon": 123.93, "Lat": 10.28, "data": [
+                {"display_name": "PHILIPPINES, Cebu", "country": "PHILIPPINES", "city": "Cebu", "lon": 123.93, "lat": 10.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.82},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.25},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.26},
@@ -15099,7 +15099,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -10.72},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -10.72}
                 ]},
-                {"display_name": "PHILIPPINES, Zamboanga", "country": "PHILIPPINES", "city": "Zamboanga", "Lon": 122.08, "Lat": 6.92, "data": [
+                {"display_name": "PHILIPPINES, Zamboanga", "country": "PHILIPPINES", "city": "Zamboanga", "lon": 122.08, "lat": 6.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.72},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 32.53},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.42},
@@ -15121,7 +15121,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -10.01},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -10.01}
                 ]},
-                {"display_name": "PHILIPPINES, Cagayan_de_Oro", "country": "PHILIPPINES", "city": "Cagayan_de_Oro", "Lon": 124.67, "Lat": 8.48, "data": [
+                {"display_name": "PHILIPPINES, Cagayan_de_Oro", "country": "PHILIPPINES", "city": "Cagayan_de_Oro", "lon": 124.67, "lat": 8.48, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.77},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.33},
@@ -15143,7 +15143,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.14},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.14}
                 ]},
-                {"display_name": "PHILIPPINES, Bacolod", "country": "PHILIPPINES", "city": "Bacolod", "Lon": 122.97, "Lat": 10.63, "data": [
+                {"display_name": "PHILIPPINES, Bacolod", "country": "PHILIPPINES", "city": "Bacolod", "lon": 122.97, "lat": 10.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.04},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 32.04},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.26},
@@ -15165,7 +15165,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -10.75},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -10.75}
                 ]},
-                {"display_name": "PHILIPPINES, Iloilo", "country": "PHILIPPINES", "city": "Iloilo", "Lon": 122.55, "Lat": 10.68, "data": [
+                {"display_name": "PHILIPPINES, Iloilo", "country": "PHILIPPINES", "city": "Iloilo", "lon": 122.55, "lat": 10.68, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.54},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 32.36},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.26},
@@ -15187,7 +15187,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -10.79},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -10.79}
                 ]},
-                {"display_name": "PHILIPPINES, Angeles", "country": "PHILIPPINES", "city": "Angeles", "Lon": 120.55, "Lat": 15.15, "data": [
+                {"display_name": "PHILIPPINES, Angeles", "country": "PHILIPPINES", "city": "Angeles", "lon": 120.55, "lat": 15.15, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 31.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.83},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.29},
@@ -15209,7 +15209,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.02},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.02}
                 ]},
-                {"display_name": "PHILIPPINES, General_Santos", "country": "PHILIPPINES", "city": "General_Santos", "Lon": 125.18, "Lat": 6.12, "data": [
+                {"display_name": "PHILIPPINES, General_Santos", "country": "PHILIPPINES", "city": "General_Santos", "lon": 125.18, "lat": 6.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.88},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.45},
@@ -15231,7 +15231,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.34},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.34}
                 ]},
-                {"display_name": "PHILIPPINES, Batangas", "country": "PHILIPPINES", "city": "Batangas", "Lon": 121.05, "Lat": 13.75, "data": [
+                {"display_name": "PHILIPPINES, Batangas", "country": "PHILIPPINES", "city": "Batangas", "lon": 121.05, "lat": 13.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 31.38},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.24},
@@ -15253,7 +15253,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.91},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.91}
                 ]},
-                {"display_name": "POLAND, WARSAW", "country": "POLAND", "city": "WARSAW", "Lon": 21, "Lat": 52.25, "data": [
+                {"display_name": "POLAND, WARSAW", "country": "POLAND", "city": "WARSAW", "lon": 21, "lat": 52.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.74},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.77},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -15275,7 +15275,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "POLAND, Lodz", "country": "POLAND", "city": "Lodz", "Lon": 19.47, "Lat": 51.82, "data": [
+                {"display_name": "POLAND, Lodz", "country": "POLAND", "city": "Lodz", "lon": 19.47, "lat": 51.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.76},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.75},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -15297,7 +15297,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "POLAND, Krakow", "country": "POLAND", "city": "Krakow", "Lon": 19.92, "Lat": 50.05, "data": [
+                {"display_name": "POLAND, Krakow", "country": "POLAND", "city": "Krakow", "lon": 19.92, "lat": 50.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.89},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.75},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.83},
@@ -15319,7 +15319,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "POLAND, Wroclaw", "country": "POLAND", "city": "Wroclaw", "Lon": 17, "Lat": 51.08, "data": [
+                {"display_name": "POLAND, Wroclaw", "country": "POLAND", "city": "Wroclaw", "lon": 17, "lat": 51.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.81},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.76},
@@ -15341,7 +15341,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "POLAND, Poznan", "country": "POLAND", "city": "Poznan", "Lon": 16.88, "Lat": 52.42, "data": [
+                {"display_name": "POLAND, Poznan", "country": "POLAND", "city": "Poznan", "lon": 16.88, "lat": 52.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.71},
@@ -15363,7 +15363,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "POLAND, Gdansk", "country": "POLAND", "city": "Gdansk", "Lon": 18.68, "Lat": 54.37, "data": [
+                {"display_name": "POLAND, Gdansk", "country": "POLAND", "city": "Gdansk", "lon": 18.68, "lat": 54.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.56},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.63},
@@ -15385,7 +15385,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "POLAND, Szczecin", "country": "POLAND", "city": "Szczecin", "Lon": 14.53, "Lat": 53.42, "data": [
+                {"display_name": "POLAND, Szczecin", "country": "POLAND", "city": "Szczecin", "lon": 14.53, "lat": 53.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.63},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.65},
@@ -15407,7 +15407,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "POLAND, Bydgoszcz", "country": "POLAND", "city": "Bydgoszcz", "Lon": 18, "Lat": 53.27, "data": [
+                {"display_name": "POLAND, Bydgoszcz", "country": "POLAND", "city": "Bydgoszcz", "lon": 18, "lat": 53.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.68},
@@ -15429,7 +15429,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "POLAND, Katowice", "country": "POLAND", "city": "Katowice", "Lon": 18.98, "Lat": 50.25, "data": [
+                {"display_name": "POLAND, Katowice", "country": "POLAND", "city": "Katowice", "lon": 18.98, "lat": 50.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.88},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.81},
@@ -15451,7 +15451,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "POLAND, Lublin", "country": "POLAND", "city": "Lublin", "Lon": 22.52, "Lat": 51.3, "data": [
+                {"display_name": "POLAND, Lublin", "country": "POLAND", "city": "Lublin", "lon": 22.52, "lat": 51.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.82},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.8},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.81},
@@ -15473,7 +15473,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "POLAND, Sosnowiec", "country": "POLAND", "city": "Sosnowiec", "Lon": 19.12, "Lat": 50.27, "data": [
+                {"display_name": "POLAND, Sosnowiec", "country": "POLAND", "city": "Sosnowiec", "lon": 19.12, "lat": 50.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.88},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.81},
@@ -15495,7 +15495,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "QATAR, DOHA", "country": "QATAR", "city": "DOHA", "Lon": 51.53, "Lat": 25.25, "data": [
+                {"display_name": "QATAR, DOHA", "country": "QATAR", "city": "DOHA", "lon": 51.53, "lat": 25.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.51},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.31},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.69},
@@ -15517,7 +15517,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.86},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.86}
                 ]},
-                {"display_name": "QATAR, Musayid", "country": "QATAR", "city": "Musayid", "Lon": 51.53, "Lat": 24.98, "data": [
+                {"display_name": "QATAR, Musayid", "country": "QATAR", "city": "Musayid", "lon": 51.53, "lat": 24.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.24},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.69},
@@ -15539,7 +15539,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.86},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.86}
                 ]},
-                {"display_name": "QATAR, Dukhan", "country": "QATAR", "city": "Dukhan", "Lon": 50.8, "Lat": 25.42, "data": [
+                {"display_name": "QATAR, Dukhan", "country": "QATAR", "city": "Dukhan", "lon": 50.8, "lat": 25.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.05},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.96},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -15561,7 +15561,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.96},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.96}
                 ]},
-                {"display_name": "QATAR, Umm_Bab", "country": "QATAR", "city": "Umm_Bab", "Lon": 50.8, "Lat": 25.2, "data": [
+                {"display_name": "QATAR, Umm_Bab", "country": "QATAR", "city": "Umm_Bab", "lon": 50.8, "lat": 25.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.01},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.91},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -15583,7 +15583,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.97},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.97}
                 ]},
-                {"display_name": "QATAR, al-Khawr", "country": "QATAR", "city": "al-Khawr", "Lon": 51.5, "Lat": 25.68, "data": [
+                {"display_name": "QATAR, al-Khawr", "country": "QATAR", "city": "al-Khawr", "lon": 51.5, "lat": 25.68, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.57},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.4},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.69},
@@ -15605,7 +15605,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.86},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.86}
                 ]},
-                {"display_name": "REUNION, SAINT-DENIS", "country": "REUNION", "city": "SAINT-DENIS", "Lon": 55.47, "Lat": -20.87, "data": [
+                {"display_name": "REUNION, SAINT-DENIS", "country": "REUNION", "city": "SAINT-DENIS", "lon": 55.47, "lat": -20.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.64},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.82},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.52},
@@ -15627,7 +15627,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -25.86},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -25.86}
                 ]},
-                {"display_name": "REUNION, Saint-Paul", "country": "REUNION", "city": "Saint-Paul", "Lon": 55.28, "Lat": -21, "data": [
+                {"display_name": "REUNION, Saint-Paul", "country": "REUNION", "city": "Saint-Paul", "lon": 55.28, "lat": -21, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.61},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.56},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.54},
@@ -15649,7 +15649,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -26.05},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -26.05}
                 ]},
-                {"display_name": "REUNION, Saint-Pierre", "country": "REUNION", "city": "Saint-Pierre", "Lon": 55.48, "Lat": -21.32, "data": [
+                {"display_name": "REUNION, Saint-Pierre", "country": "REUNION", "city": "Saint-Pierre", "lon": 55.48, "lat": -21.32, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.47},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.48},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.39},
@@ -15671,7 +15671,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -26.71},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -26.71}
                 ]},
-                {"display_name": "REUNION, Le_Tampon", "country": "REUNION", "city": "Le_Tampon", "Lon": 55.53, "Lat": -21.27, "data": [
+                {"display_name": "REUNION, Le_Tampon", "country": "REUNION", "city": "Le_Tampon", "lon": 55.53, "lat": -21.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.56},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.39},
@@ -15693,7 +15693,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -26.61},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -26.61}
                 ]},
-                {"display_name": "REUNION, Saint-Louis", "country": "REUNION", "city": "Saint-Louis", "Lon": 55.42, "Lat": -21.27, "data": [
+                {"display_name": "REUNION, Saint-Louis", "country": "REUNION", "city": "Saint-Louis", "lon": 55.42, "lat": -21.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.49},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.47},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.42},
@@ -15715,7 +15715,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -26.59},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -26.59}
                 ]},
-                {"display_name": "REUNION, Le_Port", "country": "REUNION", "city": "Le_Port", "Lon": 55.3, "Lat": -20.92, "data": [
+                {"display_name": "REUNION, Le_Port", "country": "REUNION", "city": "Le_Port", "lon": 55.3, "lat": -20.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.63},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.64},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.55},
@@ -15737,7 +15737,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -25.92},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -25.92}
                 ]},
-                {"display_name": "REUNION, Saint-Benoit", "country": "REUNION", "city": "Saint-Benoit", "Lon": 55.72, "Lat": -21.03, "data": [
+                {"display_name": "REUNION, Saint-Benoit", "country": "REUNION", "city": "Saint-Benoit", "lon": 55.72, "lat": -21.03, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.56},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.9},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.41},
@@ -15759,7 +15759,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -26.19},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -26.19}
                 ]},
-                {"display_name": "REUNION, Saint-Andre", "country": "REUNION", "city": "Saint-Andre", "Lon": 55.65, "Lat": -20.95, "data": [
+                {"display_name": "REUNION, Saint-Andre", "country": "REUNION", "city": "Saint-Andre", "lon": 55.65, "lat": -20.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.6},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.9},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.45},
@@ -15781,7 +15781,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -26.03},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -26.03}
                 ]},
-                {"display_name": "ROMANIA, BUCHAREST", "country": "ROMANIA", "city": "BUCHAREST", "Lon": 26.12, "Lat": 44.42, "data": [
+                {"display_name": "ROMANIA, BUCHAREST", "country": "ROMANIA", "city": "BUCHAREST", "lon": 26.12, "lat": 44.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.22},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.11},
@@ -15803,7 +15803,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ROMANIA, Brasov", "country": "ROMANIA", "city": "Brasov", "Lon": 25.58, "Lat": 45.65, "data": [
+                {"display_name": "ROMANIA, Brasov", "country": "ROMANIA", "city": "Brasov", "lon": 25.58, "lat": 45.65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.17},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.06},
@@ -15825,7 +15825,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ROMANIA, Constanta", "country": "ROMANIA", "city": "Constanta", "Lon": 28.67, "Lat": 44.2, "data": [
+                {"display_name": "ROMANIA, Constanta", "country": "ROMANIA", "city": "Constanta", "lon": 28.67, "lat": 44.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.21},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.16},
@@ -15847,7 +15847,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ROMANIA, Timisoara", "country": "ROMANIA", "city": "Timisoara", "Lon": 21.25, "Lat": 45.75, "data": [
+                {"display_name": "ROMANIA, Timisoara", "country": "ROMANIA", "city": "Timisoara", "lon": 21.25, "lat": 45.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.17},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.98},
@@ -15869,7 +15869,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ROMANIA, Iasi", "country": "ROMANIA", "city": "Iasi", "Lon": 27.63, "Lat": 47.15, "data": [
+                {"display_name": "ROMANIA, Iasi", "country": "ROMANIA", "city": "Iasi", "lon": 27.63, "lat": 47.15, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.83},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.04},
@@ -15891,7 +15891,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ROMANIA, Cluj-Napoca", "country": "ROMANIA", "city": "Cluj-Napoca", "Lon": 23.62, "Lat": 46.78, "data": [
+                {"display_name": "ROMANIA, Cluj-Napoca", "country": "ROMANIA", "city": "Cluj-Napoca", "lon": 23.62, "lat": 46.78, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.99},
@@ -15913,7 +15913,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ROMANIA, Galati", "country": "ROMANIA", "city": "Galati", "Lon": 28.03, "Lat": 45.45, "data": [
+                {"display_name": "ROMANIA, Galati", "country": "ROMANIA", "city": "Galati", "lon": 28.03, "lat": 45.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.17},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.78},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.11},
@@ -15935,7 +15935,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ROMANIA, Craiova", "country": "ROMANIA", "city": "Craiova", "Lon": 23.78, "Lat": 44.3, "data": [
+                {"display_name": "ROMANIA, Craiova", "country": "ROMANIA", "city": "Craiova", "lon": 23.78, "lat": 44.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.06},
@@ -15957,7 +15957,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ROMANIA, Braila", "country": "ROMANIA", "city": "Braila", "Lon": 27.97, "Lat": 45.28, "data": [
+                {"display_name": "ROMANIA, Braila", "country": "ROMANIA", "city": "Braila", "lon": 27.97, "lat": 45.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.18},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.77},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.12},
@@ -15979,7 +15979,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ROMANIA, Ploiesti", "country": "ROMANIA", "city": "Ploiesti", "Lon": 26.02, "Lat": 44.95, "data": [
+                {"display_name": "ROMANIA, Ploiesti", "country": "ROMANIA", "city": "Ploiesti", "lon": 26.02, "lat": 44.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.2},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.72},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.09},
@@ -16001,7 +16001,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ROMANIA, Oradea", "country": "ROMANIA", "city": "Oradea", "Lon": 21.92, "Lat": 47.05, "data": [
+                {"display_name": "ROMANIA, Oradea", "country": "ROMANIA", "city": "Oradea", "lon": 21.92, "lat": 47.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.95},
@@ -16023,7 +16023,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "RWANDA, KIGALI", "country": "RWANDA", "city": "KIGALI", "Lon": 30.07, "Lat": -1.93, "data": [
+                {"display_name": "RWANDA, KIGALI", "country": "RWANDA", "city": "KIGALI", "lon": 30.07, "lat": -1.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.6},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.84},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.54},
@@ -16045,7 +16045,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "RWANDA, Butare", "country": "RWANDA", "city": "Butare", "Lon": 29.73, "Lat": -2.58, "data": [
+                {"display_name": "RWANDA, Butare", "country": "RWANDA", "city": "Butare", "lon": 29.73, "lat": -2.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.07},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.26},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.49},
@@ -16067,7 +16067,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "RWANDA, Ruhengeri", "country": "RWANDA", "city": "Ruhengeri", "Lon": 29.62, "Lat": -1.5, "data": [
+                {"display_name": "RWANDA, Ruhengeri", "country": "RWANDA", "city": "Ruhengeri", "lon": 29.62, "lat": -1.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.65},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.82},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.53},
@@ -16089,7 +16089,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "RWANDA, Gisenyi", "country": "RWANDA", "city": "Gisenyi", "Lon": 29.25, "Lat": -1.68, "data": [
+                {"display_name": "RWANDA, Gisenyi", "country": "RWANDA", "city": "Gisenyi", "lon": 29.25, "lat": -1.68, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.94},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.5},
@@ -16111,7 +16111,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "RWANDA, Nyabisindu", "country": "RWANDA", "city": "Nyabisindu", "Lon": 29.72, "Lat": -2.33, "data": [
+                {"display_name": "RWANDA, Nyabisindu", "country": "RWANDA", "city": "Nyabisindu", "lon": 29.72, "lat": -2.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.4},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.5},
@@ -16133,7 +16133,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "RWANDA, Cyangugu", "country": "RWANDA", "city": "Cyangugu", "Lon": 28.9, "Lat": -2.5, "data": [
+                {"display_name": "RWANDA, Cyangugu", "country": "RWANDA", "city": "Cyangugu", "lon": 28.9, "lat": -2.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.45},
@@ -16155,7 +16155,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SAN_MARINO, Serravalle", "country": "SAN_MARINO", "city": "Serravalle", "Lon": 12.5, "Lat": 43.95, "data": [
+                {"display_name": "SAN_MARINO, Serravalle", "country": "SAN_MARINO", "city": "Serravalle", "lon": 12.5, "lat": 43.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.19},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.81},
@@ -16177,7 +16177,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SAN_MARINO, SAN_MARINO", "country": "SAN_MARINO", "city": "SAN_MARINO", "Lon": 12.47, "Lat": 43.92, "data": [
+                {"display_name": "SAN_MARINO, SAN_MARINO", "country": "SAN_MARINO", "city": "SAN_MARINO", "lon": 12.47, "lat": 43.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.19},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.81},
@@ -16199,7 +16199,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SAN_MARINO, Borgo_Maggiore", "country": "SAN_MARINO", "city": "Borgo_Maggiore", "Lon": 12.45, "Lat": 43.93, "data": [
+                {"display_name": "SAN_MARINO, Borgo_Maggiore", "country": "SAN_MARINO", "city": "Borgo_Maggiore", "lon": 12.45, "lat": 43.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.19},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.81},
@@ -16221,7 +16221,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SAO_TOME_&_PRINCIPE, SAO_TOM", "country": "SAO_TOME_&_PRINCIPE", "city": "SAO_TOM", "Lon": 6.72, "Lat": 0.2, "data": [
+                {"display_name": "SAO_TOME_&_PRINCIPE, SAO_TOM", "country": "SAO_TOME_&_PRINCIPE", "city": "SAO_TOM", "lon": 6.72, "lat": 0.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.53},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.34},
@@ -16243,7 +16243,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SAO_TOME_&_PRINCIPE, Santo_A", "country": "SAO_TOME_&_PRINCIPE", "city": "Santo_A", "Lon": 7.45, "Lat": 1.62, "data": [
+                {"display_name": "SAO_TOME_&_PRINCIPE, Santo_A", "country": "SAO_TOME_&_PRINCIPE", "city": "Santo_A", "lon": 7.45, "lat": 1.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.78},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.9},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.44},
@@ -16265,7 +16265,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SAUDI_ARABIA, Jeddah", "country": "SAUDI_ARABIA", "city": "Jeddah", "Lon": 39.17, "Lat": 21.5, "data": [
+                {"display_name": "SAUDI_ARABIA, Jeddah", "country": "SAUDI_ARABIA", "city": "Jeddah", "lon": 39.17, "lat": 21.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 22.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 24.31},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.32},
@@ -16287,7 +16287,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SAUDI_ARABIA, RIYADH", "country": "SAUDI_ARABIA", "city": "RIYADH", "Lon": 46.77, "Lat": 24.65, "data": [
+                {"display_name": "SAUDI_ARABIA, RIYADH", "country": "SAUDI_ARABIA", "city": "RIYADH", "lon": 46.77, "lat": 24.65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.35},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.81},
@@ -16309,7 +16309,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6.54},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6.54}
                 ]},
-                {"display_name": "SAUDI_ARABIA, Mecca", "country": "SAUDI_ARABIA", "city": "Mecca", "Lon": 39.82, "Lat": 21.43, "data": [
+                {"display_name": "SAUDI_ARABIA, Mecca", "country": "SAUDI_ARABIA", "city": "Mecca", "lon": 39.82, "lat": 21.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 22.93},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 24.55},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.28},
@@ -16331,7 +16331,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.48},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.48}
                 ]},
-                {"display_name": "SAUDI_ARABIA, Taif", "country": "SAUDI_ARABIA", "city": "Taif", "Lon": 40.35, "Lat": 21.25, "data": [
+                {"display_name": "SAUDI_ARABIA, Taif", "country": "SAUDI_ARABIA", "city": "Taif", "lon": 40.35, "lat": 21.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 22.84},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 24.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.25},
@@ -16353,7 +16353,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.48},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.48}
                 ]},
-                {"display_name": "SAUDI_ARABIA, Medina", "country": "SAUDI_ARABIA", "city": "Medina", "Lon": 39.58, "Lat": 24.5, "data": [
+                {"display_name": "SAUDI_ARABIA, Medina", "country": "SAUDI_ARABIA", "city": "Medina", "lon": 39.58, "lat": 24.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.44},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.45},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.25},
@@ -16375,7 +16375,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.09},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.09}
                 ]},
-                {"display_name": "SAUDI_ARABIA, Dammam", "country": "SAUDI_ARABIA", "city": "Dammam", "Lon": 50.1, "Lat": 26.42, "data": [
+                {"display_name": "SAUDI_ARABIA, Dammam", "country": "SAUDI_ARABIA", "city": "Dammam", "lon": 50.1, "lat": 26.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.79},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.82},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.71},
@@ -16397,7 +16397,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6}
                 ]},
-                {"display_name": "SAUDI_ARABIA, Hufuf", "country": "SAUDI_ARABIA", "city": "Hufuf", "Lon": 49.57, "Lat": 25.33, "data": [
+                {"display_name": "SAUDI_ARABIA, Hufuf", "country": "SAUDI_ARABIA", "city": "Hufuf", "lon": 49.57, "lat": 25.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.28},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.72},
@@ -16419,7 +16419,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6.13},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6.13}
                 ]},
-                {"display_name": "SAUDI_ARABIA, Haradh", "country": "SAUDI_ARABIA", "city": "Haradh", "Lon": 49.08, "Lat": 24.13, "data": [
+                {"display_name": "SAUDI_ARABIA, Haradh", "country": "SAUDI_ARABIA", "city": "Haradh", "lon": 49.08, "lat": 24.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.62},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -16441,7 +16441,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6.25},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6.25}
                 ]},
-                {"display_name": "SAUDI_ARABIA, Tabouk", "country": "SAUDI_ARABIA", "city": "Tabouk", "Lon": 36.53, "Lat": 28.37, "data": [
+                {"display_name": "SAUDI_ARABIA, Tabouk", "country": "SAUDI_ARABIA", "city": "Tabouk", "lon": 36.53, "lat": 28.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.06},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.8},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -16463,7 +16463,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SAUDI_ARABIA, Buraidah", "country": "SAUDI_ARABIA", "city": "Buraidah", "Lon": 43.98, "Lat": 26.33, "data": [
+                {"display_name": "SAUDI_ARABIA, Buraidah", "country": "SAUDI_ARABIA", "city": "Buraidah", "lon": 43.98, "lat": 26.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.99},
@@ -16485,7 +16485,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6.57},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6.57}
                 ]},
-                {"display_name": "SAUDI_ARABIA, Al-Mobarraz", "country": "SAUDI_ARABIA", "city": "Al-Mobarraz", "Lon": 49.62, "Lat": 25.43, "data": [
+                {"display_name": "SAUDI_ARABIA, Al-Mobarraz", "country": "SAUDI_ARABIA", "city": "Al-Mobarraz", "lon": 49.62, "lat": 25.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.34},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.72},
@@ -16507,7 +16507,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6.12},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6.12}
                 ]},
-                {"display_name": "SAUDI_ARABIA, Khamis-Mushait", "country": "SAUDI_ARABIA", "city": "Khamis-Mushait", "Lon": 42.75, "Lat": 18.32, "data": [
+                {"display_name": "SAUDI_ARABIA, Khamis-Mushait", "country": "SAUDI_ARABIA", "city": "Khamis-Mushait", "lon": 42.75, "lat": 18.32, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 21.62},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 24.77},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.16},
@@ -16529,7 +16529,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.52},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.52}
                 ]},
-                {"display_name": "SAUDI_ARABIA, Jisan", "country": "SAUDI_ARABIA", "city": "Jisan", "Lon": 42.55, "Lat": 16.93, "data": [
+                {"display_name": "SAUDI_ARABIA, Jisan", "country": "SAUDI_ARABIA", "city": "Jisan", "lon": 42.55, "lat": 16.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 20.7},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 24.13},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.24},
@@ -16551,7 +16551,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.66},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.66}
                 ]},
-                {"display_name": "SAUDI_ARABIA, Abha", "country": "SAUDI_ARABIA", "city": "Abha", "Lon": 42.5, "Lat": 18.22, "data": [
+                {"display_name": "SAUDI_ARABIA, Abha", "country": "SAUDI_ARABIA", "city": "Abha", "lon": 42.5, "lat": 18.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 21.47},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 24.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.18},
@@ -16573,7 +16573,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.55},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.55}
                 ]},
-                {"display_name": "SEYCHELLES, VICTORIA", "country": "SEYCHELLES", "city": "VICTORIA", "Lon": 55.47, "Lat": -4.63, "data": [
+                {"display_name": "SEYCHELLES, VICTORIA", "country": "SEYCHELLES", "city": "VICTORIA", "lon": 55.47, "lat": -4.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 17.58},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.62},
@@ -16595,7 +16595,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.72},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.72}
                 ]},
-                {"display_name": "SEYCHELLES, Anse_Boileau", "country": "SEYCHELLES", "city": "Anse_Boileau", "Lon": 55.48, "Lat": -4.72, "data": [
+                {"display_name": "SEYCHELLES, Anse_Boileau", "country": "SEYCHELLES", "city": "Anse_Boileau", "lon": 55.48, "lat": -4.72, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 17.58},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.62},
@@ -16617,7 +16617,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.66},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.66}
                 ]},
-                {"display_name": "SEYCHELLES, Anse_Royale", "country": "SEYCHELLES", "city": "Anse_Royale", "Lon": 55.52, "Lat": -4.73, "data": [
+                {"display_name": "SEYCHELLES, Anse_Royale", "country": "SEYCHELLES", "city": "Anse_Royale", "lon": 55.52, "lat": -4.73, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 17.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.61},
@@ -16639,7 +16639,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.64},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.64}
                 ]},
-                {"display_name": "SEYCHELLES, Cascade", "country": "SEYCHELLES", "city": "Cascade", "Lon": 55.48, "Lat": -4.65, "data": [
+                {"display_name": "SEYCHELLES, Cascade", "country": "SEYCHELLES", "city": "Cascade", "lon": 55.48, "lat": -4.65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 17.58},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.62},
@@ -16661,7 +16661,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.71},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.71}
                 ]},
-                {"display_name": "SINGAPORE, SINGAPORE_CITY", "country": "SINGAPORE", "city": "SINGAPORE_CITY", "Lon": 103.85, "Lat": 1.28, "data": [
+                {"display_name": "SINGAPORE, SINGAPORE_CITY", "country": "SINGAPORE", "city": "SINGAPORE_CITY", "lon": 103.85, "lat": 1.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.82},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.27},
@@ -16683,7 +16683,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.54},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.54}
                 ]},
-                {"display_name": "SINGAPORE, Serangoon", "country": "SINGAPORE", "city": "Serangoon", "Lon": 103.92, "Lat": 1.38, "data": [
+                {"display_name": "SINGAPORE, Serangoon", "country": "SINGAPORE", "city": "Serangoon", "lon": 103.92, "lat": 1.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.85},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.28},
@@ -16705,7 +16705,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.56},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.56}
                 ]},
-                {"display_name": "SINGAPORE, Jurong", "country": "SINGAPORE", "city": "Jurong", "Lon": 103.7, "Lat": 1.35, "data": [
+                {"display_name": "SINGAPORE, Jurong", "country": "SINGAPORE", "city": "Jurong", "lon": 103.7, "lat": 1.35, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.87},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.28},
@@ -16727,7 +16727,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.62},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.62}
                 ]},
-                {"display_name": "SINGAPORE, Nee_Soon", "country": "SINGAPORE", "city": "Nee_Soon", "Lon": 103.82, "Lat": 1.4, "data": [
+                {"display_name": "SINGAPORE, Nee_Soon", "country": "SINGAPORE", "city": "Nee_Soon", "lon": 103.82, "lat": 1.4, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.87},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.64},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.28},
@@ -16749,7 +16749,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -11.59},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -11.59}
                 ]},
-                {"display_name": "SOLOMON_ISLANDS, Tangarare", "country": "SOLOMON_ISLANDS", "city": "Tangarare", "Lon": 159.65, "Lat": -9.58, "data": [
+                {"display_name": "SOLOMON_ISLANDS, Tangarare", "country": "SOLOMON_ISLANDS", "city": "Tangarare", "lon": 159.65, "lat": -9.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.69},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.26},
@@ -16771,7 +16771,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.26},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.26}
                 ]},
-                {"display_name": "SOLOMON_ISLANDS, Gizo", "country": "SOLOMON_ISLANDS", "city": "Gizo", "Lon": 156.85, "Lat": -8.1, "data": [
+                {"display_name": "SOLOMON_ISLANDS, Gizo", "country": "SOLOMON_ISLANDS", "city": "Gizo", "lon": 156.85, "lat": -8.1, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.56},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.2},
@@ -16793,7 +16793,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.6},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.6}
                 ]},
-                {"display_name": "SOLOMON_ISLANDS, Gatere", "country": "SOLOMON_ISLANDS", "city": "Gatere", "Lon": 159.13, "Lat": -7.83, "data": [
+                {"display_name": "SOLOMON_ISLANDS, Gatere", "country": "SOLOMON_ISLANDS", "city": "Gatere", "lon": 159.13, "lat": -7.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 24.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.17},
@@ -16815,7 +16815,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.85},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.85}
                 ]},
-                {"display_name": "SOMALIA, MOGADISHU", "country": "SOMALIA", "city": "MOGADISHU", "Lon": 45.35, "Lat": 2.03, "data": [
+                {"display_name": "SOMALIA, MOGADISHU", "country": "SOMALIA", "city": "MOGADISHU", "lon": 45.35, "lat": 2.03, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.36},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 18.03},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.61},
@@ -16837,7 +16837,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -12.93},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -12.93}
                 ]},
-                {"display_name": "SOMALIA, Hargeysa", "country": "SOMALIA", "city": "Hargeysa", "Lon": 44.03, "Lat": 9.52, "data": [
+                {"display_name": "SOMALIA, Hargeysa", "country": "SOMALIA", "city": "Hargeysa", "lon": 44.03, "lat": 9.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.2},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 21.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.52},
@@ -16859,7 +16859,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.5},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.5}
                 ]},
-                {"display_name": "SOMALIA, Baidoa", "country": "SOMALIA", "city": "Baidoa", "Lon": 43.57, "Lat": 3.13, "data": [
+                {"display_name": "SOMALIA, Baidoa", "country": "SOMALIA", "city": "Baidoa", "lon": 43.57, "lat": 3.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.22},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 17.62},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.72},
@@ -16881,7 +16881,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -12.22},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -12.22}
                 ]},
-                {"display_name": "SOMALIA, Burao", "country": "SOMALIA", "city": "Burao", "Lon": 45.48, "Lat": 9.5, "data": [
+                {"display_name": "SOMALIA, Burao", "country": "SOMALIA", "city": "Burao", "lon": 45.48, "lat": 9.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 17.35},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 22.3},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.42},
@@ -16903,7 +16903,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.33},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.33}
                 ]},
-                {"display_name": "SOMALIA, Chisimaayo", "country": "SOMALIA", "city": "Chisimaayo", "Lon": 42.52, "Lat": 0.37, "data": [
+                {"display_name": "SOMALIA, Chisimaayo", "country": "SOMALIA", "city": "Chisimaayo", "lon": 42.52, "lat": 0.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 9.73},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.92},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.81},
@@ -16925,7 +16925,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -15.26},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -15.26}
                 ]},
-                {"display_name": "SOMALIA, Berbera", "country": "SOMALIA", "city": "Berbera", "Lon": 45.03, "Lat": 10.47, "data": [
+                {"display_name": "SOMALIA, Berbera", "country": "SOMALIA", "city": "Berbera", "lon": 45.03, "lat": 10.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 17.73},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 22.56},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.4},
@@ -16947,7 +16947,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -9.08},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -9.08}
                 ]},
-                {"display_name": "SOMALIA, Merka", "country": "SOMALIA", "city": "Merka", "Lon": 44.83, "Lat": 1.8, "data": [
+                {"display_name": "SOMALIA, Merka", "country": "SOMALIA", "city": "Merka", "lon": 44.83, "lat": 1.8, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 17.53},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.66},
@@ -16969,7 +16969,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -13.24},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -13.24}
                 ]},
-                {"display_name": "SOMALIA, Giohar", "country": "SOMALIA", "city": "Giohar", "Lon": 45.5, "Lat": 2.8, "data": [
+                {"display_name": "SOMALIA, Giohar", "country": "SOMALIA", "city": "Giohar", "lon": 45.5, "lat": 2.8, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.92},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 18.64},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.58},
@@ -16991,7 +16991,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -12.23},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -12.23}
                 ]},
-                {"display_name": "SOUTH_AFRICA, Cape_Town", "country": "SOUTH_AFRICA", "city": "Cape_Town", "Lon": 18.47, "Lat": -33.93, "data": [
+                {"display_name": "SOUTH_AFRICA, Cape_Town", "country": "SOUTH_AFRICA", "city": "Cape_Town", "lon": 18.47, "lat": -33.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.96},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.44},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.11},
@@ -17013,7 +17013,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SOUTH_AFRICA, Johannesburg", "country": "SOUTH_AFRICA", "city": "Johannesburg", "Lon": 28.03, "Lat": -26.17, "data": [
+                {"display_name": "SOUTH_AFRICA, Johannesburg", "country": "SOUTH_AFRICA", "city": "Johannesburg", "lon": 28.03, "lat": -26.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.33},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.2},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.98},
@@ -17035,7 +17035,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SOUTH_AFRICA, Durban", "country": "SOUTH_AFRICA", "city": "Durban", "Lon": 31, "Lat": -29.88, "data": [
+                {"display_name": "SOUTH_AFRICA, Durban", "country": "SOUTH_AFRICA", "city": "Durban", "lon": 31, "lat": -29.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.14},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.6},
@@ -17057,7 +17057,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SOUTH_AFRICA, PRETORIA", "country": "SOUTH_AFRICA", "city": "PRETORIA", "Lon": 28.2, "Lat": -25.75, "data": [
+                {"display_name": "SOUTH_AFRICA, PRETORIA", "country": "SOUTH_AFRICA", "city": "PRETORIA", "lon": 28.2, "lat": -25.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.44},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.99},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.01},
@@ -17079,7 +17079,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SOUTH_AFRICA, Port_Elizabeth", "country": "SOUTH_AFRICA", "city": "Port_Elizabeth", "Lon": 25.6, "Lat": -33.97, "data": [
+                {"display_name": "SOUTH_AFRICA, Port_Elizabeth", "country": "SOUTH_AFRICA", "city": "Port_Elizabeth", "lon": 25.6, "lat": -33.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.07},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.07},
@@ -17101,7 +17101,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SOUTH_AFRICA, East_London", "country": "SOUTH_AFRICA", "city": "East_London", "Lon": 27.92, "Lat": -33, "data": [
+                {"display_name": "SOUTH_AFRICA, East_London", "country": "SOUTH_AFRICA", "city": "East_London", "lon": 27.92, "lat": -33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.81},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.37},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.19},
@@ -17123,7 +17123,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SOUTH_AFRICA, Umhlazi", "country": "SOUTH_AFRICA", "city": "Umhlazi", "Lon": 31, "Lat": -29.88, "data": [
+                {"display_name": "SOUTH_AFRICA, Umhlazi", "country": "SOUTH_AFRICA", "city": "Umhlazi", "lon": 31, "lat": -29.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.14},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.6},
@@ -17145,7 +17145,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SOUTH_AFRICA, Roodepoort", "country": "SOUTH_AFRICA", "city": "Roodepoort", "Lon": 27.88, "Lat": -26.17, "data": [
+                {"display_name": "SOUTH_AFRICA, Roodepoort", "country": "SOUTH_AFRICA", "city": "Roodepoort", "lon": 27.88, "lat": -26.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.34},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.24},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.98},
@@ -17167,7 +17167,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SOUTH_AFRICA, Pietermaritzbu", "country": "SOUTH_AFRICA", "city": "Pietermaritzbu", "Lon": 30.27, "Lat": -29.6, "data": [
+                {"display_name": "SOUTH_AFRICA, Pietermaritzbu", "country": "SOUTH_AFRICA", "city": "Pietermaritzbu", "lon": 30.27, "lat": -29.6, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.42},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.34},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.65},
@@ -17189,7 +17189,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SOUTH_AFRICA, Germiston", "country": "SOUTH_AFRICA", "city": "Germiston", "Lon": 28.17, "Lat": -26.25, "data": [
+                {"display_name": "SOUTH_AFRICA, Germiston", "country": "SOUTH_AFRICA", "city": "Germiston", "lon": 28.17, "lat": -26.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.31},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.18},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.98},
@@ -17211,7 +17211,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SOUTH_AFRICA, Boksburg", "country": "SOUTH_AFRICA", "city": "Boksburg", "Lon": 28.25, "Lat": -26.22, "data": [
+                {"display_name": "SOUTH_AFRICA, Boksburg", "country": "SOUTH_AFRICA", "city": "Boksburg", "lon": 28.25, "lat": -26.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.31},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.15},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.98},
@@ -17233,7 +17233,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SOUTH_AFRICA, Bloemfontein", "country": "SOUTH_AFRICA", "city": "Bloemfontein", "Lon": 26.23, "Lat": -29.12, "data": [
+                {"display_name": "SOUTH_AFRICA, Bloemfontein", "country": "SOUTH_AFRICA", "city": "Bloemfontein", "lon": 26.23, "lat": -29.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.83},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.74},
@@ -17255,7 +17255,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SOUTH_KOREA, SEOUL", "country": "SOUTH_KOREA", "city": "SEOUL", "Lon": 127, "Lat": 37.5, "data": [
+                {"display_name": "SOUTH_KOREA, SEOUL", "country": "SOUTH_KOREA", "city": "SEOUL", "lon": 127, "lat": 37.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.41},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.3},
@@ -17277,7 +17277,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.23},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.23}
                 ]},
-                {"display_name": "SOUTH_KOREA, Pusan", "country": "SOUTH_KOREA", "city": "Pusan", "Lon": 129.03, "Lat": 35.08, "data": [
+                {"display_name": "SOUTH_KOREA, Pusan", "country": "SOUTH_KOREA", "city": "Pusan", "lon": 129.03, "lat": 35.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.38},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.09},
@@ -17299,7 +17299,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.29},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.29}
                 ]},
-                {"display_name": "SOUTH_KOREA, Taegu", "country": "SOUTH_KOREA", "city": "Taegu", "Lon": 128.6, "Lat": 35.87, "data": [
+                {"display_name": "SOUTH_KOREA, Taegu", "country": "SOUTH_KOREA", "city": "Taegu", "lon": 128.6, "lat": 35.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.38},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.15},
@@ -17321,7 +17321,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.94},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.94}
                 ]},
-                {"display_name": "SOUTH_KOREA, Inchon", "country": "SOUTH_KOREA", "city": "Inchon", "Lon": 126.63, "Lat": 37.5, "data": [
+                {"display_name": "SOUTH_KOREA, Inchon", "country": "SOUTH_KOREA", "city": "Inchon", "lon": 126.63, "lat": 37.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.59},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.64},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.32},
@@ -17343,7 +17343,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.23},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.23}
                 ]},
-                {"display_name": "SOUTH_KOREA, Kwangju", "country": "SOUTH_KOREA", "city": "Kwangju", "Lon": 126.87, "Lat": 35.12, "data": [
+                {"display_name": "SOUTH_KOREA, Kwangju", "country": "SOUTH_KOREA", "city": "Kwangju", "lon": 126.87, "lat": 35.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.44},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.34},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.26},
@@ -17365,7 +17365,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.22},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.22}
                 ]},
-                {"display_name": "SOUTH_KOREA, Taejon", "country": "SOUTH_KOREA", "city": "Taejon", "Lon": 127.43, "Lat": 36.33, "data": [
+                {"display_name": "SOUTH_KOREA, Taejon", "country": "SOUTH_KOREA", "city": "Taejon", "lon": 127.43, "lat": 36.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.72},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.25},
@@ -17387,7 +17387,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.69},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.69}
                 ]},
-                {"display_name": "SOUTH_KOREA, Ulsan", "country": "SOUTH_KOREA", "city": "Ulsan", "Lon": 129.35, "Lat": 35.53, "data": [
+                {"display_name": "SOUTH_KOREA, Ulsan", "country": "SOUTH_KOREA", "city": "Ulsan", "lon": 129.35, "lat": 35.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.93},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.13},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.08},
@@ -17409,7 +17409,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.15},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.15}
                 ]},
-                {"display_name": "SOUTH_KOREA, Masan", "country": "SOUTH_KOREA", "city": "Masan", "Lon": 128.58, "Lat": 35.17, "data": [
+                {"display_name": "SOUTH_KOREA, Masan", "country": "SOUTH_KOREA", "city": "Masan", "lon": 128.58, "lat": 35.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.47},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.13},
@@ -17431,7 +17431,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.22},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.22}
                 ]},
-                {"display_name": "SOUTH_KOREA, Suwon", "country": "SOUTH_KOREA", "city": "Suwon", "Lon": 126.98, "Lat": 37.27, "data": [
+                {"display_name": "SOUTH_KOREA, Suwon", "country": "SOUTH_KOREA", "city": "Suwon", "lon": 126.98, "lat": 37.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.59},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.3},
@@ -17453,7 +17453,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.31},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.31}
                 ]},
-                {"display_name": "SOUTH_KOREA, Chonju", "country": "SOUTH_KOREA", "city": "Chonju", "Lon": 127.08, "Lat": 35.83, "data": [
+                {"display_name": "SOUTH_KOREA, Chonju", "country": "SOUTH_KOREA", "city": "Chonju", "lon": 127.08, "lat": 35.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.05},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.27},
@@ -17475,7 +17475,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.91},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.91}
                 ]},
-                {"display_name": "SPAIN, Barcelona", "country": "SPAIN", "city": "Barcelona", "Lon": 2.17, "Lat": 41.42, "data": [
+                {"display_name": "SPAIN, Barcelona", "country": "SPAIN", "city": "Barcelona", "lon": 2.17, "lat": 41.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -17497,7 +17497,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SPAIN, Palma", "country": "SPAIN", "city": "Palma", "Lon": 2.65, "Lat": 39.58, "data": [
+                {"display_name": "SPAIN, Palma", "country": "SPAIN", "city": "Palma", "lon": 2.65, "lat": 39.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.81},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.6},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.65},
@@ -17519,7 +17519,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SPAIN, Hospitalet", "country": "SPAIN", "city": "Hospitalet", "Lon": 2.1, "Lat": 41.35, "data": [
+                {"display_name": "SPAIN, Hospitalet", "country": "SPAIN", "city": "Hospitalet", "lon": 2.1, "lat": 41.35, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.98},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.67},
@@ -17541,7 +17541,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SRI_LANKA, COLOMBO", "country": "SRI_LANKA", "city": "COLOMBO", "Lon": 79.87, "Lat": 6.92, "data": [
+                {"display_name": "SRI_LANKA, COLOMBO", "country": "SRI_LANKA", "city": "COLOMBO", "lon": 79.87, "lat": 6.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.64},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.21},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.37},
@@ -17563,7 +17563,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.96},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.96}
                 ]},
-                {"display_name": "SRI_LANKA, Dehiwala", "country": "SRI_LANKA", "city": "Dehiwala", "Lon": 79.87, "Lat": 6.87, "data": [
+                {"display_name": "SRI_LANKA, Dehiwala", "country": "SRI_LANKA", "city": "Dehiwala", "lon": 79.87, "lat": 6.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.63},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.2},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.36},
@@ -17585,7 +17585,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.98},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.98}
                 ]},
-                {"display_name": "SRI_LANKA, Jaffna", "country": "SRI_LANKA", "city": "Jaffna", "Lon": 80.02, "Lat": 9.67, "data": [
+                {"display_name": "SRI_LANKA, Jaffna", "country": "SRI_LANKA", "city": "Jaffna", "lon": 80.02, "lat": 9.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.29},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.04},
@@ -17607,7 +17607,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.39},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.39}
                 ]},
-                {"display_name": "SRI_LANKA, Kandy", "country": "SRI_LANKA", "city": "Kandy", "Lon": 80.67, "Lat": 7.28, "data": [
+                {"display_name": "SRI_LANKA, Kandy", "country": "SRI_LANKA", "city": "Kandy", "lon": 80.67, "lat": 7.28, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.8},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.28},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.49},
@@ -17629,7 +17629,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.98},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.98}
                 ]},
-                {"display_name": "SRI_LANKA, Galle", "country": "SRI_LANKA", "city": "Galle", "Lon": 80.22, "Lat": 6.02, "data": [
+                {"display_name": "SRI_LANKA, Galle", "country": "SRI_LANKA", "city": "Galle", "lon": 80.22, "lat": 6.02, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.39},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.01},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.12},
@@ -17651,7 +17651,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.42},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.42}
                 ]},
-                {"display_name": "SRI_LANKA, Moratuwa", "country": "SRI_LANKA", "city": "Moratuwa", "Lon": 79.88, "Lat": 6.78, "data": [
+                {"display_name": "SRI_LANKA, Moratuwa", "country": "SRI_LANKA", "city": "Moratuwa", "lon": 79.88, "lat": 6.78, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.6},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.18},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.34},
@@ -17673,7 +17673,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.02},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.02}
                 ]},
-                {"display_name": "SRI_LANKA, Negombo", "country": "SRI_LANKA", "city": "Negombo", "Lon": 79.85, "Lat": 7.22, "data": [
+                {"display_name": "SRI_LANKA, Negombo", "country": "SRI_LANKA", "city": "Negombo", "lon": 79.85, "lat": 7.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.73},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.26},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.45},
@@ -17695,7 +17695,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.86},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.86}
                 ]},
-                {"display_name": "SRI_LANKA, Trincomalee", "country": "SRI_LANKA", "city": "Trincomalee", "Lon": 81.23, "Lat": 8.57, "data": [
+                {"display_name": "SRI_LANKA, Trincomalee", "country": "SRI_LANKA", "city": "Trincomalee", "lon": 81.23, "lat": 8.57, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.46},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.83},
@@ -17717,7 +17717,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.76},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.76}
                 ]},
-                {"display_name": "SUDAN, KHARTOUM", "country": "SUDAN", "city": "KHARTOUM", "Lon": 32.53, "Lat": 15.55, "data": [
+                {"display_name": "SUDAN, KHARTOUM", "country": "SUDAN", "city": "KHARTOUM", "lon": 32.53, "lat": 15.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 18.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 19.98},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.76},
@@ -17739,7 +17739,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SUDAN, Omdurman", "country": "SUDAN", "city": "Omdurman", "Lon": 32.48, "Lat": 15.62, "data": [
+                {"display_name": "SUDAN, Omdurman", "country": "SUDAN", "city": "Omdurman", "lon": 32.48, "lat": 15.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 19.05},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 20.01},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.76},
@@ -17761,7 +17761,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SUDAN, Port_Sudan", "country": "SUDAN", "city": "Port_Sudan", "Lon": 37.12, "Lat": 19.63, "data": [
+                {"display_name": "SUDAN, Port_Sudan", "country": "SUDAN", "city": "Port_Sudan", "lon": 37.12, "lat": 19.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 22.02},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 22.79},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.48},
@@ -17783,7 +17783,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SUDAN, Wadi_Medani", "country": "SUDAN", "city": "Wadi_Medani", "Lon": 33.47, "Lat": 14.4, "data": [
+                {"display_name": "SUDAN, Wadi_Medani", "country": "SUDAN", "city": "Wadi_Medani", "lon": 33.47, "lat": 14.4, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 17.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 19.41},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.8},
@@ -17805,7 +17805,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SUDAN, Al_Obeid", "country": "SUDAN", "city": "Al_Obeid", "Lon": 30.17, "Lat": 13.18, "data": [
+                {"display_name": "SUDAN, Al_Obeid", "country": "SUDAN", "city": "Al_Obeid", "lon": 30.17, "lat": 13.18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.71},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 18.76},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.83},
@@ -17827,7 +17827,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SUDAN, Atbara", "country": "SUDAN", "city": "Atbara", "Lon": 34, "Lat": 17.7, "data": [
+                {"display_name": "SUDAN, Atbara", "country": "SUDAN", "city": "Atbara", "lon": 34, "lat": 17.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 20.9},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 21.2},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.66},
@@ -17849,7 +17849,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SUDAN, Kassala", "country": "SUDAN", "city": "Kassala", "Lon": 36.42, "Lat": 15.4, "data": [
+                {"display_name": "SUDAN, Kassala", "country": "SUDAN", "city": "Kassala", "lon": 36.42, "lat": 15.4, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 18.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 20.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.67},
@@ -17871,7 +17871,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SUDAN, Kosti", "country": "SUDAN", "city": "Kosti", "Lon": 32.63, "Lat": 13.18, "data": [
+                {"display_name": "SUDAN, Kosti", "country": "SUDAN", "city": "Kosti", "lon": 32.63, "lat": 13.18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 18.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.84},
@@ -17893,7 +17893,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWAZILAND, MBABANE", "country": "SWAZILAND", "city": "MBABANE", "Lon": 31.13, "Lat": -26.33, "data": [
+                {"display_name": "SWAZILAND, MBABANE", "country": "SWAZILAND", "city": "MBABANE", "lon": 31.13, "lat": -26.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.01},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.5},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.97},
@@ -17915,7 +17915,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWAZILAND, Manzini", "country": "SWAZILAND", "city": "Manzini", "Lon": 31.37, "Lat": -26.5, "data": [
+                {"display_name": "SWAZILAND, Manzini", "country": "SWAZILAND", "city": "Manzini", "lon": 31.37, "lat": -26.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.93},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.5},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.95},
@@ -17937,7 +17937,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWAZILAND, Big_Bend", "country": "SWAZILAND", "city": "Big_Bend", "Lon": 31.95, "Lat": -26.83, "data": [
+                {"display_name": "SWAZILAND, Big_Bend", "country": "SWAZILAND", "city": "Big_Bend", "lon": 31.95, "lat": -26.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.74},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.46},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.91},
@@ -17959,7 +17959,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWAZILAND, Mhlume", "country": "SWAZILAND", "city": "Mhlume", "Lon": 31.83, "Lat": -26.03, "data": [
+                {"display_name": "SWAZILAND, Mhlume", "country": "SWAZILAND", "city": "Mhlume", "lon": 31.83, "lat": -26.03, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.33},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.98},
@@ -17981,7 +17981,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWAZILAND, Nhlangano", "country": "SWAZILAND", "city": "Nhlangano", "Lon": 31.2, "Lat": -27.1, "data": [
+                {"display_name": "SWAZILAND, Nhlangano", "country": "SWAZILAND", "city": "Nhlangano", "lon": 31.2, "lat": -27.1, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.78},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.58},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.9},
@@ -18003,7 +18003,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWAZILAND, Pigg's_Peak", "country": "SWAZILAND", "city": "Pigg's_Peak", "Lon": 31.25, "Lat": -25.63, "data": [
+                {"display_name": "SWAZILAND, Pigg's_Peak", "country": "SWAZILAND", "city": "Pigg's_Peak", "lon": 31.25, "lat": -25.63, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.21},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.25},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.02},
@@ -18025,7 +18025,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWAZILAND, Siteki", "country": "SWAZILAND", "city": "Siteki", "Lon": 32, "Lat": -26.5, "data": [
+                {"display_name": "SWAZILAND, Siteki", "country": "SWAZILAND", "city": "Siteki", "lon": 32, "lat": -26.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.83},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.42},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.94},
@@ -18047,7 +18047,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, STOCKHOLM", "country": "SWEDEN", "city": "STOCKHOLM", "Lon": 18.08, "Lat": 59.33, "data": [
+                {"display_name": "SWEDEN, STOCKHOLM", "country": "SWEDEN", "city": "STOCKHOLM", "lon": 18.08, "lat": 59.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.18},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.32},
@@ -18069,7 +18069,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, Goteborg", "country": "SWEDEN", "city": "Goteborg", "Lon": 12, "Lat": 57.75, "data": [
+                {"display_name": "SWEDEN, Goteborg", "country": "SWEDEN", "city": "Goteborg", "lon": 12, "lat": 57.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.45},
@@ -18091,7 +18091,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, Malmo", "country": "SWEDEN", "city": "Malmo", "Lon": 13, "Lat": 55.58, "data": [
+                {"display_name": "SWEDEN, Malmo", "country": "SWEDEN", "city": "Malmo", "lon": 13, "lat": 55.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.46},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.55},
@@ -18113,7 +18113,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, Uppsala", "country": "SWEDEN", "city": "Uppsala", "Lon": 17.63, "Lat": 59.92, "data": [
+                {"display_name": "SWEDEN, Uppsala", "country": "SWEDEN", "city": "Uppsala", "lon": 17.63, "lat": 59.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.6},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.28},
@@ -18135,7 +18135,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, Orebro", "country": "SWEDEN", "city": "Orebro", "Lon": 15.08, "Lat": 59.3, "data": [
+                {"display_name": "SWEDEN, Orebro", "country": "SWEDEN", "city": "Orebro", "lon": 15.08, "lat": 59.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.17},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.34},
@@ -18157,7 +18157,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, Norrkoping", "country": "SWEDEN", "city": "Norrkoping", "Lon": 16.17, "Lat": 58.58, "data": [
+                {"display_name": "SWEDEN, Norrkoping", "country": "SWEDEN", "city": "Norrkoping", "lon": 16.17, "lat": 58.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.22},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.38},
@@ -18179,7 +18179,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, Vasteras", "country": "SWEDEN", "city": "Vasteras", "Lon": 16.53, "Lat": 59.6, "data": [
+                {"display_name": "SWEDEN, Vasteras", "country": "SWEDEN", "city": "Vasteras", "lon": 16.53, "lat": 59.6, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.15},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.62},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.31},
@@ -18201,7 +18201,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, Linkoping", "country": "SWEDEN", "city": "Linkoping", "Lon": 15.58, "Lat": 58.42, "data": [
+                {"display_name": "SWEDEN, Linkoping", "country": "SWEDEN", "city": "Linkoping", "lon": 15.58, "lat": 58.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.4},
@@ -18223,7 +18223,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, Jonkoping", "country": "SWEDEN", "city": "Jonkoping", "Lon": 14.17, "Lat": 57.75, "data": [
+                {"display_name": "SWEDEN, Jonkoping", "country": "SWEDEN", "city": "Jonkoping", "lon": 14.17, "lat": 57.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.66},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.44},
@@ -18245,7 +18245,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, Helsingborg", "country": "SWEDEN", "city": "Helsingborg", "Lon": 12.75, "Lat": 56.08, "data": [
+                {"display_name": "SWEDEN, Helsingborg", "country": "SWEDEN", "city": "Helsingborg", "lon": 12.75, "lat": 56.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.41},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.66},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.53},
@@ -18267,7 +18267,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, Boras", "country": "SWEDEN", "city": "Boras", "Lon": 12.92, "Lat": 57.73, "data": [
+                {"display_name": "SWEDEN, Boras", "country": "SWEDEN", "city": "Boras", "lon": 12.92, "lat": 57.73, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.44},
@@ -18289,7 +18289,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, Sundsvall", "country": "SWEDEN", "city": "Sundsvall", "Lon": 17.3, "Lat": 62.38, "data": [
+                {"display_name": "SWEDEN, Sundsvall", "country": "SWEDEN", "city": "Sundsvall", "lon": 17.3, "lat": 62.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.92},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.41},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.09},
@@ -18311,7 +18311,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, Umea", "country": "SWEDEN", "city": "Umea", "Lon": 20.25, "Lat": 63.83, "data": [
+                {"display_name": "SWEDEN, Umea", "country": "SWEDEN", "city": "Umea", "lon": 20.25, "lat": 63.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.73},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.17},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.91},
@@ -18333,7 +18333,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, Gavle", "country": "SWEDEN", "city": "Gavle", "Lon": 17.17, "Lat": 60.67, "data": [
+                {"display_name": "SWEDEN, Gavle", "country": "SWEDEN", "city": "Gavle", "lon": 17.17, "lat": 60.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.07},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.55},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.23},
@@ -18355,7 +18355,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWEDEN, Skelleftea", "country": "SWEDEN", "city": "Skelleftea", "Lon": 20.95, "Lat": 64.77, "data": [
+                {"display_name": "SWEDEN, Skelleftea", "country": "SWEDEN", "city": "Skelleftea", "lon": 20.95, "lat": 64.77, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 26.59},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.8},
@@ -18377,7 +18377,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWITZERLAND, Zrich", "country": "SWITZERLAND", "city": "Zrich", "Lon": 8.55, "Lat": 47.38, "data": [
+                {"display_name": "SWITZERLAND, Zrich", "country": "SWITZERLAND", "city": "Zrich", "lon": 8.55, "lat": 47.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.08},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.74},
@@ -18399,7 +18399,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWITZERLAND, Basel", "country": "SWITZERLAND", "city": "Basel", "Lon": 7.6, "Lat": 47.55, "data": [
+                {"display_name": "SWITZERLAND, Basel", "country": "SWITZERLAND", "city": "Basel", "lon": 7.6, "lat": 47.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.07},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -18421,7 +18421,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWITZERLAND, Geneva", "country": "SWITZERLAND", "city": "Geneva", "Lon": 6.15, "Lat": 46.22, "data": [
+                {"display_name": "SWITZERLAND, Geneva", "country": "SWITZERLAND", "city": "Geneva", "lon": 6.15, "lat": 46.22, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.72},
@@ -18443,7 +18443,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWITZERLAND, BERN", "country": "SWITZERLAND", "city": "BERN", "Lon": 7.43, "Lat": 46.95, "data": [
+                {"display_name": "SWITZERLAND, BERN", "country": "SWITZERLAND", "city": "BERN", "lon": 7.43, "lat": 46.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -18465,7 +18465,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWITZERLAND, Lausanne", "country": "SWITZERLAND", "city": "Lausanne", "Lon": 6.65, "Lat": 46.53, "data": [
+                {"display_name": "SWITZERLAND, Lausanne", "country": "SWITZERLAND", "city": "Lausanne", "lon": 6.65, "lat": 46.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -18487,7 +18487,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWITZERLAND, Winterthur", "country": "SWITZERLAND", "city": "Winterthur", "Lon": 8.75, "Lat": 47.5, "data": [
+                {"display_name": "SWITZERLAND, Winterthur", "country": "SWITZERLAND", "city": "Winterthur", "lon": 8.75, "lat": 47.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.07},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.74},
@@ -18509,7 +18509,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWITZERLAND, Saint_Gallen", "country": "SWITZERLAND", "city": "Saint_Gallen", "Lon": 9.38, "Lat": 47.42, "data": [
+                {"display_name": "SWITZERLAND, Saint_Gallen", "country": "SWITZERLAND", "city": "Saint_Gallen", "lon": 9.38, "lat": 47.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.08},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -18531,7 +18531,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWITZERLAND, Luzern", "country": "SWITZERLAND", "city": "Luzern", "Lon": 8.3, "Lat": 47.03, "data": [
+                {"display_name": "SWITZERLAND, Luzern", "country": "SWITZERLAND", "city": "Luzern", "lon": 8.3, "lat": 47.03, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.74},
@@ -18553,7 +18553,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWITZERLAND, Biel", "country": "SWITZERLAND", "city": "Biel", "Lon": 7.27, "Lat": 47.17, "data": [
+                {"display_name": "SWITZERLAND, Biel", "country": "SWITZERLAND", "city": "Biel", "lon": 7.27, "lat": 47.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -18575,7 +18575,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWITZERLAND, Thun", "country": "SWITZERLAND", "city": "Thun", "Lon": 7.63, "Lat": 46.77, "data": [
+                {"display_name": "SWITZERLAND, Thun", "country": "SWITZERLAND", "city": "Thun", "lon": 7.63, "lat": 46.77, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -18597,7 +18597,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SWITZERLAND, Koniz", "country": "SWITZERLAND", "city": "Koniz", "Lon": 7.42, "Lat": 46.93, "data": [
+                {"display_name": "SWITZERLAND, Koniz", "country": "SWITZERLAND", "city": "Koniz", "lon": 7.42, "lat": 46.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -18619,7 +18619,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SYRIA, DAMASCUS", "country": "SYRIA", "city": "DAMASCUS", "Lon": 36.32, "Lat": 33.5, "data": [
+                {"display_name": "SYRIA, DAMASCUS", "country": "SYRIA", "city": "DAMASCUS", "lon": 36.32, "lat": 33.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.3},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.95},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -18641,7 +18641,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SYRIA, Aleppo", "country": "SYRIA", "city": "Aleppo", "Lon": 37.17, "Lat": 36.23, "data": [
+                {"display_name": "SYRIA, Aleppo", "country": "SYRIA", "city": "Aleppo", "lon": 37.17, "lat": 36.23, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.38},
@@ -18663,7 +18663,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SYRIA, Homs", "country": "SYRIA", "city": "Homs", "Lon": 36.72, "Lat": 34.73, "data": [
+                {"display_name": "SYRIA, Homs", "country": "SYRIA", "city": "Homs", "lon": 36.72, "lat": 34.73, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.49},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.24},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.38},
@@ -18685,7 +18685,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SYRIA, Latakia", "country": "SYRIA", "city": "Latakia", "Lon": 35.78, "Lat": 35.52, "data": [
+                {"display_name": "SYRIA, Latakia", "country": "SYRIA", "city": "Latakia", "lon": 35.78, "lat": 35.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.64},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.25},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -18707,7 +18707,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SYRIA, Hama", "country": "SYRIA", "city": "Hama", "Lon": 36.67, "Lat": 35.08, "data": [
+                {"display_name": "SYRIA, Hama", "country": "SYRIA", "city": "Hama", "lon": 36.67, "lat": 35.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.54},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -18729,7 +18729,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SYRIA, Dayr_az-Zawr", "country": "SYRIA", "city": "Dayr_az-Zawr", "Lon": 40.08, "Lat": 35.33, "data": [
+                {"display_name": "SYRIA, Dayr_az-Zawr", "country": "SYRIA", "city": "Dayr_az-Zawr", "lon": 40.08, "lat": 35.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.56},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.94},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.33},
@@ -18751,7 +18751,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SYRIA, Raqqa", "country": "SYRIA", "city": "Raqqa", "Lon": 39.05, "Lat": 35.95, "data": [
+                {"display_name": "SYRIA, Raqqa", "country": "SYRIA", "city": "Raqqa", "lon": 39.05, "lat": 35.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.64},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.8},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.35},
@@ -18773,7 +18773,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SYRIA, Hasakeh", "country": "SYRIA", "city": "Hasakeh", "Lon": 40.73, "Lat": 36.53, "data": [
+                {"display_name": "SYRIA, Hasakeh", "country": "SYRIA", "city": "Hasakeh", "lon": 40.73, "lat": 36.53, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.77},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.24},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.32},
@@ -18795,7 +18795,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SYRIA, Tartus", "country": "SYRIA", "city": "Tartus", "Lon": 35.87, "Lat": 34.92, "data": [
+                {"display_name": "SYRIA, Tartus", "country": "SYRIA", "city": "Tartus", "lon": 35.87, "lat": 34.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.55},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.16},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -18817,7 +18817,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SYRIA, Idlib", "country": "SYRIA", "city": "Idlib", "Lon": 36.63, "Lat": 35.93, "data": [
+                {"display_name": "SYRIA, Idlib", "country": "SYRIA", "city": "Idlib", "lon": 36.63, "lat": 35.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.41},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.38},
@@ -18839,7 +18839,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SYRIA, Dar'a", "country": "SYRIA", "city": "Dar'a", "Lon": 36.1, "Lat": 32.62, "data": [
+                {"display_name": "SYRIA, Dar'a", "country": "SYRIA", "city": "Dar'a", "lon": 36.1, "lat": 32.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 26.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -18861,7 +18861,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "SYRIA, Abu-Kamal", "country": "SYRIA", "city": "Abu-Kamal", "Lon": 40.92, "Lat": 34.45, "data": [
+                {"display_name": "SYRIA, Abu-Kamal", "country": "SYRIA", "city": "Abu-Kamal", "lon": 40.92, "lat": 34.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.43},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.04},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.29},
@@ -18883,7 +18883,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.22},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.22}
                 ]},
-                {"display_name": "TAIWAN, TAIPEI", "country": "TAIWAN", "city": "TAIPEI", "Lon": 121.53, "Lat": 25.08, "data": [
+                {"display_name": "TAIWAN, TAIPEI", "country": "TAIWAN", "city": "TAIPEI", "lon": 121.53, "lat": 25.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.25},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.99},
@@ -18905,7 +18905,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.71},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.71}
                 ]},
-                {"display_name": "TAIWAN, Kaohsiung", "country": "TAIWAN", "city": "Kaohsiung", "Lon": 120.28, "Lat": 22.6, "data": [
+                {"display_name": "TAIWAN, Kaohsiung", "country": "TAIWAN", "city": "Kaohsiung", "lon": 120.28, "lat": 22.6, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.8},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.97},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.83},
@@ -18927,7 +18927,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.99},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.99}
                 ]},
-                {"display_name": "TAIWAN, Taichung", "country": "TAIWAN", "city": "Taichung", "Lon": 120.67, "Lat": 24.15, "data": [
+                {"display_name": "TAIWAN, Taichung", "country": "TAIWAN", "city": "Taichung", "lon": 120.67, "lat": 24.15, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.58},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.73},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.93},
@@ -18949,7 +18949,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.65},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.65}
                 ]},
-                {"display_name": "TAIWAN, Tainan", "country": "TAIWAN", "city": "Tainan", "Lon": 120.23, "Lat": 23.02, "data": [
+                {"display_name": "TAIWAN, Tainan", "country": "TAIWAN", "city": "Tainan", "lon": 120.23, "lat": 23.02, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.86},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.99},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.86},
@@ -18971,7 +18971,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.83},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.83}
                 ]},
-                {"display_name": "TAIWAN, Panchiao", "country": "TAIWAN", "city": "Panchiao", "Lon": 121.45, "Lat": 25.02, "data": [
+                {"display_name": "TAIWAN, Panchiao", "country": "TAIWAN", "city": "Panchiao", "lon": 121.45, "lat": 25.02, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.06},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.3},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.98},
@@ -18993,7 +18993,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.7},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.7}
                 ]},
-                {"display_name": "TAIWAN, Keelung", "country": "TAIWAN", "city": "Keelung", "Lon": 121.73, "Lat": 25.13, "data": [
+                {"display_name": "TAIWAN, Keelung", "country": "TAIWAN", "city": "Keelung", "lon": 121.73, "lat": 25.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 31.86},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.15},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.98},
@@ -19015,7 +19015,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.81},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.81}
                 ]},
-                {"display_name": "TAIWAN, Hsinchu", "country": "TAIWAN", "city": "Hsinchu", "Lon": 120.98, "Lat": 24.8, "data": [
+                {"display_name": "TAIWAN, Hsinchu", "country": "TAIWAN", "city": "Hsinchu", "lon": 120.98, "lat": 24.8, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.38},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.55},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.98},
@@ -19037,7 +19037,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.54},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.54}
                 ]},
-                {"display_name": "TAIWAN, Chiali", "country": "TAIWAN", "city": "Chiali", "Lon": 120.18, "Lat": 23.15, "data": [
+                {"display_name": "TAIWAN, Chiali", "country": "TAIWAN", "city": "Chiali", "lon": 120.18, "lat": 23.15, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.9},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 34.01},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.87},
@@ -19059,7 +19059,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.76},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.76}
                 ]},
-                {"display_name": "TAIWAN, Chungli", "country": "TAIWAN", "city": "Chungli", "Lon": 121.13, "Lat": 24.92, "data": [
+                {"display_name": "TAIWAN, Chungli", "country": "TAIWAN", "city": "Chungli", "lon": 121.13, "lat": 24.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.47},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.99},
@@ -19081,7 +19081,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.57},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.57}
                 ]},
-                {"display_name": "TAIWAN, Yunghu", "country": "TAIWAN", "city": "Yunghu", "Lon": 120.05, "Lat": 24.85, "data": [
+                {"display_name": "TAIWAN, Yunghu", "country": "TAIWAN", "city": "Yunghu", "lon": 120.05, "lat": 24.85, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 33.01},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 34.01},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.01},
@@ -19103,7 +19103,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.15},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.15}
                 ]},
-                {"display_name": "TANZANIA, DAR_ES_SALAAM", "country": "TANZANIA", "city": "DAR_ES_SALAAM", "Lon": 39.3, "Lat": -6.85, "data": [
+                {"display_name": "TANZANIA, DAR_ES_SALAAM", "country": "TANZANIA", "city": "DAR_ES_SALAAM", "lon": 39.3, "lat": -6.85, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 9.77},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.23},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.83},
@@ -19125,7 +19125,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -14.16},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -14.16}
                 ]},
-                {"display_name": "TANZANIA, Zanzibar", "country": "TANZANIA", "city": "Zanzibar", "Lon": 39.2, "Lat": -6.2, "data": [
+                {"display_name": "TANZANIA, Zanzibar", "country": "TANZANIA", "city": "Zanzibar", "lon": 39.2, "lat": -6.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 9.68},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.82},
@@ -19147,7 +19147,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -14.61},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -14.61}
                 ]},
-                {"display_name": "TANZANIA, Mwanza", "country": "TANZANIA", "city": "Mwanza", "Lon": 32.93, "Lat": -2.52, "data": [
+                {"display_name": "TANZANIA, Mwanza", "country": "TANZANIA", "city": "Mwanza", "lon": 32.93, "lat": -2.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.4},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.62},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.66},
@@ -19169,7 +19169,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TANZANIA, Tanga", "country": "TANZANIA", "city": "Tanga", "Lon": 39.1, "Lat": -5.12, "data": [
+                {"display_name": "TANZANIA, Tanga", "country": "TANZANIA", "city": "Tanga", "lon": 39.1, "lat": -5.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 9.55},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.75},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.82},
@@ -19191,7 +19191,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TANZANIA, Mbeya", "country": "TANZANIA", "city": "Mbeya", "Lon": 33.45, "Lat": -8.9, "data": [
+                {"display_name": "TANZANIA, Mbeya", "country": "TANZANIA", "city": "Mbeya", "lon": 33.45, "lat": -8.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.62},
@@ -19213,7 +19213,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -15.69},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -15.69}
                 ]},
-                {"display_name": "TANZANIA, Tabora", "country": "TANZANIA", "city": "Tabora", "Lon": 32.8, "Lat": -5.02, "data": [
+                {"display_name": "TANZANIA, Tabora", "country": "TANZANIA", "city": "Tabora", "lon": 32.8, "lat": -5.02, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 11.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.6},
@@ -19235,7 +19235,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TANZANIA, Arusha", "country": "TANZANIA", "city": "Arusha", "Lon": 36.67, "Lat": -3.38, "data": [
+                {"display_name": "TANZANIA, Arusha", "country": "TANZANIA", "city": "Arusha", "lon": 36.67, "lat": -3.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 9.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.54},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.8},
@@ -19257,7 +19257,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TANZANIA, Dodoma", "country": "TANZANIA", "city": "Dodoma", "Lon": 35.67, "Lat": -6.17, "data": [
+                {"display_name": "TANZANIA, Dodoma", "country": "TANZANIA", "city": "Dodoma", "lon": 35.67, "lat": -6.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.98},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.72},
@@ -19279,7 +19279,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "THAILAND, Angthong", "country": "THAILAND", "city": "Angthong", "Lon": 100.37, "Lat": 14.6, "data": [
+                {"display_name": "THAILAND, Angthong", "country": "THAILAND", "city": "Angthong", "lon": 100.37, "lat": 14.6, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.53},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.81},
@@ -19301,7 +19301,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.73},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.73}
                 ]},
-                {"display_name": "THAILAND, Ayudthaya", "country": "THAILAND", "city": "Ayudthaya", "Lon": 100.58, "Lat": 14.33, "data": [
+                {"display_name": "THAILAND, Ayudthaya", "country": "THAILAND", "city": "Ayudthaya", "lon": 100.58, "lat": 14.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.53},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.8},
@@ -19323,7 +19323,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.7},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.7}
                 ]},
-                {"display_name": "THAILAND, BANGKOK", "country": "THAILAND", "city": "BANGKOK", "Lon": 100.57, "Lat": 13.75, "data": [
+                {"display_name": "THAILAND, BANGKOK", "country": "THAILAND", "city": "BANGKOK", "lon": 100.57, "lat": 13.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.51},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.84},
@@ -19345,7 +19345,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.61},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.61}
                 ]},
-                {"display_name": "THAILAND, Burirum", "country": "THAILAND", "city": "Burirum", "Lon": 103.12, "Lat": 14.98, "data": [
+                {"display_name": "THAILAND, Burirum", "country": "THAILAND", "city": "Burirum", "lon": 103.12, "lat": 14.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.3},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.47},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.44},
@@ -19367,7 +19367,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.65},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.65}
                 ]},
-                {"display_name": "THAILAND, Chacheongsao", "country": "THAILAND", "city": "Chacheongsao", "Lon": 101.08, "Lat": 13.68, "data": [
+                {"display_name": "THAILAND, Chacheongsao", "country": "THAILAND", "city": "Chacheongsao", "lon": 101.08, "lat": 13.68, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.49},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.77},
@@ -19389,7 +19389,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.61},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.61}
                 ]},
-                {"display_name": "THAILAND, Chantaburi", "country": "THAILAND", "city": "Chantaburi", "Lon": 102.13, "Lat": 12.61, "data": [
+                {"display_name": "THAILAND, Chantaburi", "country": "THAILAND", "city": "Chantaburi", "lon": 102.13, "lat": 12.61, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.44},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.69},
@@ -19411,7 +19411,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.34},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.34}
                 ]},
-                {"display_name": "THAILAND, Chainat", "country": "THAILAND", "city": "Chainat", "Lon": 100.2, "Lat": 15.2, "data": [
+                {"display_name": "THAILAND, Chainat", "country": "THAILAND", "city": "Chainat", "lon": 100.2, "lat": 15.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.55},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.79},
@@ -19433,7 +19433,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.78},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.78}
                 ]},
-                {"display_name": "THAILAND, Chaiyaphoom", "country": "THAILAND", "city": "Chaiyaphoom", "Lon": 101.8, "Lat": 15.7, "data": [
+                {"display_name": "THAILAND, Chaiyaphoom", "country": "THAILAND", "city": "Chaiyaphoom", "lon": 101.8, "lat": 15.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.4},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.54},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.56},
@@ -19455,7 +19455,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.98},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.98}
                 ]},
-                {"display_name": "THAILAND, Chaing_Mai", "country": "THAILAND", "city": "Chaing_Mai", "Lon": 98.97, "Lat": 18.75, "data": [
+                {"display_name": "THAILAND, Chaing_Mai", "country": "THAILAND", "city": "Chaing_Mai", "lon": 98.97, "lat": 18.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.46},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.63},
@@ -19477,7 +19477,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.67},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.67}
                 ]},
-                {"display_name": "THAILAND, Chiang_Rai", "country": "THAILAND", "city": "Chiang_Rai", "Lon": 99.83, "Lat": 19.82, "data": [
+                {"display_name": "THAILAND, Chiang_Rai", "country": "THAILAND", "city": "Chiang_Rai", "lon": 99.83, "lat": 19.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.36},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.46},
@@ -19499,7 +19499,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.72},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.72}
                 ]},
-                {"display_name": "THAILAND, Chon_Buri", "country": "THAILAND", "city": "Chon_Buri", "Lon": 100.98, "Lat": 13.4, "data": [
+                {"display_name": "THAILAND, Chon_Buri", "country": "THAILAND", "city": "Chon_Buri", "lon": 100.98, "lat": 13.4, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.5},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.8},
@@ -19521,7 +19521,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.56},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.56}
                 ]},
-                {"display_name": "THAILAND, Choomporn", "country": "THAILAND", "city": "Choomporn", "Lon": 99.19, "Lat": 10.51, "data": [
+                {"display_name": "THAILAND, Choomporn", "country": "THAILAND", "city": "Choomporn", "lon": 99.19, "lat": 10.51, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.34},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.11},
@@ -19543,7 +19543,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.36},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.36}
                 ]},
-                {"display_name": "THAILAND, Hat_Yai", "country": "THAILAND", "city": "Hat_Yai", "Lon": 100.45, "Lat": 7.02, "data": [
+                {"display_name": "THAILAND, Hat_Yai", "country": "THAILAND", "city": "Hat_Yai", "lon": 100.45, "lat": 7.02, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.29},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.84},
@@ -19565,7 +19565,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.29},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.29}
                 ]},
-                {"display_name": "THAILAND, Kabi", "country": "THAILAND", "city": "Kabi", "Lon": 98.75, "Lat": 8.4, "data": [
+                {"display_name": "THAILAND, Kabi", "country": "THAILAND", "city": "Kabi", "lon": 98.75, "lat": 8.4, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.34},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.18},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.1},
@@ -19587,7 +19587,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.83},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.83}
                 ]},
-                {"display_name": "THAILAND, Kalasin", "country": "THAILAND", "city": "Kalasin", "Lon": 103.4, "Lat": 16.6, "data": [
+                {"display_name": "THAILAND, Kalasin", "country": "THAILAND", "city": "Kalasin", "lon": 103.4, "lat": 16.6, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.2},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.45},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.35},
@@ -19609,7 +19609,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.95},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.95}
                 ]},
-                {"display_name": "THAILAND, Kumphaengpet", "country": "THAILAND", "city": "Kumphaengpet", "Lon": 99.53, "Lat": 16.48, "data": [
+                {"display_name": "THAILAND, Kumphaengpet", "country": "THAILAND", "city": "Kumphaengpet", "lon": 99.53, "lat": 16.48, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.77},
@@ -19631,7 +19631,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.77},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.77}
                 ]},
-                {"display_name": "THAILAND, Karnchanaburi", "country": "THAILAND", "city": "Karnchanaburi", "Lon": 99.5, "Lat": 14.5, "data": [
+                {"display_name": "THAILAND, Karnchanaburi", "country": "THAILAND", "city": "Karnchanaburi", "lon": 99.5, "lat": 14.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.52},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.94},
@@ -19653,7 +19653,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.66},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.66}
                 ]},
-                {"display_name": "THAILAND, Khon_Kaen", "country": "THAILAND", "city": "Khon_Kaen", "Lon": 102.83, "Lat": 16.43, "data": [
+                {"display_name": "THAILAND, Khon_Kaen", "country": "THAILAND", "city": "Khon_Kaen", "lon": 102.83, "lat": 16.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -19675,7 +19675,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.04},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.04}
                 ]},
-                {"display_name": "THAILAND, Lampang", "country": "THAILAND", "city": "Lampang", "Lon": 99.5, "Lat": 18.3, "data": [
+                {"display_name": "THAILAND, Lampang", "country": "THAILAND", "city": "Lampang", "lon": 99.5, "lat": 18.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.46},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.61},
@@ -19697,7 +19697,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.76},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.76}
                 ]},
-                {"display_name": "THAILANA, Lamphun", "country": "THAILANA", "city": "Lamphun", "Lon": 99, "Lat": 18, "data": [
+                {"display_name": "THAILANA, Lamphun", "country": "THAILANA", "city": "Lamphun", "lon": 99, "lat": 18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.66},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.69},
@@ -19719,7 +19719,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.68},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.68}
                 ]},
-                {"display_name": "THAILAND, Loei", "country": "THAILAND", "city": "Loei", "Lon": 101.5, "Lat": 17.3, "data": [
+                {"display_name": "THAILAND, Loei", "country": "THAILAND", "city": "Loei", "lon": 101.5, "lat": 17.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.38},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.5},
@@ -19741,7 +19741,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.14},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.14}
                 ]},
-                {"display_name": "THAILAND, Lopburi", "country": "THAILAND", "city": "Lopburi", "Lon": 100.62, "Lat": 14.83, "data": [
+                {"display_name": "THAILAND, Lopburi", "country": "THAILAND", "city": "Lopburi", "lon": 100.62, "lat": 14.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.49},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.54},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.76},
@@ -19763,7 +19763,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.78},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.78}
                 ]},
-                {"display_name": "THAILAND, Maehongson", "country": "THAILAND", "city": "Maehongson", "Lon": 98, "Lat": 19.5, "data": [
+                {"display_name": "THAILAND, Maehongson", "country": "THAILAND", "city": "Maehongson", "lon": 98, "lat": 19.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.44},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.66},
@@ -19785,7 +19785,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.53},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.53}
                 ]},
-                {"display_name": "THAILAND, Mahasarakram", "country": "THAILAND", "city": "Mahasarakram", "Lon": 103.4, "Lat": 16.2, "data": [
+                {"display_name": "THAILAND, Mahasarakram", "country": "THAILAND", "city": "Mahasarakram", "lon": 103.4, "lat": 16.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.21},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.45},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.36},
@@ -19807,7 +19807,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.87},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.87}
                 ]},
-                {"display_name": "THAILAND, Mukdaharn", "country": "THAILAND", "city": "Mukdaharn", "Lon": 104.6, "Lat": 16.5, "data": [
+                {"display_name": "THAILAND, Mukdaharn", "country": "THAILAND", "city": "Mukdaharn", "lon": 104.6, "lat": 16.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.02},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.33},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.25},
@@ -19829,7 +19829,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.54},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.54}
                 ]},
-                {"display_name": "THAILAND, Nakhonpatom", "country": "THAILAND", "city": "Nakhonpatom", "Lon": 100.22, "Lat": 13.72, "data": [
+                {"display_name": "THAILAND, Nakhonpatom", "country": "THAILAND", "city": "Nakhonpatom", "lon": 100.22, "lat": 13.72, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.52},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.5},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.89},
@@ -19851,7 +19851,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.6},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.6}
                 ]},
-                {"display_name": "THAILAND, Nakhonnayok", "country": "THAILAND", "city": "Nakhonnayok", "Lon": 101, "Lat": 14.2, "data": [
+                {"display_name": "THAILAND, Nakhonnayok", "country": "THAILAND", "city": "Nakhonnayok", "lon": 101, "lat": 14.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.49},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.75},
@@ -19873,7 +19873,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.7},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.7}
                 ]},
-                {"display_name": "THAILAND, Nakhonpanom", "country": "THAILAND", "city": "Nakhonpanom", "Lon": 104.6, "Lat": 17.4, "data": [
+                {"display_name": "THAILAND, Nakhonpanom", "country": "THAILAND", "city": "Nakhonpanom", "lon": 104.6, "lat": 17.4, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.32},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.24},
@@ -19895,7 +19895,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.7},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.7}
                 ]},
-                {"display_name": "THAILAND, Korat", "country": "THAILAND", "city": "Korat", "Lon": 102.1, "Lat": 14.97, "data": [
+                {"display_name": "THAILAND, Korat", "country": "THAILAND", "city": "Korat", "lon": 102.1, "lat": 14.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.4},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.56},
@@ -19917,7 +19917,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.83},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.83}
                 ]},
-                {"display_name": "THAILAND, Nakhonsawan", "country": "THAILAND", "city": "Nakhonsawan", "Lon": 100.13, "Lat": 15.7, "data": [
+                {"display_name": "THAILAND, Nakhonsawan", "country": "THAILAND", "city": "Nakhonsawan", "lon": 100.13, "lat": 15.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.76},
@@ -19939,7 +19939,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.82},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.82}
                 ]},
-                {"display_name": "THAILAND, Nakhonsi", "country": "THAILAND", "city": "Nakhonsi", "Lon": 99.97, "Lat": 8.47, "data": [
+                {"display_name": "THAILAND, Nakhonsi", "country": "THAILAND", "city": "Nakhonsi", "lon": 99.97, "lat": 8.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.4},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.3},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.98},
@@ -19961,7 +19961,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.56},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.56}
                 ]},
-                {"display_name": "THAILAND, Nan", "country": "THAILAND", "city": "Nan", "Lon": 100.6, "Lat": 18.7, "data": [
+                {"display_name": "THAILAND, Nan", "country": "THAILAND", "city": "Nan", "lon": 100.6, "lat": 18.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.38},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.62},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.48},
@@ -19983,7 +19983,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.96},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.96}
                 ]},
-                {"display_name": "THAILAND, Narathiwat", "country": "THAILAND", "city": "Narathiwat", "Lon": 101.83, "Lat": 6.5, "data": [
+                {"display_name": "THAILAND, Narathiwat", "country": "THAILAND", "city": "Narathiwat", "lon": 101.83, "lat": 6.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.22},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.32},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.7},
@@ -20005,7 +20005,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.88},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.88}
                 ]},
-                {"display_name": "THAILAND, Nongkai", "country": "THAILAND", "city": "Nongkai", "Lon": 102.75, "Lat": 17.87, "data": [
+                {"display_name": "THAILAND, Nongkai", "country": "THAILAND", "city": "Nongkai", "lon": 102.75, "lat": 17.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.22},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.36},
@@ -20027,7 +20027,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.2},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.2}
                 ]},
-                {"display_name": "THAILAND, Nongbualumpu", "country": "THAILAND", "city": "Nongbualumpu", "Lon": 102.43, "Lat": 17.2, "data": [
+                {"display_name": "THAILAND, Nongbualumpu", "country": "THAILAND", "city": "Nongbualumpu", "lon": 102.43, "lat": 17.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.29},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -20049,7 +20049,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.18},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.18}
                 ]},
-                {"display_name": "THAILAND, Nonthaburi", "country": "THAILAND", "city": "Nonthaburi", "Lon": 100.4, "Lat": 13.9, "data": [
+                {"display_name": "THAILAND, Nonthaburi", "country": "THAILAND", "city": "Nonthaburi", "lon": 100.4, "lat": 13.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.51},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.85},
@@ -20071,7 +20071,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.63},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.63}
                 ]},
-                {"display_name": "THAILAND, Pathumthani", "country": "THAILAND", "city": "Pathumthani", "Lon": 100.57, "Lat": 14.08, "data": [
+                {"display_name": "THAILAND, Pathumthani", "country": "THAILAND", "city": "Pathumthani", "lon": 100.57, "lat": 14.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.82},
@@ -20093,7 +20093,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.67},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.67}
                 ]},
-                {"display_name": "THAILAND, Pattani", "country": "THAILAND", "city": "Pattani", "Lon": 101.3, "Lat": 6.9, "data": [
+                {"display_name": "THAILAND, Pattani", "country": "THAILAND", "city": "Pattani", "lon": 101.3, "lat": 6.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.32},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.76},
@@ -20115,7 +20115,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.45},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.45}
                 ]},
-                {"display_name": "THAILAND, Phangnga", "country": "THAILAND", "city": "Phangnga", "Lon": 98.54, "Lat": 8.45, "data": [
+                {"display_name": "THAILAND, Phangnga", "country": "THAILAND", "city": "Phangnga", "lon": 98.54, "lat": 8.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.34},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.16},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.12},
@@ -20137,7 +20137,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.87},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.87}
                 ]},
-                {"display_name": "THAILAND, Phayao", "country": "THAILAND", "city": "Phayao", "Lon": 99.88, "Lat": 19.2, "data": [
+                {"display_name": "THAILAND, Phayao", "country": "THAILAND", "city": "Phayao", "lon": 99.88, "lat": 19.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.4},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.5},
@@ -20159,7 +20159,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.79},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.79}
                 ]},
-                {"display_name": "THAILAND, Phatthalung", "country": "THAILAND", "city": "Phatthalung", "Lon": 100.08, "Lat": 7.62, "data": [
+                {"display_name": "THAILAND, Phatthalung", "country": "THAILAND", "city": "Phatthalung", "lon": 100.08, "lat": 7.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.34},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.92},
@@ -20181,7 +20181,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.92},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.92}
                 ]},
-                {"display_name": "THAILAND, Phetchabun", "country": "THAILAND", "city": "Phetchabun", "Lon": 101.17, "Lat": 16.42, "data": [
+                {"display_name": "THAILAND, Phetchabun", "country": "THAILAND", "city": "Phetchabun", "lon": 101.17, "lat": 16.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.43},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.59},
@@ -20203,7 +20203,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.03},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.03}
                 ]},
-                {"display_name": "THAILAND, Phetchaburi", "country": "THAILAND", "city": "Phetchaburi", "Lon": 99.95, "Lat": 13.12, "data": [
+                {"display_name": "THAILAND, Phetchaburi", "country": "THAILAND", "city": "Phetchaburi", "lon": 99.95, "lat": 13.12, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.48},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.96},
@@ -20225,7 +20225,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.51},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.51}
                 ]},
-                {"display_name": "THAILAND, Phichit", "country": "THAILAND", "city": "Phichit", "Lon": 100.32, "Lat": 16.43, "data": [
+                {"display_name": "THAILAND, Phichit", "country": "THAILAND", "city": "Phichit", "lon": 100.32, "lat": 16.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.6},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.68},
@@ -20247,7 +20247,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.9},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.9}
                 ]},
-                {"display_name": "THAILAND, Phitsanulok", "country": "THAILAND", "city": "Phitsanulok", "Lon": 100.27, "Lat": 16.82, "data": [
+                {"display_name": "THAILAND, Phitsanulok", "country": "THAILAND", "city": "Phitsanulok", "lon": 100.27, "lat": 16.82, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.47},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.66},
@@ -20269,7 +20269,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.91},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.91}
                 ]},
-                {"display_name": "THAILAND, Phrae", "country": "THAILAND", "city": "Phrae", "Lon": 100.15, "Lat": 18.13, "data": [
+                {"display_name": "THAILAND, Phrae", "country": "THAILAND", "city": "Phrae", "lon": 100.15, "lat": 18.13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.43},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.64},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.56},
@@ -20291,7 +20291,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.89},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.89}
                 ]},
-                {"display_name": "THAILAND, Phuket", "country": "THAILAND", "city": "Phuket", "Lon": 98.38, "Lat": 7.88, "data": [
+                {"display_name": "THAILAND, Phuket", "country": "THAILAND", "city": "Phuket", "lon": 98.38, "lat": 7.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.11},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.09},
@@ -20313,7 +20313,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.19},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.19}
                 ]},
-                {"display_name": "THAILAND, Prachuap", "country": "THAILAND", "city": "Prachuap", "Lon": 99.75, "Lat": 11.75, "data": [
+                {"display_name": "THAILAND, Prachuap", "country": "THAILAND", "city": "Prachuap", "lon": 99.75, "lat": 11.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.52},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.43},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.03},
@@ -20335,7 +20335,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.35},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.35}
                 ]},
-                {"display_name": "THAILAND, Prachinburi", "country": "THAILAND", "city": "Prachinburi", "Lon": 101.4, "Lat": 14, "data": [
+                {"display_name": "THAILAND, Prachinburi", "country": "THAILAND", "city": "Prachinburi", "lon": 101.4, "lat": 14, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.47},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.71},
@@ -20357,7 +20357,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.67},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.67}
                 ]},
-                {"display_name": "THAILAND, Ranong", "country": "THAILAND", "city": "Ranong", "Lon": 98.5, "Lat": 16.1, "data": [
+                {"display_name": "THAILAND, Ranong", "country": "THAILAND", "city": "Ranong", "lon": 98.5, "lat": 16.1, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.52},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.58},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.93},
@@ -20379,7 +20379,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.64},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.64}
                 ]},
-                {"display_name": "THAILAND, Ratchaburi", "country": "THAILAND", "city": "Ratchaburi", "Lon": 99.17, "Lat": 13.58, "data": [
+                {"display_name": "THAILAND, Ratchaburi", "country": "THAILAND", "city": "Ratchaburi", "lon": 99.17, "lat": 13.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.47},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.04},
@@ -20401,7 +20401,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.58},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.58}
                 ]},
-                {"display_name": "THAILAND, Rayong", "country": "THAILAND", "city": "Rayong", "Lon": 101.29, "Lat": 12.69, "data": [
+                {"display_name": "THAILAND, Rayong", "country": "THAILAND", "city": "Rayong", "lon": 101.29, "lat": 12.69, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.49},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.8},
@@ -20423,7 +20423,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.43},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.43}
                 ]},
-                {"display_name": "THAILAND, Roiet", "country": "THAILAND", "city": "Roiet", "Lon": 103.5, "Lat": 16.1, "data": [
+                {"display_name": "THAILAND, Roiet", "country": "THAILAND", "city": "Roiet", "lon": 103.5, "lat": 16.1, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.2},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.44},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.35},
@@ -20445,7 +20445,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.82},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.82}
                 ]},
-                {"display_name": "THAILAND, Sakheaw", "country": "THAILAND", "city": "Sakheaw", "Lon": 102.6, "Lat": 13.7, "data": [
+                {"display_name": "THAILAND, Sakheaw", "country": "THAILAND", "city": "Sakheaw", "lon": 102.6, "lat": 13.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.39},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.48},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.58},
@@ -20467,7 +20467,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.47},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.47}
                 ]},
-                {"display_name": "THAILAND, Sakonnakorn", "country": "THAILAND", "city": "Sakonnakorn", "Lon": 104, "Lat": 17.1, "data": [
+                {"display_name": "THAILAND, Sakonnakorn", "country": "THAILAND", "city": "Sakonnakorn", "lon": 104, "lat": 17.1, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.39},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.28},
@@ -20489,7 +20489,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.86},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.86}
                 ]},
-                {"display_name": "THAILAND, Samutprakan", "country": "THAILAND", "city": "Samutprakan", "Lon": 100.62, "Lat": 13.58, "data": [
+                {"display_name": "THAILAND, Samutprakan", "country": "THAILAND", "city": "Samutprakan", "lon": 100.62, "lat": 13.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.51},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.84},
@@ -20511,7 +20511,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.59},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.59}
                 ]},
-                {"display_name": "THAILAND, Samutsakhon", "country": "THAILAND", "city": "Samutsakhon", "Lon": 100.33, "Lat": 13.58, "data": [
+                {"display_name": "THAILAND, Samutsakhon", "country": "THAILAND", "city": "Samutsakhon", "lon": 100.33, "lat": 13.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.52},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.5},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.88},
@@ -20533,7 +20533,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.58},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.58}
                 ]},
-                {"display_name": "THAILAND, Samutsongkram", "country": "THAILAND", "city": "Samutsongkram", "Lon": 99.7, "Lat": 13.5, "data": [
+                {"display_name": "THAILAND, Samutsongkram", "country": "THAILAND", "city": "Samutsongkram", "lon": 99.7, "lat": 13.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.97},
@@ -20555,7 +20555,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.56},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.56}
                 ]},
-                {"display_name": "THAILAND, Saraburi", "country": "THAILAND", "city": "Saraburi", "Lon": 100.92, "Lat": 14.55, "data": [
+                {"display_name": "THAILAND, Saraburi", "country": "THAILAND", "city": "Saraburi", "lon": 100.92, "lat": 14.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.53},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.74},
@@ -20577,7 +20577,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.76},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.76}
                 ]},
-                {"display_name": "THAILAND, Satoon", "country": "THAILAND", "city": "Satoon", "Lon": 100.1, "Lat": 6, "data": [
+                {"display_name": "THAILAND, Satoon", "country": "THAILAND", "city": "Satoon", "lon": 100.1, "lat": 6, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.17},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.79},
@@ -20599,7 +20599,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.18},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.18}
                 ]},
-                {"display_name": "THAILAND, Singburi", "country": "THAILAND", "city": "Singburi", "Lon": 100.3, "Lat": 14.9, "data": [
+                {"display_name": "THAILAND, Singburi", "country": "THAILAND", "city": "Singburi", "lon": 100.3, "lat": 14.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.54},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.8},
@@ -20621,7 +20621,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.76},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.76}
                 ]},
-                {"display_name": "THAILAND, Songkhla", "country": "THAILAND", "city": "Songkhla", "Lon": 100.5, "Lat": 7, "data": [
+                {"display_name": "THAILAND, Songkhla", "country": "THAILAND", "city": "Songkhla", "lon": 100.5, "lat": 7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.29},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.84},
@@ -20643,7 +20643,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.3},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.3}
                 ]},
-                {"display_name": "THAILAND, Srisaket", "country": "THAILAND", "city": "Srisaket", "Lon": 104.2, "Lat": 15, "data": [
+                {"display_name": "THAILAND, Srisaket", "country": "THAILAND", "city": "Srisaket", "lon": 104.2, "lat": 15, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.15},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.38},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.33},
@@ -20665,7 +20665,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.31},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.31}
                 ]},
-                {"display_name": "THAILAND, Sukhothai", "country": "THAILAND", "city": "Sukhothai", "Lon": 99.8, "Lat": 17.02, "data": [
+                {"display_name": "THAILAND, Sukhothai", "country": "THAILAND", "city": "Sukhothai", "lon": 99.8, "lat": 17.02, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.62},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.69},
@@ -20687,7 +20687,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.83},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.83}
                 ]},
-                {"display_name": "THAILAND, Supanburi", "country": "THAILAND", "city": "Supanburi", "Lon": 100.13, "Lat": 14.48, "data": [
+                {"display_name": "THAILAND, Supanburi", "country": "THAILAND", "city": "Supanburi", "lon": 100.13, "lat": 14.48, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.51},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.53},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.85},
@@ -20709,7 +20709,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.7},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.7}
                 ]},
-                {"display_name": "THAILAND, Suratthani", "country": "THAILAND", "city": "Suratthani", "Lon": 99.25, "Lat": 9.08, "data": [
+                {"display_name": "THAILAND, Suratthani", "country": "THAILAND", "city": "Suratthani", "lon": 99.25, "lat": 9.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.41},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.08},
@@ -20731,7 +20731,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.5},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.5}
                 ]},
-                {"display_name": "THAILAND, Surin", "country": "THAILAND", "city": "Surin", "Lon": 103.5, "Lat": 14.88, "data": [
+                {"display_name": "THAILAND, Surin", "country": "THAILAND", "city": "Surin", "lon": 103.5, "lat": 14.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.25},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.44},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.41},
@@ -20753,7 +20753,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.51},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.51}
                 ]},
-                {"display_name": "THAILAND, Tak", "country": "THAILAND", "city": "Tak", "Lon": 99.13, "Lat": 16.87, "data": [
+                {"display_name": "THAILAND, Tak", "country": "THAILAND", "city": "Tak", "lon": 99.13, "lat": 16.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.62},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.78},
@@ -20775,7 +20775,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.71},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.71}
                 ]},
-                {"display_name": "THAILAND, Trad", "country": "THAILAND", "city": "Trad", "Lon": 102.57, "Lat": 12.08, "data": [
+                {"display_name": "THAILAND, Trad", "country": "THAILAND", "city": "Trad", "lon": 102.57, "lat": 12.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.41},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.48},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.66},
@@ -20797,7 +20797,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.2},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.2}
                 ]},
-                {"display_name": "THAILAND, Trang", "country": "THAILAND", "city": "Trang", "Lon": 99.61, "Lat": 7.56, "data": [
+                {"display_name": "THAILAND, Trang", "country": "THAILAND", "city": "Trang", "lon": 99.61, "lat": 7.56, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.32},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.22},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.96},
@@ -20819,7 +20819,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.01},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.01}
                 ]},
-                {"display_name": "THAILAND, Ubonratchatani", "country": "THAILAND", "city": "Ubonratchatani", "Lon": 104.85, "Lat": 15.68, "data": [
+                {"display_name": "THAILAND, Ubonratchatani", "country": "THAILAND", "city": "Ubonratchatani", "lon": 104.85, "lat": 15.68, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.01},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.31},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.24},
@@ -20841,7 +20841,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.25},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.25}
                 ]},
-                {"display_name": "THAILAND, Udonthani", "country": "THAILAND", "city": "Udonthani", "Lon": 102.8, "Lat": 17.42, "data": [
+                {"display_name": "THAILAND, Udonthani", "country": "THAILAND", "city": "Udonthani", "lon": 102.8, "lat": 17.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.37},
@@ -20863,7 +20863,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.17},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.17}
                 ]},
-                {"display_name": "THAILAND, Umnatcharoen", "country": "THAILAND", "city": "Umnatcharoen", "Lon": 104.62, "Lat": 15.89, "data": [
+                {"display_name": "THAILAND, Umnatcharoen", "country": "THAILAND", "city": "Umnatcharoen", "lon": 104.62, "lat": 15.89, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.04},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.33},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.26},
@@ -20885,7 +20885,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.39},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.39}
                 ]},
-                {"display_name": "THAILAND, Uthaithani", "country": "THAILAND", "city": "Uthaithani", "Lon": 100, "Lat": 13.2, "data": [
+                {"display_name": "THAILAND, Uthaithani", "country": "THAILAND", "city": "Uthaithani", "lon": 100, "lat": 13.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.48},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.95},
@@ -20907,7 +20907,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.52},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.52}
                 ]},
-                {"display_name": "THAILAND, Uttaradit", "country": "THAILAND", "city": "Uttaradit", "Lon": 100.1, "Lat": 17.7, "data": [
+                {"display_name": "THAILAND, Uttaradit", "country": "THAILAND", "city": "Uttaradit", "lon": 100.1, "lat": 17.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.6},
@@ -20929,7 +20929,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.89},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.89}
                 ]},
-                {"display_name": "THAILAND, Yala", "country": "THAILAND", "city": "Yala", "Lon": 101.25, "Lat": 6.5, "data": [
+                {"display_name": "THAILAND, Yala", "country": "THAILAND", "city": "Yala", "lon": 101.25, "lat": 6.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.75},
@@ -20951,7 +20951,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.77},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.77}
                 ]},
-                {"display_name": "THAILAND, Yasothon", "country": "THAILAND", "city": "Yasothon", "Lon": 104.1, "Lat": 15.7, "data": [
+                {"display_name": "THAILAND, Yasothon", "country": "THAILAND", "city": "Yasothon", "lon": 104.1, "lat": 15.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 40.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.39},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.31},
@@ -20973,7 +20973,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.52},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.52}
                 ]},
-                {"display_name": "TOGO, LOME", "country": "TOGO", "city": "LOME", "Lon": 1.35, "Lat": 6.17, "data": [
+                {"display_name": "TOGO, LOME", "country": "TOGO", "city": "LOME", "lon": 1.35, "lat": 6.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.57},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.93},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.51},
@@ -20995,7 +20995,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TOGO, Sokode", "country": "TOGO", "city": "Sokode", "Lon": 1.18, "Lat": 8.98, "data": [
+                {"display_name": "TOGO, Sokode", "country": "TOGO", "city": "Sokode", "lon": 1.18, "lat": 8.98, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.79},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.23},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.58},
@@ -21017,7 +21017,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TOGO, Palime", "country": "TOGO", "city": "Palime", "Lon": 0.73, "Lat": 6.95, "data": [
+                {"display_name": "TOGO, Palime", "country": "TOGO", "city": "Palime", "lon": 0.73, "lat": 6.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.42},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.18},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.52},
@@ -21039,7 +21039,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TOGO, Atakpame", "country": "TOGO", "city": "Atakpame", "Lon": 1.23, "Lat": 7.57, "data": [
+                {"display_name": "TOGO, Atakpame", "country": "TOGO", "city": "Atakpame", "lon": 1.23, "lat": 7.57, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.41},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.55},
@@ -21061,7 +21061,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TOGO, Bassari", "country": "TOGO", "city": "Bassari", "Lon": 0.88, "Lat": 9.3, "data": [
+                {"display_name": "TOGO, Bassari", "country": "TOGO", "city": "Bassari", "lon": 0.88, "lat": 9.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.69},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.45},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.58},
@@ -21083,7 +21083,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TOGO, Tsevie", "country": "TOGO", "city": "Tsevie", "Lon": 1.3, "Lat": 6.43, "data": [
+                {"display_name": "TOGO, Tsevie", "country": "TOGO", "city": "Tsevie", "lon": 1.3, "lat": 6.43, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.52},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.52},
@@ -21105,7 +21105,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TOGO, Anecho", "country": "TOGO", "city": "Anecho", "Lon": 1.57, "Lat": 6.23, "data": [
+                {"display_name": "TOGO, Anecho", "country": "TOGO", "city": "Anecho", "lon": 1.57, "lat": 6.23, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.55},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.93},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.52},
@@ -21127,7 +21127,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TOGO, Mango", "country": "TOGO", "city": "Mango", "Lon": 0.58, "Lat": 10.38, "data": [
+                {"display_name": "TOGO, Mango", "country": "TOGO", "city": "Mango", "lon": 0.58, "lat": 10.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.3},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.31},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.6},
@@ -21149,7 +21149,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TOGO, Bafilo", "country": "TOGO", "city": "Bafilo", "Lon": 1.33, "Lat": 9.38, "data": [
+                {"display_name": "TOGO, Bafilo", "country": "TOGO", "city": "Bafilo", "lon": 1.33, "lat": 9.38, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.63},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.52},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.59},
@@ -21171,7 +21171,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TOGO, Tabligbo", "country": "TOGO", "city": "Tabligbo", "Lon": 1.5, "Lat": 6.58, "data": [
+                {"display_name": "TOGO, Tabligbo", "country": "TOGO", "city": "Tabligbo", "lon": 1.5, "lat": 6.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 11.03},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.53},
@@ -21193,7 +21193,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TUNISIA, TUNIS", "country": "TUNISIA", "city": "TUNIS", "Lon": 10.22, "Lat": 36.83, "data": [
+                {"display_name": "TUNISIA, TUNIS", "country": "TUNISIA", "city": "TUNIS", "lon": 10.22, "lat": 36.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.4},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.76},
@@ -21215,7 +21215,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TUNISIA, Sfax", "country": "TUNISIA", "city": "Sfax", "Lon": 10.72, "Lat": 34.75, "data": [
+                {"display_name": "TUNISIA, Sfax", "country": "TUNISIA", "city": "Sfax", "lon": 10.72, "lat": 34.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.16},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.76},
@@ -21237,7 +21237,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TUNISIA, Ariana", "country": "TUNISIA", "city": "Ariana", "Lon": 10.2, "Lat": 36.87, "data": [
+                {"display_name": "TUNISIA, Ariana", "country": "TUNISIA", "city": "Ariana", "lon": 10.2, "lat": 36.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.66},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.4},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.76},
@@ -21259,7 +21259,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TUNISIA, Bizerte", "country": "TUNISIA", "city": "Bizerte", "Lon": 9.87, "Lat": 37.3, "data": [
+                {"display_name": "TUNISIA, Bizerte", "country": "TUNISIA", "city": "Bizerte", "lon": 9.87, "lat": 37.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.71},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.44},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -21281,7 +21281,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TUNISIA, Djerba", "country": "TUNISIA", "city": "Djerba", "Lon": 10.85, "Lat": 33.87, "data": [
+                {"display_name": "TUNISIA, Djerba", "country": "TUNISIA", "city": "Djerba", "lon": 10.85, "lat": 33.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.08},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.03},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -21303,7 +21303,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TUNISIA, Gabes", "country": "TUNISIA", "city": "Gabes", "Lon": 10.1, "Lat": 33.87, "data": [
+                {"display_name": "TUNISIA, Gabes", "country": "TUNISIA", "city": "Gabes", "lon": 10.1, "lat": 33.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.03},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.03},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.73},
@@ -21325,7 +21325,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TUNISIA, Sousse", "country": "TUNISIA", "city": "Sousse", "Lon": 10.63, "Lat": 35.83, "data": [
+                {"display_name": "TUNISIA, Sousse", "country": "TUNISIA", "city": "Sousse", "lon": 10.63, "lat": 35.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.76},
@@ -21347,7 +21347,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TUNISIA, Kairouan", "country": "TUNISIA", "city": "Kairouan", "Lon": 10.12, "Lat": 35.7, "data": [
+                {"display_name": "TUNISIA, Kairouan", "country": "TUNISIA", "city": "Kairouan", "lon": 10.12, "lat": 35.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.44},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.28},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -21369,7 +21369,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TUNISIA, La_Goulette", "country": "TUNISIA", "city": "La_Goulette", "Lon": 10.3, "Lat": 36.87, "data": [
+                {"display_name": "TUNISIA, La_Goulette", "country": "TUNISIA", "city": "La_Goulette", "lon": 10.3, "lat": 36.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.66},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.4},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.76},
@@ -21391,7 +21391,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TUNISIA, Gafsa", "country": "TUNISIA", "city": "Gafsa", "Lon": 8.8, "Lat": 34.42, "data": [
+                {"display_name": "TUNISIA, Gafsa", "country": "TUNISIA", "city": "Gafsa", "lon": 8.8, "lat": 34.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.11},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -21413,7 +21413,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TURKEY, Istanbul", "country": "TURKEY", "city": "Istanbul", "Lon": 28.95, "Lat": 41.03, "data": [
+                {"display_name": "TURKEY, Istanbul", "country": "TURKEY", "city": "Istanbul", "lon": 28.95, "lat": 41.03, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.22},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.53},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.24},
@@ -21435,7 +21435,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TURKEY, ANKARA", "country": "TURKEY", "city": "ANKARA", "Lon": 32.83, "Lat": 39.92, "data": [
+                {"display_name": "TURKEY, ANKARA", "country": "TURKEY", "city": "ANKARA", "lon": 32.83, "lat": 39.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.32},
@@ -21457,7 +21457,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TURKEY, Izmir", "country": "TURKEY", "city": "Izmir", "Lon": 27.17, "Lat": 38.42, "data": [
+                {"display_name": "TURKEY, Izmir", "country": "TURKEY", "city": "Izmir", "lon": 27.17, "lat": 38.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.17},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.3},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.26},
@@ -21479,7 +21479,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TURKEY, Adana", "country": "TURKEY", "city": "Adana", "Lon": 35.32, "Lat": 37, "data": [
+                {"display_name": "TURKEY, Adana", "country": "TURKEY", "city": "Adana", "lon": 35.32, "lat": 37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.84},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.4},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.38},
@@ -21501,7 +21501,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TURKEY, Bursa", "country": "TURKEY", "city": "Bursa", "Lon": 29.07, "Lat": 40.2, "data": [
+                {"display_name": "TURKEY, Bursa", "country": "TURKEY", "city": "Bursa", "lon": 29.07, "lat": 40.2, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.21},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.46},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.26},
@@ -21523,7 +21523,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TURKEY, Gaziantep", "country": "TURKEY", "city": "Gaziantep", "Lon": 37.38, "Lat": 37.1, "data": [
+                {"display_name": "TURKEY, Gaziantep", "country": "TURKEY", "city": "Gaziantep", "lon": 37.38, "lat": 37.1, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.8},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.66},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.37},
@@ -21545,7 +21545,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TURKEY, Konya", "country": "TURKEY", "city": "Konya", "Lon": 32.52, "Lat": 37.87, "data": [
+                {"display_name": "TURKEY, Konya", "country": "TURKEY", "city": "Konya", "lon": 32.52, "lat": 37.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.01},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.32},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.35},
@@ -21567,7 +21567,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TURKEY, Kayseri", "country": "TURKEY", "city": "Kayseri", "Lon": 35.47, "Lat": 38.7, "data": [
+                {"display_name": "TURKEY, Kayseri", "country": "TURKEY", "city": "Kayseri", "lon": 35.47, "lat": 38.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.99},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.63},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.36},
@@ -21589,7 +21589,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TURKEY, Eskisehir", "country": "TURKEY", "city": "Eskisehir", "Lon": 30.5, "Lat": 39.77, "data": [
+                {"display_name": "TURKEY, Eskisehir", "country": "TURKEY", "city": "Eskisehir", "lon": 30.5, "lat": 39.77, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.17},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.45},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.29},
@@ -21611,7 +21611,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TURKEY, Mersin_(Icel)", "country": "TURKEY", "city": "Mersin_(Icel)", "Lon": 34.62, "Lat": 36.78, "data": [
+                {"display_name": "TURKEY, Mersin_(Icel)", "country": "TURKEY", "city": "Mersin_(Icel)", "lon": 34.62, "lat": 36.78, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.84},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.31},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.38},
@@ -21633,7 +21633,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "TURKEY, Diyarbakir", "country": "TURKEY", "city": "Diyarbakir", "Lon": 40.23, "Lat": 37.92, "data": [
+                {"display_name": "TURKEY, Diyarbakir", "country": "TURKEY", "city": "Diyarbakir", "lon": 40.23, "lat": 37.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.94},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.27},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.33},
@@ -21655,7 +21655,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "UGANDA, KAMPALA", "country": "UGANDA", "city": "KAMPALA", "Lon": 32.58, "Lat": 0.33, "data": [
+                {"display_name": "UGANDA, KAMPALA", "country": "UGANDA", "city": "KAMPALA", "lon": 32.58, "lat": 0.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 9.42},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.37},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.76},
@@ -21677,7 +21677,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "UGANDA, Jinja", "country": "UGANDA", "city": "Jinja", "Lon": 33.23, "Lat": 0.45, "data": [
+                {"display_name": "UGANDA, Jinja", "country": "UGANDA", "city": "Jinja", "lon": 33.23, "lat": 0.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 9.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.47},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.79},
@@ -21699,7 +21699,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "UGANDA, Masaka", "country": "UGANDA", "city": "Masaka", "Lon": 31.73, "Lat": -0.33, "data": [
+                {"display_name": "UGANDA, Masaka", "country": "UGANDA", "city": "Masaka", "lon": 31.73, "lat": -0.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.05},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.05},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.7},
@@ -21721,7 +21721,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "UGANDA, Mbale", "country": "UGANDA", "city": "Mbale", "Lon": 34.2, "Lat": 1.07, "data": [
+                {"display_name": "UGANDA, Mbale", "country": "UGANDA", "city": "Mbale", "lon": 34.2, "lat": 1.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 8.64},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.66},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.85},
@@ -21743,7 +21743,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "UGANDA, Mbarara", "country": "UGANDA", "city": "Mbarara", "Lon": 30.65, "Lat": -0.62, "data": [
+                {"display_name": "UGANDA, Mbarara", "country": "UGANDA", "city": "Mbarara", "lon": 30.65, "lat": -0.62, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 10.69},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 12.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.63},
@@ -21765,7 +21765,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "UGANDA, Entebbe", "country": "UGANDA", "city": "Entebbe", "Lon": 32.45, "Lat": 0.07, "data": [
+                {"display_name": "UGANDA, Entebbe", "country": "UGANDA", "city": "Entebbe", "lon": 32.45, "lat": 0.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 9.59},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.75},
@@ -21787,7 +21787,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "UGANDA, Tororo", "country": "UGANDA", "city": "Tororo", "Lon": 34.2, "Lat": 0.7, "data": [
+                {"display_name": "UGANDA, Tororo", "country": "UGANDA", "city": "Tororo", "lon": 34.2, "lat": 0.7, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 8.8},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 13.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.84},
@@ -21809,7 +21809,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "UGANDA, Gulu", "country": "UGANDA", "city": "Gulu", "Lon": 32.35, "Lat": 2.77, "data": [
+                {"display_name": "UGANDA, Gulu", "country": "UGANDA", "city": "Gulu", "lon": 32.35, "lat": 2.77, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 8.05},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 14.1},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.83},
@@ -21831,7 +21831,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "U.A.E., Dubai", "country": "U.A.E.", "city": "Dubai", "Lon": 55.28, "Lat": 25.23, "data": [
+                {"display_name": "U.A.E., Dubai", "country": "U.A.E.", "city": "Dubai", "lon": 55.28, "lat": 25.23, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.36},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -21853,7 +21853,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.27},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.27}
                 ]},
-                {"display_name": "U.A.E., ABU_DHABI", "country": "U.A.E.", "city": "ABU_DHABI", "Lon": 54.42, "Lat": 24.47, "data": [
+                {"display_name": "U.A.E., ABU_DHABI", "country": "U.A.E.", "city": "ABU_DHABI", "lon": 54.42, "lat": 24.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 31.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 32.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.74},
@@ -21875,7 +21875,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.36},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.36}
                 ]},
-                {"display_name": "U.A.E., Sharjah", "country": "U.A.E.", "city": "Sharjah", "Lon": 55.43, "Lat": 25.33, "data": [
+                {"display_name": "U.A.E., Sharjah", "country": "U.A.E.", "city": "Sharjah", "lon": 55.43, "lat": 25.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.47},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.75},
@@ -21897,7 +21897,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.25},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.25}
                 ]},
-                {"display_name": "U.A.E., Ras_al-Khaimah", "country": "U.A.E.", "city": "Ras_al-Khaimah", "Lon": 55.95, "Lat": 25.78, "data": [
+                {"display_name": "U.A.E., Ras_al-Khaimah", "country": "U.A.E.", "city": "Ras_al-Khaimah", "lon": 55.95, "lat": 25.78, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 32.54},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 33.85},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.76},
@@ -21919,7 +21919,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.19},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.19}
                 ]},
-                {"display_name": "USSR, MOSCOW", "country": "USSR", "city": "MOSCOW", "Lon": 37.7, "Lat": 55.75, "data": [
+                {"display_name": "USSR, MOSCOW", "country": "USSR", "city": "MOSCOW", "lon": 37.7, "lat": 55.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.63},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.92},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.53},
@@ -21941,7 +21941,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "USSR, Leningrad", "country": "USSR", "city": "Leningrad", "Lon": 30.33, "Lat": 59.92, "data": [
+                {"display_name": "USSR, Leningrad", "country": "USSR", "city": "Leningrad", "lon": 30.33, "lat": 59.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.48},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.19},
@@ -21963,7 +21963,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "USSR, Kiev", "country": "USSR", "city": "Kiev", "Lon": 30.5, "Lat": 50.42, "data": [
+                {"display_name": "USSR, Kiev", "country": "USSR", "city": "Kiev", "lon": 30.5, "lat": 50.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.96},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.99},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.93},
@@ -21985,7 +21985,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "USSR, Tashkent", "country": "USSR", "city": "Tashkent", "Lon": 69.22, "Lat": 41.27, "data": [
+                {"display_name": "USSR, Tashkent", "country": "USSR", "city": "Tashkent", "lon": 69.22, "lat": 41.27, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 35.67},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.77},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.82},
@@ -22007,7 +22007,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.69},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.69}
                 ]},
-                {"display_name": "USSR, Baku", "country": "USSR", "city": "Baku", "Lon": 49.88, "Lat": 40.37, "data": [
+                {"display_name": "USSR, Baku", "country": "USSR", "city": "Baku", "lon": 49.88, "lat": 40.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 29.64},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 31.11},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.13},
@@ -22029,7 +22029,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.97},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.97}
                 ]},
-                {"display_name": "USSR, Kharkov", "country": "USSR", "city": "Kharkov", "Lon": 36.25, "Lat": 50, "data": [
+                {"display_name": "USSR, Kharkov", "country": "USSR", "city": "Kharkov", "lon": 36.25, "lat": 50, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.1},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.26},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.97},
@@ -22051,7 +22051,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "USSR, Minsk", "country": "USSR", "city": "Minsk", "Lon": 27.5, "Lat": 53.85, "data": [
+                {"display_name": "USSR, Minsk", "country": "USSR", "city": "Minsk", "lon": 27.5, "lat": 53.85, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.88},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -22073,7 +22073,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "USSR, Gorky", "country": "USSR", "city": "Gorky", "Lon": 44, "Lat": 56.33, "data": [
+                {"display_name": "USSR, Gorky", "country": "USSR", "city": "Gorky", "lon": 44, "lat": 56.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.41},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.85},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.38},
@@ -22095,7 +22095,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "USSR, Novosibirsk", "country": "USSR", "city": "Novosibirsk", "Lon": 83.08, "Lat": 55.07, "data": [
+                {"display_name": "USSR, Novosibirsk", "country": "USSR", "city": "Novosibirsk", "lon": 83.08, "lat": 55.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 30.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.96},
@@ -22117,7 +22117,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.79},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.79}
                 ]},
-                {"display_name": "USSR, Sverdlovsk", "country": "USSR", "city": "Sverdlovsk", "Lon": 60.5, "Lat": 56.83, "data": [
+                {"display_name": "USSR, Sverdlovsk", "country": "USSR", "city": "Sverdlovsk", "lon": 60.5, "lat": 56.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 25.81},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 28.29},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 34.94},
@@ -22139,7 +22139,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.75},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.75}
                 ]},
-                {"display_name": "USSR, Tbilisi", "country": "USSR", "city": "Tbilisi", "Lon": 44.82, "Lat": 41.72, "data": [
+                {"display_name": "USSR, Tbilisi", "country": "USSR", "city": "Tbilisi", "lon": 44.82, "lat": 41.72, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.66},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.24},
@@ -22161,7 +22161,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -6.47},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -6.47}
                 ]},
-                {"display_name": "USSR, Yerevan", "country": "USSR", "city": "Yerevan", "Lon": 44.5, "Lat": 40.18, "data": [
+                {"display_name": "USSR, Yerevan", "country": "USSR", "city": "Yerevan", "lon": 44.5, "lat": 40.18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.54},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 29.43},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.26},
@@ -22183,7 +22183,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -5.98},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -5.98}
                 ]},
-                {"display_name": "USSR, Alma-Ata", "country": "USSR", "city": "Alma-Ata", "Lon": 76.95, "Lat": 43.25, "data": [
+                {"display_name": "USSR, Alma-Ata", "country": "USSR", "city": "Alma-Ata", "lon": 76.95, "lat": 43.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 35.67},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 36.58},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.76},
@@ -22205,7 +22205,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -4.25},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -4.25}
                 ]},
-                {"display_name": "USSR, Odessa", "country": "USSR", "city": "Odessa", "Lon": 30.73, "Lat": 46.47, "data": [
+                {"display_name": "USSR, Odessa", "country": "USSR", "city": "Odessa", "lon": 30.73, "lat": 46.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.14},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.92},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.11},
@@ -22227,7 +22227,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "USSR, Riga", "country": "USSR", "city": "Riga", "Lon": 24.1, "Lat": 56.95, "data": [
+                {"display_name": "USSR, Riga", "country": "USSR", "city": "Riga", "lon": 24.1, "lat": 56.95, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.39},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.75},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.48},
@@ -22249,7 +22249,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "USSR, Lvov", "country": "USSR", "city": "Lvov", "Lon": 24, "Lat": 49.83, "data": [
+                {"display_name": "USSR, Lvov", "country": "USSR", "city": "Lvov", "lon": 24, "lat": 49.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.93},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.82},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.89},
@@ -22271,7 +22271,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "USSR, Vladivostock", "country": "USSR", "city": "Vladivostock", "Lon": 131.93, "Lat": 43.17, "data": [
+                {"display_name": "USSR, Vladivostock", "country": "USSR", "city": "Vladivostock", "lon": 131.93, "lat": 43.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 20.62},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.9},
@@ -22293,7 +22293,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -1.7},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -1.7}
                 ]},
-                {"display_name": "USSR, Vilnius", "country": "USSR", "city": "Vilnius", "Lon": 25.32, "Lat": 54.68, "data": [
+                {"display_name": "USSR, Vilnius", "country": "USSR", "city": "Vilnius", "lon": 25.32, "lat": 54.68, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.58},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.83},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.63},
@@ -22315,7 +22315,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "USSR, Tallinn", "country": "USSR", "city": "Tallinn", "Lon": 24.75, "Lat": 59.42, "data": [
+                {"display_name": "USSR, Tallinn", "country": "USSR", "city": "Tallinn", "lon": 24.75, "lat": 59.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 27.19},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.6},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.28},
@@ -22337,7 +22337,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "VIETNAM, Ho_Chi_Minh_City", "country": "VIETNAM", "city": "Ho_Chi_Minh_City", "Lon": 106.72, "Lat": 10.77, "data": [
+                {"display_name": "VIETNAM, Ho_Chi_Minh_City", "country": "VIETNAM", "city": "Ho_Chi_Minh_City", "lon": 106.72, "lat": 10.77, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.76},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.16},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.23},
@@ -22359,7 +22359,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.78},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.78}
                 ]},
-                {"display_name": "VIETNAM, HANOI", "country": "VIETNAM", "city": "HANOI", "Lon": 105.87, "Lat": 21.02, "data": [
+                {"display_name": "VIETNAM, HANOI", "country": "VIETNAM", "city": "HANOI", "lon": 105.87, "lat": 21.02, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.46},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.01},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.26},
@@ -22381,7 +22381,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.71},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.71}
                 ]},
-                {"display_name": "VIETNAM, Haiphong", "country": "VIETNAM", "city": "Haiphong", "Lon": 106.68, "Lat": 20.83, "data": [
+                {"display_name": "VIETNAM, Haiphong", "country": "VIETNAM", "city": "Haiphong", "lon": 106.68, "lat": 20.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.29},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.87},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.27},
@@ -22403,7 +22403,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.62},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.62}
                 ]},
-                {"display_name": "VIETNAM, Da_Nang", "country": "VIETNAM", "city": "Da_Nang", "Lon": 108.23, "Lat": 16.07, "data": [
+                {"display_name": "VIETNAM, Da_Nang", "country": "VIETNAM", "city": "Da_Nang", "lon": 108.23, "lat": 16.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.19},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.76},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.09},
@@ -22425,7 +22425,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.61},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.61}
                 ]},
-                {"display_name": "VIETNAM, Nha_Trang", "country": "VIETNAM", "city": "Nha_Trang", "Lon": 109.17, "Lat": 12.25, "data": [
+                {"display_name": "VIETNAM, Nha_Trang", "country": "VIETNAM", "city": "Nha_Trang", "lon": 109.17, "lat": 12.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.02},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.06},
@@ -22447,7 +22447,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.87},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.87}
                 ]},
-                {"display_name": "VIETNAM, Qui_Nhon", "country": "VIETNAM", "city": "Qui_Nhon", "Lon": 109.18, "Lat": 13.78, "data": [
+                {"display_name": "VIETNAM, Qui_Nhon", "country": "VIETNAM", "city": "Qui_Nhon", "lon": 109.18, "lat": 13.78, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 38.98},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.04},
@@ -22469,7 +22469,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.67},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.67}
                 ]},
-                {"display_name": "VIETNAM, Hue", "country": "VIETNAM", "city": "Hue", "Lon": 107.58, "Lat": 16.47, "data": [
+                {"display_name": "VIETNAM, Hue", "country": "VIETNAM", "city": "Hue", "lon": 107.58, "lat": 16.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.35},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.88},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.11},
@@ -22491,7 +22491,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.69},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.69}
                 ]},
-                {"display_name": "VIETNAM, Can_Tho", "country": "VIETNAM", "city": "Can_Tho", "Lon": 105.77, "Lat": 10.05, "data": [
+                {"display_name": "VIETNAM, Can_Tho", "country": "VIETNAM", "city": "Can_Tho", "lon": 105.77, "lat": 10.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.97},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.28},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.33},
@@ -22513,7 +22513,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.02},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.02}
                 ]},
-                {"display_name": "VIETNAM, Nam_Dinh", "country": "VIETNAM", "city": "Nam_Dinh", "Lon": 106.17, "Lat": 20.42, "data": [
+                {"display_name": "VIETNAM, Nam_Dinh", "country": "VIETNAM", "city": "Nam_Dinh", "lon": 106.17, "lat": 20.42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.45},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.99},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.24},
@@ -22535,7 +22535,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.86},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.86}
                 ]},
-                {"display_name": "VIETNAM, Vinh", "country": "VIETNAM", "city": "Vinh", "Lon": 105.67, "Lat": 18.67, "data": [
+                {"display_name": "VIETNAM, Vinh", "country": "VIETNAM", "city": "Vinh", "lon": 105.67, "lat": 18.67, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.69},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.14},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.2},
@@ -22557,7 +22557,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3.36},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3.36}
                 ]},
-                {"display_name": "VIETNAM, My_Tho", "country": "VIETNAM", "city": "My_Tho", "Lon": 106.35, "Lat": 10.35, "data": [
+                {"display_name": "VIETNAM, My_Tho", "country": "VIETNAM", "city": "My_Tho", "lon": 106.35, "lat": 10.35, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.84},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.21},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.27},
@@ -22579,7 +22579,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.92},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.92}
                 ]},
-                {"display_name": "VIETNAM, Cam_Ranh", "country": "VIETNAM", "city": "Cam_Ranh", "Lon": 109.23, "Lat": 11.9, "data": [
+                {"display_name": "VIETNAM, Cam_Ranh", "country": "VIETNAM", "city": "Cam_Ranh", "lon": 109.23, "lat": 11.9, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.01},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 38.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.06},
@@ -22601,7 +22601,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -3},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -3}
                 ]},
-                {"display_name": "VIETNAM, Vung_Tau", "country": "VIETNAM", "city": "Vung_Tau", "Lon": 107.07, "Lat": 10.35, "data": [
+                {"display_name": "VIETNAM, Vung_Tau", "country": "VIETNAM", "city": "Vung_Tau", "lon": 107.07, "lat": 10.35, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 39.67},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 39.11},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.21},
@@ -22623,7 +22623,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -2.99},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -2.99}
                 ]},
-                {"display_name": "YEMEN, SANAA", "country": "YEMEN", "city": "SANAA", "Lon": 44.23, "Lat": 15.4, "data": [
+                {"display_name": "YEMEN, SANAA", "country": "YEMEN", "city": "SANAA", "lon": 44.23, "lat": 15.4, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 20.62},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 24.38},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.21},
@@ -22645,7 +22645,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.75},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.75}
                 ]},
-                {"display_name": "YEMEN, Aden", "country": "YEMEN", "city": "Aden", "Lon": 45.05, "Lat": 12.78, "data": [
+                {"display_name": "YEMEN, Aden", "country": "YEMEN", "city": "Aden", "lon": 45.05, "lat": 12.78, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 19.48},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.62},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.29},
@@ -22667,7 +22667,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -8.33},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -8.33}
                 ]},
-                {"display_name": "YEMEN, Taizz", "country": "YEMEN", "city": "Taizz", "Lon": 44.03, "Lat": 13.58, "data": [
+                {"display_name": "YEMEN, Taizz", "country": "YEMEN", "city": "Taizz", "lon": 44.03, "lat": 13.58, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 19.29},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.49},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.32},
@@ -22689,7 +22689,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -8.21},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -8.21}
                 ]},
-                {"display_name": "YEMEN, Hodeida", "country": "YEMEN", "city": "Hodeida", "Lon": 42.97, "Lat": 14.83, "data": [
+                {"display_name": "YEMEN, Hodeida", "country": "YEMEN", "city": "Hodeida", "lon": 42.97, "lat": 14.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 19.52},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 23.5},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.32},
@@ -22711,7 +22711,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.98},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.98}
                 ]},
-                {"display_name": "YEMEN, Mukalla", "country": "YEMEN", "city": "Mukalla", "Lon": 49.12, "Lat": 14.57, "data": [
+                {"display_name": "YEMEN, Mukalla", "country": "YEMEN", "city": "Mukalla", "lon": 49.12, "lat": 14.57, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 23.77},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 25.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36},
@@ -22733,7 +22733,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.18},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.18}
                 ]},
-                {"display_name": "YEMEN, Dhamar", "country": "YEMEN", "city": "Dhamar", "Lon": 44.5, "Lat": 14.55, "data": [
+                {"display_name": "YEMEN, Dhamar", "country": "YEMEN", "city": "Dhamar", "lon": 44.5, "lat": 14.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 20.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 24.15},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.24},
@@ -22755,7 +22755,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.91},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.91}
                 ]},
-                {"display_name": "YEMEN, El_Beida", "country": "YEMEN", "city": "El_Beida", "Lon": 46.65, "Lat": 14, "data": [
+                {"display_name": "YEMEN, El_Beida", "country": "YEMEN", "city": "El_Beida", "lon": 46.65, "lat": 14, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 21.56},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 24.79},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.14},
@@ -22777,7 +22777,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.77},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.77}
                 ]},
-                {"display_name": "YEMEN, Hajja", "country": "YEMEN", "city": "Hajja", "Lon": 43.57, "Lat": 15.75, "data": [
+                {"display_name": "YEMEN, Hajja", "country": "YEMEN", "city": "Hajja", "lon": 43.57, "lat": 15.75, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 20.44},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 24.19},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.23},
@@ -22799,7 +22799,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": -7.75},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": -7.75}
                 ]},
-                {"display_name": "YUGOSLAVIA, BELGRADE", "country": "YUGOSLAVIA", "city": "BELGRADE", "Lon": 20.5, "Lat": 44.83, "data": [
+                {"display_name": "YUGOSLAVIA, BELGRADE", "country": "YUGOSLAVIA", "city": "BELGRADE", "lon": 20.5, "lat": 44.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.21},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.98},
@@ -22821,7 +22821,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "YUGOSLAVIA, Zagreb", "country": "YUGOSLAVIA", "city": "Zagreb", "Lon": 15.97, "Lat": 45.8, "data": [
+                {"display_name": "YUGOSLAVIA, Zagreb", "country": "YUGOSLAVIA", "city": "Zagreb", "lon": 15.97, "lat": 45.8, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.16},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.87},
@@ -22843,7 +22843,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "YUGOSLAVIA, Skopje", "country": "YUGOSLAVIA", "city": "Skopje", "Lon": 21.47, "Lat": 42, "data": [
+                {"display_name": "YUGOSLAVIA, Skopje", "country": "YUGOSLAVIA", "city": "Skopje", "lon": 21.47, "lat": 42, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.05},
@@ -22865,7 +22865,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "YUGOSLAVIA, Sarajevo", "country": "YUGOSLAVIA", "city": "Sarajevo", "Lon": 18.43, "Lat": 43.87, "data": [
+                {"display_name": "YUGOSLAVIA, Sarajevo", "country": "YUGOSLAVIA", "city": "Sarajevo", "lon": 18.43, "lat": 43.87, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.24},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.95},
@@ -22887,7 +22887,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "YUGOSLAVIA, Ljubljana", "country": "YUGOSLAVIA", "city": "Ljubljana", "Lon": 14.5, "Lat": 46.07, "data": [
+                {"display_name": "YUGOSLAVIA, Ljubljana", "country": "YUGOSLAVIA", "city": "Ljubljana", "lon": 14.5, "lat": 46.07, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.15},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.84},
@@ -22909,7 +22909,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "YUGOSLAVIA, Novi_Sad", "country": "YUGOSLAVIA", "city": "Novi_Sad", "Lon": 19.85, "Lat": 45.25, "data": [
+                {"display_name": "YUGOSLAVIA, Novi_Sad", "country": "YUGOSLAVIA", "city": "Novi_Sad", "lon": 19.85, "lat": 45.25, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.19},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.96},
@@ -22931,7 +22931,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "YUGOSLAVIA, Nis", "country": "YUGOSLAVIA", "city": "Nis", "Lon": 21.9, "Lat": 43.33, "data": [
+                {"display_name": "YUGOSLAVIA, Nis", "country": "YUGOSLAVIA", "city": "Nis", "lon": 21.9, "lat": 43.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.62},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.04},
@@ -22953,7 +22953,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "YUGOSLAVIA, Pristina", "country": "YUGOSLAVIA", "city": "Pristina", "Lon": 21.17, "Lat": 42.65, "data": [
+                {"display_name": "YUGOSLAVIA, Pristina", "country": "YUGOSLAVIA", "city": "Pristina", "lon": 21.17, "lat": 42.65, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.27},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.6},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.03},
@@ -22975,7 +22975,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "YUGOSLAVIA, Rijeka", "country": "YUGOSLAVIA", "city": "Rijeka", "Lon": 14.45, "Lat": 45.33, "data": [
+                {"display_name": "YUGOSLAVIA, Rijeka", "country": "YUGOSLAVIA", "city": "Rijeka", "lon": 14.45, "lat": 45.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.17},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.84},
@@ -22997,7 +22997,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "YUGOSLAVIA, Maribor", "country": "YUGOSLAVIA", "city": "Maribor", "Lon": 15.65, "Lat": 46.55, "data": [
+                {"display_name": "YUGOSLAVIA, Maribor", "country": "YUGOSLAVIA", "city": "Maribor", "lon": 15.65, "lat": 46.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.7},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.85},
@@ -23019,7 +23019,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "YUGOSLAVIA, Banja_Luka", "country": "YUGOSLAVIA", "city": "Banja_Luka", "Lon": 17.18, "Lat": 44.77, "data": [
+                {"display_name": "YUGOSLAVIA, Banja_Luka", "country": "YUGOSLAVIA", "city": "Banja_Luka", "lon": 17.18, "lat": 44.77, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.2},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.91},
@@ -23041,7 +23041,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "YUGOSLAVIA, Split", "country": "YUGOSLAVIA", "city": "Split", "Lon": 16.47, "Lat": 43.52, "data": [
+                {"display_name": "YUGOSLAVIA, Split", "country": "YUGOSLAVIA", "city": "Split", "lon": 16.47, "lat": 43.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.9},
@@ -23063,7 +23063,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "YUGOSLAVIA, Osijek", "country": "YUGOSLAVIA", "city": "Osijek", "Lon": 18.68, "Lat": 45.55, "data": [
+                {"display_name": "YUGOSLAVIA, Osijek", "country": "YUGOSLAVIA", "city": "Osijek", "lon": 18.68, "lat": 45.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 28.18},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 27.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.93},
@@ -23085,7 +23085,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAIRE, KINSHASA", "country": "ZAIRE", "city": "KINSHASA", "Lon": 15.3, "Lat": -4.3, "data": [
+                {"display_name": "ZAIRE, KINSHASA", "country": "ZAIRE", "city": "KINSHASA", "lon": 15.3, "lat": -4.3, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.28},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.69},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.51},
@@ -23107,7 +23107,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAIRE, Lubumbashi", "country": "ZAIRE", "city": "Lubumbashi", "Lon": 27.48, "Lat": -11.68, "data": [
+                {"display_name": "ZAIRE, Lubumbashi", "country": "ZAIRE", "city": "Lubumbashi", "lon": 27.48, "lat": -11.68, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.67},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 4.11},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.39},
@@ -23129,7 +23129,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAIRE, Mbuji-Mayi", "country": "ZAIRE", "city": "Mbuji-Mayi", "Lon": 23.65, "Lat": -6.17, "data": [
+                {"display_name": "ZAIRE, Mbuji-Mayi", "country": "ZAIRE", "city": "Mbuji-Mayi", "lon": 23.65, "lat": -6.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.46},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 3.1},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.98},
@@ -23151,7 +23151,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAIRE, Kananga", "country": "ZAIRE", "city": "Kananga", "Lon": 22.43, "Lat": -5.88, "data": [
+                {"display_name": "ZAIRE, Kananga", "country": "ZAIRE", "city": "Kananga", "lon": 22.43, "lat": -5.88, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.68},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 2.82},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.91},
@@ -23173,7 +23173,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAIRE, Kisangani", "country": "ZAIRE", "city": "Kisangani", "Lon": 25.23, "Lat": 0.55, "data": [
+                {"display_name": "ZAIRE, Kisangani", "country": "ZAIRE", "city": "Kisangani", "lon": 25.23, "lat": 0.55, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.06},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.99},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.36},
@@ -23195,7 +23195,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAIRE, Likasi", "country": "ZAIRE", "city": "Likasi", "Lon": 26.78, "Lat": -10.97, "data": [
+                {"display_name": "ZAIRE, Likasi", "country": "ZAIRE", "city": "Likasi", "lon": 26.78, "lat": -10.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.83},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 3.84},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.3},
@@ -23217,7 +23217,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAIRE, Kalemie", "country": "ZAIRE", "city": "Kalemie", "Lon": 29.2, "Lat": -5.93, "data": [
+                {"display_name": "ZAIRE, Kalemie", "country": "ZAIRE", "city": "Kalemie", "lon": 29.2, "lat": -5.93, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.4},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.92},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.36},
@@ -23239,7 +23239,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAIRE, Bukavu", "country": "ZAIRE", "city": "Bukavu", "Lon": 28.83, "Lat": -2.5, "data": [
+                {"display_name": "ZAIRE, Bukavu", "country": "ZAIRE", "city": "Bukavu", "lon": 28.83, "lat": -2.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 12.54},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 10.68},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.44},
@@ -23261,7 +23261,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAIRE, Kamina", "country": "ZAIRE", "city": "Kamina", "Lon": 25, "Lat": -8.73, "data": [
+                {"display_name": "ZAIRE, Kamina", "country": "ZAIRE", "city": "Kamina", "lon": 25, "lat": -8.73, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.23},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 3.21},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.09},
@@ -23283,7 +23283,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAIRE, Kikwit", "country": "ZAIRE", "city": "Kikwit", "Lon": 18.85, "Lat": -5.03, "data": [
+                {"display_name": "ZAIRE, Kikwit", "country": "ZAIRE", "city": "Kikwit", "lon": 18.85, "lat": -5.03, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 16.11},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 4.82},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.7},
@@ -23305,7 +23305,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAIRE, Matadi", "country": "ZAIRE", "city": "Matadi", "Lon": 13.53, "Lat": -5.83, "data": [
+                {"display_name": "ZAIRE, Matadi", "country": "ZAIRE", "city": "Matadi", "lon": 13.53, "lat": -5.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.91},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 9.57},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.38},
@@ -23327,7 +23327,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAIRE, Mbandaka", "country": "ZAIRE", "city": "Mbandaka", "Lon": 18.27, "Lat": 0.05, "data": [
+                {"display_name": "ZAIRE, Mbandaka", "country": "ZAIRE", "city": "Mbandaka", "lon": 18.27, "lat": 0.05, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 15.91},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 5.02},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 35.91},
@@ -23349,7 +23349,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAMBIA, LUSAKA", "country": "ZAMBIA", "city": "LUSAKA", "Lon": 28.27, "Lat": -15.47, "data": [
+                {"display_name": "ZAMBIA, LUSAKA", "country": "ZAMBIA", "city": "LUSAKA", "lon": 28.27, "lat": -15.47, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.29},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 5.42},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.71},
@@ -23371,7 +23371,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAMBIA, Kitwe", "country": "ZAMBIA", "city": "Kitwe", "Lon": 28.18, "Lat": -12.83, "data": [
+                {"display_name": "ZAMBIA, Kitwe", "country": "ZAMBIA", "city": "Kitwe", "lon": 28.18, "lat": -12.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.51},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 4.61},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.52},
@@ -23393,7 +23393,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAMBIA, Ndola", "country": "ZAMBIA", "city": "Ndola", "Lon": 28.65, "Lat": -13, "data": [
+                {"display_name": "ZAMBIA, Ndola", "country": "ZAMBIA", "city": "Ndola", "lon": 28.65, "lat": -13, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.41},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 4.77},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.56},
@@ -23415,7 +23415,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAMBIA, Kabwe", "country": "ZAMBIA", "city": "Kabwe", "Lon": 28.42, "Lat": -14.48, "data": [
+                {"display_name": "ZAMBIA, Kabwe", "country": "ZAMBIA", "city": "Kabwe", "lon": 28.42, "lat": -14.48, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.39},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 5.06},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.66},
@@ -23437,7 +23437,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAMBIA, Mufulira", "country": "ZAMBIA", "city": "Mufulira", "Lon": 28.2, "Lat": -12.5, "data": [
+                {"display_name": "ZAMBIA, Mufulira", "country": "ZAMBIA", "city": "Mufulira", "lon": 28.2, "lat": -12.5, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.5},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 4.51},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.49},
@@ -23459,7 +23459,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAMBIA, Chingola", "country": "ZAMBIA", "city": "Chingola", "Lon": 27.88, "Lat": -12.52, "data": [
+                {"display_name": "ZAMBIA, Chingola", "country": "ZAMBIA", "city": "Chingola", "lon": 27.88, "lat": -12.52, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.57},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 4.43},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.47},
@@ -23481,7 +23481,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAMBIA, Luanshya", "country": "ZAMBIA", "city": "Luanshya", "Lon": 28.4, "Lat": -13.15, "data": [
+                {"display_name": "ZAMBIA, Luanshya", "country": "ZAMBIA", "city": "Luanshya", "lon": 28.4, "lat": -13.15, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.46},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 4.74},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.56},
@@ -23503,7 +23503,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAMBIA, Livingstone", "country": "ZAMBIA", "city": "Livingstone", "Lon": 25.88, "Lat": -17.83, "data": [
+                {"display_name": "ZAMBIA, Livingstone", "country": "ZAMBIA", "city": "Livingstone", "lon": 25.88, "lat": -17.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.88},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.81},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.76},
@@ -23525,7 +23525,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAMBIA, Kalulushi", "country": "ZAMBIA", "city": "Kalulushi", "Lon": 28.05, "Lat": -12.83, "data": [
+                {"display_name": "ZAMBIA, Kalulushi", "country": "ZAMBIA", "city": "Kalulushi", "lon": 28.05, "lat": -12.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.53},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 4.58},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.51},
@@ -23547,7 +23547,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZAMBIA, Chililabombwe", "country": "ZAMBIA", "city": "Chililabombwe", "Lon": 27.87, "Lat": -12.33, "data": [
+                {"display_name": "ZAMBIA, Chililabombwe", "country": "ZAMBIA", "city": "Chililabombwe", "lon": 27.87, "lat": -12.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 14.58},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 4.35},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.46},
@@ -23569,7 +23569,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZIMBABWE, HARARE", "country": "ZIMBABWE", "city": "HARARE", "Lon": 31.05, "Lat": -17.83, "data": [
+                {"display_name": "ZIMBABWE, HARARE", "country": "ZIMBABWE", "city": "HARARE", "lon": 31.05, "lat": -17.83, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.51},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 6.12},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.01},
@@ -23591,7 +23591,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZIMBABWE, Bulawayo", "country": "ZIMBABWE", "city": "Bulawayo", "Lon": 28.72, "Lat": -20.17, "data": [
+                {"display_name": "ZIMBABWE, Bulawayo", "country": "ZIMBABWE", "city": "Bulawayo", "lon": 28.72, "lat": -20.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.26},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 8.07},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.04},
@@ -23613,7 +23613,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZIMBABWE, Chitungwiza", "country": "ZIMBABWE", "city": "Chitungwiza", "Lon": 31.1, "Lat": -18, "data": [
+                {"display_name": "ZIMBABWE, Chitungwiza", "country": "ZIMBABWE", "city": "Chitungwiza", "lon": 31.1, "lat": -18, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.47},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 6.21},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.02},
@@ -23635,7 +23635,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZIMBABWE, Gweru", "country": "ZIMBABWE", "city": "Gweru", "Lon": 29.82, "Lat": -19.45, "data": [
+                {"display_name": "ZIMBABWE, Gweru", "country": "ZIMBABWE", "city": "Gweru", "lon": 29.82, "lat": -19.45, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.37},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.39},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.05},
@@ -23657,7 +23657,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZIMBABWE, Mutare", "country": "ZIMBABWE", "ci	ty": "Mutare", "Lon": 32.67, "Lat": -18.97, "data": [
+                {"display_name": "ZIMBABWE, Mutare", "country": "ZIMBABWE", "ci	ty": "Mutare", "lon": 32.67, "lat": -18.97, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 6.59},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.11},
@@ -23679,7 +23679,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZIMBABWE, Que_Que", "country": "ZIMBABWE", "city": "Que_Que", "Lon": 29.82, "Lat": -18.92, "data": [
+                {"display_name": "ZIMBABWE, Que_Que", "country": "ZIMBABWE", "city": "Que_Que", "lon": 29.82, "lat": -18.92, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.49},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.06},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.02},
@@ -23701,7 +23701,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZIMBABWE, Kadoma", "country": "ZIMBABWE", "city": "Kadoma", "Lon": 29.92, "Lat": -18.35, "data": [
+                {"display_name": "ZIMBABWE, Kadoma", "country": "ZIMBABWE", "city": "Kadoma", "lon": 29.92, "lat": -18.35, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.6},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 6.65},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37},
@@ -23723,7 +23723,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZIMBABWE, Wankie", "country": "ZIMBABWE", "city": "Wankie", "Lon": 26.48, "Lat": -18.37, "data": [
+                {"display_name": "ZIMBABWE, Wankie", "country": "ZIMBABWE", "city": "Wankie", "lon": 26.48, "lat": -18.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.76},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.92},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.83},
@@ -23745,7 +23745,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZIMBABWE, Masvingo", "country": "ZIMBABWE", "city": "Masvingo", "Lon": 30.83, "Lat": -20.08, "data": [
+                {"display_name": "ZIMBABWE, Masvingo", "country": "ZIMBABWE", "city": "Masvingo", "lon": 30.83, "lat": -20.08, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.09},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.36},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.1},
@@ -23767,7 +23767,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZIMBABWE, Shabani", "country": "ZIMBABWE", "city": "Shabani", "Lon": 30.03, "Lat": -20.33, "data": [
+                {"display_name": "ZIMBABWE, Shabani", "country": "ZIMBABWE", "city": "Shabani", "lon": 30.03, "lat": -20.33, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.12},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 7.67},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37.08},
@@ -23789,7 +23789,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZIMBABWE, Chegutu", "country": "ZIMBABWE", "city": "Chegutu", "Lon": 30.23, "Lat": -18.17, "data": [
+                {"display_name": "ZIMBABWE, Chegutu", "country": "ZIMBABWE", "city": "Chegutu", "lon": 30.23, "lat": -18.17, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.59},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 6.46},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 37},
@@ -23811,7 +23811,7 @@ Meteor.methods({
                     {"satellite": "Thaicom 7", "beam": "Regional", "type": "uplink", "value": 0},
                     {"satellite": "Thaicom 7", "beam": "Semi", "type": "uplink", "value": 0}
                 ]},
-                {"display_name": "ZIMBABWE, Chinhoyi", "country": "ZIMBABWE", "city": "Chinhoyi", "Lon": 30.2, "Lat": -17.37, "data": [
+                {"display_name": "ZIMBABWE, Chinhoyi", "country": "ZIMBABWE", "city": "Chinhoyi", "lon": 30.2, "lat": -17.37, "data": [
                     {"satellite": "Thaicom 5", "beam": "Standard C", "type": "downlink", "value": 13.73},
                     {"satellite": "Thaicom 5", "beam": "Extended C", "type": "downlink", "value": 5.94},
                     {"satellite": "Thaicom 5", "beam": "Global C", "type": "downlink", "value": 36.94},

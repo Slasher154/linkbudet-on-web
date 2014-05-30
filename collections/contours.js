@@ -48,5 +48,11 @@ Meteor.methods({
         });
 
 
+    },
+
+    'find_best_beam': function(latlon){
+        var lat = latlon.lat, lon = latlon.lon;
+
     }
+
 })

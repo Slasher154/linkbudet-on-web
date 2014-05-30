@@ -4,7 +4,7 @@
 //Insert default data
         if (Satellites.find().count() === 0) {
 
-        // -----------------------------------Insert Satellite Data----------------------------------------
+            // -----------------------------------Insert Satellite Data----------------------------------------
             Meteor.call('insert_satellites');
 
             // -----------------------------------Insert Thaicom 5 Channels----------------------------------------
@@ -31,4 +31,9 @@
             // -----------------------------------Insert ITU 1999 Rain Data ----------------------------------------
             Meteor.call('insert_rain_data');
 
-            }
+            // -----------------------------------Insert Gateways----------------------------------------
+            Meteor.call('insert_gateways');
+
+            // -----------------------------------Insert Contours from Satsoft program----------------------------------------
+            Meteor.call('insert_contours');
+        }
