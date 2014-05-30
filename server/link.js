@@ -136,9 +136,123 @@ link = new Link();
 
 function LinkBudget() {
 
-    // Manage the input parameters, loop them and run each link
+    // Manage the input parameters from the input page, loop them and run each link
     function run(data) {
 
+        var channels = [], remote_antennas = [], remote_locations = [], bucs = [];
+        // check if user selects to find best channel, loop each lat/lon and find best channel first
+        if (data.findBestChannel) {
+            channels = GetBestChannels(data.satellite, data.remote_locations);
+        }
+        else {
+            // data.channels is array of channels from user selection
+            channels = data.channels;
+        }
+
+        // check if user selects recommend antenna, if yes, calculates all standard antenna, from biggest to smallest
+        if (_.has(data, 'recommendAntenna') && data.recommendAntenna) {
+            remote_antennas = Antennas.find({$query: {type: 'standard'}, $orderby: { size: -1}});
+        }
+        else {
+            remote_antennas = data.remote_antennas;
+        }
+
+        // max contour...not implemented yet
+
+        // lat/lon locations
+        remote_locations = data.remote_locations;
+
+        // check if user selects recommend buc, if yes, calculates all standard buc, from biggest to smallest
+        if (_.has(data, 'recommendBuc') && data.recommendBuc) {
+            bucs = Bucs.find({$query: {type: 'standard'}, $orderby: { size: -1}});
+        }
+        else if (_.has(data, 'bucs')) {
+            bucs = data.bucs;
+        }
+
+        // setup the input parameters
+        var input = {
+            satellite: data.satellite,
+            platform: data.platform,
+            unit: data.unit
+        }
+
+        // set bt product if user specifies it
+        if (_.has(data, 'bt')) {
+            input.bt = data.bt;
+        }
+
+        // set link margin if user specifies it
+        if (_.has(data, 'link_margin')) {
+            input.link_margin = data.link_margin;
+        }
+
+        // hub antenna and location is input only for conventional satellite
+        input.hub_antenna = _.has(data, 'hub_antenna') ? data.hub_antenna : {};
+        input.hub_location = _.has(data, 'hub_location') ? data.hub_location : {};
+
+        var results = [];
+
+        // start looping each parameters
+        for (var i = 0; i < channels.length; i++) {
+            for (var i1 = 0; i1 < remote_locations.length; i1++) {
+                for (var i2 = 0; i2 < remote_antennas.length; i2++) {
+                    for (var i3 = 0; i3 < data.bandwidths.length; i3++) {
+
+                        var fwd_result = {}, rtn_result = {};
+
+                        // setup the input parameters for each case
+                        input.channel = channels[i];
+                        input.remote_location = remote_locations[i1];
+                        input.remote_antenna = remote_antennas[i2];
+
+                        // Hub to remote
+
+                        input.bw = data.bandwidths[i3].forward; // use the forward bandwidth
+
+                        // check if user fixes MCG, if yes, loop them and record results
+                        // the program allows users to select MCG for broadcast applications only
+                        if (_.has(data, 'fix_mcgs')) {
+                            for (var i4 = 0; i4 < data.fix_mcgs.length; i4++) {
+                                input.fix_mcg = data.fix_mcgs[i4];
+                                fwd_result = hub_to_remote(input);
+
+                                // store the result to the array as there would be no remote to hub for BC apps
+                                results.push({fwd: fwd_result, rtn: rtn_result});
+                            }
+                        }
+                        else {
+                            fwd_result = hub_to_remote(input);
+
+                            // check if link requires remote to hub by checking if the platform is not broadcast
+                            if (input.platform.applications[0].type !== 'Broadcast') {
+
+                                input.bw = data.bandwidths[i3].return; // use the forward bandwidth
+
+                                // loop buc if any (IPSTAR satellite link budget will find calculate for each BUC, while conventional VSAT assume BUC power is enough)
+                                if (bucs.length != 0) {
+                                    for (var i5 = 0; i5 < bucs.length; i5++) {
+                                        input.buc = bucs[i5];
+                                        rtn_result = remote_to_hub(input);
+
+                                        // store the result to array
+                                        results.push({fwd: fwd_result, rtn: rtn_result});
+                                    }
+                                }
+                                else {
+                                    rtn_result = remote_to_hub(input);
+                                    results.push({fwd: fwd_result, rtn: rtn_result});
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+        return results;
     }
 
     // Calculates the link from hub to remote
@@ -174,7 +288,7 @@ function LinkBudget() {
         }
         // Else, the uplink parameters come from user input (such as for conventional)
         else {
-            uplink_ant = data.hub_ant, uplink_hpa.size = 2000, uplink_hpa.type = "hpa"; // assume there is enough HPA
+            uplink_ant = data.hub_antenna, uplink_hpa.size = 2000, uplink_hpa.type = "hpa"; // assume there is enough HPA
 
             // Find the relative contour from satellite and given location
             uplink_loc = GetLocationObject(channel, data.hub_location, "uplink");
@@ -313,7 +427,7 @@ function LinkBudget() {
         }
         // Else, the uplink parameters come from user input (such as for conventional)
         else {
-            downlink_ant.size = data.hub_size; // assume there is enough HPA
+            downlink_ant.size = data.hub_antenna; // assume there is enough HPA
 
             // Find the relative contour from satellite and given location
             downlink_loc = GetLocationObject(channel, data.hub_location, "downlink");
@@ -1717,4 +1831,8 @@ function GetLocationObject(channel, location, path) {
 
 }
 
+function GetBestChannels(satellite, locations) {
+    // TODO: Write this function when mongodb 2.6 comes with meteor
+    return [];
+}
 

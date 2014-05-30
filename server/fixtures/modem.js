@@ -8,6 +8,7 @@ Meteor.methods({
             Modems.insert({
                 name: "Standard DVB-S2",
                 vendor: "Standard",
+                type: 'Broadcast',
                 applications: [
                     {
                         name: "DVB-S2",
