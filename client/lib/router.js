@@ -11,7 +11,8 @@ Router.map(function () {
     this.route('index', {
         path: '/',
         waitOn: function () {
-            [Meteor.subscribe('satellites'), Meteor.subscribe('channels'), Meteor.subscribe('modems'), Meteor.subscribe('locations')]
+            [Meteor.subscribe('satellites'), Meteor.subscribe('channels'), Meteor.subscribe('modems'), Meteor.subscribe('locations'),
+            Meteor.subscribe('antennas'), Meteor.subscribe('bucs')]
         }
     })
     this.route('about');

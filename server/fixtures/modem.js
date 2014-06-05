@@ -6,6 +6,84 @@ Meteor.methods({
     'insert_modem' : function(){
         (function(){
             Modems.insert({
+                name: "Standard DVB-S1",
+                vendor: "Standard",
+                type: 'Broadcast',
+                applications: [
+                    {
+                        name: "DVB-S1",
+                        acm: false,
+                        minimum_symbol_rate: 1000,
+                        maximum_symbol_rate: 30000,
+                        roll_off_factor: 1.2,
+                        link_margin: 2,
+                        default: true, // indicates that this application is a default for this modem
+                        mcgs: [
+                            {
+                                name: "QPSK 1/3",
+                                spectral_efficiency: 0.67,
+                                es_no: -0.5
+                            },
+                            {
+                                name: "QPSK 2/5",
+                                spectral_efficiency: 0.8,
+                                es_no: 0.5
+                            },
+                            {
+                                name: "QPSK 1/2",
+                                spectral_efficiency: 1,
+                                es_no: 1.8
+                            },
+                            {
+                                name: "QPSK 3/5",
+                                spectral_efficiency: 1.2,
+                                es_no: 3
+                            },
+                            {
+                                name: "QPSK 2/3",
+                                spectral_efficiency: 1.33,
+                                es_no: 3.9
+                            },
+                            {
+                                name: "QPSK 3/4",
+                                spectral_efficiency: 1.5,
+                                es_no: 4.8
+                            },
+                            {
+                                name: "QPSK 4/5",
+                                spectral_efficiency: 1.6,
+                                es_no: 5.5
+                            },
+                            {
+                                name: "QPSK 5/6",
+                                spectral_efficiency: 1.67,
+                                es_no: 6
+                            },
+                            {
+                                name: "8PSK 3/5",
+                                spectral_efficiency: 1.8,
+                                es_no: 6.5
+                            },
+                            {
+                                name: "8PSK 2/3",
+                                spectral_efficiency: 2,
+                                es_no: 7.6
+                            },
+                            {
+                                name: "8PSK 3/4",
+                                spectral_efficiency: 2.25,
+                                es_no: 8.9
+                            },
+                            {
+                                name: "8PSK 5/6",
+                                spectral_efficiency: 2.5,
+                                es_no: 10.4
+                            }
+                        ]
+                    }
+                ]
+            });
+            Modems.insert({
                 name: "Standard DVB-S2",
                 vendor: "Standard",
                 type: 'Broadcast',
@@ -105,7 +183,7 @@ Meteor.methods({
                         link_margin: 1,
                         minimum_symbol_rate: 300,
                         maximum_symbol_rate: 60000,
-                        roll_off_factor: [1.2],
+                        roll_off_factor: 1.2,
                         mcgs: [
                             {"name": "QPSK 1/4", "spectral_efficiency": 0.48, "es_no": -2},
                             {"name": "QPSK 1/3", "spectral_efficiency": 0.64, "es_no": -1.1},
@@ -141,7 +219,7 @@ Meteor.methods({
                         minimum_symbol_rate: 128,
                         maximum_symbol_rate: 2560,
                         symbol_rates: [128, 256, 512, 1024, 1536, 2048, 2560],
-                        roll_off_factor: [1.2],
+                        roll_off_factor: 1.2,
                         mcgs: [
                             {"name": "QPSK 1/2", "spectral_efficiency": 1, "es_no": 4.9},
                             {"name": "QPSK 2/3", "spectral_efficiency": 1.334, "es_no": 5},
@@ -157,5 +235,16 @@ Meteor.methods({
                 ]
             })
         })();
+    },
+
+    // return MCG for standard DVB-S1 or DVB-S2 for select fix mcg for conventional satellite
+    'get_dvb_mcg': function(dvb){
+        var platform = Modems.findOne({name:"Standard " + dvb});
+        if(platform){
+            return _.pluck(platform.applications[0].mcgs,'name');
+        }
+        else{
+            throw new Meteor.Error(422, 'No MCGs found for this platform.');
+        }
     }
 })

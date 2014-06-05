@@ -4,8 +4,8 @@
         <label>Select BUC size</label>
         <br/>
         <select class="form-control selectpicker" id="bucPicker" multiple>
-            {{#each sizeList}}
-            <option value="{{this}}">{{this}}</option>
+            {{#each bucs}}
+            <option value="{{_id}}">{{name}}</option>
             {{/each}}
         </select>
 

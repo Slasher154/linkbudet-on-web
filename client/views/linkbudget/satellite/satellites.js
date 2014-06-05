@@ -16,6 +16,14 @@ Template.satellites.events({
         Session.set('isBroadband', satellite.type === "Broadband");
         Session.set('satellite', satellite);
 
+        // set default session values
+        if(Session.get('isBroadband')){
+            Session.set('findBestChannel', false);
+            Session.set('findMaxContour', false);
+            Session.set('recommendAntenna', false);
+            Session.set('recommendBuc', false);
+        }
+
 
 
 

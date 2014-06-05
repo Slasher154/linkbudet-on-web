@@ -24,3 +24,11 @@ Meteor.publish('locations', function(){
 Meteor.publish('constants', function(){
     return Constants.find();
 })
+
+Meteor.publish('antennas', function(){
+    return Antennas.find();
+})
+
+Meteor.publish('bucs', function(){
+    return Bucs.find();
+})

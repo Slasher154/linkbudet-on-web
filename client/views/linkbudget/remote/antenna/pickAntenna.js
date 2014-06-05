@@ -3,20 +3,7 @@
  */
 Template.pickAntenna.antennas = function () {
     //TODO: Change to set value to ID
-    return [{
-        _id: "xxx",
-        name: "0.84 m"
-    },{
-        _id: "yyy",
-        name: "1.2 m"
-    },{
-        _id: "zzz",
-        name: "1.8 m"
-    },{
-        _id: "aaa",
-        name: "E7000"
-    }
-    ]
+    return Antennas.find();
 
 }
 

@@ -20,7 +20,7 @@ Template.index.events({
         }
 
         var assumptions = {
-            satellite: satellite
+            satellite: satellite.name
         };
 
         // check if broadband or conventional
@@ -34,10 +34,11 @@ Template.index.events({
             }
 
             var channels;
-            var hubSize;
-            var hubLocation;
-            var remoteSize;
-            var selectedLocs;
+            var hub_antenna;
+            var hub_location;
+            var remote_antennas;
+            var remote_locations;
+            var platform;
             var selectedConventionalPlatform;
             var selectedBcPlatform;
             var selectedMcgs = [];
@@ -56,32 +57,48 @@ Template.index.events({
             }
 
             // check if hub size is valid
-            hubSize = $('#hub-size').val();
-            console.log('Hub size: ' + hubSize + ' m.')
-            if (hubSize === '' || hubSize < 0) {
+            var hub = $('#hub-size').val();
+            console.log('Hub size: ' + hub + ' m.')
+            if (hub === '' || hub < 0) {
                 Errors.throw('Hub size is not valid.');
                 return false;
+            }
+            else{
+                // create antenna object
+                hub_antenna = {
+                    type: "Standard",
+                    name: hub + " m",
+                    size: hub
+                }
             }
 
             // check if location is valid
             // TODO: Wait for the location database
-            hubLocation = $('#hub-location').val();
-            console.log('Hub location: ' + hubLocation);
+            hub_location = $('#hub-location').val();
+            console.log('Hub location: ' + hub_location);
 
             // check if remote antenna size is valid
-            remoteSize = $('#remote-size').val();
-            console.log('Remote size: ' + remoteSize + ' m.');
-            if (remoteSize === '' || remoteSize < 0) {
+            var ant = $('#remote-size').val();
+            console.log('Remote size: ' + ant + ' m.');
+            if (ant === '' || ant < 0) {
                 Errors.throw('Remote size is not valid.');
                 return false;
             }
+            else{
+                // convert select remote antennas to an array of antenna object
+                remote_antennas = [{
+                   type: 'Standard',
+                   name: ant + " m",
+                   size: ant
+                }];
+            }
 
             // check if remote location is valid
-            selectedLocs = $('#selected-locations').find('span').map(function () {
+            remote_locations = $('#selected-locations').find('span').map(function () {
                 return $(this).html();
             }).get();
-            console.log('Selected locations: ' + selectedLocs.join(','));
-            if (selectedLocs.length <= 0) {
+            console.log('Selected locations: ' + remote_locations.join(','));
+            if (remote_locations.length <= 0) {
                 Errors.throw('Please select at least 1 remote location.');
                 return false;
             }
@@ -103,11 +120,15 @@ Template.index.events({
                     Errors.throw('Please select broadcast application.');
                     return false;
                 }
+                else{
+                    // set platform = DVB-S1 or DVB-S2
+                    platform = Modems.findOne({name:"Standard " + selectedBcPlatform});
+                }
 
                 selectedMcgs = $('.bcMcg').find(':checked').map(function () {
                     return $(this).val();
                 }).get();
-                console.log('Selct MCGs: ' + selectedMcgs.join(','));
+                console.log('Select MCGs: ' + selectedMcgs.join(','));
                 if (selectedMcgs.length <= 0) {
                     Errors.throw('Please select at least 1 MCG.');
                     return false;
@@ -129,6 +150,9 @@ Template.index.events({
                     Errors.throw('Please select modem.');
                     return false;
                 }
+                else{
+                    platform = selectedVsatModem;
+                }
 
                 linkMargin = $('#link-margin').val();
                 console.log('Link margin: ' + linkMargin + " dB");
@@ -142,16 +166,15 @@ Template.index.events({
             _.extend(assumptions,{
                 beam: beam,
                 channels: channels,
-                hubSize: hubSize,
-                hubLocation: hubLocation,
-                remoteSize: remoteSize,
-                locations: selectedLocs,
-                platform: selectedConventionalPlatform,
-                bcApplication: selectedBcPlatform,
-                mcgs: selectedMcgs,
-                btProduct: selectedBt,
+                hub_antenna: hub_antenna,
+                hub_location: hub_location,
+                remote_antennas: remote_antennas,
+                remote_locations: remote_locations,
+                platform: platform,
+                fix_mcgs: selectedMcgs,
+                bt: selectedBt,
                 modem: selectedVsatModem,
-                linkMargin: linkMargin
+                link_Margin: linkMargin
             })
         }
 
@@ -168,6 +191,7 @@ Template.index.events({
             var selectedChannels = [];
             var selectedDefinedContours = [];
             var selectedLatLon = [];
+            var remote_locations = [];
             var recommendAntenna;
             var selectedAntennas = [];
             var recommendBuc;
@@ -196,11 +220,11 @@ Template.index.events({
                     selectedDefinedContours = $('#definedContours').find('label.active').map(function () {
                         return $(this).find('input').val();
                     }).get();
-                    console.log('Selected Defined contours: ' + selectedDefinedContours);
+                    //console.log('Selected Defined contours: ' + selectedDefinedContours);
                     selectedLatLon = $('#selected-locations').find('span').map(function () {
                         return $(this).html();
                     }).get();
-                    console.log('Selected lat/lon: ' + selectedLatLon.join(','));
+                    //console.log('Selected lat/lon: ' + selectedLatLon.join(','));
                     if (selectedLatLon.length > 0) {
                         //check if each latlon is valid
                         _.map(selectedLatLon, function (item) {
@@ -215,6 +239,9 @@ Template.index.events({
                         Errors.throw('Please select at least 1 location.');
                         return false;
                     }
+
+                    // merge lat/lon and defined contours to one array
+                    remote_locations = selectedDefinedContours.concat(selectedLatLon);
                 }
             }
             else {
@@ -222,7 +249,6 @@ Template.index.events({
                 selectedLatLon = $('#selected-locations').find('span').map(function () {
                     return $(this).html();
                 }).get();
-                console.log('Selected lat/lon: ' + selectedLatLon.join(','));
                 if (selectedLatLon.length > 0) {
                     //check if each latlon is valid
                     _.map(selectedLatLon, function (item) {
@@ -236,7 +262,12 @@ Template.index.events({
                     Errors.throw('Please select at least 1 location.');
                     return false;
                 }
+                else{
+                    remote_locations = selectedLatLon;
+                }
             }
+
+            console.log("Remote locations = " + remote_locations.join(","));
 
             // check if recommend antenna is selected
             recommendAntenna = Session.get('recommendAntenna');
@@ -244,15 +275,19 @@ Template.index.events({
 
             // check if any antenna is selected
             if (!recommendAntenna) {
-                selectedAntennas = $('#antennaPicker').find('option:selected').map(function () {
+                var ants = $('#antennaPicker').find('option:selected').map(function () {
                     return $(this).val();
                 }).get();
-                console.log('Selected antennas: ' + selectedAntennas.join(','));
-                if (selectedAntennas.length <= 0) {
+                if (ants.length <= 0) {
                     Errors.throw('Please select at least 1 antenna.');
                     return false;
                 }
+                else{
+                    // set array of antenna objects to our select antenna ids
+                    selectedAntennas = Antennas.find({_id:{$in:ants}}).fetch();
+                }
             }
+            console.log('Select antennas = ' + _.pluck(selectedAntennas,'name'));
 
             // check if any BUC is selected
             recommendBuc = Session.get('recommendBuc');
@@ -260,19 +295,23 @@ Template.index.events({
 
             // check if any buc is selected
             if (!recommendBuc) {
-                selectedBucs = $('#bucPicker').find('option:selected').map(function () {
+                var bucs = $('#bucPicker').find('option:selected').map(function () {
                     return $(this).val();
                 }).get();
-                console.log('Selected bucs: ' + selectedBucs.join(','));
-                if (selectedBucs.length <= 0) {
+                console.log('Selected bucs: ' + bucs.join(','));
+                if (bucs.length <= 0) {
                     Errors.throw('Please select at least 1 buc size.');
                     return false;
                 }
+                else{
+                    selectedBucs = Bucs.find({_id:{$in:bucs}}).fetch();
+                }
             }
+            console.log('Select bucs = ' + _.pluck(selectedBucs,'name'));
 
             // check if any platform is selected
-            modem = Session.get('modemId');
-            console.log('Selected modem: ' + modem);
+            modem = Modems.findOne({_id:Session.get('modemId')});
+            console.log('Selected modem: ' + modem.name);
             if (!modem || modem === '') {
                 Errors.throw('Please select modem.');
                 return false;
@@ -288,14 +327,13 @@ Template.index.events({
                 findBestChannel: findBestChannel,
                 findMaxContour: findMaxContour,
                 channels: selectedChannels,
-                definedContours: selectedDefinedContours,
-                latlon: selectedLatLon,
+                remote_locations: remote_locations,
                 recommendAntenna: recommendAntenna,
-                antennas: selectedAntennas,
+                remote_antennas: selectedAntennas,
                 recommendBuc: recommendBuc,
                 bucs: selectedBucs,
-                modem: modem,
-                fixMcg: fixMcg
+                platform: modem,
+                no_acm: fixMcg
             })
         }
 
@@ -331,14 +369,15 @@ Template.index.events({
         }
         // broadcast platform
         else{
-            bandwidth.push($('.oneWayBw').val());
+            // this object will have forward bandwidth only
+            bandwidth.push({fwd:$('.oneWayBw').val(),rtn:0});
             console.log("Bandwidth: " + bandwidth.join(',') + " " + bwUnit);
         }
         _.extend(assumptions,{
-            bwUnit: bwUnit,
-            bandwidth: bandwidth
+            unit: bwUnit,
+            bandwidths: bandwidth
         })
-
+        console.log(JSON.stringify(assumptions));
         Meteor.call('add_assumption', assumptions, function(error, assumptionId) {
             if (error){
                 Errors.throw(error.reason);
@@ -346,11 +385,11 @@ Template.index.events({
                 console.log(assumptionId);
             }
         });
-        Meteor.call('run_linkcalc', assumptions, function(error, message) {
+        Meteor.call('link_calc', assumptions, function(error, message) {
             if (error){
                 Errors.throw(error.reason);
             } else {
-                console.log(message);
+                console.log(JSON.stringify(message));
             }
         });
 

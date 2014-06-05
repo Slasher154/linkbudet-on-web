@@ -3,28 +3,24 @@
  */
 Template.broadcastMcgSelector.mcgs = function(){
     var selectedApplication = Session.get('selectedBcPlatform');
-    if(selectedApplication==="DVB-S1"){
-        return [
-            "QPSK 1/2",
-            "QPSK 3/4",
-            "QPSK 5/6",
-            "QPSK 7/8",
-            "8PSK 2/3",
-            "8PSK 3/4"
-        ];
+    var platform = Modems.findOne({name:"Standard " + selectedApplication});
+    if(platform){
+        return _.pluck(platform.applications[0].mcgs,'name');
     }
-    if(selectedApplication==="DVB-S2"){
-        return [
-            "QPSK 1/2",
-            "QPSK 3/4",
-            "QPSK 5/6",
-            "QPSK 7/8",
-            "8PSK 2/3",
-            "8PSK 3/4",
-            "16APSK 4/5",
-            "16APSK 5/6"
-        ];
+    else{
+        Errors.throw('No MCGs found for this platform.');
     }
+    /*
+    Meteor.call('get_dvb_mcg',selectedApplication, function(error, data){
+        if(error){
+            Errors.throw(error.reason);
+        }
+        else{
+            console.log(data);
+            return data;
+        }
+    })
+    */
 
 }
 Template.broadcastMcgSelector.bt = function(){

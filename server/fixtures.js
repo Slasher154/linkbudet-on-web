@@ -36,4 +36,10 @@
 
             // -----------------------------------Insert Contours from Satsoft program----------------------------------------
             Meteor.call('insert_contours');
+
+            // -----------------------------------Insert Antennas----------------------------------------
+            Meteor.call('insert_antennas');
+
+            // -----------------------------------Insert Bucs----------------------------------------
+            Meteor.call('insert_bucs');
         }
