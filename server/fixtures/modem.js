@@ -8,11 +8,11 @@ Meteor.methods({
             Modems.insert({
                 name: "Standard DVB-S1",
                 vendor: "Standard",
-                type: 'Broadcast',
                 applications: [
                     {
                         name: "DVB-S1",
                         acm: false,
+                        type: 'Broadcast',
                         minimum_symbol_rate: 1000,
                         maximum_symbol_rate: 30000,
                         roll_off_factor: 1.2,
@@ -86,11 +86,11 @@ Meteor.methods({
             Modems.insert({
                 name: "Standard DVB-S2",
                 vendor: "Standard",
-                type: 'Broadcast',
                 applications: [
                     {
                         name: "DVB-S2",
                         acm: false,
+                        type: 'Broadcast',
                         minimum_symbol_rate: 1000,
                         maximum_symbol_rate: 30000,
                         roll_off_factor: [1.2, 1.35],

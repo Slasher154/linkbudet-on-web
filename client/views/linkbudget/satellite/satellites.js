@@ -3,7 +3,8 @@
  */
 Template.satellites.satelliteList = function () {
     return {
-        value: _.pluck(Satellites.find().fetch(), 'name')
+        //value: _.pluck(Satellites.find().fetch(), 'name')
+        value: ["Thaicom 5","Thaicom 6","Thaicom 7","IPSTAR"]
     }
 }
 

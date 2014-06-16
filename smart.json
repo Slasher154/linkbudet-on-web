@@ -4,10 +4,14 @@
     "spin": {},
     "errors": {},
     "roles": {},
-    "accounts-ui-bootstrap-3": {},
     "accounts-admin-ui-bootstrap-3": {},
     "leaflet": {},
     "Bootstrap3-Typeahead": {},
-    "bootstrap-select": {}
+    "bootstrap-select": {},
+    "npm": {},
+    "pdfjs": {},
+    "pdfkit": {},
+    "collectionFS": {},
+    "accounts-ui-bootstrap-3-blaze": {}
   }
 }

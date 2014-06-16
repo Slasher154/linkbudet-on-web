@@ -32,3 +32,11 @@ Meteor.publish('antennas', function(){
 Meteor.publish('bucs', function(){
     return Bucs.find();
 })
+
+Meteor.publish('intf', function(){
+    return Intf.find();
+})
+
+Meteor.publish('pdfs', function(){
+    return Pdfs.find();
+})

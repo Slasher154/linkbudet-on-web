@@ -31,7 +31,7 @@ Template.conventional.events({
             // Render location typeahead based on beam (available locations are based on selected beam)
             var sat_name = Session.get('satellite').name;
             // Filter locations by satellite name, beam name, and EIRP value not equal to 0
-            var locations = _.pluck(Locations.find({data:{$elemMatch:{satellite:sat_name,beam:selectedBeam,type:'downlink',value:{$ne:0}}}}).fetch(),'display_name');
+            var locations = _.pluck(Locations.find({data:{$elemMatch:{satellite:sat_name,beam:selectedBeam,type:'downlink',value:{$ne:0}}}}).fetch(),'name');
 
             // Destroy old sources and bind new location sources for hub locations
             $('#hub-location').typeahead('destroy');

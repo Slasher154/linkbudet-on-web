@@ -42,4 +42,10 @@
 
             // -----------------------------------Insert Bucs----------------------------------------
             Meteor.call('insert_bucs');
+
+            // -----------------------------------Insert Adjacent satellites----------------------------------------
+            Meteor.call('insert_apstar7');
+            Meteor.call('insert_telkom3');
+            Meteor.call('insert_asiasat4');
+            Meteor.call('insert_express_am4');
         }

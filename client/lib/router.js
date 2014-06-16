@@ -24,7 +24,7 @@ Router.map(function () {
     });
     this.route('calculate',{
        waitOn: function(){
-           [Meteor.subscribe('satellites'), Meteor.subscribe('channels'), Meteor.subscribe('constants')]
+           [Meteor.subscribe('satellites'), Meteor.subscribe('channels'), Meteor.subscribe('constants'), Meteor.subscribe('intf')]
        }
     });
 })

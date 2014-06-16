@@ -9,6 +9,7 @@ Meteor.methods({
         _.each(standard_size, function(num){
             Bucs.insert({
                 type: 'Standard',
+                category: 'buc',
                 size: num,
                 name: num + "W"
             });

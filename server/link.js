@@ -4,128 +4,6 @@
 
 Meteor.methods({
     'link_calc': function (assumptions) {
-        /*
-        var antenna1 = {size: 8}
-        var antenna2 = {size: 1.2, rx_gain: {value: 41.6, freq: 12}}
-        var channel1 = Channels.findOne({name: "1E"});
-        var ul_location = {name: "Bangkok", contour: -1, lat: 13.75, lon: 100.46};
-        var dl_location = {name: "Bangkok", contour: -1, lat: 13.75, lon: 100.46};
-        var hpa = {size: 500, obo: -0.5, intermod: 30};
-        var bandwidth = 30;
-        var app = {
-            name: "DVB-S2",
-            acm: false,
-            minimum_symbol_rate: 1000,
-            maximum_symbol_rate: 30000,
-            roll_off_factor: [1.2, 1.35],
-            link_margin: 2,
-            default: true, // indicates that this application is a default for this modem
-            mcgs: [
-                {
-                    name: "QPSK 1/3",
-                    spectral_efficiency: 0.67,
-                    es_no: -0.5
-                },
-                {
-                    name: "QPSK 2/5",
-                    spectral_efficiency: 0.8,
-                    es_no: 0.5
-                },
-                {
-                    name: "QPSK 1/2",
-                    spectral_efficiency: 1,
-                    es_no: 1.8
-                },
-                {
-                    name: "QPSK 3/5",
-                    spectral_efficiency: 1.2,
-                    es_no: 3
-                },
-                {
-                    name: "QPSK 2/3",
-                    spectral_efficiency: 1.33,
-                    es_no: 3.9
-                },
-                {
-                    name: "QPSK 3/4",
-                    spectral_efficiency: 1.5,
-                    es_no: 4.8
-                },
-                {
-                    name: "QPSK 4/5",
-                    spectral_efficiency: 1.6,
-                    es_no: 5.5
-                },
-                {
-                    name: "QPSK 5/6",
-                    spectral_efficiency: 1.67,
-                    es_no: 6
-                },
-                {
-                    name: "8PSK 3/5",
-                    spectral_efficiency: 1.8,
-                    es_no: 6.5
-                },
-                {
-                    name: "8PSK 2/3",
-                    spectral_efficiency: 2,
-                    es_no: 7.6
-                },
-                {
-                    name: "8PSK 3/4",
-                    spectral_efficiency: 2.25,
-                    es_no: 8.9
-                },
-                {
-                    name: "8PSK 5/6",
-                    spectral_efficiency: 2.5,
-                    es_no: 10.4
-                },
-                {
-                    name: "8PSK 8/9",
-                    spectral_efficiency: 2.67,
-                    es_no: 11.7
-                },
-                {
-                    name: "8PSK 9/10",
-                    spectral_efficiency: 2.7,
-                    es_no: 12.2
-                }
-            ]
-        };
-        var mcg = {
-            name: "QPSK 1/2",
-            spectral_efficiency: 1,
-            es_no: 1.8
-        };
-        var clear_sky = {uplink: "clear", downlink: "clear"};
-        var rain = {uplink: "rain", downlink: "rain"};
-        var lm = 2;
-        var overused = 0;
-        var bt = 1.2;
-
-        console.log('Chan name: ' + channel1.name);
-
-        link.setUplinkAntenna(antenna1);
-        link.setUplinkHpa(hpa);
-        link.setUplinkLocation(ul_location);
-        link.setDownlinkAntenna(antenna2);
-        link.setDownlinkLocation(dl_location);
-        link.setApplication(app);
-        link.setChannel(channel1);
-        link.setMcg(mcg);
-        link.setBandwidth(bandwidth);
-        link.setRollOff(bt);
-        link.setCondition(rain);
-        link.setRequiredMargin(lm);
-        link.setOverusedPower(overused);
-        link.setUplinkAvailability(99.5);
-        link.setdownlinkAvailability(99.5);
-
-        var re = link.run();
-        console.log('Run = ' + JSON.stringify(re));
-        return re;
-        */
         var lb = new LinkBudget();
         return lb.calc(assumptions);
     }
@@ -138,165 +16,222 @@ function LinkBudget() {
 
     // Manage the input parameters from the input page, loop them and run each link
     return {
+        calc: function (data) {
 
-    calc: function(data) {
+            console.log("Input data is " + data);
 
-        console.log("Input data is " + data);
+            var channels = [], remote_antennas = [], remote_locations = [], bucs = [], downlink_adj_sat_interferences = [];
+            // check if user selects to find best channel, loop each lat/lon and find best channel first
+            if (data.findBestChannel) {
+                console.log("Finding best channels");
+                channels = GetBestChannels(data.satellite, data.remote_locations);
+            }
+            else {
+                // data.channels is array of channels from user selection
+                channels = data.channels;
+                console.log('Set channels = ' + channels);
 
-        var channels = [], remote_antennas = [], remote_locations = [], bucs = [];
-        // check if user selects to find best channel, loop each lat/lon and find best channel first
-        if (data.findBestChannel) {
-            console.log("Finding best channels");
-            channels = GetBestChannels(data.satellite, data.remote_locations);
-        }
-        else {
-            // data.channels is array of channels from user selection
-            channels = data.channels;
-            console.log('Set channels = ' + channels);
+            }
 
-        }
+            // check if user selects recommend antenna, if yes, calculates all standard antenna, from biggest to smallest
+            if (_.has(data, 'recommendAntenna') && data.recommendAntenna) {
+                console.log('User has selected recommend antenna.');
+                remote_antennas = Antennas.find({$query: {type: 'standard'}, $orderby: { size: -1}});
+            }
+            else {
+                remote_antennas = data.remote_antennas;
 
-        // check if user selects recommend antenna, if yes, calculates all standard antenna, from biggest to smallest
-        if (_.has(data, 'recommendAntenna') && data.recommendAntenna) {
-            console.log('User has selected recommend antenna.');
-            remote_antennas = Antennas.find({$query: {type: 'standard'}, $orderby: { size: -1}});
-        }
-        else {
-            remote_antennas = data.remote_antennas;
+            }
+            console.log('Set remote antennas = ' + _.pluck(remote_antennas, 'name'));
 
-        }
-        console.log('Set remote antennas = ' + _.pluck(remote_antennas,'name'));
+            // max contour...not implemented yet
 
-        // max contour...not implemented yet
+            // lat/lon locations
+            remote_locations = data.remote_locations;
+            console.log('Set remote locations = ' + remote_locations.join(','));
 
-        // lat/lon locations
-        remote_locations = data.remote_locations;
-        console.log('Set remote locations = ' + remote_locations.join(','));
+            // check if user selects recommend buc, if yes, calculates all standard buc, from biggest to smallest
+            if (_.has(data, 'recommendBuc') && data.recommendBuc) {
+                bucs = Bucs.find({$query: {vendor: 'standard'}, $orderby: { size: -1}});
+            }
+            else if (_.has(data, 'bucs')) {
+                bucs = data.bucs;
+            }
+            else {
+                bucs = [
+                    {}
+                ];
+            }
+            console.log('Set bucs = ' + _.pluck(bucs, 'name'));
 
-        // check if user selects recommend buc, if yes, calculates all standard buc, from biggest to smallest
-        if (_.has(data, 'recommendBuc') && data.recommendBuc) {
-            bucs = Bucs.find({$query: {vendor: 'standard'}, $orderby: { size: -1}});
-        }
-        else if (_.has(data, 'bucs')) {
-            bucs = data.bucs;
-        }
-        console.log('Set bucs = ' + _.pluck(bucs,'name'));
+            // setup the input parameters
+            var input = {
+                satellite: data.satellite,
+                platform: data.platform,
+                unit: data.unit
+            }
 
-        // setup the input parameters
-        var input = {
-            satellite: data.satellite,
-            platform: data.platform,
-            unit: data.unit
-        }
-
-        // check if user specifies to remove ACM function (select fix MCG at platform for IPSTAR satellite)
-        if (_.has(data, 'no_acm')){
-            _.each(input.platform.applications, function(app){
-               app.acm = false;
-            });
-            console.log('User has selected fixed mod and coding for this platform.')
-        }
+            // check if user specifies to remove ACM function (select fix MCG at platform for IPSTAR satellite)
+            if (_.has(data, 'no_acm')) {
+                _.each(input.platform.applications, function (app) {
+                    app.acm = !data.no_acm;
+                });
+                console.log('User has selected fixed mod and coding for this platform.')
+            }
 
 
-        // set bt product if user specifies it
-        if (_.has(data, 'bt')) {
-            input.bt = data.bt;
-            console.log('User has selected BT product ' + input.bt);
-        }
+            // set bt product if user specifies it
+            if (_.has(data, 'bt')) {
+                input.bt = data.bt;
+                console.log('User has selected BT product ' + input.bt);
+            }
 
-        // set link margin if user specifies it
-        if (_.has(data, 'link_margin')) {
-            input.link_margin = data.link_margin;
-            console.log('User has input link margin of ' + input.link_margin + ' db')
-        }
+            // set link margin if user specifies it
+            if (_.has(data, 'link_margin')) {
+                input.link_margin = data.link_margin;
+                console.log('User has input link margin of ' + input.link_margin + ' db')
+            }
 
-        // hub antenna and location is input only for conventional satellite
-        input.hub_antenna = _.has(data, 'hub_antenna') ? data.hub_antenna : {};
-        input.hub_location = _.has(data, 'hub_location') ? data.hub_location : {};
+            // hub antenna and location is input only for conventional satellite
+            input.hub_antenna = _.has(data, 'hub_antenna') ? data.hub_antenna : {};
+            input.hub_location = _.has(data, 'hub_location') ? data.hub_location : {};
 
-        console.log('Hub antenna = ' + input.hub_antenna);
-        console.log('Hub location = ' + input.hub_location);
+            console.log('Hub antenna = ' + input.hub_antenna);
+            console.log('Hub location = ' + input.hub_location);
 
-        var results = [];
 
-        // start looping each parameters
-        for (var i = 0; i < channels.length; i++) {
-            console.log('Start loop channel ' + channels[i]);
-            for (var i1 = 0; i1 < remote_locations.length; i1++) {
-                console.log('Start loop remote location ' + remote_locations[i1]);
-                for (var i2 = 0; i2 < remote_antennas.length; i2++) {
-                    console.log('Start loop remote antenna ' + remote_antennas[i2].name);
-                    for (var i3 = 0; i3 < data.bandwidths.length; i3++) {
-                        console.log('Start loop bandwidth: fwd ' + data.bandwidths[i3].fwd + ' ' + data.unit + ' rtn ' + data.bandwidths[i3].rtn + ' ' + data.unit );
-                        var fwd_result = {}, rtn_result = {};
+            var results = [];
 
-                        // setup the input parameters for each case
-                        input.channel = channels[i];
-                        input.remote_location = remote_locations[i1];
-                        input.remote_antenna = remote_antennas[i2];
+            // start looping each parameters
+            for (var i = 0; i < channels.length; i++) {
+                console.log('Start loop channel ' + channels[i]);
 
-                        // Hub to remote
+                for (var i1 = 0; i1 < remote_locations.length; i1++) {
+                    console.log('Start loop remote location ' + remote_locations[i1]);
+                    for (var i2 = 0; i2 < remote_antennas.length; i2++) {
+                        console.log('Start loop remote antenna ' + remote_antennas[i2].name);
+                        for (var i3 = 0; i3 < data.bandwidths.length; i3++) {
+                            console.log('Start loop bandwidth: fwd ' + data.bandwidths[i3].fwd + ' ' + data.unit + ' rtn ' + data.bandwidths[i3].rtn + ' ' + data.unit);
 
-                        input.bw = data.bandwidths[i3].fwd; // use the forward bandwidth
 
-                        // check if user fixes MCG, if yes, loop them and record results
-                        // the program allows users to select MCG for broadcast applications only
-                        if (_.has(data, 'fix_mcgs')) {
-                            for (var i4 = 0; i4 < data.fix_mcgs.length; i4++) {
-                                console.log('Start loop fix mcg ' + data.fix_mcgs[i4]);
-                                
-                                // find the mcg object from the application
-                                input.fix_mcg = data.fix_mcgs[i4];
-                                fwd_result = hub_to_remote(input);
+                            var fwd_result = {}, rtn_result = {};
+
+                            // setup the input parameters for each case
+                            input.remote_location = remote_locations[i1];
+                            input.remote_antenna = remote_antennas[i2];
+                            input.downlink_adj_sat_interferences = downlink_adj_sat_interferences[i4];
+
+                            // Hub to remote
+
+                            // The following query find the channel for the given satellite name, channel name and only channel which type is forward (IPSTAR) or broadcast (conventional)
+                            var fwd_channel = Channels.findOne({satellite: data.satellite, type: {$in: ['forward', 'broadcast']}, name: channels[i]});
+                            var fwd_downlink_adjacent_sat_channels = GetAdjacentSatelliteChannels(fwd_channel, "downlink");
+
+                            // Set FWD MCGs to be fixed if user input (as of now, only conventional BC allows fix MCG)
+                            var fwd_mcgs = [];
+                            if (_.has(data, 'fwd_fix_mcgs')) {
+                                fwd_mcgs = data.fwd_fix_mcgs;
+                            }
+                            else {
+                                fwd_mcgs.push({}); // put blank object to indicates no fix MCG
+                            }
+
+                            input.channel = fwd_channel;
+                            input.bw = data.bandwidths[i3].fwd; // use the forward bandwidth
+
+                            // loop through each condition of downlink adjacent satellite interferences
+
+                            for (var i6 = 0; i6 < fwd_downlink_adjacent_sat_channels.length; i6++) {
+
+                                console.log('Start loop forward downlink adj.sat : ' + (i6 + 1) + ' of ' + fwd_downlink_adjacent_sat_channels.length);
+
+                                // check if user fixes MCG, if yes, loop them and record results
+                                // the program allows users to select MCG for broadcast applications only
+                                input.downlink_adj_sat_interferences = fwd_downlink_adjacent_sat_channels[i6];
+
+                                for (var i4 = 0; i4 < fwd_mcgs.length; i4++) {
+
+                                    var fwd_mcg = fwd_mcgs[i4];
+                                    console.log('Start loop fix mcg ' + fwd_mcg);
+
+                                    // Set the fix MCG to the input if it is not an empty object
+                                    // This will be empty object for the case user doesn't select fix MCG
+                                    if (!_.isEmpty(fwd_mcg)) {
+                                        input.fix_mcg = fwd_mcg;
+                                    }
+
+                                    fwd_result = hub_to_remote(input);
+
+                                    // check if link requires remote to hub by checking if the platform is not broadcast
+                                    if (input.platform.applications[0].type !== 'Broadcast') {
+
+                                        // The following query find the channel for the given satellite name, channel name and only channel which type is forward (IPSTAR) or broadcast (conventional)
+                                        console.log('Finding channel for name = ' + channels[i] + ' satellite = ' + data.satellite);
+                                        var rtn_channel = Channels.findOne({satellite: data.satellite, type: {$in: ['return', 'broadcast']}, name: channels[i]});
+                                        var rtn_downlink_adjacent_sat_channels = GetAdjacentSatelliteChannels(rtn_channel, "downlink");
+                                        var rtn_fix_mcgs = [
+                                            {}
+                                        ]; // it will always be array with 1 empty object as of now
+
+                                        input.channel = rtn_channel;
+                                        input.bw = data.bandwidths[i3].rtn; // use the return bandwidth
+
+                                        // loop through each condition of downlink adjacent satellite interferences
+                                        for (var i9 = 0; i9 < rtn_downlink_adjacent_sat_channels.length; i9++) {
+
+                                            input.downlink_adj_sat_interferences = rtn_downlink_adjacent_sat_channels[i9];
+                                            console.log('Start loop return downlink adj.sat : ' + (i9 + 1) + ' of ' + rtn_downlink_adjacent_sat_channels.length);
+
+                                            // loop through return fix mcg
+                                            for (var i10 = 0; i10 < rtn_fix_mcgs.length; i10++) {
+
+                                                console.log('Start loop return mcg');
+                                                var rtn_mcg = rtn_fix_mcgs[i10];
+                                                if (!_.isEmpty(rtn_mcg)) {
+                                                    input.fix_mcg = rtn_mcg;
+                                                }
+
+                                                // loop buc if any (IPSTAR satellite link budget will find calculate for each BUC, while conventional VSAT assume BUC power is enough)
+                                                for (var i5 = 0; i5 < bucs.length; i5++) {
+
+                                                    console.log('Start loop buc ' + (i5 + 1) + ' of ' + bucs.length);
+                                                    input.buc = bucs[i5];
+                                                    rtn_result = remote_to_hub(input);
+
+                                                    // store the result to array
+                                                    results.push({fwd: fwd_result, rtn: rtn_result});
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
 
                                 // store the result to the array as there would be no remote to hub for BC apps
                                 results.push({fwd: fwd_result, rtn: rtn_result});
                             }
                         }
-                        else {
-                            fwd_result = hub_to_remote(input);
-
-                            // check if link requires remote to hub by checking if the platform is not broadcast
-                            if (input.platform.applications[0].type !== 'Broadcast') {
-
-                                input.bw = data.bandwidths[i3].rtn; // use the forward bandwidth
-
-                                // loop buc if any (IPSTAR satellite link budget will find calculate for each BUC, while conventional VSAT assume BUC power is enough)
-                                if (bucs.length != 0) {
-                                    for (var i5 = 0; i5 < bucs.length; i5++) {
-                                        input.buc = bucs[i5];
-                                        rtn_result = remote_to_hub(input);
-
-                                        // store the result to array
-                                        results.push({fwd: fwd_result, rtn: rtn_result});
-                                    }
-                                }
-                                else {
-                                    rtn_result = remote_to_hub(input);
-                                    results.push({fwd: fwd_result, rtn: rtn_result});
-                                }
-                            }
-
-                        }
-
                     }
+
+
                 }
             }
-        }
 
-        return results;
+            return results;
+        }
     }
 
-    };
 
-    // Calculates the link from hub to remote
+
+
+// Calculates the link from hub to remote
     function hub_to_remote(data) {
-        
+
         LogTitle('Start hub to remote');
         console.log('input = ' + data);
 
-        var uplink_ant = {}, uplink_hpa = {}, uplink_loc = {}, uplink_avail = 99.5;
-        var downlink_ant = {}, downlink_loc = {}, downlink_avail = 99.5;
+        var uplink_ant = {}, uplink_hpa = {}, uplink_loc = {}, uplink_avail = 99.5, uplink_diversity = {};
+        var downlink_ant = {}, downlink_loc = {}, downlink_avail = 99.5, downlink_diversity = {}
 
         // ------------------------- Channel -----------------------------------------------
 
@@ -304,10 +239,8 @@ function LinkBudget() {
         // If the input is "1G", "C01" or other conventional transponders, grab that transponder
         // If the input is "207, "514" or other IPSTAR transponders, search the name for forward channel
 
-        // The following query find the channel for the given satellite name, channel name and only channel which type is forward (IPSTAR) or broadcast (conventional)
-        console.log('Finding channel for name = ' + data.channel + ' satellite = ' + data.satellite);
-        var channel = Channels.findOne({satellite: data.satellite, type: {$in: ['forward', 'broadcast']}, name: data.channel});
-        
+
+        var channel = data.channel;
         console.log('Set forward channel = ' + channel.name);
 
         if (!channel) {
@@ -325,10 +258,16 @@ function LinkBudget() {
             uplink_loc = {lat: gateway.lat, lon: gateway.lon, contour: -1, name: gateway.city}; // Assume -1 dB relative contour at this stage
             uplink_avail = gateway.gateway_availability; // default availability from database
             downlink_avail = gateway.remote_availability; // default availability from database
+
+            // check if gateway has site diversity
+            if (_.has(gateway, 'site_diversity')) {
+                uplink_diversity = gateway.site_diversity;
+            }
+
         }
         // Else, the uplink parameters come from user input (such as for conventional)
         else {
-            uplink_ant = data.hub_antenna, uplink_hpa.size = 2000, uplink_hpa.type = "hpa"; // assume there is enough HPA
+            uplink_ant = data.hub_antenna, uplink_hpa.size = 2000, uplink_hpa.category = "hpa"; // assume there is enough HPA
 
             // Find the relative contour from satellite and given location
             uplink_loc = GetLocationObject(channel, data.hub_location, "uplink");
@@ -355,7 +294,7 @@ function LinkBudget() {
 
         downlink_ant = data.remote_antenna;
         downlink_loc = GetLocationObject(channel, data.remote_location, "downlink");
-        
+
         console.log('Set downlink ant = ' + downlink_ant.name);
         console.log('Set downlink loc = ' + downlink_loc.name);
 
@@ -366,14 +305,14 @@ function LinkBudget() {
         var fwd_app = _.where(data.platform.applications, {type: 'forward'});
         // if forward app is found, use that app, otherwise use an only app in that platform
         var app = fwd_app.length != 0 ? fwd_app[0] : data.platform.applications[0];
-        
+
         console.log('Set app = ' + app.name);
-        
+
         // check if user fix mcg, if yes, calculate on this fix mcg. If not, try all MCGs available in that application
         var mcgs = [];
         if (_.has(data, 'fix_mcg')) {
             // find mcg object from the mcg name
-            var mcg = _.where(app.mcgs,{name:data.fix_mcg})[0];
+            var mcg = _.where(app.mcgs, {name: data.fix_mcg})[0];
             mcgs.push(mcg); // push a fix mcg to an array
             console.log('Calculate on this fix MCG: ' + mcgs[0].name + ' only.');
         }
@@ -387,20 +326,18 @@ function LinkBudget() {
 
         // check if user specifies the required link margin at clear sky, if not, use the app default link margin
         var link_margin = _.has(data, 'link_margin') ? data.link_margin : app.link_margin;
-        console.log ('Set link margin to ' + link_margin + ' dB');
+        console.log('Set link margin to ' + link_margin + ' dB');
 
         // check if user specifies the required bt, if not, use the app default bt
         var bt = _.has(data, 'bt') ? data.bt : app.roll_off_factor;
         console.log('BT = ' + bt);
 
         // loop through all MCG
-        _.each(mcgs, function (mcg) {
-
+        for (var i = 0; i < mcgs.length; i++) {
+            var mcg = mcgs[i];
             LogTitle('Start loop MCG ' + mcg.name);
-
             var bw = get_bandwidth(app, mcg, data.unit, data.bw, bt);
             console.log('Bandwidth for mcg ' + mcg.name + ' and ' + data.bw + ' ' + data.unit + ' = ' + bw + ' MHz');
-
             var link_data = {
                 uplink_antenna: uplink_ant,
                 uplink_hpa: uplink_hpa,
@@ -415,37 +352,55 @@ function LinkBudget() {
                 link_margin: link_margin,
                 overused_power: 0, // as of now, not consider overused power yet
                 uplink_availability: uplink_avail,
-                downlink_availability: downlink_avail
+                downlink_availability: downlink_avail,
+                downlink_adj_sat_interferences: data.downlink_adj_sat_interferences,
+                uplink_diversity: uplink_diversity,
+                downlink_diversity: downlink_diversity,
+                last_mcg: i == mcgs.length - 1 // indicates that this is the last MCG
             }
-
-            var results = run_link(link_data);
-
-            // if fix mcg (run 1 code) return the result right away
-            if (_.has(data, 'fix_mcg')) {
-                LogTitle('End hub to remote');
-                return results;
+            var cases = run_link(link_data);
+            // if run_link return false, we continue to the next mcg.
+            // This is the case where we calculate ACM applications and looping all MCG from best to worst and this MCG does not pass at clear sky
+            // So we just skip this result
+            if (!cases) {
+                continue;
             }
+            else {
+                return cases;
+                /*
+                 // if fix mcg (run 1 code) return the result right away
+                 if (_.has(data, 'fix_mcg')) {
+                 LogTitle('End hub to remote');
+                 return cases;
+                 }
+                 _.each(cases, function (c) {
+                 console.log('uplink = ' + c.uplink_condition + " , downlink = " + c.downlink_condition);
+                 })
+                 //console.log(JSON.stringify(cases));
 
-            // if not fix mcg (run all codes), check if the clear sky result and both fade pass condition
-            var clr_result = _.filter(results, function (re) {
-                return re.condition.uplink === "clear" && re.condition.downlink === "clear";
-            })[0];
-            var rain_result = _.filter(results, function (re) {
-                return re.condition.uplink === "rain" && re.condition.downlink === "rain";
-            })[0];
+                 // if not fix mcg (run all codes), check if the clear sky result and both fade pass condition
+                 var clr_result = _.filter(cases, function (re) {
+                 return re.uplink_condition === "clear" && re.downlink_condition === "clear";
+                 })[0];
+                 var rain_result = _.filter(cases, function (re) {
+                 return re.uplink_condition === "rain" && re.downlink_condition === "rain";
+                 })[0];
 
-            // if both clear and rain pass condition, return the result (not continue for remaining mcgs as we find the pass one)
-            if (clr_result.pass && rain_result.pass) {
-                console.log('Both clear sky and rain pass result.');
-                LogTitle('End hub to remote');
-                return results;
+                 // if both clear and rain pass condition, return the result (not continue for remaining mcgs as we find the pass one)
+                 if (clr_result.pass && rain_result.pass) {
+                 console.log('Both clear sky and rain pass result.');
+                 LogTitle('End hub to remote');
+                 return cases;
+                 }
+                 else if (i == mcgs.length - 1) { // last MCG
+                 LogTitle('This is the last MCG already');
+                 return cases;
+                 }
+                 else {
+                 }
+                 */
             }
-
-        })
-
-        // if the code reaches here, it means that no result is returned (run all codes, but any MCG cannot pass condition)
-        return false;
-
+        }
     }
 
 // Calculates the link from remote to hub
@@ -453,8 +408,8 @@ function LinkBudget() {
 
         LogTitle('Start remote to hub');
 
-        var uplink_ant = {}, uplink_hpa = {}, uplink_loc = {}, uplink_avail = 99.5;
-        var downlink_ant = {}, downlink_loc = {}, downlink_avail = 99.5;
+        var uplink_ant = {}, uplink_hpa = {}, uplink_loc = {}, uplink_avail = 99.5, uplink_diversity = {};
+        var downlink_ant = {}, downlink_loc = {}, downlink_avail = 99.5, downlink_diversity = {};
 
         // ------------------------- Channel -----------------------------------------------
 
@@ -462,10 +417,9 @@ function LinkBudget() {
         // If the input is "1G", "C01" or other conventional transponders, grab that transponder
         // If the input is "207, "514" or other IPSTAR transponders, search the name for return channel
 
-        // The following query find the channel for the given satellite name, channel name and only channel which type is forward (IPSTAR) or broadcast (conventional)
-        var channel = Channels.findOne({satellite: data.satellite, type: {$in: ['return', 'broadcast']}, name: data.channel});
-        console.log('Set channel = ' + channel);
-        
+        var channel = data.channel;
+
+
         if (!channel) {
             console.log('Channel is not found.');
         }
@@ -493,6 +447,10 @@ function LinkBudget() {
             downlink_loc = {lat: gateway.lat, lon: gateway.lon, contour: -1, name: gateway.city}; // Assume -1 dB relative contour at this stage
             uplink_avail = gateway.remote_availability; // default availability from database
             downlink_avail = gateway.gateway_availability; // default availability from database
+
+            if (_.has(gateway, 'site_diversity')) {
+                downlink_diversity = gateway.site_diversity;
+            }
         }
         // Else, the uplink parameters come from user input (such as for conventional)
         else {
@@ -513,8 +471,9 @@ function LinkBudget() {
                 console.log('No default link avail is found, set to 99.5');
             }
         }
+
         console.log('Set downlink parameters: ant = ' + downlink_ant);
-        console.log('Uplink location = ' + downlink_loc + " , up avail = " + uplink_avail + "% , down avail = " + downlink_avail + "%");
+        console.log('Downlink location = ' + downlink_loc + " , up avail = " + uplink_avail + "% , down avail = " + downlink_avail + "%");
 
 
         // set the application of this link to the return one (for outbound-inbound systems)
@@ -528,7 +487,7 @@ function LinkBudget() {
         // check if user fix mcg, if yes, calculate on this fix mcg. If not, try all MCGs available in that application
         var mcgs = [];
         if (_.has(data, 'fix_mcg')) {
-            var mcg = _.where(app.mcgs,{name:data.fix_mcg})[0];
+            var mcg = _.where(app.mcgs, {name: data.fix_mcg})[0];
             mcgs.push(mcg); // push a fix mcg to an array
             console.log('Calculate on this fix MCG ' + mcgs[0].name + ' only.');
         }
@@ -549,14 +508,13 @@ function LinkBudget() {
         var bt = _.has(data, 'bt') ? data.bt : app.roll_off_factor;
         console.log('BT = ' + bt);
 
+        // loop through all adjacent satellite interferences
         // loop through all MCG
-        _.each(mcgs, function (mcg) {
-
+        for (var i = 0; i < mcgs.length; i++) {
+            var mcg = mcgs[i];
             LogTitle('Start loop MCG ' + mcg.name);
-
             var bw = get_bandwidth(app, mcg, data.unit, data.bw, bt);
             console.log('Bandwidth for mcg ' + mcg + ' and ' + data.bw + ' ' + data.unit + ' = ' + bw + ' MHz');
-
             var link_data = {
                 uplink_antenna: uplink_ant,
                 uplink_hpa: uplink_hpa,
@@ -571,38 +529,49 @@ function LinkBudget() {
                 link_margin: link_margin,
                 overused_power: 0, // as of now, not consider overused power yet
                 uplink_availability: uplink_avail,
-                downlink_availability: downlink_avail
+                downlink_availability: downlink_avail,
+                uplink_diversity: uplink_diversity,
+                downlink_diversity: downlink_diversity,
+                downlink_adj_sat_interferences: data.downlink_adj_sat_interferences,
+                last_mcg: i == mcgs.length - 1 // indicates that this is the last MCG
             }
-
-            var results = run_link(link_data);
-
-            // if fix mcg (run 1 code) return the result right away
-            if (_.has(data, 'fix_mcg')) {
-                LogTitle('End remote to Hub');
-                return results;
+            var cases = run_link(link_data);
+            // if run_link return false, we continue to the next mcg.
+            // This is the case where we calculate ACM applications and looping all MCG from best to worst and this MCG does not pass at clear sky
+            // So we just skip this result
+            if (!cases) {
+                continue;
             }
+            else {
+                /*
+                 // if fix mcg (run 1 code) return the result right away
+                 if (_.has(data, 'fix_mcg')) {
+                 LogTitle('End remote to Hub');
+                 return cases;
+                 }
 
-            // if not fix mcg (run all codes), check if the clear sky result and both fade pass condition
-            var clr_result = _.filter(results, function (re) {
-                return re.condition.uplink === "clear" && re.condition.downlink === "clear";
-            })[0];
-            var rain_result = _.filter(results, function (re) {
-                return re.condition.uplink === "rain" && re.condition.downlink === "rain";
-            })[0];
+                 // if not fix mcg (run all codes), check if the clear sky result and both fade pass condition
+                 var clr_result = _.filter(cases, function (re) {
+                 return re.uplink_condition === "clear" && re.downlink_condition === "clear";
+                 })[0];
+                 var rain_result = _.filter(cases, function (re) {
+                 return re.uplink_condition === "rain" && re.downlink_condition === "rain";
+                 })[0];
 
-            // if both clear and rain pass condition, return the result (not continue for remaining mcgs as we find the pass one)
-            if (clr_result.pass && rain_result.pass) {
-                LogTitle('End remote to hub');
-                return results;
+                 // if both clear and rain pass condition, return the result (not continue for remaining mcgs as we find the pass one)
+                 if (clr_result.pass && rain_result.pass) {
+                 LogTitle('End remote to hub');
+                 return cases;
+                 }
+                 else if (i == mcgs.length - 1) {
+                 LogTitle("This is the last MCG already");
+                 return cases;
+                 }
+                 */
+                return cases;
             }
-
-        })
-
-        // if the code reaches here, it means that no result is returned (run all codes, but any MCG cannot pass condition)
-        return false;
-
+        }
     }
-
 
 // for one set of assumptions, run the link 4 times (clear sky, up fade, down fade, both fade)
     function run_link(data) {
@@ -612,7 +581,7 @@ function LinkBudget() {
         var down_fade = {uplink: "clear", downlink: "rain"};
         var both_fade = {uplink: "rain", downlink: "rain"};
 
-        var results = [];
+        var calculations = [];
         var mylink = new Link();
         // Set other assumptions except the condition to the link
         mylink.setUplinkAntenna(data.uplink_antenna);
@@ -625,37 +594,60 @@ function LinkBudget() {
         mylink.setBandwidth(data.bandwidth);
         mylink.setRollOff(data.bt);
         mylink.setMcg(data.mcg);
+        mylink.setMcgClearSky(data.mcg);
         mylink.setRequiredMargin(data.link_margin);
         mylink.setOverusedPower(data.overused_power);
         mylink.setUplinkAvailability(data.uplink_availability);
-        mylink.setdownlinkAvailability(data.downlink_availability);
+        mylink.setDownlinkAvailability(data.downlink_availability);
+        mylink.setDownlinkAdjSatInterferences(data.downlink_adj_sat_interferences);
+
+        if (_.has(data, 'uplink_diversity')) mylink.setUplinkDiversity(data.uplink_diversity);
+        if (_.has(data, 'downlink_diversity')) mylink.setDownlinkDiversity(data.downlink_diversity);
 
         // Set condition and run link 1 time for each condition
         mylink.setCondition(clear_sky);
         console.log('------------------------------------');
         console.log('Run link at clear sky.');
         console.log('------------------------------------');
-        results.push(mylink.run());
+        var clear_re = mylink.run();
+        calculations.push(clear_re);
+        console.log("Clear sky result = " + JSON.stringify(clear_re));
+
+        // continue to run the link for rain if clear sky is passed or this is last mcg
+        if (!clear_re.pass && !data.last_mcg) {
+            return false;
+        }
+
+        mylink.setCondition(both_fade);
+        mylink.setRequiredMargin(0); // Set link margin = 0 for both fade
+        console.log('------------------------------------');
+        console.log('Run link at both fade');
+        console.log('------------------------------------');
+        var both_fade_re = mylink.run();
+        calculations.push(both_fade_re);
+        console.log("Both fade result = " + JSON.stringify(both_fade_re));
+
+        if (!both_fade_re.pass && !data.last_mcg) {
+            return false;
+        }
 
         mylink.setCondition(up_fade);
         console.log('------------------------------------');
         console.log('Run link at up fade');
         console.log('------------------------------------');
-        results.push(mylink.run());
+        var up_fade_re = mylink.run();
+        calculations.push(up_fade_re);
+        console.log("Up fade result = " + JSON.stringify(up_fade_re));
 
         mylink.setCondition(down_fade);
         console.log('------------------------------------');
         console.log('Run link at down fade');
         console.log('------------------------------------');
-        results.push(mylink.run());
+        var down_fade_re = mylink.run();
+        calculations.push(down_fade_re);
+        console.log("Down fade result = " + JSON.stringify(down_fade_re));
 
-        mylink.setCondition(both_fade);
-        console.log('------------------------------------');
-        console.log('Run link at both fade');
-        console.log('------------------------------------');
-        results.push(mylink.run());
-
-        return results;
+        return calculations;
 
     }
 
@@ -702,7 +694,7 @@ function LinkBudget() {
         // check if symbol rate is among the list of available symbol rates in the app
         else {
             // if the app does not contain the symbol rate property, it means the symbol can be any value (between min and max)
-            if(!(_.has(app,'symbol_rates'))){
+            if (!(_.has(app, 'symbol_rates'))) {
                 sr_2 = sr;
             }
             else if (_.contains(app.symbol_rates, sr)) {
@@ -723,8 +715,8 @@ function LinkBudget() {
         return (sr_2 / 1024) * bt;
 
     }
-}
 
+}
 
 // Class to calculate 1 link (clear sky and rain fade is considered 2 separate links)
 
@@ -743,41 +735,52 @@ function Link() {
     var application = {};
     var bandwidth = 0;
     var mcg = {};
+    var mcg_clr = {};
     var roll_off_factor = 1.2;
     var condition = {uplink: "clear", downlink: "clear"}
     var required_margin = 2;
     var overused_power = 0;
     var uplink_availability = 99.5;
     var downlink_availability = 99.5;
+    var downlink_adj_sat_interferences = {};
+    var uplink_diversity = {};
+    var downlink_diversity = {};
     this.errorMessage = "";
-    var result = {};
-
-    // -------------- Class Properties ----------------------
-    var isRainCase = condition.uplink === "clear" && condition.downlink === "clear";
-    var hasAcm = _.has(application, 'acm') || application.acm;
-    var hasDynamicChannels = _.has(application, 'dynamic_channels') || application.dynamic_channels;
 
     // ---------------- Run Program --------------------------
 
     this.run = function () {
 
         // check if this is rain fade case
-        if (isRainCase) {
+        if (condition.uplink === "rain" || condition.downlink === "rain") {
+
             // if the application has ACM mode, the rain fade condition loops through MCG lower than MCG at clear sky
-            // and calculates the link
-            if (hasAcm) {
-                var lowerMcgs = getLowerMcgThanClearSky();
+            // and calculates the link (same bandwidth, change mcg)
+            LogTitle("This is rain fade case.");
+            if (_.has(application, 'acm') && application.acm) {
+                LogTitle("This application has ACM");
+                // get sorted MCG array from best to worst
+                var lowerMcgs = getLowerMcgThanClearSky(mcg_clr);
                 // there is any MCG lower than clear sky
                 if (lowerMcgs.length > 0) {
-                    var results = [];
-                    _.each(getLowerMcgThanClearSky(), function (mcg) {
-                        mcg = mcg;
-                        results.push(calculate());
-                    })
-                    // Filter result with 2 requirements, pass margin and max data rate
-                    return _.max(_.where(results, {pass: true}), function (item) {
-                        return item.data_rate;
-                    })[0];
+
+                    // Loop through MCG from best to worst, if the result pass, return it. Or if it is the last MCG, returns it.
+                    // Since we sort from best to worst, the first MCG that makes the link pass is the best condition
+                    for (var i = 0; i < lowerMcgs.length; i++) {
+                        mcg = lowerMcgs[i];
+                        LogTitle("Find the result for uplink = " + condition.uplink + " downlink = " + condition.downlink + " at MCG = " + lowerMcgs[i].name);
+                        var re = calculate();
+                        if (re.pass || i == lowerMcgs.length - 1) {
+                            return re;
+                        }
+                    }
+                    /*
+                     var passResults = _.where(results, {pass: true});
+                     var maxPass = _.max(passResults, function(item){
+                     return item.data_rate;
+                     });
+                     return maxPass;
+                     */
                 }
                 // the MCG at clear sky is already the minimum one
                 else {
@@ -787,9 +790,10 @@ function Link() {
             }
             // if the application has dynamic channels (or adaptive-TDMA or whatever technology which allows the return
             // link to change both MCG and bandwidth, loop through MCG and symbol rates available to find the best
-            else if (hasDynamicChannels) {
-                var lowerMcgs = getLowerMcgThanClearSky();
-                var lowerBw = getLowerBandwidth();
+            else if (_.has(application, 'dynamic_channels') && application.dynamic_channels) {
+                LogTitle('This application has dynamic channels');
+                var lowerMcgs = getLowerMcgThanClearSky(mcg_clr);
+                var lowerBw = getLowerBandwidth(bandwidth);
                 var results = [];
                 _.each(lowerMcgs, function (mcg) {
                     _.each(lowerBw, function (bw) {
@@ -801,11 +805,16 @@ function Link() {
                 // Filter result with 2 requirements, pass margin and max data rate
                 return _.max(_.where(results, {pass: true}), function (item) {
                     return item.data_rate;
-                })[0];
+                });
             }
             else {
                 return calculate();
             }
+        }
+
+        else {
+            LogTitle("This is clear sky case");
+            return calculate();
         }
 
     }
@@ -814,8 +823,7 @@ function Link() {
 
     var calculate = function () {
 
-        record('channel', channel.name);
-        record('channel_mode', channel.mode);
+        var result = {};
 
         var satellite = Satellites.findOne({name: channel.satellite});
         var orbital_slot = satellite.orbital_slot;
@@ -831,7 +839,7 @@ function Link() {
         var uplink_freq = channel.uplink_cf;
         var uplink_slant_range = slantRange(uplink_station.location, orbital_slot);
         var uplink_elevation_angle = elevationAngle(uplink_station.location, orbital_slot);
-        var uplink_xpolLoss = xpolLoss(), uplink_pointingLoss = pointingLoss(uplink_freq,uplink_station.antenna.size, skb);
+        var uplink_xpolLoss = xpolLoss(), uplink_pointingLoss = pointingLoss(uplink_freq, uplink_station.antenna.size, skb);
         var uplink_atmLoss = atmosphericLoss({
             condition: condition.uplink,
             location: uplink_station.location,
@@ -845,7 +853,7 @@ function Link() {
         var uplink_spreadingLoss = spreadingLoss(uplink_slant_range);
         var uplink_gt = channel.gt_peak + uplink_station.location.contour;
 
-        var operating_sfd = 0, operating_pfd = 0, eirp_up = 0, carrier_pfd = 0, carrier_output_backoff = 0;
+        var operating_sfd = 0, operating_pfd_per_carrier = 0, eirp_up = 0, carrier_pfd = 0, carrier_output_backoff = 0;
 
         // If channel is FGM, find operating PFD at 100% utilization
 
@@ -858,17 +866,10 @@ function Link() {
             // SFD in the database is the -X value of -X-G/T (derived from -(X+G/T)
             // Operating PFD = -(X + G/T) - (Atten.Range - defaultAtten) + TransponderIBO - Backoff from bandwidth
             operating_sfd = channel.sfd - uplink_gt - (channel.atten_range - channel.default_atten);
-            operating_pfd = operating_sfd + backoff_settings.ibo - num_carriers_in_channel;
-
-            record('operating_sfd', operating_sfd);
-            record('operating_pfd', operating_pfd);
-            record('channel_sfd', channel.sfd);
-            record('channel_atten_range', channel.atten_range);
-            record('channel_default_atten', channel.default_atten);
-            record('channel_ibo', backoff_settings.ibo);
+            operating_pfd_per_carrier = operating_sfd + backoff_settings.ibo - num_carriers_in_channel;
 
             // Derive EIRP up (at ground station) needed to compensate spreading loss, pointing, xpol and atmoshperic loss
-            eirp_up = operating_pfd + uplink_spreadingLoss + uplink_otherLoss + uplink_atmLoss
+            eirp_up = operating_pfd_per_carrier + uplink_spreadingLoss + uplink_otherLoss + uplink_atmLoss
 
             // Apply overused power (for normal case, overused power = 0). It will be more than 0 when we're goal seeking
             // the amount of power-utilization to pass the margin
@@ -893,10 +894,19 @@ function Link() {
             carrier_pfd = eirp_up - uplink_spreadingLoss - uplink_otherLoss - uplink_atmLoss;
 
             // Find carrier output backoff = transponder obo + (carrier input backoff)
-            carrier_output_backoff = backoff_settings.obo + (carrier_pfd - operating_sfd);
+            //carrier_output_backoff = backoff_settings.obo + (carrier_pfd - operating_sfd);
+            var op_pfd = operating_sfd + backoff_settings.ibo;
 
-            record('carrier_pfd', carrier_pfd);
-            record('carrier_obo', carrier_output_backoff);
+            // if PFD of carrier is higher than operating PFD per transponder (such as too much overused)
+            // return transponder obo (maximum backoff)
+
+            if (carrier_pfd > op_pfd) {
+                carrier_output_backoff = backoff_settings.obo;
+            }
+            else {
+                carrier_output_backoff = backoff_settings.obo + (carrier_pfd - op_pfd);
+            }
+
         }
 
         // If channel is ALC, find operating PFD at desired deep-in
@@ -908,20 +918,20 @@ function Link() {
             // For IPSTAR FWD Link, the data is stored in format fixed gateway EIRP Up
             if (_.has(channel, 'eirp_up_channel')) {
                 eirp_up = channel.eirp_up_channel - num_carriers_in_channel;
-                operating_pfd = eirp_up - uplink_spreadingLoss - uplink_otherLoss;
+                operating_pfd_per_carrier = eirp_up - uplink_spreadingLoss - uplink_otherLoss;
             }
 
             // For other ALC transponders, the data is stored in desired deep-in value
             // so, we find PFD at designed deepin first, then derive for EIRP up
             // the derived EIRP up will need to compensate spreading loss, pointing, xpol and atmoshperic loss
             else {
-                operating_pfd = operating_sfd - channel.dynamic_range + channel.designed_deepin - num_carriers_in_channel;
-                eirp_up = operating_pfd + uplink_spreadingLoss + uplink_otherLoss + uplink_atmLoss;
+                operating_pfd_per_carrier = operating_sfd - channel.dynamic_range + channel.designed_deepin - num_carriers_in_channel;
+                eirp_up = operating_pfd_per_carrier + uplink_spreadingLoss + uplink_otherLoss + uplink_atmLoss;
             }
 
             // check if it's rain fade case and uplink station hpa has UPC (such as gateways), increase EIRP up by that UPC
             if (condition.uplink === "rain" && _.has(uplink_station.hpa, 'upc')) {
-                    eirp_up += uplink_station.hpa.upc;
+                eirp_up += uplink_station.hpa.upc;
 
             }
 
@@ -930,7 +940,7 @@ function Link() {
             eirp_up += overused_power;
 
             // Check if the uplink HPA is BUC type. If yes, use the uplink power of that BUC (use 100% of BUC power instead of show the result of desired EIRP level)
-            if (_.has(uplink_station.hpa, 'type') && uplink_station.hpa.type.toLowerCase() == 'buc') {
+            if (_.has(uplink_station.hpa, 'category') && uplink_station.hpa.category.toLowerCase() == 'buc') {
                 // check if eirp of this buc & antenna can reach the desired level
                 var eirp_up_from_buc = eirp_uplink(uplink_station.hpa, uplink_station.antenna, uplink_freq);
                 if (eirp_up > eirp_up_from_buc) {
@@ -949,19 +959,17 @@ function Link() {
             var channel_pfd = carrier_pfd + num_carriers_in_channel;
             var channel_deepin = channel_pfd - (operating_sfd - channel.dynamic_range);
 
-            // set carrier output backoff to the full-load OBO of the channel
-            carrier_output_backoff = channel.full_load_obo;
+            // set carrier output backoff to the OBO at backoff settings based on current load
+            // normally for Conventional Ku-ALC is single carrier and IPSTAR is multi carrier
+            carrier_output_backoff = _.where(channel.backoff_settings, {"num_carriers": channel.current_num_carriers})[0].obo;
 
             // If the pfd not reach deep-in, output backoff is increased to that amount out of deepin
             carrier_output_backoff += channel_deepin > 0 ? 0 : channel_deepin;
             carrier_output_backoff -= num_carriers_in_channel;
 
-            record('operating_sfd', operating_sfd);
-            record('operating_pfd', operating_pfd);
-            record('channel_pfd', channel_pfd);
-            record('channel_deepin', channel_deepin);
-            record('carrier_obo', carrier_output_backoff);
-            record('carrier_pfd', carrier_pfd);
+            _.extend(result, {
+                channel_deepin: channel_deepin
+            });
 
         }
 
@@ -978,7 +986,7 @@ function Link() {
 
         console.log('-------Power optimization---------');
         console.log('Operating SFD ' + operating_sfd + ' dBW/m^2');
-        console.log('Operating PFD ' + operating_pfd + ' dBW/m^2');
+        console.log('Operating PFD ' + operating_pfd_per_carrier + ' dBW/m^2');
         console.log('Channel PFD ' + channel_pfd + ' dBW/m^2');
         console.log('Carrier OBO ' + carrier_output_backoff + ' dB');
         console.log('Carrier PFD ' + carrier_pfd + ' dBW/m^2');
@@ -992,12 +1000,6 @@ function Link() {
         console.log('Path Loss: ' + uplink_path_loss + ' dB');
         console.log('Noise BW: ' + noiseBw + ' dB');
         console.log('C/N uplink ' + cn_uplink + ' dB');
-        record('uplink_condition', condition.uplink);
-        record('uplink_atmLoss', uplink_atmLoss);
-        record('uplink_eirp', eirp_up);
-        record('uplink_gt', uplink_gt);
-        record('uplink_path_loss', uplink_path_loss);
-        record('cn_uplink', cn_uplink);
 
         // ---------------------------------- Downlink ---------------------------------------------
 
@@ -1045,9 +1047,6 @@ function Link() {
             console.log("Antenna Temp: " + ant_temp + " K");
             console.log("System Temp: " + sys_temp + " K");
             console.log("Ant Gain: " + ant_gain + "dBi");
-            record('antenna_temp', ant_temp);
-            record('system_temp', sys_temp);
-            record('ant_gain', ant_gain);
 
         }
 
@@ -1064,20 +1063,82 @@ function Link() {
         console.log('Path Loss ' + downlink_path_loss + ' dB');
         console.log('Noise BW ' + noiseBw + ' dB');
         console.log('C/N Downlink ' + cn_downlink + ' dB');
-        record('downlink_condition', condition.downlink);
-        record('downlink_atmLoss', downlink_atmLoss);
-        record('downlink_eirp', carrier_eirp_down_at_loc);
-        record('downlink_gt', ant_gt);
-        record('downlink_path_loss', downlink_path_loss);
-        record('cn_downlink', cn_downlink);
-
 
         // ---------------------------------- Interferences ---------------------------------------------
 
+        // -------------------------------Uplink Interferences ---------------------------------------------
+
+        // C/I Intermod from HPA, C/I Adjacent satellite
+        // If uplink HPA, do not have C/I intermod specified, assume it is 25
+        var ci_uplink_intermod = _.has(uplink_station.hpa, 'intermod') ? uplink_station.hpa.intermod : 25;
+
+        // Uplink adjacent satellite interferences
+        // uplink adjacent satellite interferences
+        var ci_uplink_adj_sat_obj = ci_adjacent_satellite({
+            path: "uplink",
+            channel: channel,
+            interference_channels: [],
+            eirp_density: eirp_up - 10 * log10(bandwidth * Math.pow(10,6)),
+            location: uplink_station.location,
+            diameter: uplink_station.antenna.size,
+            orbital_slot: orbital_slot
+        });
+        var ci_uplink_adj_sat = ci_uplink_adj_sat_obj.ci;
+
+        // Uplink cross-polarization interferences
+        var ci_uplink_xpol = 30; // default, assume the antenna points correctly
+
+        // Uplink cross cells interferences
+        var ci_uplink_xcells = ci_cross_cells(channel, "uplink", uplink_station.location);
+
+        // -------------------------------Downlink Interferences ---------------------------------------------
+
+        // Downlink adjacent satellite interferences
+        var ci_downlink_adj_sat_obj = ci_adjacent_satellite({
+            path: "downlink",
+            channel: channel,
+            interference_channels: downlink_adj_sat_interferences,
+            eirp_density: carrier_eirp_down_at_loc - 10 * log10(bandwidth * Math.pow(10,6)),
+            location: downlink_station.location,
+            diameter: downlink_station.antenna.size,
+            orbital_slot: orbital_slot
+        });
+        var ci_downlink_adj_sat = ci_downlink_adj_sat_obj.ci;
+
+        // C/I Intermod from satellite
+        var ci_downlink_intermod = 20; // default
+
+        // If the channel has the backoff settings property, use that value
+        if (_.has(channel, 'backoff_settings')) {
+            ci_downlink_intermod = _.where(channel.backoff_settings, {"num_carriers": channel.current_num_carriers})[0].intermod;
+        }
+
+        // Downlink cross-polarization interferences
+        var ci_downlink_xpol = 30; // default, assume the antenna points correctly
+
+        // Downlink cross cells interferences
+        var ci_downlink_xcells = ci_cross_cells(channel, "downlink", downlink_station.location);
+
+        // Total C/I uplink
+        var ci_uplink = cnOperation(ci_uplink_intermod, ci_uplink_adj_sat, ci_uplink_xpol, ci_uplink_xcells);
+
+        // Total C/I downlink
+        var ci_downlink = cnOperation(ci_downlink_intermod, ci_downlink_adj_sat, ci_downlink_xpol, ci_downlink_xcells);
+
+        console.log('------Interferences------');
+        console.log('C/I Up X-pol = ' + ci_uplink_xpol);
+        console.log('C/I Up Intermod = ' + ci_uplink_intermod);
+        console.log('C/I Up Adj. Sat = ' + ci_uplink_adj_sat);
+        console.log('C/I Up Adj. Cells = ' + ci_uplink_xcells);
+        console.log('C/I Down X-pol = ' + ci_downlink_xpol);
+        console.log('C/I Down Intermod = ' + ci_downlink_intermod);
+        console.log('C/I Down Adj. Sat = ' + ci_downlink_adj_sat);
+        console.log('C/I Down Cross Cells = ' + ci_downlink_xcells);
 
         // ---------------------------------- C/N Total ---------------------------------------------
 
-        var cn_total = cnOperation(cn_uplink, cn_downlink);
+        var cn_total = cnOperation(cn_uplink, cn_downlink, ci_uplink, ci_downlink);
+        var link_availability = total_availability(uplink_availability, uplink_diversity, downlink_availability, downlink_diversity);
         var link_margin = cn_total - mcg.es_no;
         var pass = link_margin > required_margin;
 
@@ -1085,10 +1146,7 @@ function Link() {
         console.log('C/N Total: ' + cn_total + ' dB');
         console.log('Link margin ' + link_margin + ' dB');
         console.log('Pass? ' + pass);
-        record('bandwidth', bandwidth);
-        record('cn_total', cn_total);
-        record('link_margin', link_margin);
-        record('pass', pass);
+        console.log('Total link availability: ' + link_availability);
 
         // ---------------------------------- Data Rate ---------------------------------------------
 
@@ -1096,7 +1154,68 @@ function Link() {
 
         console.log('Data rate: ' + data_rate + ' Mbps');
         record('data_rate', data_rate);
+
+
+        // Store the variables in the result object.
+        // We will use this object to represent all parameters in the result.
+
+        _.extend(result, {
+            // satellite
+            operating_sfd: operating_sfd,
+            operating_pfd_per_carrier: operating_pfd_per_carrier,
+            carrier_pfd: carrier_pfd,
+            carrier_obo: carrier_output_backoff,
+            // uplink
+            uplink_pointing_loss: uplink_pointingLoss,
+            uplink_xpol_loss: uplink_xpolLoss,
+            uplink_atmLoss: uplink_atmLoss,
+            uplink_eirp: eirp_up,
+            uplink_gt: uplink_gt,
+            uplink_path_loss: uplink_path_loss,
+            uplink_condition: condition.uplink,
+            uplink_availability: uplink_availability,
+            cn_uplink: cn_uplink,
+            // downlink
+            antenna_temp: ant_temp,
+            system_temp: sys_temp,
+            ant_gain: ant_gain,
+            downlink_pointing_loss: downlink_pointingLoss,
+            downlink_xpol_loss: downlink_xpolLoss,
+            downlink_atmLoss: downlink_atmLoss,
+            downlink_eirp: carrier_eirp_down_at_loc,
+            downlink_gt: ant_gt,
+            downlink_path_loss: downlink_path_loss,
+            downlink_condition: condition.downlink,
+            downlink_availability: downlink_availability,
+            cn_downlink: cn_downlink,
+            // interferences
+            ci_uplink_intermod: ci_uplink_intermod,
+            ci_uplink_adj_sat: ci_uplink_adj_sat,
+            ci_uplink_xpol: ci_uplink_xpol,
+            ci_uplink_xcells: ci_uplink_xcells,
+            ci_downlink_adj_sat: ci_downlink_adj_sat,
+            ci_downlink_intermod: ci_downlink_intermod,
+            ci_downlink_xpol: ci_downlink_xpol,
+            ci_downlink_xcells: ci_downlink_xcells,
+            ci_uplink: ci_uplink,
+            ci_downlink: ci_downlink,
+            // total
+            cn_total: cn_total,
+            link_margin: link_margin,
+            pass: pass,
+            link_availability: link_availability,
+            mcg: mcg,
+            occupied_bandwidth: bandwidth,
+            data_rate: data_rate
+        });
+
+
         return result;
+
+        // Record the result into the result object
+        function record(title, variable) {
+            result[title] = variable;
+        }
 
     }
 
@@ -1104,22 +1223,26 @@ function Link() {
     // -------------- Utility functions ---------------------
 
     // Return array of MCG which is lower than the MCG at clear sky
-    function getLowerMcgThanClearSky() {
+    function getLowerMcgThanClearSky(input_mcg) {
         // Assume the MCG in the application is sorted from lowest to highest efficiency
-        return _.filter(application.mcgs, function (mcg) {
-            return mcg.spectral_efficiency < mcg.spectral_efficiency;
-        })
+        var mcgs = _.filter(application.mcgs, function (mcg) {
+            return mcg.spectral_efficiency < input_mcg.spectral_efficiency;
+        });
+        // Return sorted mcg by spectral efficiency
+        return _.sortBy(mcgs, function (num) {
+            return -(num.spectral_efficiency);
+        });
     }
 
     // Return array of Bandwidth which is lower than the current bandwidth
-    function getLowerBandwidth() {
+    function getLowerBandwidth(input_bandwidth) {
         // Check the the application has array of available symbol rates
         if (!_.has(application, 'symbol_rates')) {
             logError("Cannot find list of available symbol rates.")
             return false;
         }
         var sr = _.filter(application.symbol_rates, function (sr) {
-            return sr < bandwidth / roll_off_factor;
+            return sr < input_bandwidth / roll_off_factor;
         })
         // Return array of bandwidth from symbol rate
         return _.map(sr, function (item) {
@@ -1155,10 +1278,10 @@ function Link() {
     // Return pointing loss in dB
     function pointingLoss(freq, size, skw) {
         //TODO: Rewrite after discussion
-        if(size===8.1){
+        if (size === 8.1) {
             return 0.6;
         }
-        else if (size <= 4.5){
+        else if (size <= 4.5) {
             //calculate pointing loss of an earth station with fixed pointing
             //Inputs
             //   freq = frequency of interest in GHz
@@ -1173,11 +1296,11 @@ function Link() {
             //   Tracking Antenna: Diam > 4.5m
             //       Tracking capability is good within 0.035 degree of nominal boresight
 
-            return 12 * Math.pow((0.15 + Math.sqrt(2) * skw * (freq * Math.pow(10,9)) * size / (70 * c_light)),2);
+            return 12 * Math.pow((0.15 + Math.sqrt(2) * skw * (freq * Math.pow(10, 9)) * size / (70 * c_light)), 2);
 
         }
-        else{
-            return 12 * Math.pow((0.035 * (freq * Math.pow(10,9)) * size / (70 * c_light)),2);
+        else {
+            return 12 * Math.pow((0.035 * (freq * Math.pow(10, 9)) * size / (70 * c_light)), 2);
         }
 
     }
@@ -1211,7 +1334,6 @@ function Link() {
 
     // Return cross-pol loss in dB
     function xpolLoss() {
-        //TODO: Write this function
         return 0.1;
     }
 
@@ -1222,13 +1344,7 @@ function Link() {
 
     // Return gain of 1 square.meter. antenna at the given frequency
     function gain1m(freq) {
-        return 10 * log10(4 * Math.PI * Math.pow(lambda(freq), 2));
-    }
-
-    // Return uplink G/T of this link
-    // TODO: correct this function
-    function uplinkGt() {
-        return 0;
+        return 10 * log10(4 * Math.PI / Math.pow(lambda(freq), 2));
     }
 
     // Return C/N
@@ -1250,7 +1366,7 @@ function Link() {
 
     // Return lambda from give frequency in GHz
     function lambda(freq) {
-        return (freq * Math.pow(10, 9)) / c_light;
+        return  c_light / (freq * Math.pow(10,9));
     }
 
     // Return noise bandwidth = occupied bandwidth / roll off
@@ -1280,14 +1396,14 @@ function Link() {
     // Calculate antenna gain from normal formula from given diameter (m) and frequency (GHz)
     function antenna_gain(diameter, freq) {
         var eff = 0.6 // Assume antenna efficiency to be 60%
-        return 10 * log10(eff * Math.pow(Math.PI * diameter * lambda(freq), 2));
+        return 10 * log10(eff * Math.pow(Math.PI * diameter / lambda(freq), 2));
     }
 
     // Calculate antenna gain at specific frequency from another gain at frequency (ex. gain at mid-band frequency)
     function antenna_gain_at_frequency(ref_gain, ref_freq, freq, diameter) {
         // derives the equation to get this antenna efficiency
-        var eff = Math.pow(10, ref_gain / 10) / Math.pow((diameter * lambda(ref_freq) * Math.PI), 2);
-        return 10 * log10(eff * Math.pow(Math.PI * diameter * lambda(freq), 2));
+        var eff = Math.pow(10, ref_gain / 10) / Math.pow((diameter / lambda(ref_freq) * Math.PI), 2);
+        return 10 * log10(eff * Math.pow(Math.PI * diameter / lambda(freq), 2));
     }
 
     // Calculate eirp uplink from given antenna and hpa
@@ -1385,6 +1501,236 @@ function Link() {
         }
     }
 
+    // return C/I Adjacent satellites from the given channel, path and location
+    // our_eirp_den is EIRP density of our satellite corresponding to the given location
+    function ci_adjacent_satellite(data) {
+        
+        var ci_objects = [];
+
+        var path = data.path, channel = data.channel, interference_channels = data.interference_channels, location = data.location;
+        var ci = 30; //default value
+
+        // if the channel database specifies this value (such as IPSTAR channels), use this value
+        ci = _.has(channel, 'ci_' + path + '_adj_sat') ? channel['ci_' + path + '_adj_sat'] : ci;
+        
+        ci_objects.push({
+            interference: false,
+            name: "no interference",
+            value: ci
+        })
+
+        // loop through interfered channels
+        // intf = interference in short
+        for (var i = 0; i < interference_channels.length; i++) {
+            var intf = interference_channels[i];
+            if (_.isEmpty(intf)) {
+                ci_objects.push({
+                    interference: false,
+                    name: "no interference",
+                    value: 50
+                });
+                continue;
+            }
+            else {
+                var eirp_density = data.eirp_density, diameter = data.diameter, orbital_slot = data.orbital_slot;
+
+                var intf_sat = Satellites.findOne({name: intf.satellite});
+                var deg_diff = orbital_slot - intf_sat.orbital_slot;
+
+                console.log('Finding interferences from satellite ' + intf.satellite + ' channel: ' + intf.name + ' at ' + intf_sat.orbital_slot + ' degrees');
+
+                // find the gain rejection ratio (relative gain)
+                var grr = gain_rejection_ratio(channel[path + '_cf'], diameter, deg_diff);
+                console.log('GRR of ' + diameter + ' m. antenna at ' + deg_diff + ' degrees = ' + grr + ' dB');
+
+                // find the EIRP of the location on that satellite from the database
+                var loc = Locations.findOne({name: location.name});
+
+                // location is not found
+                if (!location) continue;
+
+                var loc_data = _.where(loc.data, {beam: intf[path + '_beam'], satellite:intf.satellite, type: path})[0];
+
+                // location is found, but this location is not under this beam contour
+                if (!loc_data) continue;
+
+                // compare with EIRP down of adjacent satellite channels
+                if (path === "downlink") {
+
+                    console.log('The location ' + loc.name + ' has value on beam ' + loc_data.beam + ' = ' + loc_data.value);
+
+                    // find the output backoff of the interfered channels
+                    var intf_obo = _.where(intf.backoff_settings, {num_carriers: intf.current_num_carriers})[0].obo;
+
+                    // find EIRP density of interfered channels at that location
+                    var intf_eirp_density = loc_data.value + intf_obo - 10 * log10(intf.bandwidth * Math.pow(10,6));
+
+                    console.log("EIRP density for " + intf.satellite + ' ' + intf.name + ' = ' + intf_eirp_density + ' dBW');
+
+                    // return C/I = our eirp density - intf eirp density + GRR + polarization improvement
+                    var c_intf = eirp_density - intf_eirp_density + grr + pol_improvement(channel[path + '_pol'], intf[path + '_pol']);
+
+                    console.log("C/I for " + channel.satellite + ' ' + channel.name + ' = ' + c_intf + ' dB');
+                    
+                    ci_objects.push({
+                        interference: true,
+                        name: intf.satellite + " " + intf.name,
+                        value: c_intf
+                    });
+                    
+                    ci = cnOperation(ci, c_intf);
+
+                }
+
+
+            }
+            
+            
+        }
+        
+        ci_objects.ci = ci;
+        
+        return ci_objects;
+
+        function pol_improvement(our_pol, intf_pol) {
+            var circular_pols = ["LHCP", "RHCP"];
+            var linear_pols = ["H", "V"];
+
+            // if our pol is linear and intf pol is circular, we gain +3
+            if (_.contains(linear_pols, our_pol) && _.contains(circular_pols, intf_pol)) {
+                return 3;
+            }
+            // and vice versa, we gain -3
+            else if (_.contains(circular_pols, our_pol) && _.contains(linear_pols, intf_pol)) {
+                return -3;
+            }
+            else return 0;
+        }
+    }
+
+
+    // Return C/I cross cells from the given channel, path and location
+    function ci_cross_cells(channel, path, location) {
+        var ci = 25 // default value
+        if (path == "uplink") {
+            // For IPSTAR forward channels KA-uplink (or Ku for BC)
+            if (_.has(channel, 'ci_uplink_adj_cell')) {
+                ci = channel.ci_uplink_adj_cell;
+            }
+            // For IPSTAR return channels Ku-uplink
+            else if (_.has(channel, 'ci_uplink_adj_cell_50') && _.has(channel, 'ci_uplink_adj_cell_eoc')) {
+                // If location is between peak and 50%, C/I = C/I at 50% plus the distance between 50% and that location
+                // (if closer to peak, C/I is better)
+                if (location.contour <= channel.contour_50) {
+                    ci = channel.ci_uplink_adj_cell_50 + (location.contour - channel.contour_50);
+                }
+                // If location is between 50% and EOC, C/I = linear interpolation of C/I at 50% and C/I at EOC
+                else if (location.contour > channel.contour_50 && location.contour <= channel.contour_eoc) {
+                    ci = linearInterpolation(location.contour, channel.contour_50, channel.contour_eoc, channel.ci_uplink_adj_cell_50, channel.ci_uplink_adj_cell_eoc);
+                }
+                // If location is beyond EOC, C/I = C/I at EOC minus the distance between EOC and that location
+                // (if farther from EOC, C/I is worse)
+                else {
+                    ci = channel.ci_uplink_adj_cell_eoc - (location.contour - channel.contour_eoc);
+                }
+            }
+            else {
+            }
+        }
+        else { // downlink
+            // For IPSTAR return channels KA-downlink
+            if (_.has(channel, 'ci_downlink_adj_cell')) {
+                ci = channel.ci_downlink_adj_cell;
+            }
+            // For IPSTAR forward channels Ku-downlink
+            else if (_.has(channel, 'ci_downlink_adj_cell_50') && _.has(channel, 'ci_downlink_adj_cell_eoc')) {
+                // If location is between peak and 50%, C/I = C/I at 50% plus the distance between 50% and that location
+                // (if closer to peak, C/I is better)
+                if (location.contour <= channel.contour_50) {
+                    ci = channel.ci_downlink_adj_cell_50 + (location.contour - channel.contour_50);
+                }
+                // If location is between 50% and EOC, C/I = linear interpolation of C/I at 50% and C/I at EOC
+                else if (location.contour > channel.contour_50 && location.contour <= channel.contour_eoc) {
+                    ci = linearInterpolation(location.contour, channel.contour_50, channel.contour_eoc, channel.ci_downlink_adj_cell_50, channel.ci_downlink_adj_cell_eoc);
+                }
+                // If location is beyond EOC, C/I = C/I at EOC minus the distance between EOC and that location
+                // (if farther from EOC, C/I is worse)
+                else {
+                    ci = channel.ci_downlink_adj_cell_eoc - (location.contour - channel.contour_eoc);
+                }
+            }
+            else {
+            }
+        }
+
+        return ci;
+    }
+
+    // Return Gain rejection ratio from given frequency, antenna size and degree difference
+    // (Return Positive value)
+    function gain_rejection_ratio(freq, diameter, degree_diff) {
+        return antenna_gain(diameter, freq) - off_axis_gain(diameter, freq, degree_diff);
+    }
+
+    // Return off-axis gain
+    function off_axis_gain(diameter, freq, offset) {
+        var gain_max = antenna_gain(diameter, freq);
+
+        var theta_r = 95 * lambda(freq) / diameter;
+        var g1 = 29 - 25 * log10(theta_r);
+        var theta_m = lambda(freq) / diameter * Math.sqrt((gain_max - g1) / 0.0025);
+        var theta_b = Math.pow(10, 34.0 / 25);
+
+        var result = 0;
+        var abs_offset = Math.abs(offset);
+        if (abs_offset < theta_m) {
+            result = gain_max - 0.0025 * Math.pow((diameter / lambda(freq) * offset), 2);
+        }
+        else if (abs_offset < theta_r) {
+            result = g1;
+        }
+        else if (abs_offset < theta_b) {
+            result = 29 - 25 * log10(abs_offset);
+        }
+        else if (abs_offset < 70) {
+            result = -5;
+        }
+        else {
+            result = 0;
+        }
+        return result;
+    }
+
+    function total_availability(up_avail, up_diversity, down_avail, down_diversity) {
+
+        // find total uplink availability
+        var total_up_avail = up_avail;
+
+        // if there is uplink diversity input
+        if (!_.isEmpty(up_diversity)) {
+            total_up_avail = two_sites_avail(up_avail, up_diversity);
+        }
+
+        // find total downlink availability
+        var total_down_avail = down_avail;
+
+        // if there is downlink diversity input
+        if (!_.isEmpty(down_diversity)) {
+            total_down_avail = two_sites_avail(down_avail, down_diversity);
+        }
+
+        // combine up and down together
+        return (total_up_avail * total_down_avail) / 100;
+
+        function two_sites_avail(one_site_avail, diversity) {
+            var single_site_unavail = 100 - one_site_avail;
+            var beta_factor_square = (0.0001) * Math.pow(diversity.distance_from_main, 1.33);
+            var two_site_unavail = single_site_unavail / (1 + 100 * beta_factor_square / single_site_unavail);
+            return 100 - two_site_unavail;
+        }
+    }
+
+
     // --------------------------- Atmospheric Attenuation functions -------------------
 
     // Return tau value
@@ -1421,7 +1767,7 @@ function Link() {
         var ep_p = ((ep0 - ep1) / (1 + Math.pow((freq / fp), 2))) + ((ep1 - ep2) / (1 + Math.pow((freq / fs), 2))) + ep2;
         var ep_pp = (freq * (ep0 - ep1) / (fp * (1 + Math.pow((freq / fp), 2)))) + (freq * (ep1 - ep2) / (fs * (1 + Math.pow((freq / fs), 2))));
         var nue = (2 + ep_p) / ep_pp;
-        var kl = 0.819 * freq / (ep_pp * (1 + Math.pow(nue,2)));
+        var kl = 0.819 * freq / (ep_pp * (1 + Math.pow(nue, 2)));
 
         //console.log('fp = ' + fp);
         //console.log('fs = ' + fs);
@@ -1470,7 +1816,6 @@ function Link() {
         var nue_2 = 27.8843 * (Math.pow(r_p, -0.4908)) * (Math.pow(r_t, -0.8491)) * Math.exp(0.5496 * (1 - r_t)) - 1;
         var a_fact = Math.log(nue_2 / nue_1) / Math.log(3.5);
         var b_fact = Math.pow(4, a_fact) / nue_1;
-        // TODO: Find real sources of a_factor and b_factor (In the link budget, they come out of nowhere)
         var gamma_op54 = 2.128 * Math.pow(r_p, 1.4954) * Math.pow(r_t, -1.6032) * Math.exp(-2.528 * (1 - r_t));
         var gamma_o = ((7.34 * Math.pow(r_p, 2) * Math.pow(r_t, 2) / (Math.pow(freq, 2) + 0.36 * Math.pow(r_p, 2) * Math.pow(r_t, 2))) + (0.3429 * b_fact * gamma_op54 / (Math.pow((54 - freq), a_fact) + b_fact))) * Math.pow(freq, 2) * Math.pow(10, -3);
 
@@ -1844,11 +2189,6 @@ function Link() {
         this.errorMessage = message;
     }
 
-    // Record the result into the result object
-    function record(title, variable) {
-        result[title] = variable;
-    }
-
 
     // --------------- Setter functions ----------------------
     this.setUplinkAntenna = function (antenna) {
@@ -1881,6 +2221,9 @@ function Link() {
     this.setMcg = function (m) {
         mcg = m;
     }
+    this.setMcgClearSky = function (m) {
+        mcg_clr = m;
+    }
     this.setCondition = function (cond) {
         condition = cond;
     }
@@ -1893,11 +2236,20 @@ function Link() {
     this.setUplinkAvailability = function (value) {
         uplink_availability = value;
     }
-    this.setdownlinkAvailability = function (value) {
+    this.setDownlinkAvailability = function (value) {
         downlink_availability = value;
     }
+    this.setDownlinkAdjSatInterferences = function (value) {
+        downlink_adj_sat_interferences = value;
+        ;
+    }
+    this.setUplinkDiversity = function (value) {
+        uplink_diversity = value;
+    }
+    this.setDownlinkDiversity = function (value) {
+        downlink_diversity = value;
+    }
 }
-
 
 // -------------------------- Uplink Station --------------------------
 
@@ -1980,15 +2332,15 @@ function GetLocationObject(channel, location, path) {
         // find the contour from location database
         // given location is the string of location name
         if (typeof location === 'string') {
-            var loc = Locations.findOne({display_name: location});
+            var loc = Locations.findOne({name: location});
             // If loc is found, find the contour from the value in the database
             // The value in locations database is stored in EIRP and G/T value
             if (loc) {
                 // Retrieve the data object for our desired beam
-                console.log("The given location is " + loc.display_name + " lat/lon = " + loc.lat + "/" + loc.lon);
-                var data = _.where(loc.data, {beam: channel.uplink_beam, type: path})[0];
-                if(data){
-                    console.log("Data for this loc for beam " + channel.uplink_beam + " = " + data.value);
+                console.log("The given location is " + loc.name + " lat/lon = " + loc.lat + "/" + loc.lon);
+                var data = _.where(loc.data, {beam: channel[path + '_beam'], type: path})[0];
+                if (data) {
+                    console.log("Data for this loc for beam " + channel[path + '_beam'] + " = " + data.value);
                 }
                 var contour = 0;
                 if (path === "uplink") { // G/T
@@ -1997,8 +2349,8 @@ function GetLocationObject(channel, location, path) {
                 else { // EIRP
                     contour = -(channel.saturated_eirp_peak - data.value);
                 }
-                console.log('Find location returns lat = ' + loc.lat + ' lon = ' + loc.lon + ' name = ' + loc.display_name + ' contour = ' + contour);
-                return {lat: loc.lat, lon: loc.lon, name: loc.display_name, contour: contour};
+                console.log('Find location returns lat = ' + loc.lat + ' lon = ' + loc.lon + ' name = ' + loc.name + ' contour = ' + contour);
+                return {lat: loc.lat, lon: loc.lon, name: loc.name, contour: contour};
             }
             else {
                 console.log('Location not found.')
@@ -2017,13 +2369,102 @@ function GetLocationObject(channel, location, path) {
 
 function GetBestChannels(satellite, locations) {
     // TODO: Write this function when mongodb 2.6 comes with meteor
-    _.each(locations,function(loc){
+    _.each(locations, function (loc) {
         console.log("Find best channel at " + loc + " on " + satellite + " satellite.");
     });
     return [];
 }
 
-function LogTitle(string){
+// Return adjacent satellite channels of the given channels within 2 degrees difference
+function GetAdjacentSatelliteChannels(channel, path) {
+
+    var sat = Satellites.findOne({name: channel.satellite});
+    var slot = sat.orbital_slot;
+
+    // Find satellite within 2 degrees but not itself
+    var adj_sats = Satellites.find({
+        orbital_slot: {$gte: slot - 2.1, $lte: slot + 2.1},
+        name: { $not: {$in: [sat.name]} }
+    }).fetch();
+
+
+    var query = {};
+    var pol = channel[path + "_pol"];
+    var start_freq = channel[path + "_cf"] - (channel.bandwidth / 2000);
+    var stop_freq = channel[path + "_cf"] + (channel.bandwidth / 2000);
+
+    query.satellite = {$in: _.pluck(adj_sats, 'name')};
+    query[path + "_pol"] = {$in: getpols(pol)};
+    query['$where'] = "function () { return " + start_freq + " < (obj." + path + "_cf + obj.bandwidth / 2000) && " + stop_freq + " > (obj." + path +"_cf - obj.bandwidth / 2000) }";
+
+    var adj_channels = Channels.find(query).fetch();
+
+    if (adj_channels.length == 0) {
+        return [
+            {}
+        ];
+    }
+
+    // Find the possible combinations of adjacent satellite
+    var bandwidth_slices = [];
+    for (var i = 1; i <= channel.bandwidth; i++) {
+        // For each MHz of bandwidth, find the channel with interferes at this MHz
+        var freq = start_freq + i / 1000;
+        var interfered_channels = _.filter(adj_channels, function (item) {
+            var left_freq = item[path + "_cf"] - (item.bandwidth / 2000);
+            var right_freq = item[path + "_cf"] + (item.bandwidth / 2000);
+            return left_freq < freq && freq < right_freq;
+        });
+        //if the combinations is already in the array, do not push it
+        var id_arr = _.pluck(interfered_channels, '_id');
+        var count = 0;
+        for(var j = 0; j < bandwidth_slices.length; j++){
+            if(_.isEqual(id_arr,bandwidth_slices[j])){
+                count++;
+            }
+        }
+        if(count == 0) {
+            bandwidth_slices.push(id_arr);
+        }
+
+    }
+    var bw_obj = [];
+    _.each(bandwidth_slices, function (item2) {
+        var intf_obj = [];
+        _.each(item2, function (item3) {
+            intf_obj.push(Channels.findOne({_id: item3}));
+        });
+        bw_obj.push(intf_obj);
+    });
+    return bw_obj;
+
+
+
+    // Get the polarizations to search
+    // If our channel is linear, the interfered pol would be other 2 circular pols and itself (H or V)
+    // If our pol is circular, the interfered pol would be other 2 linear pols and itself (RHCP or LHCP)
+    function getpols(pol) {
+        if (_.contains(["H", "V"], pol)) {
+            return [pol, "RHCP", "LHCP"];
+        }
+        else {
+            return [pol, "H", "V"];
+        }
+
+    }
+
+}
+
+function LogTitle(string) {
     console.log('---------------------- ' + string + ' ----------------------');
 }
+
+Meteor.methods({
+    'get_adj_sat': function(ch_id, path){
+        var channel = Channels.findOne({_id:ch_id});
+        return GetAdjacentSatelliteChannels(channel, path);
+    }
+})
+
+
 

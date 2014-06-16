@@ -8,8 +8,15 @@ iron-router
 spin
 errors
 roles
-accounts-ui-bootstrap-3
 accounts-admin-ui-bootstrap-3
 leaflet
 Bootstrap3-Typeahead
 bootstrap-select
+npm
+pdfjs
+bootstrap-3
+collectionFS
+cfs-filesystem
+cfs-gridfs
+accounts-password
+accounts-ui-bootstrap-3-blaze

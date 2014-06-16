@@ -23,6 +23,6 @@ Template.findLocationByName.events({
 
 Template.findLocationByName.rendered = function(){
     // render typeahead for hub locations from location database
-    var locations = _.pluck(Locations.find().fetch(),'display_name');
+    var locations = _.pluck(Locations.find().fetch(),'name');
     //$(this.find('#location-by-name')).typeahead({source: locations});
 }

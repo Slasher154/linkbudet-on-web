@@ -171,7 +171,7 @@ Template.index.events({
                 remote_antennas: remote_antennas,
                 remote_locations: remote_locations,
                 platform: platform,
-                fix_mcgs: selectedMcgs,
+                fwd_fix_mcgs: selectedMcgs,
                 bt: selectedBt,
                 modem: selectedVsatModem,
                 link_Margin: linkMargin

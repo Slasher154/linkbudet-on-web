@@ -1,5 +1,18 @@
 <template name="calculate">
     <div id="result">
-
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Channel</th>
+                <th>Interferences</th>
+            </tr>
+            </thead>
+            {{#each adj}}
+            <tr>
+                <td><span>{{chan}}</span></td>
+                <td><span>{{text}}</span></td>
+            </tr>
+            {{/each}}
+        </table>
     </div>
 </template>
