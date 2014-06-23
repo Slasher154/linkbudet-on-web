@@ -7,7 +7,7 @@ Template.conventionalChannels.channels = function(){
     if(!beam){
         return [];
     }
-    var channels = Channels.find({uplink_beam:beam},{fields:{name:1}}).fetch();
+    var channels = Channels.find({satellite:Session.get('satellite').name,uplink_beam:beam},{fields:{name:1}}).fetch();
     return {
         value: _.uniq(_.pluck(channels,'name'))
     }

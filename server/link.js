@@ -5,7 +5,11 @@
 Meteor.methods({
     'link_calc': function (assumptions) {
         var lb = new LinkBudget();
-        return lb.calc(assumptions);
+        var link_req_obj = {
+            assumptions: assumptions,
+            results: lb.calc(assumptions)
+        }
+        return LinkRequests.insert(link_req_obj);
     }
 });
 
@@ -129,7 +133,7 @@ function LinkBudget() {
 
                             // Set FWD MCGs to be fixed if user input (as of now, only conventional BC allows fix MCG)
                             var fwd_mcgs = [];
-                            if (_.has(data, 'fwd_fix_mcgs')) {
+                            if (_.has(data, 'fwd_fix_mcgs') && data.fwd_fix_mcgs.length > 0) {
                                 fwd_mcgs = data.fwd_fix_mcgs;
                             }
                             else {
@@ -198,17 +202,21 @@ function LinkBudget() {
                                                     input.buc = bucs[i5];
                                                     rtn_result = remote_to_hub(input);
 
-                                                    // store the result to array
+                                                    // store the result to the array
                                                     results.push({fwd: fwd_result, rtn: rtn_result});
                                                 }
                                             }
                                         }
                                     }
 
+                                    // else, just store the forward result along with return as empty object
+                                    else{
+                                        results.push({fwd: fwd_result, rtn: rtn_result});
+                                    }
+
                                 }
 
-                                // store the result to the array as there would be no remote to hub for BC apps
-                                results.push({fwd: fwd_result, rtn: rtn_result});
+
                             }
                         }
                     }
@@ -267,7 +275,13 @@ function LinkBudget() {
         }
         // Else, the uplink parameters come from user input (such as for conventional)
         else {
-            uplink_ant = data.hub_antenna, uplink_hpa.size = 2000, uplink_hpa.category = "hpa"; // assume there is enough HPA
+            uplink_ant = data.hub_antenna;
+
+            uplink_hpa.size = 2000, uplink_hpa.category = "hpa"; // assume there is enough HPA
+
+            // for IFL and OBO, get them from constant database
+            uplink_hpa.obo = Constants.findOne({name:"hpa_obo"}).value;
+            uplink_hpa.ifl = Constants.findOne({name:"uplink_ifl"}).value;
 
             // Find the relative contour from satellite and given location
             uplink_loc = GetLocationObject(channel, data.hub_location, "uplink");
@@ -429,9 +443,20 @@ function LinkBudget() {
         uplink_ant = data.remote_antenna;
 
         // check if user specifies BUC size
-        if (_.has(data, 'buc')) {
+        if (_.has(data, 'buc') && !_.isEmpty(data.buc[0])) {
             uplink_hpa = data.buc;
             console.log('Set buc = ' + uplink_hpa);
+        }
+
+        else {
+            // TODO: discuss value with CND
+            uplink_hpa = {
+                type: 'Standard',
+                category: 'HPA',
+                size: 1000,
+                ifl: Constants.findOne({name:'uplink_ifl'}).value,
+                obo: Constants.findOne({name:'hpa_obo'}).value
+            }
         }
 
         uplink_loc = GetLocationObject(channel, data.remote_location, "uplink");
@@ -454,7 +479,7 @@ function LinkBudget() {
         }
         // Else, the uplink parameters come from user input (such as for conventional)
         else {
-            downlink_ant.size = data.hub_antenna; // assume there is enough HPA
+            downlink_ant = data.hub_antenna;
 
             // Find the relative contour from satellite and given location
             downlink_loc = GetLocationObject(channel, data.hub_location, "downlink");
@@ -882,10 +907,10 @@ function Link() {
             }
 
             // Check if the uplink HPA is BUC type. If yes, use the uplink power of that BUC (use 100% of BUC power instead of show the result of desired EIRP level)
-            if (_.has(uplink_station.hpa, 'type') && uplink_station.type.toLowerCase() === 'buc') {
+            if (_.has(uplink_station.hpa, 'category') && uplink_station.hpa.category.toLowerCase() == 'buc') {
                 // check if eirp of this buc & antenna can reach the desired level
                 var eirp_up_from_buc = eirp_uplink(uplink_station.hpa, uplink_station.antenna, uplink_freq);
-                if (eirp_up_clear > eirp_up_from_buc) {
+                if (eirp_up > eirp_up_from_buc) {
                     eirp_up = eirp_up_from_buc;
                 }
             }
@@ -977,6 +1002,12 @@ function Link() {
             logError("Transponder mode is not FGM or ALC.");
             return false;
         }
+
+        // Calculate required HPA power
+        var op_power_at_hpa_output = eirp_up - antenna_gain(uplink_station.antenna.size, uplink_freq);
+        LogTitle('HPA IFL = ' + uplink_station.hpa.ifl + ' HPA OBO = ' + uplink_station.hpa.obo + ' dB');
+        LogTitle('OP Power = ' + op_power_at_hpa_output);
+        var hpa_power = Math.pow(10,(op_power_at_hpa_output + uplink_station.hpa.ifl + uplink_station.hpa.obo)/10);
 
         // Calculate C/N Uplink
 
@@ -1152,8 +1183,17 @@ function Link() {
 
         var data_rate = symbolRate(bandwidth) * mcg.spectral_efficiency;
 
-        console.log('Data rate: ' + data_rate + ' Mbps');
-        record('data_rate', data_rate);
+        // ---------------------------------- Power utilization -------------------------------------
+
+        // Calculate power utilization percentage by comparing real carrier PFD and operating PFD per carrier
+        // PFD diff is positive if overused
+        var pfd_diff = carrier_pfd - operating_pfd_per_carrier;
+        var power_util_percent = 100 * Math.pow(10,pfd_diff/10);
+
+        // Calculate guard band in percent for this carrier
+        // Conventional result needs this as Sales team do not accept the bandwidth in decimal
+        var roundup_bandwidth = Math.ceil(bandwidth);
+        var guardband = ((roundup_bandwidth - bandwidth) * 100 / bandwidth).toFixed(2);
 
 
         // Store the variables in the result object.
@@ -1161,11 +1201,14 @@ function Link() {
 
         _.extend(result, {
             // satellite
+            channel: channel.name,
             operating_sfd: operating_sfd,
             operating_pfd_per_carrier: operating_pfd_per_carrier,
             carrier_pfd: carrier_pfd,
             carrier_obo: carrier_output_backoff,
             // uplink
+            uplink_antenna: uplink_station.antenna,
+            uplink_hpa: uplink_station.hpa,
             uplink_pointing_loss: uplink_pointingLoss,
             uplink_xpol_loss: uplink_xpolLoss,
             uplink_atmLoss: uplink_atmLoss,
@@ -1174,8 +1217,11 @@ function Link() {
             uplink_path_loss: uplink_path_loss,
             uplink_condition: condition.uplink,
             uplink_availability: uplink_availability,
+            uplink_location: uplink_station.location,
+            hpa_power: hpa_power,
             cn_uplink: cn_uplink,
             // downlink
+            downlink_antenna: downlink_station.antenna,
             antenna_temp: ant_temp,
             system_temp: sys_temp,
             ant_gain: ant_gain,
@@ -1187,6 +1233,7 @@ function Link() {
             downlink_path_loss: downlink_path_loss,
             downlink_condition: condition.downlink,
             downlink_availability: downlink_availability,
+            downlink_location: downlink_station.location,
             cn_downlink: cn_downlink,
             // interferences
             ci_uplink_intermod: ci_uplink_intermod,
@@ -1194,6 +1241,7 @@ function Link() {
             ci_uplink_xpol: ci_uplink_xpol,
             ci_uplink_xcells: ci_uplink_xcells,
             ci_downlink_adj_sat: ci_downlink_adj_sat,
+            ci_downlink_adj_sat_obj: ci_downlink_adj_sat_obj,
             ci_downlink_intermod: ci_downlink_intermod,
             ci_downlink_xpol: ci_downlink_xpol,
             ci_downlink_xcells: ci_downlink_xcells,
@@ -1206,7 +1254,11 @@ function Link() {
             link_availability: link_availability,
             mcg: mcg,
             occupied_bandwidth: bandwidth,
-            data_rate: data_rate
+            roundup_bandwidth: roundup_bandwidth,
+            guardband: guardband,
+            data_rate: data_rate,
+            power_util_percent: power_util_percent,
+            roll_off_factor: roll_off_factor
         });
 
 
@@ -1512,81 +1564,87 @@ function Link() {
 
         // if the channel database specifies this value (such as IPSTAR channels), use this value
         ci = _.has(channel, 'ci_' + path + '_adj_sat') ? channel['ci_' + path + '_adj_sat'] : ci;
-        
-        ci_objects.push({
-            interference: false,
-            name: "no interference",
-            value: ci
-        })
 
-        // loop through interfered channels
-        // intf = interference in short
-        for (var i = 0; i < interference_channels.length; i++) {
-            var intf = interference_channels[i];
-            if (_.isEmpty(intf)) {
-                ci_objects.push({
-                    interference: false,
-                    name: "no interference",
-                    value: 50
-                });
-                continue;
-            }
-            else {
-                var eirp_density = data.eirp_density, diameter = data.diameter, orbital_slot = data.orbital_slot;
+        // if the input interference channel is blank (no adj.sat intf), put the object to adj.
+        if(interference_channels.length == 0){
+            ci_objects.push({
+                interference: false,
+                name: "no interference",
+                value: ci
+            });
+        }
 
-                var intf_sat = Satellites.findOne({name: intf.satellite});
-                var deg_diff = orbital_slot - intf_sat.orbital_slot;
-
-                console.log('Finding interferences from satellite ' + intf.satellite + ' channel: ' + intf.name + ' at ' + intf_sat.orbital_slot + ' degrees');
-
-                // find the gain rejection ratio (relative gain)
-                var grr = gain_rejection_ratio(channel[path + '_cf'], diameter, deg_diff);
-                console.log('GRR of ' + diameter + ' m. antenna at ' + deg_diff + ' degrees = ' + grr + ' dB');
-
-                // find the EIRP of the location on that satellite from the database
-                var loc = Locations.findOne({name: location.name});
-
-                // location is not found
-                if (!location) continue;
-
-                var loc_data = _.where(loc.data, {beam: intf[path + '_beam'], satellite:intf.satellite, type: path})[0];
-
-                // location is found, but this location is not under this beam contour
-                if (!loc_data) continue;
-
-                // compare with EIRP down of adjacent satellite channels
-                if (path === "downlink") {
-
-                    console.log('The location ' + loc.name + ' has value on beam ' + loc_data.beam + ' = ' + loc_data.value);
-
-                    // find the output backoff of the interfered channels
-                    var intf_obo = _.where(intf.backoff_settings, {num_carriers: intf.current_num_carriers})[0].obo;
-
-                    // find EIRP density of interfered channels at that location
-                    var intf_eirp_density = loc_data.value + intf_obo - 10 * log10(intf.bandwidth * Math.pow(10,6));
-
-                    console.log("EIRP density for " + intf.satellite + ' ' + intf.name + ' = ' + intf_eirp_density + ' dBW');
-
-                    // return C/I = our eirp density - intf eirp density + GRR + polarization improvement
-                    var c_intf = eirp_density - intf_eirp_density + grr + pol_improvement(channel[path + '_pol'], intf[path + '_pol']);
-
-                    console.log("C/I for " + channel.satellite + ' ' + channel.name + ' = ' + c_intf + ' dB');
-                    
+        else{
+            // loop through interfered channels
+            // intf = interference in short
+            for (var i = 0; i < interference_channels.length; i++) {
+                var intf = interference_channels[i];
+                if (_.isEmpty(intf)) {
                     ci_objects.push({
-                        interference: true,
-                        name: intf.satellite + " " + intf.name,
-                        value: c_intf
+                        interference: false,
+                        name: "no interference",
+                        value: 50
                     });
-                    
-                    ci = cnOperation(ci, c_intf);
+                    continue;
+                }
+                else {
+                    var eirp_density = data.eirp_density, diameter = data.diameter, orbital_slot = data.orbital_slot;
+
+                    var intf_sat = Satellites.findOne({name: intf.satellite});
+                    var deg_diff = orbital_slot - intf_sat.orbital_slot;
+
+                    console.log('Finding interferences from satellite ' + intf.satellite + ' channel: ' + intf.name + ' at ' + intf_sat.orbital_slot + ' degrees');
+
+                    // find the gain rejection ratio (relative gain)
+                    var grr = gain_rejection_ratio(channel[path + '_cf'], diameter, deg_diff);
+                    console.log('GRR of ' + diameter + ' m. antenna at ' + deg_diff + ' degrees = ' + grr + ' dB');
+
+                    // find the EIRP of the location on that satellite from the database
+                    var loc = Locations.findOne({name: location.name});
+
+                    // location is not found
+                    if (!location) continue;
+
+                    var loc_data = _.where(loc.data, {beam: intf[path + '_beam'], satellite:intf.satellite, type: path})[0];
+
+                    // location is found, but this location is not under this beam contour
+                    if (!loc_data) continue;
+
+                    // compare with EIRP down of adjacent satellite channels
+                    if (path === "downlink") {
+
+                        console.log('The location ' + loc.name + ' has value on beam ' + loc_data.beam + ' = ' + loc_data.value);
+
+                        // find the output backoff of the interfered channels
+                        var intf_obo = _.where(intf.backoff_settings, {num_carriers: intf.current_num_carriers})[0].obo;
+
+                        // find EIRP density of interfered channels at that location
+                        var intf_eirp_density = loc_data.value + intf_obo - 10 * log10(intf.bandwidth * Math.pow(10,6));
+
+                        console.log("EIRP density for " + intf.satellite + ' ' + intf.name + ' = ' + intf_eirp_density + ' dBW');
+
+                        // return C/I = our eirp density - intf eirp density + GRR + polarization improvement
+                        var c_intf = eirp_density - intf_eirp_density + grr + pol_improvement(channel[path + '_pol'], intf[path + '_pol']);
+
+                        console.log("C/I for " + channel.satellite + ' ' + channel.name + ' = ' + c_intf + ' dB');
+
+                        ci_objects.push({
+                            interference: true,
+                            name: intf.satellite + " " + intf.name,
+                            value: c_intf
+                        });
+
+                        ci = cnOperation(ci, c_intf);
+
+                    }
+
 
                 }
 
 
             }
-            
-            
         }
+
         
         ci_objects.ci = ci;
         
@@ -2400,9 +2458,7 @@ function GetAdjacentSatelliteChannels(channel, path) {
     var adj_channels = Channels.find(query).fetch();
 
     if (adj_channels.length == 0) {
-        return [
-            {}
-        ];
+        return [[]];
     }
 
     // Find the possible combinations of adjacent satellite
@@ -2415,7 +2471,7 @@ function GetAdjacentSatelliteChannels(channel, path) {
             var right_freq = item[path + "_cf"] + (item.bandwidth / 2000);
             return left_freq < freq && freq < right_freq;
         });
-        //if the combinations is already in the array, do not push it
+        // if no interfered channels is found on this particular freq, the funciton returns empty array
         var id_arr = _.pluck(interfered_channels, '_id');
         var count = 0;
         for(var j = 0; j < bandwidth_slices.length; j++){
@@ -2423,6 +2479,7 @@ function GetAdjacentSatelliteChannels(channel, path) {
                 count++;
             }
         }
+        //if the combinations is not already in the array, push it
         if(count == 0) {
             bandwidth_slices.push(id_arr);
         }
@@ -2431,6 +2488,7 @@ function GetAdjacentSatelliteChannels(channel, path) {
     var bw_obj = [];
     _.each(bandwidth_slices, function (item2) {
         var intf_obj = [];
+
         _.each(item2, function (item3) {
             intf_obj.push(Channels.findOne({_id: item3}));
         });

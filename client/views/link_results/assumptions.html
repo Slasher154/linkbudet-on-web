@@ -1,0 +1,30 @@
+<template name="resultAssumptions">
+    <!-- The panel for assumptions -->
+
+    <h3>Assumptions</h3>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                {{#each this}}
+                <th>
+                    {{title}}
+                </th>
+                {{/each}}
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            {{#each this}}
+            <td>{{detail}}</td>
+            {{/each}}
+        </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+    <!-- End panel for assumptions -->
+</template>

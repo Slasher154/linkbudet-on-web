@@ -1,0 +1,25 @@
+<template name="conventionalResults">
+    <!-- The panel for tables -->
+    <h3>Results</h3>
+    {{#each this}}
+
+    {{#if has_intf}}
+    <h4>Case: Adjacent satellite interferences from {{intf}}</h4>
+    {{else}}
+    <h4>Case: No adjacent satellite interferences</h4>
+    {{/if}}
+    {{#if isNotEmpty fwd}}
+    <h5>Summary of Link Budget from Location A to Location B</h5>
+    {{ >conventionalResultTable fwd}}
+    {{/if}}
+
+    {{#if isNotEmpty rtn}}
+    <h5>Summary of Link Budget from Location B to Location A</h5>
+    {{ >conventionalResultTable rtn}}
+    {{/if}}
+
+    <hr>
+
+    {{/each}}
+
+</template>

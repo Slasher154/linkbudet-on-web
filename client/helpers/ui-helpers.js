@@ -64,4 +64,9 @@ if (Meteor.isClient){
         // return true if any broadcast platform (DVB-S1, DVB-S2) or modems (conventional VSAT, broadband satellites is selected
         return Session.get('selectedBcPlatform') || Session.get('modemId');
     })
+
+    UI.registerHelper('joinString', function(string_arr){
+        // join the array string
+        return string_arr.join(' , ');
+    })
 }

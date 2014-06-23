@@ -151,7 +151,7 @@ Template.index.events({
                     return false;
                 }
                 else{
-                    platform = selectedVsatModem;
+                    platform = Modems.findOne({_id:selectedVsatModem});
                 }
 
                 linkMargin = $('#link-margin').val();
@@ -378,18 +378,15 @@ Template.index.events({
             bandwidths: bandwidth
         })
         console.log(JSON.stringify(assumptions));
-        Meteor.call('add_assumption', assumptions, function(error, assumptionId) {
-            if (error){
-                Errors.throw(error.reason);
-            } else {
-                console.log(assumptionId);
-            }
-        });
+
         Meteor.call('link_calc', assumptions, function(error, message) {
             if (error){
                 Errors.throw(error.reason);
             } else {
+                // the method returns id of the link requests we just inserted to the database
+                // so we redirect to the result page of the link budget
                 console.log(JSON.stringify(message));
+                Router.go('results',{_id: message});
             }
         });
 

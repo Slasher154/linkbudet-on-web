@@ -17,6 +17,15 @@
                     <li class="{{activeRouteClass 'contact'}}"><a href="{{pathFor 'contact'}}">Contact</a></li>
                     <li class="{{activeRouteClass 'map'}}"><a href="{{pathFor 'maps'}}">Maps</a></li>
                     <li class="{{activeRouteClass 'calculate'}}"><a href="{{pathFor 'calculate'}}">Calc</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">View Requests <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{pathFor 'allRequests' sat='thaicom5' }}">Thaicom 5</a></li>
+                            <li><a href="{{pathFor 'allRequests' sat='thaicom6' }}">Thaicom 6</a></li>
+                            <li><a href="{{pathFor 'allRequests' sat='thaicom7' }}">Thaicom 7</a></li>
+                            <li><a href="{{pathFor 'allRequests' sat='ipstar' }}">IPSTAR</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {{> loginButtons }}

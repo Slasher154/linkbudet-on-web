@@ -40,3 +40,16 @@ Meteor.publish('intf', function(){
 Meteor.publish('pdfs', function(){
     return Pdfs.find();
 })
+
+Meteor.publish('link_requests', function(){
+    return LinkRequests.find();
+})
+
+Meteor.publish('singleRequest', function(id){
+    return LinkRequests.find({_id:id});
+})
+
+Meteor.publish('requestsBySatellite', function(sat){
+    //var sat = Satellites.findOne({_id:id});
+    return LinkRequests.find({'assumptions.satellite':sat});
+})

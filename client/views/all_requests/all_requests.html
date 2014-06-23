@@ -1,0 +1,19 @@
+<template name="allRequests">
+    <h1>All link budget requests for {{sat}}</h1>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Link</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each requests}}
+        <tr>
+            <td><a href="{{pathFor 'results'}}">{{_id}}</a></td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</template>

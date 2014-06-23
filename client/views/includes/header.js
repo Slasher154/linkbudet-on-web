@@ -12,4 +12,11 @@ Template.header.helpers({
 
     return active && 'active';
   }
+
 });
+
+Template.header.thaicom5id = function(){
+    var sat = Satellites.findOne({name:"Thaicom 5"});
+    console.log(JSON.stringify(sat));
+    return sat._id;
+}
