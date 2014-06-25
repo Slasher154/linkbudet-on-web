@@ -18,5 +18,5 @@ bootstrap-3
 collectionFS
 cfs-filesystem
 cfs-gridfs
-accounts-password
 accounts-ui-bootstrap-3-blaze
+http

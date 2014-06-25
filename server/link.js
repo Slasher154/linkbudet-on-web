@@ -7,7 +7,8 @@ Meteor.methods({
         var lb = new LinkBudget();
         var link_req_obj = {
             assumptions: assumptions,
-            results: lb.calc(assumptions)
+            results: lb.calc(assumptions),
+            requestor_id: Meteor.user()._id
         }
         return LinkRequests.insert(link_req_obj);
     }
@@ -223,6 +224,13 @@ function LinkBudget() {
 
 
                 }
+            }
+
+
+            // insert case number for each case
+
+            for(var i = 0; i < results.length; i++){
+                _.extend(results[i],{case_num:i});
             }
 
             return results;
