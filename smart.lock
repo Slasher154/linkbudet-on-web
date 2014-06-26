@@ -14,7 +14,8 @@
       "pdfjs": {},
       "pdfkit": {},
       "collectionFS": {},
-      "accounts-ui-bootstrap-3-blaze": {}
+      "accounts-ui-bootstrap-3-blaze": {},
+      "headers": {}
     },
     "packages": {
       "iron-router": {
@@ -82,6 +83,11 @@
         "tag": "v0.3.7",
         "commit": "a40b15f4b6213040accec10df97a7793e3a25225"
       },
+      "headers": {
+        "git": "https://github.com/gadicohen/meteor-headers.git",
+        "tag": "v0.0.23",
+        "commit": "f7c9a01c12b08f4bf4cd9965f60cf72cf9a62d87"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
         "tag": "v0.2.4",
@@ -122,6 +128,11 @@
         "tag": "v0.0.12",
         "commit": "774bf581e0f3da269dc842672ed6c2da09fd2bdf"
       },
+      "inject-initial": {
+        "git": "https://github.com/gadicc/meteor-inject-initial.git",
+        "tag": "v0.0.7",
+        "commit": "921a944815e06ece8ce4ded180e9d2e9e31f6000"
+      },
       "cfs-filesaver": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-filesaver.git",
         "tag": "v0.0.3",
@@ -154,8 +165,8 @@
       },
       "cfs-tempstore": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-tempstore.git",
-        "tag": "v0.0.26",
-        "commit": "0b95e286b94754ca317b968a4d818cc65913dd72"
+        "tag": "v0.0.27",
+        "commit": "d8fe0422b2767391738ab537bf6749395e4030a0"
       },
       "emitter": {
         "git": "https://github.com/Meteor-Reaction/meteor-emitter.git",

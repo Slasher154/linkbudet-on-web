@@ -69,4 +69,10 @@ if (Meteor.isClient){
         // join the array string
         return string_arr.join(' , ');
     })
+
+    UI.registerHelper('isEqual', function(choice1, choice2){
+        //return true if both choices are equal
+        console.log(choice1 + " equals to " + choice2 + " >> ");
+        return choice1 == choice2;
+    })
 }

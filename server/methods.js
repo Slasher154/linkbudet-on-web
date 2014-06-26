@@ -88,11 +88,18 @@ Meteor.methods({
     test_authen: function () {
         var oAuthServiceUrl = 'https://thcom2.thaicom.net/authservice/AuthenticationSystem.asmx?op=GetAuthen';
 
-        Logs = new Meteor.Collection('logs');
+        var path = Meteor.require('path');
+        var my_path = path.resolve(".");
 
-        var sys_name = "linkcalc_development";
-        var ip_address = "202.183.220.14";
-        var api_key =  "A42994C48598F2A278D892F2AB1CB5F8231CFF55";
+        var sys_name = "LNCL";
+        var ip_address = headers.methodClientIP(this);
+
+        // if my_path starts with '/Users' >> development machine (MAC)
+        // else, it is production server
+        var api_key = "A42994C48598F2A278D892F2AB1CB5F8231CFF55"; // api key for development machine
+        if(my_path.substring(0,6) !== '/Users'){
+            api_key = "2A94C4ADCCDCC29242B18ED6C13E4D7B8382F2AB"; // api key for production server
+        }
 
         function beginAuthen(user, password) {
             var message = "";
@@ -103,9 +110,9 @@ Meteor.methods({
                       <param>\
                         <UserName>37090</UserName>\
                         <Password>;uvufuwmp8,</Password>\
-                        <System>linkcalc_development</System>\
-                        <IP_Address>202.183.220.14</IP_Address>\
-                        <APIKey>A42994C48598F2A278D892F2AB1CB5F8231CFF55</APIKey>\
+                        <System>' + sys_name + '</System>\
+                        <IP_Address>' + ip_address + '</IP_Address>\
+                        <APIKey>' + api_key + '</APIKey>\
                       </param>\
                     </GetAuthen>\
                 </soap:Body>\
@@ -118,15 +125,12 @@ Meteor.methods({
                     }
                 });
                 message = JSON.stringify(result);
-                console.log(message);
-                Logs.insert({message: message});
             } catch (e) {
                 console.log("Error: " + e.message);
                 message = JSON.stringify(e);
-                Logs.insert({message: "Error message = " + e.message});
-                Logs.insert({message: "Error object = " + JSON.stringify(e)});
                 return false;
             }
+            message += " Client IP Address = " + ip_address;
             return message;
         }
 

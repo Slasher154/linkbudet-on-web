@@ -14,7 +14,9 @@ Template.login.events({
         Accounts.callLoginMethod({
             methodArguments: [loginRequest],
             userCallback: function(error){
-                //console.log(error.message);
+               if(error){
+                   Errors.throw(error.reason);
+               }
             }
         });
     }

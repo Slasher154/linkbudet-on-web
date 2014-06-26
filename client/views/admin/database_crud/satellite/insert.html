@@ -1,30 +1,4 @@
-<template name="insert_satellite">
+<template name="satelliteInsert">
     <h1>Insert new satellite</h1>
-    <form class="form-horizontal" role="form">
-        <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Name</label>
-            <div class="col-sm-10">
-                <input type="email" class="form-control" id="name" placeholder="Name">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="orbitalSlot" class="col-sm-2 control-label">Orbital Slot</label>
-            <div class="col-sm-10">
-                <input type="password" class="form-control" id="orbitalSlot" placeholder="Orbital Slot">
-                <p class="help-block">This number must be between -180 and 180</p>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="skb" class="col-sm-2 control-label">Orbital Slot</label>
-            <div class="col-sm-10">
-                <input type="password" class="form-control" id="skb" placeholder="Orbital Slot">
-                <p class="help-block">This number must be between -180 and 180</p>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">Sign in</button>
-            </div>
-        </div>
-    </form>
+    {{ >satelliteBaseForm data}}
 </template>

@@ -39,3 +39,44 @@
     </div>
 </template>
 
+<template name="formGroup">
+    <div class="form-group">
+        <label  class="col-sm-2 control-label">{{title}}</label>
+        <div class="col-sm-10">
+            {{> UI.contentBlock}}
+        </div>
+    </div>
+
+</template>
+
+<template name="dropdown">
+    <select id="{{_id}}" class="form-control">
+        {{#each choices}}
+            {{#if isEqual value ../selected}}
+                <option value="{{value}}" selected>{{text}}</option>
+            {{else}}
+                <option value="{{value}}">{{text}}</option>
+            {{/if}}
+        {{/each}}
+    </select>
+</template>
+
+<template name="databaseTable">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                {{#each rows}}
+                    <th>{{this}}</th>
+                {{/each}}
+            </tr>
+        </thead>
+        <tbody>
+            {{ >UI.contentBlock}}
+        </tbody>
+    </table>
+</template>
+
+<template name="static">
+    <p class="form-control-static">{{ >UI.contentBlock}}</p>
+</template>
+
