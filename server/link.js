@@ -10,6 +10,10 @@ Meteor.methods({
             results: lb.calc(assumptions),
             requestor_id: Meteor.user()._id
         }
+        // push the case number into the result
+        for (var i = 0; i < link_req_obj.results.length; i++){
+            _.extend(link_req_obj.results[i],{"case_num": i+1});
+        }
         return LinkRequests.insert(link_req_obj);
     }
 });
@@ -224,13 +228,6 @@ function LinkBudget() {
 
 
                 }
-            }
-
-
-            // insert case number for each case
-
-            for(var i = 0; i < results.length; i++){
-                _.extend(results[i],{case_num:i});
             }
 
             return results;
@@ -694,16 +691,16 @@ function LinkBudget() {
         var sr = 0;
         if (_.contains(["Mbps", "kbps"], unit)) {
             // if Mbps, convert to kbps
-            var dr = unit === "Mbps" ? value * 1024 : value;
+            var dr = unit === "Mbps" ? value * 1000 : value;
             sr = dr / mcg.spectral_efficiency; // calculate symbol rate in ksps
         }
         else if (_.contains(["MHz", "kHz"], unit)) {
             // convert to symbol rate in ksps
-            var bw = unit === "MHz" ? value * 1024 : value;
+            var bw = unit === "MHz" ? value * 1000 : value;
             sr = bw / bt;
         }
         else if (_.contains(["Msps", "ksps"], unit)) {
-            sr = unit === "Msps" ? value * 1024 : value;
+            sr = unit === "Msps" ? value * 1000 : value;
         }
         else {
             console.log("Unit of bandwidth error.");
@@ -726,8 +723,8 @@ function LinkBudget() {
 
         // check if symbol rate is among the list of available symbol rates in the app
         else {
-            // if the app does not contain the symbol rate property, it means the symbol can be any value (between min and max)
-            if (!(_.has(app, 'symbol_rates'))) {
+            // if the app does not contain the symbol rate property or symbol rate array has no elements, it means the symbol can be any value (between min and max)
+            if (!(_.has(app, 'symbol_rates')) || app.symbol_rates.length == 0) {
                 sr_2 = sr;
             }
             else if (_.contains(app.symbol_rates, sr)) {
@@ -745,7 +742,7 @@ function LinkBudget() {
         console.log("Symbol rate after app limitation = " + sr_2 + " ksps");
 
         // return the occupied bandwidth in MHz
-        return (sr_2 / 1024) * bt;
+        return (sr_2 / 1000) * bt;
 
     }
 
@@ -901,7 +898,7 @@ function Link() {
             operating_sfd = channel.sfd - uplink_gt - (channel.atten_range - channel.default_atten);
             operating_pfd_per_carrier = operating_sfd + backoff_settings.ibo - num_carriers_in_channel;
 
-            // Derive EIRP up (at ground station) needed to compensate spreading loss, pointing, xpol and atmoshperic loss
+            // Derive EIRP up (at ground station) needed to compensate spreading loss, pointing, xpol and atmospheric loss
             eirp_up = operating_pfd_per_carrier + uplink_spreadingLoss + uplink_otherLoss + uplink_atmLoss
 
             // Apply overused power (for normal case, overused power = 0). It will be more than 0 when we're goal seeking
@@ -939,6 +936,11 @@ function Link() {
             else {
                 carrier_output_backoff = backoff_settings.obo + (carrier_pfd - op_pfd);
             }
+
+            _.extend(result,{
+                channel_input_backoff: backoff_settings.ibo,
+                channel_output_backoff: backoff_settings.obo
+            })
 
         }
 
@@ -1001,6 +1003,7 @@ function Link() {
             carrier_output_backoff -= num_carriers_in_channel;
 
             _.extend(result, {
+                channel_output_backoff: _.where(channel.backoff_settings, {"num_carriers": channel.current_num_carriers})[0].obo,
                 channel_deepin: channel_deepin
             });
 
@@ -1210,61 +1213,64 @@ function Link() {
         _.extend(result, {
             // satellite
             channel: channel.name,
-            operating_sfd: operating_sfd,
-            operating_pfd_per_carrier: operating_pfd_per_carrier,
-            carrier_pfd: carrier_pfd,
-            carrier_obo: carrier_output_backoff,
+            operating_mode: channel.mode,
+            operating_sfd: operating_sfd.toFixed(2),
+            operating_pfd_per_carrier: operating_pfd_per_carrier.toFixed(2),
+            carrier_pfd: carrier_pfd.toFixed(2),
+            carrier_obo: carrier_output_backoff.toFixed(2),
             // uplink
             uplink_antenna: uplink_station.antenna,
             uplink_hpa: uplink_station.hpa,
-            uplink_pointing_loss: uplink_pointingLoss,
-            uplink_xpol_loss: uplink_xpolLoss,
-            uplink_atmLoss: uplink_atmLoss,
-            uplink_eirp: eirp_up,
-            uplink_gt: uplink_gt,
-            uplink_path_loss: uplink_path_loss,
+            uplink_pointing_loss: uplink_pointingLoss.toFixed(2),
+            uplink_xpol_loss: uplink_xpolLoss.toFixed(2),
+            uplink_atmLoss: uplink_atmLoss.toFixed(2),
+            uplink_eirp: eirp_up.toFixed(2),
+            uplink_gt: uplink_gt.toFixed(2),
+            uplink_path_loss: uplink_path_loss.toFixed(2),
             uplink_condition: condition.uplink,
-            uplink_availability: uplink_availability,
+            uplink_availability: uplink_availability.toFixed(2),
             uplink_location: uplink_station.location,
-            hpa_power: hpa_power,
-            cn_uplink: cn_uplink,
+            hpa_power: hpa_power.toFixed(2),
+            cn_uplink: cn_uplink.toFixed(2),
             // downlink
             downlink_antenna: downlink_station.antenna,
-            antenna_temp: ant_temp,
-            system_temp: sys_temp,
-            ant_gain: ant_gain,
-            downlink_pointing_loss: downlink_pointingLoss,
-            downlink_xpol_loss: downlink_xpolLoss,
-            downlink_atmLoss: downlink_atmLoss,
-            downlink_eirp: carrier_eirp_down_at_loc,
-            downlink_gt: ant_gt,
-            downlink_path_loss: downlink_path_loss,
+            antenna_temp: ant_temp.toFixed(2),
+            system_temp: sys_temp.toFixed(2),
+            ant_gain: ant_gain.toFixed(2),
+            downlink_pointing_loss: downlink_pointingLoss.toFixed(2),
+            downlink_xpol_loss: downlink_xpolLoss.toFixed(2),
+            downlink_atmLoss: downlink_atmLoss.toFixed(2),
+            downlink_eirp: carrier_eirp_down_at_loc.toFixed(2),
+            downlink_gt: ant_gt.toFixed(2),
+            downlink_path_loss: downlink_path_loss.toFixed(2),
             downlink_condition: condition.downlink,
-            downlink_availability: downlink_availability,
+            downlink_availability: downlink_availability.toFixed(2),
             downlink_location: downlink_station.location,
-            cn_downlink: cn_downlink,
+            cn_downlink: cn_downlink.toFixed(2),
             // interferences
-            ci_uplink_intermod: ci_uplink_intermod,
-            ci_uplink_adj_sat: ci_uplink_adj_sat,
-            ci_uplink_xpol: ci_uplink_xpol,
-            ci_uplink_xcells: ci_uplink_xcells,
-            ci_downlink_adj_sat: ci_downlink_adj_sat,
+            ci_uplink_intermod: ci_uplink_intermod.toFixed(2),
+            ci_uplink_adj_sat: ci_uplink_adj_sat.toFixed(2),
+            ci_uplink_xpol: ci_uplink_xpol.toFixed(2),
+            ci_uplink_xcells: ci_uplink_xcells.toFixed(2),
+            ci_downlink_adj_sat: ci_downlink_adj_sat.toFixed(2),
             ci_downlink_adj_sat_obj: ci_downlink_adj_sat_obj,
-            ci_downlink_intermod: ci_downlink_intermod,
-            ci_downlink_xpol: ci_downlink_xpol,
-            ci_downlink_xcells: ci_downlink_xcells,
-            ci_uplink: ci_uplink,
-            ci_downlink: ci_downlink,
+            ci_downlink_intermod: ci_downlink_intermod.toFixed(2),
+            ci_downlink_xpol: ci_downlink_xpol.toFixed(2),
+            ci_downlink_xcells: ci_downlink_xcells.toFixed(2),
+            ci_uplink: ci_uplink.toFixed(2),
+            ci_downlink: ci_downlink.toFixed(2),
             // total
-            cn_total: cn_total,
-            link_margin: link_margin,
+            cn_total: cn_total.toFixed(2),
+            link_margin: link_margin.toFixed(2),
+            required_margin: required_margin,
             pass: pass,
-            link_availability: link_availability,
+            link_availability: link_availability.toFixed(2),
             mcg: mcg,
-            occupied_bandwidth: bandwidth,
-            roundup_bandwidth: roundup_bandwidth,
+            occupied_bandwidth: bandwidth.toFixed(2),
+            noise_bandwidth: noiseBw.toFixed(2),
+            roundup_bandwidth: roundup_bandwidth.toFixed(2),
             guardband: guardband,
-            data_rate: data_rate,
+            data_rate: data_rate.toFixed(2),
             power_util_percent: power_util_percent,
             roll_off_factor: roll_off_factor
         });
@@ -1297,7 +1303,7 @@ function Link() {
     // Return array of Bandwidth which is lower than the current bandwidth
     function getLowerBandwidth(input_bandwidth) {
         // Check the the application has array of available symbol rates
-        if (!_.has(application, 'symbol_rates')) {
+        if (!_.has(application, 'symbol_rates') || application.symbol_rates.length == 0) {
             logError("Cannot find list of available symbol rates.")
             return false;
         }
@@ -1639,7 +1645,7 @@ function Link() {
                         ci_objects.push({
                             interference: true,
                             name: intf.satellite + " " + intf.name,
-                            value: c_intf
+                            value: c_intf.toFixed(2)
                         });
 
                         ci = cnOperation(ci, c_intf);

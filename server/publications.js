@@ -53,3 +53,7 @@ Meteor.publish('requestsBySatellite', function(sat){
     //var sat = Satellites.findOne({_id:id});
     return LinkRequests.find({'assumptions.satellite':sat});
 })
+
+Meteor.publish('modem_vendors', function(){
+    return ModemVendors.find({$query:{},$orderby:{name:1}});
+})

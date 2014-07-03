@@ -49,8 +49,28 @@
 
 </template>
 
+<template name="formGroupButton">
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            {{> UI.contentBlock}}
+        </div>
+    </div>
+</template>
+
+<template name="formGroupCheckbox">
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" class="{{class}}" checked="{{isChecked}}"> {{text}}
+                </label>
+            </div>
+        </div>
+    </div>
+</template>
+
 <template name="dropdown">
-    <select id="{{_id}}" class="form-control">
+    <select id="{{_id}}" class="form-control {{class}}">
         {{#each choices}}
             {{#if isEqual value ../selected}}
                 <option value="{{value}}" selected>{{text}}</option>
@@ -72,6 +92,21 @@
         </thead>
         <tbody>
             {{ >UI.contentBlock}}
+        </tbody>
+    </table>
+</template>
+
+<template name="condensedTable">
+    <table class="table table-bordered table-condensed">
+        <thead>
+        <tr>
+            {{#each rows}}
+            <th>{{this}}</th>
+            {{/each}}
+        </tr>
+        </thead>
+        <tbody>
+        {{ >UI.contentBlock}}
         </tbody>
     </table>
 </template>

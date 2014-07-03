@@ -35,16 +35,14 @@
         {{/formGroup}}
 
 
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
+        {{#formGroupButton}}
                 {{#if view_mode}}
                 <a class="btn btn-primary" href="{{pathFor 'satelliteViewAll'}}">View all satellites</a>
                 <a class="btn btn-success" href="{{pathFor 'satelliteInsert'}}">Add new satellite</a>
                 {{else}}
                 <button type="submit" class="btn btn-primary">Submit</button>
                 {{/if}}
-            </div>
-        </div>
+         {{/formGroupButton}}
 
     </form>
 </template>

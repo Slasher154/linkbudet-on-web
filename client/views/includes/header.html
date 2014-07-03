@@ -12,11 +12,17 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="{{activeRouteClass 'index'}}"><a href="{{pathFor 'index'}}">Home</a></li>
-                    <li class="{{activeRouteClass 'about'}}"><a href="{{pathFor 'about'}}">About</a></li>
-                    <li class="{{activeRouteClass 'contact'}}"><a href="{{pathFor 'contact'}}">Contact</a></li>
-                    <li class="{{activeRouteClass 'map'}}"><a href="{{pathFor 'maps'}}">Maps</a></li>
-                    <li class="{{activeRouteClass 'calculate'}}"><a href="{{pathFor 'calculate'}}">Calc</a></li>
+                    <li><a href="{{pathFor 'index'}}">Home</a></li>
+                    <li><a href="{{pathFor 'about'}}">About</a></li>
+                    <li><a href="{{pathFor 'contact'}}">Contact</a></li>
+                    <li><a href="{{pathFor 'maps'}}">Maps</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modems <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{pathFor 'modemViewAll' }}">View all</a></li>
+                            <li><a href="{{pathFor 'modemInsert' }}">Insert</a></li>
+                        </ul>
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">View Requests <b class="caret"></b></a>
                         <ul class="dropdown-menu">

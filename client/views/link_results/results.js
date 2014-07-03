@@ -123,12 +123,15 @@ Template.results.conventionalResult = function () {
 
         // create result object for forward and return results
         var fwd_result_obj = CreateLinkObject(re.fwd);
+        // add case number and request id to the object
+        _.extend(fwd_result_obj,{ request_id: this._id, 'case_num': re.case_num});
         if (_.has(assumption, 'platform')) {
             _.extend(fwd_result_obj, {platform: assumption.platform.name});
         }
         var rtn_result_obj = {}
         if (!_.isEmpty(re.rtn)) {
             rtn_result_obj = CreateLinkObject(re.rtn);
+            _.extend(rtn_result_obj,{ request_id: this._id, 'case_num': re.case_num});
             if (_.has(assumption, 'platform')) {
                 _.extend(rtn_result_obj, {platform: assumption.platform.name});
             }
@@ -169,25 +172,29 @@ Template.results.conventionalResult = function () {
         var clear = _.where(result, {uplink_condition: "clear", downlink_condition: "clear"})[0];
         var rain = _.where(result, {uplink_condition: "rain", downlink_condition: "rain"})[0];
 
+        console.log("Clear result = " + JSON.stringify(clear));
+        console.log("Rain result = " + JSON.stringify(rain));
+
+
         return {
             case_name: clear.channel + " : " + clear.downlink_location.name,
             uplink_location: clear.uplink_location.name,
             downlink_location: clear.downlink_location.name,
             uplink_antenna: clear.uplink_antenna.size,
             downlink_antenna: clear.downlink_antenna.size,
-            data_rate: clear.data_rate.toFixed(2),
+            data_rate: clear.data_rate,
             mcg: clear.mcg.name,
             eb_no_threshold: eb_no(clear.mcg.spectral_efficiency, clear.mcg.es_no).toFixed(2),
             bandwidth: clear.roundup_bandwidth,
             uplink_ifl: clear.uplink_hpa.ifl,
-            hpa_power: clear.hpa_power.toFixed(2),
-            cn_total: clear.cn_total.toFixed(2),
+            hpa_power: clear.hpa_power,
+            cn_total: clear.cn_total,
             eb_no: eb_no(clear.mcg.spectral_efficiency, clear.cn_total).toFixed(2),
-            eb_no_margin: clear.link_margin.toFixed(2),
-            cn_uplink: clear.cn_uplink.toFixed(2),
-            cn_downlink: clear.cn_downlink.toFixed(2),
+            eb_no_margin: clear.link_margin,
+            cn_uplink: clear.cn_uplink,
+            cn_downlink: clear.cn_downlink,
             eb_no_rain: eb_no(rain.mcg.spectral_efficiency, rain.cn_total).toFixed(2),
-            power_util_percent: clear.power_util_percent.toFixed(2),
+            power_util_percent: clear.power_util_percent,
             guardband: clear.guardband,
             roll_off_factor: clear.roll_off_factor
         };

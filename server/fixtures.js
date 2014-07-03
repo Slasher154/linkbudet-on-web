@@ -19,6 +19,9 @@
             // -----------------------------------Insert IPSTAR Channels----------------------------------------
             Meteor.call('insert_ipstar');
 
+            // -----------------------------------Insert Modems Vendors----------------------------------------
+            Meteor.call('insert_modem_vendors');
+
             // -----------------------------------Insert Modems ----------------------------------------
             Meteor.call('insert_modem');
 
@@ -27,12 +30,6 @@
 
             // -----------------------------------Insert Link Budget Constants ----------------------------------------
             Meteor.call('insert_constants');
-
-            // -----------------------------------Insert ITU 1999 Rain Data ----------------------------------------
-            Meteor.call('insert_rain_data');
-
-            // -----------------------------------Insert Gateways----------------------------------------
-            Meteor.call('insert_gateways');
 
             // -----------------------------------Insert Contours from Satsoft program----------------------------------------
             Meteor.call('insert_contours');
@@ -48,4 +45,10 @@
             Meteor.call('insert_telkom3');
             Meteor.call('insert_asiasat4');
             Meteor.call('insert_express_am4');
+
+            // -----------------------------------Insert Gateways----------------------------------------
+            Meteor.call('insert_gateways');
+
+            // -----------------------------------Insert ITU 1999 Rain Data ----------------------------------------
+            Meteor.call('insert_rain_data');
         }

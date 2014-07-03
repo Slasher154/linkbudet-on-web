@@ -22,6 +22,7 @@
             <th>Power utilization (%)</th>
             <th>Guardband (%)</th>
             <th>BT Product</th>
+            <th>Details</th>
         </tr>
         </thead>
         <tbody>
@@ -46,6 +47,7 @@
             <td>{{power_util_percent}}</td>
             <td>{{guardband}}</td>
             <td>{{roll_off_factor}}</td>
+            <td><a href="{{pathFor 'linkDetail' _id=request_id case_num=case_num}}">Detail</a></td>
         </tr>
         {{/each}}
         </tbody>

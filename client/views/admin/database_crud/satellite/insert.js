@@ -25,6 +25,10 @@ Template.satelliteInsert.events({
                 if(error){
                     Errors.throw(error.reason);
                 }
+                else{
+                    Router.go('satelliteView',{_id: _id});
+                }
+
             });
         }
 

@@ -1,0 +1,118 @@
+/**
+ * Created by Dome on 7/1/14 AD.
+ */
+
+Template.modemInsert.modem = function(){
+    return {
+        // insert 1 blank application to display the application base form in the insert page
+        applications: [
+            {
+                name: "",
+                acm: false,
+                link_margin: 2,
+                minimum_symbol_rate: 300,
+                maximum_symbol_rate: 30000,
+                symbol_rates: [],
+                roll_off_factor: 1.2,
+                mcgs: [{
+                    name: "QPSK 1/2",
+                    spectral_efficiency: 1,
+                    es_no: 1.9
+                }]
+            }
+        ]
+    }
+}
+
+Template.modemInsert.events({
+    'submit form': function(e){
+        e.preventDefault();
+
+        // validate and insert modem
+        var name = $('#name').val();
+        var vendor = $('#vendor').find('option:selected').val();
+
+        // find the number of application by count the app-name text box
+        var app_count = $('.app-name').length;
+
+        var apps = [];
+
+        // loop through applications
+        for(var i = 0; i < app_count; i++){
+            console.log('Searching app ' + (i + 1) + ' of ' + app_count);
+            var app_name = $('.app-name:eq(' + i + ')').val();
+            console.log('App name = ' + app_name);
+            var app_type = $('.app-type:eq(' + i + ')').find('option:selected').val();
+            console.log('Type = ' + app_type);
+            var acm = $('.app-acm:eq(' + i + ')').is(':checked');
+            console.log('ACM = ' + acm);
+            var link_margin = $('.app-link-margin:eq(' + i + ')').val();
+            console.log('Link margin = ' + link_margin);
+            var min_sym_rate = $('.app-min-symbol-rate:eq(' + i + ')').val();
+            console.log('Min Sym Rate = ' + min_sym_rate);
+            var max_sym_rate = $('.app-max-symbol-rate:eq(' + i + ')').val();
+            console.log('Max Sym Rate = ' + max_sym_rate);
+            if(min_sym_rate > max_sym_rate){
+                Errors.throw('Minimum symbol rate cannot be greater than maximum symbol rate.');
+                return false;
+            }
+            var sym_rates = $('.app-symbol-rates:eq(' + i + ')').val();
+            // cut out spaces
+            sym_rates = sym_rates.replace(" ","");
+            var sym_rates_arr = [];
+            if(sym_rates != ""){
+                var temp = sym_rates.split(',');
+                for(var j = 0; j < temp.length; j++){
+                    console.log('Sym rate ' + (j+1) + ' = ' + parseInt(temp[j]));
+                    sym_rates_arr.push(parseInt(temp[j]));
+                }
+            }
+            console.log('Symbol rates = ' + sym_rates);
+            var roll_off_factor = $('.app-roll-off-factor:eq(' + i + ')').val();
+            console.log('Roll off factor = ' + roll_off_factor);
+            // MCGs
+            // Get the closest .mcg-form to the button to insert the new MCG insert boxes to the correct application
+            // (prevent click add button and insert the new MCG boxes into all applications
+            var mcg_title_form_group = $('.mcg-title:eq(' + i + ')');
+            var add_mcg_button_form_group = $('.add-mcg:eq(' + i + ')').parents('.form-group');
+            var mcg_form_groups = mcg_title_form_group.nextUntil(add_mcg_button_form_group, '.mcg-form');
+            var mcgs = [];
+            // loop each mcg
+            _.each(mcg_form_groups, function(item){
+                var mcg_name = $(item).find('.mcg-name').val();
+                var mcg_mbe = $(item).find('.mcg-mbe').val();
+                var mcg_es_no = $(item).find('.mcg-es-no').val();
+                console.log('MCG: name = ' + mcg_name + ' MBE = ' + mcg_mbe + ' Es/No = ' + mcg_es_no);
+                mcgs.push({
+                    name: mcg_name,
+                    spectral_efficiency: mcg_mbe,
+                    es_no: mcg_es_no
+                });
+            });
+            apps.push({
+                name: app_name,
+                type: app_type,
+                acm: acm,
+                link_margin: link_margin,
+                minimum_symbol_rate: min_sym_rate,
+                maximum_symbol_rate: max_sym_rate,
+                symbol_rates: sym_rates_arr,
+                roll_off_factor: roll_off_factor,
+                mcgs: mcgs
+            })
+        }
+
+        Modems.insert({
+            name: name,
+            vendor: vendor,
+            applications: apps
+        }, function(error, _id){
+            if(error){
+                Errors.throw(error.reason);
+            }
+            else{
+                Router.go('modemView',{_id: _id});
+            }
+        });
+     }
+})
