@@ -31,9 +31,6 @@
             // -----------------------------------Insert Link Budget Constants ----------------------------------------
             Meteor.call('insert_constants');
 
-            // -----------------------------------Insert Contours from Satsoft program----------------------------------------
-            Meteor.call('insert_contours');
-
             // -----------------------------------Insert Antennas----------------------------------------
             Meteor.call('insert_antennas');
 
@@ -48,6 +45,26 @@
 
             // -----------------------------------Insert Gateways----------------------------------------
             Meteor.call('insert_gateways');
+
+            // -----------------------------------Insert Contours from Satsoft program----------------------------------------
+            Meteor.call('insert_australia_contours');
+            Meteor.call('insert_australia_contours_2');
+            Meteor.call('insert_cambodia_contours');
+            Meteor.call('insert_china_contours');
+            Meteor.call('insert_china_contours_2');
+            Meteor.call('insert_china_contours_3');
+            Meteor.call('insert_china_contours_4');
+            Meteor.call('insert_india_contours');
+            Meteor.call('insert_india_contours_2');
+            Meteor.call('insert_indonesia_contours');
+            Meteor.call('insert_japan_contours');
+            Meteor.call('insert_korea_contours');
+            Meteor.call('insert_malaysia_contours');
+            Meteor.call('insert_myanmar_contours');
+            Meteor.call('insert_new_zealand_contours');
+            Meteor.call('insert_philippines_contours');
+            Meteor.call('insert_thailand_contours');
+            Meteor.call('insert_vietnam_contours');
 
             // -----------------------------------Insert ITU 1999 Rain Data ----------------------------------------
             Meteor.call('insert_rain_data');

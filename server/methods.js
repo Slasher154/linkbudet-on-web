@@ -97,7 +97,7 @@ Meteor.methods({
         // if my_path starts with '/Users' >> development machine (MAC)
         // else, it is production server
         var api_key = "A42994C48598F2A278D892F2AB1CB5F8231CFF55"; // api key for development machine
-        if(my_path.substring(0,6) !== '/Users'){
+        if (my_path.substring(0, 6) !== '/Users') {
             api_key = "2A94C4ADCCDCC29242B18ED6C13E4D7B8382F2AB"; // api key for production server
         }
 
@@ -144,6 +144,43 @@ Meteor.methods({
         }
 
         return beginAuthen('', '');
+    },
+
+    // Return the relative contour from the given lat/lon, beam and type (uplink or downlink)
+    get_contour: function (lat, lon, satellite, beam, type) {
+        var contours = Contours.findOne({satellite: satellite, beam: beam, beam_type: type}).features;
+        //var obj = db.contours.find({beam:"203"},{'features':{$eleMatch:{geometry:{$geoIntersects:{$geometry:{type:'Point',coordinates:[100.55,13.71]}}}}}});
+        //console.log('Contours = ' + JSON.stringify(contours));
+        // insert the temp contours array into database.
+        // we do this because there is no way to return only polygons which the location is within right now
+        console.log('Finding contour for satellite ' + satellite + ' , beam ' + beam + ' path ' + type);
+        var ids = [];
+        _.each(contours,function(item){
+            ids.push(TempContours.insert(item));
+        })
+
+        // use geointersects to query all the contour lines which contains this location
+        var contour_lines = TempContours.find({
+            geometry:{ $geoIntersects:{ $geometry:{type:'Point', coordinates:[lon,lat]}}}
+        }).fetch();
+
+        // remove the data after query
+        _.each(ids, function(item){
+            TempContours.remove({_id:item});
+        });
+
+        // throws error if it can't find the result
+        if(contour_lines.length == 0){
+            console.log('Cannot find contour');
+            throw new Meteor.Error(403, "The lat/lon " + lat + "/" + lon + " is not within -10 dB contour of " + type + " beam " + beam);
+        }
+
+        // the line with lowest relative value is the relative contour of that location
+        var min_contour = _.max(contour_lines, function(line){
+            return line.properties.relative_value;
+        });
+        console.log('Contour is ' + min_contour.properties.relative_value + ' dB.');
+        return min_contour.properties.relative_value;
     }
 
 

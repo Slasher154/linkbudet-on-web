@@ -1,15 +1,16 @@
 <template name="linkDetail">
 <h2>Link from A to B</h2>
-{{ >linkDetailTable fwd.[0]}}
+{{ >linkDetailTable fwd}}
 <hr>
 {{#if isNotEmpty rtn}}
 <h2>Link from B to A</h2>
-{{ >linkDetailTable rtn.[0]}}
+{{ >linkDetailTable rtn}}
 {{/if}}
 </template>
 
 <template name="linkDetailTable">
 <!-- Summary -->
+{{#with this.[0]}}
 <div class="col-sm-12">
     <h5>Summary</h5>
     {{#condensedTable rows=summaryRows}}
@@ -28,9 +29,11 @@
         <td>{{data_rate}}</td>
         <td>{{power_util_percent}}</td>
         <td>{{hpa_power}}</td>
+        {{#with ../[1]}}
         <td>{{uplink_availability}}</td>
         <td>{{downlink_availability}}</td>
         <td>{{link_availability}}</td>
+        {{/with}}
     </tr>
     {{/condensedTable}}
 </div>
@@ -74,6 +77,11 @@
         <td>dB</td>
     </tr>
     <tr>
+        <td>ATM Loss (Clear)</td>
+        <td>{{uplink_atmLoss}}</td>
+        <td>dB</td>
+    </tr>
+    <tr>
         <td>Noise Bandwidth</td>
         <td>{{noise_bandwidth}}</td>
         <td>dB</td>
@@ -83,7 +91,11 @@
         <td>{{cn_uplink}}</td>
         <td>dB</td>
     </tr>
-
+    <tr>
+        <td>ATM Loss (Rain)</td>
+        <td>{{../[1].uplink_atmLoss}}</td>
+        <td>dB</td>
+    </tr>
     {{/condensedTable}}
 </div>
 <!-- Satellite -->
@@ -197,6 +209,11 @@
         <td>dB</td>
     </tr>
     <tr>
+        <td>ATM Loss (Clear)</td>
+        <td>{{downlink_atmLoss}}</td>
+        <td>dB</td>
+    </tr>
+    <tr>
         <td>Noise bandwidth</td>
         <td>{{noise_bandwidth}}</td>
         <td>dB</td>
@@ -204,6 +221,11 @@
     <tr>
         <td>C/N Downlink</td>
         <td>{{cn_downlink}}</td>
+        <td>dB</td>
+    </tr>
+    <tr>
+        <td>ATM Loss (Rain)</td>
+        <td>{{../[1].downlink_atmLoss}}</td>
         <td>dB</td>
     </tr>
     {{/condensedTable}}
@@ -268,6 +290,28 @@
         <td>{{cn_total}}</td>
         <td>dB</td>
     </tr>
+    <tr>
+        <td colspan="3"><strong>Rain Fade</strong></td>
+    </tr>
+    {{#with ../[1]}}
+    <tr>
+        <td>C/N UL</td>
+        <td>{{cn_uplink}}</td>
+        <td>dB</td>
+    </tr>
+    <tr>
+        <td>C/N DL</td>
+        <td>{{cn_downlink}}</td>
+        <td>dB</td>
+    </tr>
+    <tr>
+        <td>C/N Total</td>
+        <td>{{cn_total}}</td>
+        <td>dB</td>
+    </tr>
+    {{/with}}
     {{/condensedTable}}
+
 </div>
+{{/with}}
 </template>

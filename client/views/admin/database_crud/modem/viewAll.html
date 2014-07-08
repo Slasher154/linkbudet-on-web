@@ -3,7 +3,7 @@
     {{#databaseTable rows=tableRows}}
     {{#each modems}}
     <tr>
-        <td>{{name}}</td>
+        <td><a href="{{pathFor 'modemView'}}">{{name}}</a></td>
         <td>{{vendor}}</td>
         <td>
             <a href="{{pathFor 'modemView'}}"><i class="glyphicon glyphicon-search"></i></a>

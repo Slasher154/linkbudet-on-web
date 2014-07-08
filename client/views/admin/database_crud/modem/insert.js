@@ -52,10 +52,7 @@ Template.modemInsert.events({
             console.log('Min Sym Rate = ' + min_sym_rate);
             var max_sym_rate = $('.app-max-symbol-rate:eq(' + i + ')').val();
             console.log('Max Sym Rate = ' + max_sym_rate);
-            if(min_sym_rate > max_sym_rate){
-                Errors.throw('Minimum symbol rate cannot be greater than maximum symbol rate.');
-                return false;
-            }
+
             var sym_rates = $('.app-symbol-rates:eq(' + i + ')').val();
             // cut out spaces
             sym_rates = sym_rates.replace(" ","");

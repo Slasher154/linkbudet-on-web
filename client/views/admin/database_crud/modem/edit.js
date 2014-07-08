@@ -97,6 +97,8 @@ Template.modemEdit.events({
                 Router.go('modemView',{_id: _id});
             }
         });
+
     }
+
 
 })

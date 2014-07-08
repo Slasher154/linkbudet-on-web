@@ -21,6 +21,10 @@ Meteor.publish('locations', function(){
     return Locations.find();
 })
 
+Meteor.publish('singleLocation', function(_id){
+    return Locations.find({_id:_id});
+})
+
 Meteor.publish('constants', function(){
     return Constants.find();
 })

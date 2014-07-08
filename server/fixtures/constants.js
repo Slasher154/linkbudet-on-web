@@ -16,6 +16,7 @@ Meteor.methods({
             Constants.insert({title:"C-Band Downlink Default Link Availability", value:99.99, name:"c_band_downlink_availability"})
             Constants.insert({title:"Ku-Band Uplink Default Link Availability", value:99.98, name:"ku_band_uplink_availability"})
             Constants.insert({title:"Ku-Band Downlink Default Link Availability", value:99.6, name:"ku_band_downlink_availability"})
+            Constants.insert({title:"Total Link Availability Limit", value: 96, name:"lowest_total_link_availability"})
         })();
     }
 })

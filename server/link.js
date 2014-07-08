@@ -375,7 +375,8 @@ function LinkBudget() {
                 downlink_adj_sat_interferences: data.downlink_adj_sat_interferences,
                 uplink_diversity: uplink_diversity,
                 downlink_diversity: downlink_diversity,
-                last_mcg: i == mcgs.length - 1 // indicates that this is the last MCG
+                last_mcg: i == mcgs.length - 1, // indicates that this is the last MCG
+                path: "forward" // indicates that the link is hub to remote link
             }
             var cases = run_link(link_data);
             // if run_link return false, we continue to the next mcg.
@@ -563,8 +564,10 @@ function LinkBudget() {
                 uplink_diversity: uplink_diversity,
                 downlink_diversity: downlink_diversity,
                 downlink_adj_sat_interferences: data.downlink_adj_sat_interferences,
-                last_mcg: i == mcgs.length - 1 // indicates that this is the last MCG
+                last_mcg: i == mcgs.length - 1, // indicates that this is the last MCG
+                path: "return" // indicates that this is not hub to remote link
             }
+
             var cases = run_link(link_data);
             // if run_link return false, we continue to the next mcg.
             // This is the case where we calculate ACM applications and looping all MCG from best to worst and this MCG does not pass at clear sky
@@ -630,6 +633,7 @@ function LinkBudget() {
         mylink.setUplinkAvailability(data.uplink_availability);
         mylink.setDownlinkAvailability(data.downlink_availability);
         mylink.setDownlinkAdjSatInterferences(data.downlink_adj_sat_interferences);
+        mylink.setPath(data.path);
 
         if (_.has(data, 'uplink_diversity')) mylink.setUplinkDiversity(data.uplink_diversity);
         if (_.has(data, 'downlink_diversity')) mylink.setDownlinkDiversity(data.downlink_diversity);
@@ -640,13 +644,14 @@ function LinkBudget() {
         console.log('Run link at clear sky.');
         console.log('------------------------------------');
         var clear_re = mylink.run();
-        calculations.push(clear_re);
-        console.log("Clear sky result = " + JSON.stringify(clear_re));
 
         // continue to run the link for rain if clear sky is passed or this is last mcg
         if (!clear_re.pass && !data.last_mcg) {
             return false;
         }
+
+        calculations.push(clear_re);
+        console.log("Clear sky result = " + JSON.stringify(clear_re));
 
         mylink.setCondition(both_fade);
         mylink.setRequiredMargin(0); // Set link margin = 0 for both fade
@@ -654,12 +659,37 @@ function LinkBudget() {
         console.log('Run link at both fade');
         console.log('------------------------------------');
         var both_fade_re = mylink.run();
-        calculations.push(both_fade_re);
-        console.log("Both fade result = " + JSON.stringify(both_fade_re));
 
+        // continue to run the link for up/down fade if both fade is passed or this is last mcg
         if (!both_fade_re.pass && !data.last_mcg) {
             return false;
         }
+
+        var sla_limit = Constants.findOne({name:"lowest_total_link_availability"}).value;
+        var decrease_step = 0.2;
+
+        // if this is the last MCG (or fixed MCG) and the link at both fade does not pass,
+        // reduce link availability until it passes to find max link avail
+        // but not lower than sla_limit
+        while(!both_fade_re.pass && data.last_mcg && both_fade_re.link_availability > sla_limit){
+            console.log("Link fail at both fade at last MCG >> find max link avail");
+            // if forward link, reduce down avail to seek max link avail
+            if(data.hub_to_remote){
+                mylink.setDownlinkAvailability(both_fade_re.downlink_availability - decrease_step);
+                console.log("Finding max link avail by reducing downlink avail to " + (both_fade_re.downlink_availability - decrease_step));
+            }
+            // else (return link), reduce up avail to seek max linka vail
+            else{
+                mylink.setUplinkAvailability(both_fade_re.uplink_availability - decrease_step);
+                console.log("Finding max link avail by reducing uplink avail to " + (both_fade_re.uplink_availability - decrease_step));
+            }
+            both_fade_re = mylink.run();
+        }
+
+        calculations.push(both_fade_re);
+        console.log("Both fade result = " + JSON.stringify(both_fade_re));
+
+
 
         mylink.setCondition(up_fade);
         console.log('------------------------------------');
@@ -775,6 +805,7 @@ function Link() {
     var downlink_adj_sat_interferences = {};
     var uplink_diversity = {};
     var downlink_diversity = {};
+    var path = "";
     this.errorMessage = "";
 
     // ---------------- Run Program --------------------------
@@ -791,6 +822,14 @@ function Link() {
                 LogTitle("This application has ACM");
                 // get sorted MCG array from best to worst
                 var lowerMcgs = getLowerMcgThanClearSky(mcg_clr);
+
+                // if there is no lower MCG than the one at clear sky, so it is the last MCG already
+                // add this MCG so the program calculates on this
+
+                if (lowerMcgs.length == 0){
+                    console.log('The clear sky code is last MCG already, add this code to calculate at rain fade');
+                }
+
                 // there is any MCG lower than clear sky
                 if (lowerMcgs.length > 0) {
 
@@ -800,21 +839,32 @@ function Link() {
                         mcg = lowerMcgs[i];
                         LogTitle("Find the result for uplink = " + condition.uplink + " downlink = " + condition.downlink + " at MCG = " + lowerMcgs[i].name);
                         var re = calculate();
-                        if (re.pass || i == lowerMcgs.length - 1) {
+                        // if the link passes at rain fade, return the result
+                        if (re.pass) {
+                            return re;
+                        }
+                        // if this is last MCG already, find max link avail
+                        else if(i == lowerMcgs.length - 1){
+                            var sla_limit = Constants.findOne({name:"lowest_total_link_availability"}).value;
+                            var decrease_step = 0.2;
+                            while(!re.pass && re.link_availability > sla_limit){
+                                console.log("Link fail at both fade at last MCG >> find max link avail");
+                                // if forward link, reduce down avail to seek max link avail
+                                if(path == "forward"){
+                                    downlink_availability -= decrease_step;
+                                    console.log("Finding max link avail by reducing downlink avail to " + (downlink_availability - decrease_step));
+                                }
+                                // else (return link), reduce up avail to seek max link avail
+                                else{
+                                    uplink_availability -= decrease_step;
+                                    console.log("Finding max link avail by reducing uplink avail to " + (uplink_availability - decrease_step));
+                                }
+                                re = calculate();
+                            }
                             return re;
                         }
                     }
-                    /*
-                     var passResults = _.where(results, {pass: true});
-                     var maxPass = _.max(passResults, function(item){
-                     return item.data_rate;
-                     });
-                     return maxPass;
-                     */
-                }
-                // the MCG at clear sky is already the minimum one
-                else {
-                    return calculate();
+
                 }
 
             }
@@ -838,7 +888,25 @@ function Link() {
                 });
             }
             else {
-                return calculate();
+                var re = calculate();
+                // check if the link pass or not, if not, find max link avail
+                var sla_limit = Constants.findOne({name:"lowest_total_link_availability"}).value;
+                var decrease_step = 0.2;
+                while(!re.pass && re.link_availability > sla_limit){
+                    console.log("Link fail at both fade at last MCG >> find max link avail");
+                    // if forward link, reduce down avail to seek max link avail
+                    if(path == "forward"){
+                        downlink_availability -= decrease_step;
+                        console.log("Finding max link avail by reducing downlink avail to " + (downlink_availability - decrease_step));
+                    }
+                    // else (return link), reduce up avail to seek max link avail
+                    else{
+                        uplink_availability -= decrease_step;
+                        console.log("Finding max link avail by reducing uplink avail to " + (uplink_availability - decrease_step));
+                    }
+                    re = calculate();
+                }
+                return re;
             }
         }
 
@@ -1004,7 +1072,7 @@ function Link() {
 
             _.extend(result, {
                 channel_output_backoff: _.where(channel.backoff_settings, {"num_carriers": channel.current_num_carriers})[0].obo,
-                channel_deepin: channel_deepin
+                channel_deepin: channel_deepin.toFixed(2)
             });
 
         }
@@ -1083,7 +1151,7 @@ function Link() {
             else {
                 ant_gain = antenna_gain(ant.size, downlink_freq);
             }
-            ant_gt = ant_gain - 10 * log10(sys_temp);
+            ant_gt = ant_gain - 10 * log10(sys_temp) - 0.3; // TODO: Correct it to parameter
 
             console.log("----------Antenna---------------");
             console.log("Antenna Temp: " + ant_temp + " K");
@@ -1112,7 +1180,7 @@ function Link() {
 
         // C/I Intermod from HPA, C/I Adjacent satellite
         // If uplink HPA, do not have C/I intermod specified, assume it is 25
-        var ci_uplink_intermod = _.has(uplink_station.hpa, 'intermod') ? uplink_station.hpa.intermod : 25;
+        var ci_uplink_intermod = _.has(uplink_station.hpa, 'intermod') ? uplink_station.hpa.intermod : 50;
 
         // Uplink adjacent satellite interferences
         // uplink adjacent satellite interferences
@@ -1271,7 +1339,7 @@ function Link() {
             roundup_bandwidth: roundup_bandwidth.toFixed(2),
             guardband: guardband,
             data_rate: data_rate.toFixed(2),
-            power_util_percent: power_util_percent,
+            power_util_percent: power_util_percent.toFixed(2),
             roll_off_factor: roll_off_factor
         });
 
@@ -1448,8 +1516,9 @@ function Link() {
 
     // Return antenna temperature from given attenuation (maybe clear sky or rain)
     function antenna_temp(attenuation) {
-        var tc = 2.7 // background sky noise due to cosmic radiation = 2.7K
-        return 280 * (1 - Math.pow(10, -(attenuation / 10))) + tc * Math.pow(10, -(attenuation / 10));
+        //var tc = 2.7 // background sky noise due to cosmic radiation = 2.7K
+        //return 280 * (1 - Math.pow(10, -(attenuation / 10))) + tc * Math.pow(10, -(attenuation / 10));
+        return 30;
     }
 
     // Return system temperature = ((Tant + Tfeed) / IFL) + Tlna
@@ -1605,7 +1674,7 @@ function Link() {
                     var eirp_density = data.eirp_density, diameter = data.diameter, orbital_slot = data.orbital_slot;
 
                     var intf_sat = Satellites.findOne({name: intf.satellite});
-                    var deg_diff = orbital_slot - intf_sat.orbital_slot;
+                    var deg_diff = (Math.abs((orbital_slot - intf_sat.orbital_slot))-0.15) * 1.1; // Topocentric Angle | from P'Oui, 8 July 2014
 
                     console.log('Finding interferences from satellite ' + intf.satellite + ' channel: ' + intf.name + ' at ' + intf_sat.orbital_slot + ' degrees');
 
@@ -1683,7 +1752,7 @@ function Link() {
 
     // Return C/I cross cells from the given channel, path and location
     function ci_cross_cells(channel, path, location) {
-        var ci = 25 // default value
+        var ci = 50 // default value
         if (path == "uplink") {
             // For IPSTAR forward channels KA-uplink (or Ku for BC)
             if (_.has(channel, 'ci_uplink_adj_cell')) {
@@ -2320,6 +2389,9 @@ function Link() {
     }
     this.setDownlinkDiversity = function (value) {
         downlink_diversity = value;
+    }
+    this.setPath = function (value){
+        path = value;
     }
 }
 
