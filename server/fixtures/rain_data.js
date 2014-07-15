@@ -5,7 +5,7 @@
 Meteor.methods({
     'insert_rain_data': function(){
         (function () {
-            var data = [
+            var data =[
                 {lat: 90, lon: 0, value: 5.96695327758789},
                 {lat: 90, lon: 1.5, value: 5.96695327758789},
                 {lat: 90, lon: 3, value: 5.96695327758789},
@@ -8921,8 +8921,7 @@ Meteor.methods({
                 {lat: 36, lon: -6, value: 43.2414741516113},
                 {lat: 36, lon: -4.5, value: 30.3774909973144},
                 {lat: 36, lon: -3, value: 31.3858394622802},
-                {lat: 36, lon: -1.5, value: 30.1046066284179
-                },
+                {lat: 36, lon: -1.5, value: 30.1046066284179},
                 {lat: 34.5, lon: 0, value: 16.4734764099121},
                 {lat: 34.5, lon: 1.5, value: 15.3765459060668},
                 {lat: 34.5, lon: 3, value: 14.7706022262573},
@@ -29167,9 +29166,12 @@ Meteor.methods({
                 {lat: -90, lon: -3, value: 0},
                 {lat: -90, lon: -1.5, value: 0}
             ];
+
             _.each(data, function (item) {
                 RainData.insert(item);
             })
+
+
         })();
     }
 })

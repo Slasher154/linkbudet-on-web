@@ -55,9 +55,14 @@ Meteor.publish('singleRequest', function(id){
 
 Meteor.publish('requestsBySatellite', function(sat){
     //var sat = Satellites.findOne({_id:id});
-    return LinkRequests.find({'assumptions.satellite':sat});
+    // return only request of this user
+    return LinkRequests.find({$query:{'assumptions.satellite':sat, requestor_id: this.userId},$orderby:{requested_date:-1}},{fields:{results:false}});
 })
 
 Meteor.publish('modem_vendors', function(){
     return ModemVendors.find({$query:{},$orderby:{name:1}});
+})
+
+Meteor.publish('test_results', function(){
+    return TestContourResults.find();
 })

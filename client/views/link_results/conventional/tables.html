@@ -40,7 +40,12 @@
             <td>{{hpa_power}}</td>
             <td>{{cn_total}}</td>
             <td>{{eb_no}}</td>
-            <td>{{eb_no_margin}}</td>
+            {{#if pass}}
+            <td class="success">{{eb_no_margin}}</td>
+            {{else}}
+            <td class="danger">{{eb_no_margin}}</td>
+            {{/if}}
+
             <td>{{cn_uplink}}</td>
             <td>{{cn_downlink}}</td>
             <td>{{eb_no_rain}}</td>

@@ -10,15 +10,15 @@ Template.locationEdit.events({
         var name = $('#name').val();
         var country = $('#country').val();
         var city = $('#city').val();
-        var lat = $('#lat').val();
-        var lon = $('#lon').val();
+        var lat = Number($('#lat').val());
+        var lon = Number($('#lon').val());
         var loc_data = [];
         var loc_data_form_groups = $('.data-form');
         _.each(loc_data_form_groups, function(item){
             var satellite = $(item).find('.satellite option:selected').val();
             var beam = $(item).find('.beam option:selected').val();
             var type = $(item).find('.type option:selected').val();
-            var value = $(item).find('.value').val();
+            var value = Number($(item).find('.value').val());
             loc_data.push({
                 satellite: satellite,
                 beam: beam,

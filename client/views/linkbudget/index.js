@@ -2,6 +2,10 @@
  * Created by Dome on 4/24/14 AD.
  */
 
+Template.index.rendered = function(){
+
+}
+
 Template.index.events({
     'submit form': function (e) {
         e.preventDefault();
@@ -11,15 +15,21 @@ Template.index.events({
         e.preventDefault();
 
         // Validate the input
+        var request_name = $('#request-name').val();
+        if(request_name == ""){
+            alert('Please input name for this request');
+            return false;
+        }
 
         // check if any satellite is selected
         var satellite = Session.get('satellite');
         if (!satellite) {
-            Errors.throw('Please select satellite.');
+            alert('Please select satellite.');
             return false;
         }
 
         var assumptions = {
+            request_name: request_name,
             satellite: satellite.name
         };
 
@@ -29,7 +39,7 @@ Template.index.events({
             // check if any beam is selected
             var beam = Session.get('beam');
             if (!beam) {
-                Errors.throw('Please select beam.');
+                alert('Please select beam.');
                 return false;
             }
 
@@ -52,7 +62,7 @@ Template.index.events({
             }).get();
             console.log('Selected channels: ' + channels.join(','));
             if (channels.length <= 0) {
-                Errors.throw('Please select at least 1 satellite channel.');
+                alert('Please select at least 1 satellite channel.');
                 return false;
             }
 
@@ -60,7 +70,7 @@ Template.index.events({
             var hub = $('#hub-size').val();
             console.log('Hub size: ' + hub + ' m.')
             if (hub === '' || hub < 0) {
-                Errors.throw('Hub size is not valid.');
+                alert('Hub size is not valid.');
                 return false;
             }
             else{
@@ -81,7 +91,7 @@ Template.index.events({
             var ant = $('#remote-size').val();
             console.log('Remote size: ' + ant + ' m.');
             if (ant === '' || ant < 0) {
-                Errors.throw('Remote size is not valid.');
+                alert('Remote size is not valid.');
                 return false;
             }
             else{
@@ -99,7 +109,7 @@ Template.index.events({
             }).get();
             console.log('Selected locations: ' + remote_locations.join(','));
             if (remote_locations.length <= 0) {
-                Errors.throw('Please select at least 1 remote location.');
+                alert('Please select at least 1 remote location.');
                 return false;
             }
 
@@ -107,7 +117,7 @@ Template.index.events({
             selectedConventionalPlatform = Session.get('selectedConventionalPlatform');
             console.log('Selected conventional platform: ' + selectedConventionalPlatform);
             if (!selectedConventionalPlatform) {
-                Errors.throw('Please select platform.');
+                alert('Please select platform.');
                 return false;
             }
 
@@ -117,7 +127,7 @@ Template.index.events({
                 selectedBcPlatform = Session.get('selectedBcPlatform');
                 console.log('Selected BC Platform: ' + selectedBcPlatform);
                 if (!selectedBcPlatform) {
-                    Errors.throw('Please select broadcast application.');
+                    alert('Please select broadcast application.');
                     return false;
                 }
                 else{
@@ -130,16 +140,27 @@ Template.index.events({
                 }).get();
                 console.log('Select MCGs: ' + selectedMcgs.join(','));
                 if (selectedMcgs.length <= 0) {
-                    Errors.throw('Please select at least 1 MCG.');
+                    alert('Please select at least 1 MCG.');
                     return false;
                 }
 
                 selectedBt = $('#bt-product').find('option:selected').val();
                 console.log('BT Product: ' + selectedBt);
                 if (selectedBt === '') {
-                    Errors.throw('Please select BT product.');
+                    alert('Please select BT product.');
                     return false;
                 }
+
+                // set link margin 2 dB for C-Band and 5 dB for Ku-Band
+                // check first selected channel if it's Ku or C Band (user cannot select both C and Ku-Band in 1 request so all channels would be either Ku or C)
+                var cf = Channels.findOne({name:channels[0]}).uplink_cf;
+                if(cf < 8 && cf > 2.8){ // C-Band
+                    linkMargin = 2;
+                }
+                else if(cf < 16 && cf > 9){ // Ku-Band
+                    linkMargin = 5;
+                }
+
             }
 
             // if VSAT is selected, check modem and link margin
@@ -147,7 +168,7 @@ Template.index.events({
                 selectedVsatModem = Session.get('modemId');
                 console.log('Select VSAT modem: ' + selectedVsatModem);
                 if (!selectedVsatModem || selectedVsatModem === '') {
-                    Errors.throw('Please select modem.');
+                    alert('Please select modem.');
                     return false;
                 }
                 else{
@@ -157,7 +178,7 @@ Template.index.events({
                 linkMargin = $('#link-margin').val();
                 console.log('Link margin: ' + linkMargin + " dB");
                 if (linkMargin < 0 || linkMargin === '') {
-                    Errors.throw('Invalid link margin.');
+                    alert('Invalid link margin.');
                     return false;
                 }
             }
@@ -182,7 +203,7 @@ Template.index.events({
             // check if any country is selected
             var country = Session.get('country');
             if (!country) {
-                Errors.throw('Please select country.');
+                alert('Please select country.');
                 return false;
             }
 
@@ -210,7 +231,7 @@ Template.index.events({
                 }).get();
                 console.log("Selected Channels: " + selectedChannels);
                 if (selectedChannels.length <= 0) {
-                    Errors.throw('Please select at least 1 channel.');
+                    alert('Please select at least 1 channel.');
                     return false;
                 }
 
@@ -225,45 +246,59 @@ Template.index.events({
                         return $(this).html();
                     }).get();
                     //console.log('Selected lat/lon: ' + selectedLatLon.join(','));
+                    var latlons = [];
                     if (selectedLatLon.length > 0) {
                         //check if each latlon is valid
-                        _.map(selectedLatLon, function (item) {
+                        latlons = _.map(selectedLatLon, function (item) {
                             if (!CheckLatLon(item)) {
-                                Errors.throw('Lat/Lon is not valid.');
+                                alert('Lat/Lon is not valid.');
                                 return false;
+                            }
+                            else{
+                               var lat = Number(item.split(',')[0]);
+                               var lon = Number(item.split(',')[1]);
+                               console.log('Lat = ' + lat + ', Lon = ' + lon);
+                               return {lat:lat,lon:lon};
                             }
                         })
                     }
                     // check if any location is selected
                     if (selectedDefinedContours.length <= 0 && selectedLatLon.length <= 0) {
-                        Errors.throw('Please select at least 1 location.');
+                        alert('Please select at least 1 location.');
                         return false;
                     }
 
                     // merge lat/lon and defined contours to one array
-                    remote_locations = selectedDefinedContours.concat(selectedLatLon);
+                    remote_locations = selectedDefinedContours.concat(latlons);
                 }
             }
             else {
                 //check if any lat/lon is selected
+                var latlons = [];
                 selectedLatLon = $('#selected-locations').find('span').map(function () {
                     return $(this).html();
                 }).get();
                 if (selectedLatLon.length > 0) {
                     //check if each latlon is valid
-                    _.map(selectedLatLon, function (item) {
+                    latlons = _.map(selectedLatLon, function (item) {
                         if (!CheckLatLon(item)) {
-                            Errors.throw('Lat/Lon is not valid.');
+                            alert('Lat/Lon is not valid.');
                             return false;
+                        }
+                        else{
+                            var lat = Number(item.split(',')[0]);
+                            var lon = Number(item.split(',')[1]);
+                            console.log('Lat = ' + lat + ', Lon = ' + lon);
+                            return {lat:lat,lon:lon};
                         }
                     })
                 }
                 if (selectedLatLon.length <= 0) {
-                    Errors.throw('Please select at least 1 location.');
+                    alert('Please select at least 1 location.');
                     return false;
                 }
                 else{
-                    remote_locations = selectedLatLon;
+                    remote_locations = latlons;
                 }
             }
 
@@ -279,7 +314,7 @@ Template.index.events({
                     return $(this).val();
                 }).get();
                 if (ants.length <= 0) {
-                    Errors.throw('Please select at least 1 antenna.');
+                    alert('Please select at least 1 antenna.');
                     return false;
                 }
                 else{
@@ -300,7 +335,7 @@ Template.index.events({
                 }).get();
                 console.log('Selected bucs: ' + bucs.join(','));
                 if (bucs.length <= 0) {
-                    Errors.throw('Please select at least 1 buc size.');
+                    alert('Please select at least 1 buc size.');
                     return false;
                 }
                 else{
@@ -313,7 +348,7 @@ Template.index.events({
             modem = Modems.findOne({_id:Session.get('modemId')});
             console.log('Selected modem: ' + modem.name);
             if (!modem || modem === '') {
-                Errors.throw('Please select modem.');
+                alert('Please select modem.');
                 return false;
             }
 
@@ -344,7 +379,7 @@ Template.index.events({
         // check if bandwidth unit is selected
         bwUnit = $('#bwUnitPicker').find('option:selected').val();
         if(bwUnit===''){
-            Errors.throw('Please select bandwidth unit.');
+            alert('Please select bandwidth unit.');
             return false;
         }
 
@@ -364,7 +399,7 @@ Template.index.events({
                 console.log(item.fwd + "/" + item.rtn + " " + bwUnit);
             })
             if (bandwidth.length <= 0) {
-                Errors.throw('Please input at least 1 bandwidth.');
+                alert('Please input at least 1 bandwidth.');
             }
         }
         // broadcast platform
@@ -381,8 +416,13 @@ Template.index.events({
 
         Meteor.call('link_calc', assumptions, function(error, message) {
             if (error){
-                Errors.throw(error.reason);
+                alert(error.reason);
             } else {
+
+                //Clear all sessions so when the user click the link to homepage from other page after they perform some link calc
+                // The data from last request is cleared
+                Session.keys = {};
+
                 // the method returns id of the link requests we just inserted to the database
                 // so we redirect to the result page of the link budget
                 console.log(JSON.stringify(message));

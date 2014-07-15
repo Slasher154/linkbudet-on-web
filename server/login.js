@@ -20,9 +20,11 @@ Accounts.registerLoginHandler(function (loginRequest) {
 
     // if my_path starts with '/Users' >> development machine (MAC)
     // else, it is production server
-    var api_key = "A42994C48598F2A278D892F2AB1CB5F8231CFF55"; // api key for development machine
+    // var api_key = "A42994C48598F2A278D892F2AB1CB5F8231CFF55"; // api key for development machine (for ip 202.183.220.14)
+    var api_key = "C081C92D1F0D9A646DA00A40A85C7424C4DAF820"; // api key for development machine (for ip 202.183.220.245)
     if (my_path.substring(0, 6) !== '/Users') {
-        api_key = "2A94C4ADCCDCC29242B18ED6C13E4D7B8382F2AB"; // api key for production server
+        //api_key = "2A94C4ADCCDCC29242B18ED6C13E4D7B8382F2AB"; // api key for production server (for ip 172.18.6.99)
+        api_key = "EDD523C7A6365F7F322B44989881843438D6C994"; // api key for production server (for ip 203.192.35.61)
     }
 
     // xml data for authentication. API Key, IP Address (of server, not related to ip address field, and system name must be matched with MIS database)
@@ -53,15 +55,7 @@ Accounts.registerLoginHandler(function (loginRequest) {
                 var authen_result = result.GetAuthenResult;
                 authenticated = authen_result.IsSuccess;
                 msg = authen_result.Message;
-                console.log('Success = ' + authen_result.IsSuccess);
-                console.log('Message = ' + authen_result.Message);
-                if(_.has(authen_result,'EmpProfile')){
-                    emp_profile = authen_result.EmpProfile;
-                    console.log('Id = ' + authen_result.EmpProfile.EmpId);
-                }
-                else{
-                    console.log('There is no Emp Profile.');
-                }
+                emp_profile = authen_result.EmpProfile;
             }
             else {
                 throw new Meteor.Error(403,err.message);
@@ -79,8 +73,8 @@ Accounts.registerLoginHandler(function (loginRequest) {
 
     var authentication = future.wait();
 
-    // my account can always login
-    if(username=="37090") { authentication.authenticated = true; }
+    // comment this in real usage
+    // authentication.authenticated = true;
 
     if(authentication.authenticated){
         var userId = null;
@@ -88,12 +82,29 @@ Accounts.registerLoginHandler(function (loginRequest) {
         // if user is not found in our Meteor database, add this user along with other data except password
         if (!user) {
 
+            var emp = authentication.emp_profile;
+
             // check roles for this new user by department name
-            var roles = ['admin'];
+            var roles = [];
+
+            // grants admin roles for CSD and CND
+            if(emp.Dp == "DP-CS" || emp.Dp == "DP-CN"){
+                roles.push("admin");
+            }
 
             // create a new user with username, name, department and roles
-            // TODO: Wait for EmpProfile
-            userId = Meteor.users.insert({username: username, roles:roles});
+            userId = Meteor.users.insert({
+                username: username,
+                bu: emp.Bu,
+                dp: emp.Dp,
+                email: emp.Email,
+                gender: emp.Gender,
+                firstname: emp.FirstName,
+                lastname: emp.LastName,
+                fullname: emp.FirstName + " " + emp.LastName,
+                position: emp.Position,
+                roles:roles
+            });
 
             if(roles.length > 0){
                 Roles.addUsersToRoles(userId, roles);
@@ -107,7 +118,7 @@ Accounts.registerLoginHandler(function (loginRequest) {
         return {userId: userId};
     }
     else{
-        throw new Meteor.Error(403,"Invalid username/password");
+        throw new Meteor.Error(403,authentication.msg);
     }
 
 

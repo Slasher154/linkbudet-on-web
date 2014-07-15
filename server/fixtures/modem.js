@@ -6,25 +6,25 @@ Meteor.methods({
     'insert_modem': function () {
         (function () {
             var modems = [
-                {"_id": "9TvHJi2XFf9RhduQg", "applications": [
-                    {"name": "DVB-S2", "type": "Broadcast", "acm": false, "link_margin": "2", "minimum_symbol_rate": "1000", "maximum_symbol_rate": "121500", "symbol_rates": [], "roll_off_factor": "", "mcgs": [
-                        {"name": "QPSK 1/2", "spectral_efficiency": "1", "es_no": "2.29"},
-                        {"name": "QPSK 3/5", "spectral_efficiency": "1.2", "es_no": "3.69"},
-                        {"name": "QPSK 2/3", "spectral_efficiency": "1.33", "es_no": "4.39"},
-                        {"name": "QPSK 3/4", "spectral_efficiency": "1.5", "es_no": "5.29"},
-                        {"name": "QPSK 4/5", "spectral_efficiency": "1.6", "es_no": "6.18"},
-                        {"name": "QPSK 5/6", "spectral_efficiency": "1.67", "es_no": "6.49"},
-                        {"name": "QPSK 8/9", "spectral_efficiency": "1.78", "es_no": "7.70"},
-                        {"name": "QPSK 9/10", "spectral_efficiency": "1.80", "es_no": "7.91"},
-                        {"name": "8PSK 3/5", "spectral_efficiency": "1.8", "es_no": "6.99"},
-                        {"name": "8PSK 2/3", "spectral_efficiency": "2", "es_no": "7.89"},
-                        {"name": "8PSK 3/4", "spectral_efficiency": "2.25", "es_no": "9.41"},
-                        {"name": "8PSK 5/6", "spectral_efficiency": "2.5", "es_no": "10.85"},
-                        {"name": "8PSK 8/9", "spectral_efficiency": "2.67", "es_no": "12.19"},
-                        {"name": "8PSK 9/10", "spectral_efficiency": "2.7", "es_no": "12.47"}
+                { "applications": [
+                    {"name": "DVB-S2", "type": "Broadcast", "acm": false, "link_margin": 2, "minimum_symbol_rate": 1000, "maximum_symbol_rate": 121500, "symbol_rates": [], "roll_off_factor": "", "mcgs": [
+                        {"name": "QPSK 1/2", "spectral_efficiency": 1, "es_no": 2.29},
+                        {"name": "QPSK 3/5", "spectral_efficiency": 1.2, "es_no": 3.69},
+                        {"name": "QPSK 2/3", "spectral_efficiency": 1.33, "es_no": 4.39},
+                        {"name": "QPSK 3/4", "spectral_efficiency": 1.5, "es_no": 5.29},
+                        {"name": "QPSK 4/5", "spectral_efficiency": 1.6, "es_no": 6.18},
+                        {"name": "QPSK 5/6", "spectral_efficiency": 1.67, "es_no": 6.49},
+                        {"name": "QPSK 8/9", "spectral_efficiency": 1.78, "es_no": 7.70},
+                        {"name": "QPSK 9/10", "spectral_efficiency": 1.8, "es_no": 7.91},
+                        {"name": "8PSK 3/5", "spectral_efficiency": 1.8, "es_no": 6.99},
+                        {"name": "8PSK 2/3", "spectral_efficiency": 2, "es_no": 7.89},
+                        {"name": "8PSK 3/4", "spectral_efficiency": 2.25, "es_no": 9.41},
+                        {"name": "8PSK 5/6", "spectral_efficiency": 2.5, "es_no": 10.85},
+                        {"name": "8PSK 8/9", "spectral_efficiency": 2.67, "es_no": 12.19},
+                        {"name": "8PSK 9/10", "spectral_efficiency": 2.7, "es_no": 12.47}
                     ]}
                 ], "name": "Standard DVB-S2", "vendor": "Standard"},
-                {"_id": "kz5g7cr8hPdPMvNrC", "name": "Gilat SE-IIC Aries", "vendor": "Gilat", "applications": [
+                { "name": "Gilat SE-IIC Aries", "vendor": "Gilat", "applications": [
                     {"name": "Outbound DVB-S2 ACM Normal Frames", "type": "forward", "acm": true, "dynamic_channels": false, "link_margin": 1, "minimum_symbol_rate": 300, "maximum_symbol_rate": 60000, "symbol_rates": [], "roll_off_factor": 1.2, "mcgs": [
                         {"name": "QPSK 1/4", "spectral_efficiency": 0.48, "es_no": -2},
                         {"name": "QPSK 1/3", "spectral_efficiency": 0.64, "es_no": -1.1},
@@ -62,113 +62,157 @@ Meteor.methods({
                         {"name": "8PSK 6/7", "spectral_efficiency": 2.412, "es_no": 13.2}
                     ]}
                 ]},
-                {"_id": "ftSFCiip2k7qA6fMY", "name": "Comtech CDM750 ", "vendor": "Comtech", "applications": [
-                    {"name": "SCPC", "type": "SCPC", "acm": true, "link_margin": "2", "minimum_symbol_rate": "1", "maximum_symbol_rate": "63", "symbol_rates": [], "roll_off_factor": "1.2", "mcgs": [
-                        {"name": "QPSK 1/2", "spectral_efficiency": "1", "es_no": "1.4"},
-                        {"name": "QPSK 3/5", "spectral_efficiency": "1.2", "es_no": "2.7"},
-                        {"name": "QPSK 2/3", "spectral_efficiency": "1.33", "es_no": "3.4"},
-                        {"name": "QPSK 3/4", "spectral_efficiency": "1.5", "es_no": "4.6"},
-                        {"name": "QPSK 4/5", "spectral_efficiency": "1.6", "es_no": "5.1"},
-                        {"name": "QPSK 5/6", "spectral_efficiency": "1.67", "es_no": "5.6"},
-                        {"name": "QPSK 8/9", "spectral_efficiency": "1.78", "es_no": "6.7"},
-                        {"name": "QPSK 9/10", "spectral_efficiency": "1.8", "es_no": "6.8"},
-                        {"name": "8 PSK 2/3", "spectral_efficiency": "2", "es_no": "7.4"},
-                        {"name": "8 PSK 3/4", "spectral_efficiency": "2.25", "es_no": "8.5"},
-                        {"name": "16 APSK 2/3", "spectral_efficiency": "2.67", "es_no": "9.9"},
-                        {"name": "16 APSK 3/4", "spectral_efficiency": "3", "es_no": "11.2"},
-                        {"name": "16 APSK 4/5", "spectral_efficiency": "3.2", "es_no": "12"},
-                        {"name": "16 APSK 5/6", "spectral_efficiency": "3.33", "es_no": "12.4"},
-                        {"name": "16 APSK 8/9", "spectral_efficiency": "3.56", "es_no": "13.8"},
-                        {"name": "16 APSK 9/10", "spectral_efficiency": "3.6", "es_no": "14"}
+                {"name": "Comtech CDM750 ", "vendor": "Comtech", "applications": [
+                    {"name": "SCPC", "type": "SCPC", "acm": true, "link_margin": 2, "minimum_symbol_rate": 1, "maximum_symbol_rate": 63000, "symbol_rates": [], "roll_off_factor": 1.2, "mcgs": [
+                        {"name": "QPSK 1/2", "spectral_efficiency": 1, "es_no": 1.4},
+                        {"name": "QPSK 3/5", "spectral_efficiency": 1.2, "es_no": 2.7},
+                        {"name": "QPSK 2/3", "spectral_efficiency": 1.33, "es_no": 3.4},
+                        {"name": "QPSK 3/4", "spectral_efficiency": 1.5, "es_no": 4.6},
+                        {"name": "QPSK 4/5", "spectral_efficiency": 1.6, "es_no": 5.1},
+                        {"name": "QPSK 5/6", "spectral_efficiency": 1.67, "es_no": 5.6},
+                        {"name": "QPSK 8/9", "spectral_efficiency": 1.78, "es_no": 6.7},
+                        {"name": "QPSK 9/10", "spectral_efficiency": 1.8, "es_no": 6.8},
+                        {"name": "8 PSK 2/3", "spectral_efficiency": 2, "es_no": 7.4},
+                        {"name": "8 PSK 3/4", "spectral_efficiency": 2.25, "es_no": 8.5},
+                        {"name": "16 APSK 2/3", "spectral_efficiency": 2.67, "es_no": 9.9},
+                        {"name": "16 APSK 3/4", "spectral_efficiency": 3, "es_no": 11.2},
+                        {"name": "16 APSK 4/5", "spectral_efficiency": 3.2, "es_no": 12},
+                        {"name": "16 APSK 5/6", "spectral_efficiency": 3.33, "es_no": 12.4},
+                        {"name": "16 APSK 8/9", "spectral_efficiency": 3.56, "es_no": 13.8},
+                        {"name": "16 APSK 9/10", "spectral_efficiency": 3.6, "es_no": 14}
                     ]}
                 ]},
-                {"_id": "GdJfdNtJEYDhWQury", "applications": [
-                    {"name": "SCPC", "type": "SCPC", "acm": true, "link_margin": "2", "minimum_symbol_rate": "300", "maximum_symbol_rate": "30000", "symbol_rates": [], "roll_off_factor": "1.25", "mcgs": [
-                        {"name": "QPSK 1/2 LDPC", "spectral_efficiency": "1", "es_no": "2.15"},
-                        {"name": "QPSK 2/3 LDPC", "spectral_efficiency": "1.33", "es_no": "3.75"},
-                        {"name": "QPSK 3/4 LDPC", "spectral_efficiency": "1.5", "es_no": "4.91"},
-                        {"name": "8 QAM 3/4 LDPC", "spectral_efficiency": "2", "es_no": "7.81"},
-                        {"name": "8 PSK 2/3 LDPC", "spectral_efficiency": "2", "es_no": "8.71"},
-                        {"name": "8 PSK 3/4 LDPC", "spectral_efficiency": "2.25", "es_no": "8.92"},
-                        {"name": "16 QSM 3/4 LDPC", "spectral_efficiency": "3", "es_no": "11.72"}
+                { "applications": [
+                    {"name": "SCPC", "type": "SCPC", "acm": true, "link_margin": 2, "minimum_symbol_rate": 300, "maximum_symbol_rate": 30000, "symbol_rates": [], "roll_off_factor": 1.25, "mcgs": [
+                        {"name": "QPSK 1/2 LDPC", "spectral_efficiency": 1, "es_no": 2.15},
+                        {"name": "QPSK 2/3 LDPC", "spectral_efficiency": 1.33, "es_no": 3.75},
+                        {"name": "QPSK 3/4 LDPC", "spectral_efficiency": 1.5, "es_no": 4.91},
+                        {"name": "8 QAM 3/4 LDPC", "spectral_efficiency": 2, "es_no": 7.81},
+                        {"name": "8 PSK 2/3 LDPC", "spectral_efficiency": 2, "es_no": 8.71},
+                        {"name": "8 PSK 3/4 LDPC", "spectral_efficiency": 2.25, "es_no": 8.92},
+                        {"name": "16 QSM 3/4 LDPC", "spectral_efficiency": 3, "es_no": 11.72}
                     ]}
                 ], "name": "Comtech CDM 625 LDPC", "vendor": "Comtech"},
-                {"_id": "F8Q7B99TNPpCA7ooB", "name": "Linksys DVB-S2", "vendor": "Standard", "applications": [
-                    {"name": "SCPC", "type": "SCPC", "acm": true, "link_margin": "2", "minimum_symbol_rate": "300", "maximum_symbol_rate": "30000", "symbol_rates": [], "roll_off_factor": "1.17", "mcgs": [
-                        {"name": "QPSK 1/2 LDPC", "spectral_efficiency": "1", "es_no": "2"},
-                        {"name": "QPSK 3/5 LDPC", "spectral_efficiency": "1.2", "es_no": "3.2"},
-                        {"name": "QPSK 2/3 LDPC", "spectral_efficiency": "1.33", "es_no": "4.1"},
-                        {"name": "QPSK 3/4 LDPC", "spectral_efficiency": "1.5", "es_no": "5"},
-                        {"name": "QPSK 4/5 LDPC", "spectral_efficiency": "1.6", "es_no": "5.7"},
-                        {"name": "QPSK 5/6 LDPC", "spectral_efficiency": "1.67", "es_no": "6.2"},
-                        {"name": "QPSK 8/9 LDPC", "spectral_efficiency": "1.78", "es_no": "7.2"},
-                        {"name": "QPSK 9/10 LDPC", "spectral_efficiency": "1.8", "es_no": "7.4"},
-                        {"name": "8 PSK 2/3 LDPC", "spectral_efficiency": "2", "es_no": "7.6"},
-                        {"name": "8 PSK 3/4 LDPC", "spectral_efficiency": "2.25", "es_no": "8.9"},
-                        {"name": "8 PSK 5/6 LDPC", "spectral_efficiency": "2.5", "es_no": "10.4"},
-                        {"name": "8 PSK 8/9 LDPC", "spectral_efficiency": "2.67", "es_no": "11.7"},
-                        {"name": "8 PSK 9/10 LDPC", "spectral_efficiency": "2.7", "es_no": "12.2"}
+                {"name": "Linksys DVB-S2", "vendor": "Standard", "applications": [
+                    {"name": "SCPC", "type": "SCPC", "acm": true, "link_margin": 2, "minimum_symbol_rate": 300, "maximum_symbol_rate": 30000, "symbol_rates": [], "roll_off_factor": 1.17, "mcgs": [
+                        {"name": "QPSK 1/2 LDPC", "spectral_efficiency": 1, "es_no": 2},
+                        {"name": "QPSK 3/5 LDPC", "spectral_efficiency": 1.2, "es_no": 3.2},
+                        {"name": "QPSK 2/3 LDPC", "spectral_efficiency": 1.33, "es_no": 4.1},
+                        {"name": "QPSK 3/4 LDPC", "spectral_efficiency": 1.5, "es_no": 5},
+                        {"name": "QPSK 4/5 LDPC", "spectral_efficiency": 1.6, "es_no": 5.7},
+                        {"name": "QPSK 5/6 LDPC", "spectral_efficiency": 1.67, "es_no": 6.2},
+                        {"name": "QPSK 8/9 LDPC", "spectral_efficiency": 1.78, "es_no": 7.2},
+                        {"name": "QPSK 9/10 LDPC", "spectral_efficiency": 1.8, "es_no": 7.4},
+                        {"name": "8 PSK 2/3 LDPC", "spectral_efficiency": 2, "es_no": 7.6},
+                        {"name": "8 PSK 3/4 LDPC", "spectral_efficiency": 2.25, "es_no": 8.9},
+                        {"name": "8 PSK 5/6 LDPC", "spectral_efficiency": 2.5, "es_no": 10.4},
+                        {"name": "8 PSK 8/9 LDPC", "spectral_efficiency": 2.67, "es_no": 11.7},
+                        {"name": "8 PSK 9/10 LDPC", "spectral_efficiency": 2.7, "es_no": 12.2}
                     ]}
                 ]},
-                {"_id": "yisxz3n89ZDij7Tk2", "applications": [
-                    {"name": "DVB-S2", "type": "Broadcast", "acm": false, "link_margin": "1000", "minimum_symbol_rate": "1000", "maximum_symbol_rate": "121500", "symbol_rates": [], "roll_off_factor": "1.2", "mcgs": [
-                        {"name": "QPSK 1/2", "spectral_efficiency": "1", "es_no": "2.29"},
-                        {"name": "QPSK 3/5", "spectral_efficiency": "1.2", "es_no": "3.69"},
-                        {"name": "QPSK 2/3", "spectral_efficiency": "1.34", "es_no": "4.39"},
-                        {"name": "QPSK 3/4", "spectral_efficiency": "1.5", "es_no": "5.29"},
-                        {"name": "QPSK 4/5", "spectral_efficiency": "1.6", "es_no": "6.178"},
-                        {"name": "QPSK 5/6", "spectral_efficiency": "1.67", "es_no": "6.49"},
-                        {"name": "QPSK 8/9", "spectral_efficiency": "1.78", "es_no": "7.70"},
-                        {"name": "QPSK 9/10", "spectral_efficiency": "1.8", "es_no": "7.91"},
-                        {"name": "8PSPK 3/5", "spectral_efficiency": "1.8", "es_no": "6.99"},
-                        {"name": "8PSPK 2/3", "spectral_efficiency": "2", "es_no": "7.89"},
-                        {"name": "8PSPK 3/4", "spectral_efficiency": "2.25", "es_no": "9.41"},
-                        {"name": "8PSPK 5/6", "spectral_efficiency": "2.5", "es_no": "10.85"},
-                        {"name": "8PSPK 8/9", "spectral_efficiency": "2.67", "es_no": "12.19"},
-                        {"name": "8PSPK 9/10", "spectral_efficiency": "2.7", "es_no": "12.47"}
+                { "applications": [
+                    {"name": "DVB-S2", "type": "Broadcast", "acm": false, "link_margin": 2, "minimum_symbol_rate": 1000, "maximum_symbol_rate": 121500, "symbol_rates": [], "roll_off_factor": 1.2, "mcgs": [
+                        {"name": "QPSK 1/2", "spectral_efficiency": 1, "es_no": 2.29},
+                        {"name": "QPSK 3/5", "spectral_efficiency": 1.2, "es_no": 3.69},
+                        {"name": "QPSK 2/3", "spectral_efficiency": 1.34, "es_no": 4.39},
+                        {"name": "QPSK 3/4", "spectral_efficiency": 1.5, "es_no": 5.29},
+                        {"name": "QPSK 4/5", "spectral_efficiency": 1.6, "es_no": 6.178},
+                        {"name": "QPSK 5/6", "spectral_efficiency": 1.67, "es_no": 6.49},
+                        {"name": "QPSK 8/9", "spectral_efficiency": 1.78, "es_no": 7.70},
+                        {"name": "QPSK 9/10", "spectral_efficiency": 1.8, "es_no": 7.91},
+                        {"name": "8PSPK 3/5", "spectral_efficiency": 1.8, "es_no": 6.99},
+                        {"name": "8PSPK 2/3", "spectral_efficiency": 2, "es_no": 7.89},
+                        {"name": "8PSPK 3/4", "spectral_efficiency": 2.25, "es_no": 9.41},
+                        {"name": "8PSPK 5/6", "spectral_efficiency": 2.5, "es_no": 10.85},
+                        {"name": "8PSPK 8/9", "spectral_efficiency": 2.67, "es_no": 12.19},
+                        {"name": "8PSPK 9/10", "spectral_efficiency": 2.7, "es_no": 12.47}
                     ]}
                 ], "name": "Standard DVB-S2 (Rx8200)", "vendor": "Standard"},
-                {"_id": "Dknh4XGh7H7sEcMzt", "applications": [
-                    {"name": "DVB-S1", "type": "Broadcast", "acm": false, "link_margin": "1000", "minimum_symbol_rate": "1000", "maximum_symbol_rate": "121500", "symbol_rates": [], "roll_off_factor": "1.2", "mcgs": [
+                { "name": "Idirect X3/X5", "vendor": "IDirect", "applications": [
+                    {"name": "Forward", "type": "forward", "acm": false, "link_margin": 2, "minimum_symbol_rate": 300, "maximum_symbol_rate": 30000, "symbol_rates": [], "roll_off_factor": 1.2, "mcgs": [
+                        {"name": "QPSK 1/4", "spectral_efficiency": 0.35, "es_no": -1.71},
+                        {"name": "QPSK 1/3", "spectral_efficiency": 0.61, "es_no": -0.73},
+                        {"name": "QPSK 2/5", "spectral_efficiency": 0.74, "es_no": 0.1},
+                        {"name": "QPSK 1/2", "spectral_efficiency": 0.83, "es_no": 0.97},
+                        {"name": "QPSK 3/5", "spectral_efficiency": 1.13, "es_no": 2.52},
+                        {"name": "QPSK 2/3", "spectral_efficiency": 1.26, "es_no": 3.29},
+                        {"name": "QPSK 3/4", "spectral_efficiency": 1.39, "es_no": 4.32},
+                        {"name": "QPSK 4/5", "spectral_efficiency": 1.47, "es_no": 4.88},
+                        {"name": "QPSK 5/6", "spectral_efficiency": 1.56, "es_no": 5.53},
+                        {"name": "8 PSK 3/5", "spectral_efficiency": 1.69, "es_no": 6.27},
+                        {"name": "QPSK 8/9", "spectral_efficiency": 1.69, "es_no": 6.57},
+                        {"name": "8 PSK 2/3", "spectral_efficiency": 1.88, "es_no": 7.44},
+                        {"name": "8 PSK 3/4", "spectral_efficiency": 2.07, "es_no": 8.46},
+                        {"name": "8 PSK 5/6", "spectral_efficiency": 2.33, "es_no": 9.57},
+                        {"name": "16 APSK 2/3", "spectral_efficiency": 2.5, "es_no": 9.78},
+                        {"name": "8 PSK 8/9", "spectral_efficiency": 2.52, "es_no": 10.82},
+                        {"name": "16 APSK 3/4", "spectral_efficiency": 2.75, "es_no": 11.2},
+                        {"name": "16 APSK 4/5", "spectral_efficiency": 2.92, "es_no": 11.86},
+                        {"name": "16 APSK 5/6", "spectral_efficiency": 3.1, "es_no": 12.81},
+                        {"name": "16 APSK 8/9", "spectral_efficiency": 3.35, "es_no": 13.75}
+                    ]},
+                    {"name": "MF-TDMA", "type": "return", "acm": false, "link_margin": 2, "minimum_symbol_rate": 1, "maximum_symbol_rate": 7500, "symbol_rates": [], "roll_off_factor": 1.2, "mcgs": [
+                        {"name": "QPSK-2D16S-170B-1/2", "spectral_efficiency": 0.972, "es_no": 3.6},
+                        {"name": "QPSK-2D16S-438B-2/3", "spectral_efficiency": 1.308, "es_no": 5},
+                        {"name": "QPSK-2D16S-170B-3/4", "spectral_efficiency": 144, "es_no": 5.9},
+                        {"name": "QPSK-2D16S-438B-4/5", "spectral_efficiency": 1.572, "es_no": 6.6},
+                        {"name": "QPSK-2D16S-438B-6/7", "spectral_efficiency": 1.68, "es_no": 7.5},
+                        {"name": "QPSK-2D16S-100B-2/3", "spectral_efficiency": 1.692, "es_no": 9.3},
+                        {"name": "8PSK-2D16S-170B-4/5", "spectral_efficiency": 2.124, "es_no": 11.7},
+                        {"name": "8PSK-TPC-4K-0.793", "spectral_efficiency": 2.256, "es_no": 12.7}
+                    ]}
+                ]},
+                { "applications": [
+                    {"name": "DVB-S1", "type": "Broadcast", "acm": false, "link_margin": 2, "minimum_symbol_rate": 1000, "maximum_symbol_rate": 121500, "symbol_rates": [], "roll_off_factor": 1.2, "mcgs": [
+                        {"name": "QPSK 1/2 RS", "spectral_efficiency": 1, "es_no": 3.15},
+                        {"name": "QPSK 2/3 RS", "spectral_efficiency": 1.33, "es_no": 4.15},
+                        {"name": "QPSK 3/4 RS", "spectral_efficiency": 1.5, "es_no": 6.09},
+                        {"name": "QPSK 5/6 RS", "spectral_efficiency": 1.67, "es_no": 7.39},
+                        {"name": "QPSK 7/8 RS", "spectral_efficiency": 1.75, "es_no": 8.48}
                     ]}
                 ], "name": "Standard DVB-S1", "vendor": "Standard"},
-                {"_id": "Dn2XzsvQLT8ZkHRTK", "name": "Idirect X3/X5", "vendor": "IDirect", "applications": [
-                    {"name": "Forward", "type": "forward", "acm": false, "link_margin": "2", "minimum_symbol_rate": "300", "maximum_symbol_rate": "30000", "symbol_rates": [], "roll_off_factor": "1.2", "mcgs": [
-                        {"name": "QPSK 1/4", "spectral_efficiency": "0.35", "es_no": "-1.71"},
-                        {"name": "QPSK 1/3", "spectral_efficiency": "0.61", "es_no": "-0.73"},
-                        {"name": "QPSK 2/5", "spectral_efficiency": "0.74", "es_no": "0.1"},
-                        {"name": "QPSK 1/2", "spectral_efficiency": "0.83", "es_no": "0.97"},
-                        {"name": "QPSK 3/5", "spectral_efficiency": "1.13", "es_no": "2.52"},
-                        {"name": "QPSK 2/3", "spectral_efficiency": "1.26", "es_no": "3.29"},
-                        {"name": "QPSK 3/4", "spectral_efficiency": "1.39", "es_no": "4.32"},
-                        {"name": "QPSK 4/5", "spectral_efficiency": "1.47", "es_no": "4.88"},
-                        {"name": "QPSK 5/6", "spectral_efficiency": "1.56", "es_no": "5.53"},
-                        {"name": "8 PSK 3/5", "spectral_efficiency": "1.69", "es_no": "6.27"},
-                        {"name": "QPSK 8/9", "spectral_efficiency": "1.69", "es_no": "6.57"},
-                        {"name": "8 PSK 2/3", "spectral_efficiency": "1.88", "es_no": "7.44"},
-                        {"name": "8 PSK 3/4", "spectral_efficiency": "2.07", "es_no": "8.46"},
-                        {"name": "8 PSK 5/6", "spectral_efficiency": "2.33", "es_no": "9.57"},
-                        {"name": "16 APSK 2/3", "spectral_efficiency": "2.5", "es_no": "9.78"},
-                        {"name": "8 PSK 8/9", "spectral_efficiency": "2.52", "es_no": "10.82"},
-                        {"name": "16 APSK 3/4", "spectral_efficiency": "2.75", "es_no": "11.2"},
-                        {"name": "16 APSK 4/5", "spectral_efficiency": "2.92", "es_no": "11.86"},
-                        {"name": "16 APSK 5/6", "spectral_efficiency": "3.1", "es_no": "12.81"},
-                        {"name": "16 APSK 8/9", "spectral_efficiency": "3.35", "es_no": "13.75"}
-                    ]},
-                    {"name": "MF-TDMA", "type": "return", "acm": false, "link_margin": "2", "minimum_symbol_rate": "1", "maximum_symbol_rate": "7500", "symbol_rates": [], "roll_off_factor": "1.2", "mcgs": [
-                        {"name": "QPSK-2D16S-170B-1/2", "spectral_efficiency": "0.972", "es_no": "3.6"},
-                        {"name": "QPSK-2D16S-438B-2/3", "spectral_efficiency": "1.308", "es_no": "5"},
-                        {"name": "QPSK-2D16S-170B-3/4", "spectral_efficiency": "144", "es_no": "5.9"},
-                        {"name": "QPSK-2D16S-438B-4/5", "spectral_efficiency": "1.572", "es_no": "6.6"},
-                        {"name": "QPSK-2D16S-438B-6/7", "spectral_efficiency": "1.68", "es_no": "7.5"},
-                        {"name": "QPSK-2D16S-100B-2/3", "spectral_efficiency": "1.692", "es_no": "9.3"},
-                        {"name": "8PSK-2D16S-170B-4/5", "spectral_efficiency": "2.124", "es_no": "11.7"},
-                        {"name": "8PSK-TPC-4K-0.793", "spectral_efficiency": "2.256", "es_no": "12.7"}
+                { "applications": [
+                    {"name": "DVB-S2", "type": "Broadcast", "acm": false, "link_margin": 2, "minimum_symbol_rate": 1000, "maximum_symbol_rate": 121500, "symbol_rates": [], "roll_off_factor": 1.05, "mcgs": [
+                        {"name": "QPSK 1/2", "spectral_efficiency": 1, "es_no": 2.29},
+                        {"name": "QPSK 3/5", "spectral_efficiency": 1.2, "es_no": 3.69},
+                        {"name": "QPSK 2/3", "spectral_efficiency": 1.33, "es_no": 4.39},
+                        {"name": "QPSK 3/4", "spectral_efficiency": 1.5, "es_no": 5.29},
+                        {"name": "QPSK 4/5", "spectral_efficiency": 1.6, "es_no": 6.18},
+                        {"name": "QPSK 5/6", "spectral_efficiency": 1.67, "es_no": 6.49},
+                        {"name": "QPSK 8/9", "spectral_efficiency": 1.78, "es_no": 7.70},
+                        {"name": "QPSK 9/10", "spectral_efficiency": 1.80, "es_no": 7.91},
+                        {"name": "8PSK 3/5", "spectral_efficiency": 1.8, "es_no": 6.99},
+                        {"name": "8PSK 2/3", "spectral_efficiency": 2, "es_no": 7.89},
+                        {"name": "8PSK 3/4", "spectral_efficiency": 2.25, "es_no": 9.41},
+                        {"name": "8PSK 5/6", "spectral_efficiency": 2.5, "es_no": 10.85},
+                        {"name": "8PSK 8/9", "spectral_efficiency": 2.67, "es_no": 12.19},
+                        {"name": "8PSK 9/10", "spectral_efficiency": 2.7, "es_no": 12.47}
                     ]}
-                ]}
-            ];
-            _.each(modems, function(item){
-                Modems.insert(item);
+                ], "name": "Standard DVB-S2", "vendor": "Standard"},
+                {  "name": "IPSTAR", "vendor": "IPSTAR", "applications": [
+                    { "name": "TOLL", "type": "forward", "acm": true, "link_margin": 2, "minimum_symbol_rate": 6750, "maximum_symbol_rate": 54000, "symbol_rates": [ 6750, 13500, 20250, 27000, 33750, 40500, 47250, 54000 ], "roll_off_factor": 1, "mcgs": [
+                        { "name": "QPSK325", "spectral_efficiency": 0.65, "es_no": 1.73, "bit_rate_per_slot": 8.14 },
+                        { "name": "QPSK495", "spectral_efficiency": 0.99, "es_no": 4.33, "bit_rate_per_slot": 12.62 },
+                        { "name": "QPSK578", "spectral_efficiency": 1.16, "es_no": 4.58, "bit_rate_per_slot": 15.01 },
+                        { "name": "QPSK747", "spectral_efficiency": 1.49, "es_no": 5.85, "bit_rate_per_slot": 19.49 },
+                        { "name": "QPSK835", "spectral_efficiency": 1.67, "es_no": 7.69, "bit_rate_per_slot": 21.81 },
+                        { "name": "8-PAH633", "spectral_efficiency": 1.9, "es_no": 9.84, "bit_rate_per_slot": 24.87 },
+                        { "name": "8-PAH703", "spectral_efficiency": 2.11, "es_no": 10.84, "bit_rate_per_slot": 27.5 },
+                        { "name": "8-PAH786", "spectral_efficiency": 2.36, "es_no": 12.31, "bit_rate_per_slot": 30.78 },
+                        { "name": "8-PAH835", "spectral_efficiency": 2.51, "es_no": 13.05, "bit_rate_per_slot": 32.71 }
+                    ] },
+                    { "name": "STAR", "type": "return", "acm": true, "link_margin": 2, "minimum_symbol_rate": 105, "maximum_symbol_rate": 1687, "symbol_rates": [ 105, 210, 421, 843, 1687 ], "roll_off_factor": 1.25, "mcgs": [
+                        { "name": "QPSK793", "spectral_efficiency": 1.32, "es_no": 5.87 },
+                        { "name": "8-ARY816", "spectral_efficiency": 1.59, "es_no": 10.3 }
+                    ] }
+                ] }
+            ]
+            _.each(modems, function (item) {
+                Modems.insert(item, function (error, data) {
+                    if (error) {
+                        Logs.insert({database: "Modem", message: error.message});
+                    }
+                });
             });
         })();
     },

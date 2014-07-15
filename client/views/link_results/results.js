@@ -2,6 +2,10 @@
  * Created by Dome on 6/18/14 AD.
  */
 
+Template.results.request_name = function() {
+    return LinkRequests.findOne({_id: this._id}).assumptions.request_name;
+}
+
 Template.results.assumptions = function () {
     console.log('Result id = ' + this._id);
     var assumption = LinkRequests.findOne({_id: this._id}).assumptions;
@@ -22,7 +26,15 @@ Template.results.assumptions = function () {
 
     // Channels
     if (_.has(assumption, 'channels')) {
-        push("Channels", assumption.channels.join(','));
+        // If user selects find best channel, show the phrase "Find best channel"
+        var chans;
+        if(assumption.findBestChannel){
+            chans = "Find best channel";
+        }
+        else{
+            chans = assumption.channels.join(',');
+        }
+        push("Channels", chans);
     }
 
     // Hub antenna
@@ -42,7 +54,14 @@ Template.results.assumptions = function () {
 
     // Remote locations
     if (_.has(assumption, 'remote_locations')) {
-        push("Remote locations", assumption.remote_locations.join(','))
+        var locs = _.map(assumption.remote_locations, function(loc){
+            if (typeof loc === "string") return loc; // if location is string (such as city name or peak, 50%, EOC), return itself
+            else if(typeof loc === "object"){ // if location is lat/lon object, return its string representation
+                return loc.lat + "," + loc.lon;
+            }
+            else{}
+        });
+        push("Remote locations", locs.join(','))
     }
 
     // BUCs
@@ -92,6 +111,75 @@ Template.results.assumptions = function () {
         data.push({title: title, detail: detail});
     }
 
+}
+
+Template.results.isConventionalResult = function(){
+    var sat = LinkRequests.findOne({_id: this._id}).assumptions.satellite;
+    return Satellites.findOne({name:sat}).type === "Conventional";
+}
+
+Template.results.broadbandResult = function(){
+    //split into array of forward links and array of return links (same as in the JRf)
+    //since the program calculate in pair of fwd/rtn links, some forward link in the array
+    //might be replicated (ex. 2 links with same antenna but 2 BUCs, forward link of 2 cases would be the same)
+    var fwd = [];
+    var rtn = [];
+    var request = LinkRequests.findOne({_id: this._id});
+    var results = request.results;
+    for(var i = 0; i < results.length; i++){
+        var re = results[i];
+        if(!_.isEmpty(re.fwd)){
+            var fwd_obj = CreateResultObject(re.fwd,"forward");
+            fwd.push(_.extend(fwd_obj,{case_num: re.case_num}));
+
+        }
+        if(!_.isEmpty(re.rtn)){
+            var rtn_obj = CreateResultObject(re.rtn,"return");
+            rtn.push(_.extend(rtn_obj,{case_num: re.case_num}));
+        }
+    }
+    return {
+        fwd: fwd,
+        rtn: rtn
+    }
+
+    function CreateResultObject(result, path){
+        // return the necessary information to show in the table result
+        var clear = _.where(result, {uplink_condition: "clear", downlink_condition: "clear"})[0];
+        var rain = _.where(result, {uplink_condition: "rain", downlink_condition: "rain"})[0];
+
+        console.log("Clear result = " + JSON.stringify(clear));
+        console.log("Rain result = " + JSON.stringify(rain));
+
+        var obj = {
+            channel: clear.channel,
+            uplink_location: clear.uplink_location.name,
+            downlink_location: clear.downlink_location.name,
+            uplink_antenna: clear.uplink_antenna.size,
+            downlink_antenna: clear.downlink_antenna.size,
+            clear_data_rate: clear.data_rate,
+            clear_ebe: (clear.mcg.spectral_efficiency * clear.roll_off_factor).toFixed(2),
+            clear_mcg: clear.mcg.name,
+            clear_bandwidth: clear.occupied_bandwidth,
+            rain_data_rate: rain.data_rate,
+            rain_ebe: (rain.mcg.spectral_efficiency * rain.roll_off_factor).toFixed(2),
+            rain_mcg: rain.mcg.name,
+            rain_bandwidth: rain.occupied_bandwidth,
+            hpa_power: clear.hpa_power,
+            cn_total: clear.cn_total,
+            link_margin: clear.link_margin,
+            link_availability: rain.link_availability,
+            roll_off_factor: clear.roll_off_factor
+        };
+
+        if(path=="return"){
+            _.extend(obj,{
+                buc: clear.uplink_hpa.size
+            })
+        }
+
+        return obj;
+    }
 }
 
 Template.results.conventionalResult = function () {
@@ -196,7 +284,8 @@ Template.results.conventionalResult = function () {
             eb_no_rain: eb_no(rain.mcg.spectral_efficiency, rain.cn_total).toFixed(2),
             power_util_percent: clear.power_util_percent,
             guardband: clear.guardband,
-            roll_off_factor: clear.roll_off_factor
+            roll_off_factor: clear.roll_off_factor,
+            pass: clear.pass
         };
 
     }

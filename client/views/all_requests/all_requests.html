@@ -4,14 +4,16 @@
     <table class="table table-bordered">
         <thead>
         <tr>
-            <th>Link</th>
+            <th>Name</th>
+            <th>Request time</th>
         </tr>
         </thead>
 
         <tbody>
         {{#each requests}}
         <tr>
-            <td><a href="{{pathFor 'results'}}">{{_id}}</a></td>
+            <td><a href="{{pathFor 'results'}}">{{assumptions.request_name}}</a></td>
+            <td>{{toDateString requested_date}}</td>
         </tr>
         {{/each}}
         </tbody>

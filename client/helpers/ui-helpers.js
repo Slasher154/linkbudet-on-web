@@ -79,4 +79,15 @@ if (Meteor.isClient){
     UI.registerHelper('isNotEmpty', function(object){
         return !_.isEmpty(object);
     })
+    UI.registerHelper('toDateString', function(date_in_milliseconds){
+        return new Date(date_in_milliseconds).toLocaleString("en-GB"); // dd//mm/yyyy
+    })
+
+    UI.registerHelper('ebNo', function(mcg){
+        return (mcg.es_no - 10 * log10(mcg.spectral_efficiency)).toFixed(2);
+    })
+}
+
+function log10(num) {
+    return Math.log(num) / Math.LN10;
 }

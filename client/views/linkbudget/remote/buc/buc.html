@@ -4,7 +4,9 @@
             <!-- Show recommend antenna only if max contour is not selected -->
             {{#if findMaxContour}}
             {{else}}
+            <!-- Disable recommend BUC as of now
             {{> recommendBuc}}
+            -->
             {{/if}}
             {{#if recommendBuc}} <!-- Do not show BUC selection if recommend BUC is ticked -->
             {{else}}

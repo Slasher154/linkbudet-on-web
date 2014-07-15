@@ -7,7 +7,7 @@ Template.linkDetailTable.tableRows = function(){
 }
 
 Template.linkDetailTable.summaryRows = function(){
-    return ['C/N Total (dB)', 'MCG', 'Es/No Threshold (dB)','Link margin (dB)','Required Link margin (dB)', 'Status','Occ.BW (MHz)','Data Rate (Mbps)','Power Utilization (%)','HPA Power (W)','UL Availability (%)','DL Availability (%)','Total Availability (%)'];
+    return ['C/N Total (dB)', 'MCG', 'Es/No Threshold (dB)','Eb/No Threshold (dB)','Link margin (dB)','Required Link margin (dB)', 'Status','Occ.BW (MHz)','Data Rate (Mbps)','Power Utilization (%)','HPA Sizing (W)','UL Availability (%)','DL Availability (%)','Total Availability (%)'];
 }
 
 Template.linkDetailTable.isAcm = function(){

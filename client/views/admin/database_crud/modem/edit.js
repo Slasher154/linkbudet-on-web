@@ -24,11 +24,11 @@ Template.modemEdit.events({
             console.log('Type = ' + app_type);
             var acm = $('.app-acm:eq(' + i + ')').is(':checked');
             console.log('ACM = ' + acm);
-            var link_margin = $('.app-link-margin:eq(' + i + ')').val();
+            var link_margin = Number($('.app-link-margin:eq(' + i + ')').val());
             console.log('Link margin = ' + link_margin);
-            var min_sym_rate = $('.app-min-symbol-rate:eq(' + i + ')').val();
+            var min_sym_rate = Number($('.app-min-symbol-rate:eq(' + i + ')').val());
             console.log('Min Sym Rate = ' + min_sym_rate);
-            var max_sym_rate = $('.app-max-symbol-rate:eq(' + i + ')').val();
+            var max_sym_rate = Number($('.app-max-symbol-rate:eq(' + i + ')').val());
             console.log('Max Sym Rate = ' + max_sym_rate);
             if(min_sym_rate > max_sym_rate){
                 Errors.throw('Minimum symbol rate cannot be greater than maximum symbol rate.');
@@ -46,7 +46,7 @@ Template.modemEdit.events({
                 }
             }
             console.log('Symbol rates = ' + sym_rates);
-            var roll_off_factor = $('.app-roll-off-factor:eq(' + i + ')').val();
+            var roll_off_factor = Number($('.app-roll-off-factor:eq(' + i + ')').val());
             console.log('Roll off factor = ' + roll_off_factor);
             // MCGs
             // Get the closest .mcg-form to the button to insert the new MCG insert boxes to the correct application
@@ -58,8 +58,8 @@ Template.modemEdit.events({
             // loop each mcg
             _.each(mcg_form_groups, function(item){
                 var mcg_name = $(item).find('.mcg-name').val();
-                var mcg_mbe = $(item).find('.mcg-mbe').val();
-                var mcg_es_no = $(item).find('.mcg-es-no').val();
+                var mcg_mbe = Number($(item).find('.mcg-mbe').val());
+                var mcg_es_no = Number($(item).find('.mcg-es-no').val());
                 console.log('MCG: name = ' + mcg_name + ' MBE = ' + mcg_mbe + ' Es/No = ' + mcg_es_no);
                 mcgs.push({
                     name: mcg_name,

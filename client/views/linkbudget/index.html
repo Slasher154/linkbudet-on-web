@@ -1,10 +1,18 @@
 <template name="index">
+    <div class="well well-sm">
+        <form class="form-horizontal" role="form">
+            {{#formGroup title="Name this request"}}
+            <input type="text" class="form-control" placeholder="Name of the request" id="request-name">
+            <p class="help-block">Pick a useful name so you can view your result later easily.</p>
+            {{/formGroup}}
+        </form>
+    </div>
     <!-- The panel for satellite and channels -->
     {{#panelPrimary title="Satellites and channels" icon="send"}}
     <form class="form-horizontal" role="form">
     {{> satellites}}
     {{> channels}}
-        </form>
+    </form>
     {{/panelPrimary}}
 
     <!-- End panel for satellite and channels -->

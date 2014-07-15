@@ -18,6 +18,7 @@
         <td>{{cn_total}}</td>
         <td>{{mcg.name}}</td>
         <td>{{mcg.es_no}}</td>
+        <td>{{ebNo mcg}}</td>
         <td>{{link_margin}}</td>
         <td>{{required_margin}}</td>
         {{#if pass}}
@@ -164,8 +165,8 @@
     <h5>Downlink</h5>
     {{#condensedTable rows=tableRows}}
     <tr>
-        <td>Uplink Location</td>
-        <td>{{uplink_location.name}}</td>
+        <td>Downlink Location</td>
+        <td>{{downlink_location.name}}</td>
         <td></td>
     </tr>
     <tr>

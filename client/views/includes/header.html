@@ -17,6 +17,7 @@
                     <li><a href="{{pathFor 'about'}}">About</a></li>
                     <li><a href="{{pathFor 'contact'}}">Contact</a></li>
                     -->
+                    <li><a href="{{pathFor 'maps'}}">Maps</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Channels <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -46,7 +47,7 @@
                             <li><a href="{{pathFor 'allRequests' sat='ipstar' }}">IPSTAR</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">{{currentUser.username}}</a></li>
+                    <li><a href="#">{{currentUser.fullname}}</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {{> loginButtons }}

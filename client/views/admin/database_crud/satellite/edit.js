@@ -8,8 +8,8 @@ Template.satelliteEdit.events({
         console.log("T data = " + JSON.stringify(t.data));
         // validate input
         var sat = $('#name').val();
-        var slot = $('#orbitalSlot').val();
-        var skb = $('#skb').val();
+        var slot = Number($('#orbitalSlot').val());
+        var skb = Number($('#skb').val());
         if(sat === '' || slot === '' || skb === ''){
             Errors.throw('Please fill in all the fields.');
         }

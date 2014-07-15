@@ -1,0 +1,40 @@
+<template name="forwardResultTable">
+    {{#condensedTable rows=tableRows}}
+        {{#each this}}
+        <tr>
+            <td>{{downlink_antenna}}</td>
+            <td>{{downlink_location}}</td>
+            <td>{{channel}}</td>
+            <td>{{clear_bandwidth}}</td>
+            <td>{{clear_mcg}}</td>
+            <td>{{clear_ebe}}</td>
+            <td>{{clear_data_rate}}</td>
+            <td>{{rain_mcg}}</td>
+            <td>{{rain_ebe}}</td>
+            <td>{{rain_data_rate}}</td>
+            <td>{{link_availability}}</td>
+        </tr>
+        {{/each}}
+    {{/condensedTable}}
+</template>
+
+<template name="returnResultTable">
+    {{#condensedTable rows=tableRows}}
+    {{#each this}}
+    <tr>
+        <td>{{uplink_antenna}}</td>
+        <td>{{buc}}</td>
+        <td>{{uplink_location}}</td>
+        <td>{{channel}}</td>
+        <td>{{clear_bandwidth}}</td>
+        <td>{{clear_mcg}}</td>
+        <td>{{clear_ebe}}</td>
+        <td>{{clear_data_rate}}</td>
+        <td>{{rain_mcg}}</td>
+        <td>{{rain_ebe}}</td>
+        <td>{{rain_data_rate}}</td>
+        <td>{{link_availability}}</td>
+    </tr>
+    {{/each}}
+    {{/condensedTable}}
+</template>
