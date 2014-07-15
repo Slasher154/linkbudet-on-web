@@ -3,7 +3,7 @@
  */
 
 Template.forwardResultTable.tableRows = function(){
-    return [
+    var rows = [
         "Antenna Size (m)",
         "Downlink Location",
         "Beam",
@@ -15,11 +15,15 @@ Template.forwardResultTable.tableRows = function(){
         "EBE Rain Fade (bps/Hz)",
         "Data Rate Rain Fade (Mbps)",
         "Total Link Availability (%)"
-    ]
+    ];
+    if(IsAdmin(Meteor.userId())){
+        rows.push("Detail");
+    }
+    return rows;
 }
 
 Template.returnResultTable.tableRows = function(){
-    return [
+    var rows = [
         "Antenna Size (m)",
         "BUC (W)",
         "Uplink Location",
@@ -32,5 +36,20 @@ Template.returnResultTable.tableRows = function(){
         "EBE Rain Fade (bps/Hz)",
         "Data Rate Rain Fade (Mbps)",
         "Total Link Availability (%)"
-    ]
+    ];
+    if(IsAdmin(Meteor.userId())){
+        rows.push("Detail");
+    }
+    return rows;
+
+}
+
+Template.forwardResultTable.rowClass = function(pass){
+    if(pass) {return ""}
+    else {return "danger";}
+}
+
+Template.returnResultTable.rowClass = function(pass){
+    if(pass) {return ""}
+    else {return "danger";}
 }

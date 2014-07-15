@@ -83,8 +83,14 @@ if (Meteor.isClient){
         return new Date(date_in_milliseconds).toLocaleString("en-GB"); // dd//mm/yyyy
     })
 
+    // return Eb/No from given MCG object
     UI.registerHelper('ebNo', function(mcg){
         return (mcg.es_no - 10 * log10(mcg.spectral_efficiency)).toFixed(2);
+    })
+
+    // return true if logged in user is admin
+    UI.registerHelper('isAdmin', function(){
+        return IsAdmin(Meteor.userId());
     })
 }
 

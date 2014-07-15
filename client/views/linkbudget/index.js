@@ -195,7 +195,7 @@ Template.index.events({
                 fwd_fix_mcgs: selectedMcgs,
                 bt: selectedBt,
                 modem: selectedVsatModem,
-                link_Margin: linkMargin
+                link_margin: linkMargin
             })
         }
 

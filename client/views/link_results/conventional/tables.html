@@ -12,7 +12,7 @@
             <th>Eb/No Threshold</th>
             <th>Allocated BW (MHz)</th>
             <th>Uplink IFL (dB)</th>
-            <th>HPA power (watts)</th>
+            <th>Operating HPA power (watts)</th>
             <th>C/N Total</th>
             <th>Eb/No</th>
             <th>Eb/No margin</th>
@@ -22,7 +22,9 @@
             <th>Power utilization (%)</th>
             <th>Guardband (%)</th>
             <th>BT Product</th>
+            {{#if isAdmin}}
             <th>Details</th>
+            {{/if}}
         </tr>
         </thead>
         <tbody>
@@ -37,7 +39,7 @@
             <td>{{eb_no_threshold}}</td>
             <td>{{bandwidth}}</td>
             <td>{{uplink_ifl}}</td>
-            <td>{{hpa_power}}</td>
+            <td>{{operating_hpa_power}}</td>
             <td>{{cn_total}}</td>
             <td>{{eb_no}}</td>
             {{#if pass}}
@@ -52,7 +54,9 @@
             <td>{{power_util_percent}}</td>
             <td>{{guardband}}</td>
             <td>{{roll_off_factor}}</td>
+            {{#if isAdmin}}
             <td><a href="{{pathFor 'linkDetail' _id=request_id case_num=case_num}}">Detail</a></td>
+            {{/if}}
         </tr>
         {{/each}}
         </tbody>

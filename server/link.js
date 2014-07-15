@@ -482,7 +482,7 @@ function LinkBudget() {
         uplink_ant = data.remote_antenna;
 
         // check if user specifies BUC size
-        if (_.has(data, 'buc')) {
+        if (_.has(data, 'buc') && (!_.isEmpty(data.buc))) {
             uplink_hpa = data.buc;
             console.log('Set buc = ' + uplink_hpa);
         }
@@ -871,6 +871,7 @@ function Link() {
 
                 if (lowerMcgs.length == 0) {
                     console.log('The clear sky code is last MCG already, add this code to calculate at rain fade');
+                    lowerMcgs.push(mcg_clr);
                 }
 
                 // there is any MCG lower than clear sky
@@ -1129,7 +1130,7 @@ function Link() {
         var op_power_at_hpa_output = eirp_up - antenna_gain(uplink_station.antenna.size, uplink_freq);
         LogTitle('HPA IFL = ' + uplink_station.hpa.ifl + ' HPA OBO = ' + uplink_station.hpa.obo + ' dB');
         LogTitle('OP Power = ' + op_power_at_hpa_output);
-        var hpa_power = Math.pow(10, (op_power_at_hpa_output + uplink_station.hpa.ifl + uplink_station.hpa.obo) / 10);
+        var operating_hpa_power = Math.pow(10, (op_power_at_hpa_output + uplink_station.hpa.ifl) / 10);
 
         // Calculate C/N Uplink
 
@@ -1170,6 +1171,9 @@ function Link() {
             availability: downlink_availability
         });
         var downlink_otherLoss = downlink_xpolLoss + downlink_pointingLoss;
+
+        // Find saturated EIRP at location for debug purpose (no backoff per carrier)
+        var saturated_eirp_down_at_loc = channel.saturated_eirp_peak + downlink_station.location.contour;
 
         // Find EIRP Down at location = Saturated EIRP at peak + carrier OBO + downlink relative contour + other losses (pointing, xpol) + atm loss
         var carrier_eirp_down_at_loc = channel.saturated_eirp_peak + carrier_output_backoff + downlink_station.location.contour - downlink_otherLoss - downlink_atmLoss;
@@ -1385,7 +1389,7 @@ function Link() {
             uplink_condition: condition.uplink,
             uplink_availability: uplink_availability.toFixed(2),
             uplink_location: uplink_station.location,
-            hpa_power: hpa_power.toFixed(2),
+            operating_hpa_power: operating_hpa_power.toFixed(2),
             cn_uplink: cn_uplink.toFixed(2),
             // downlink
             downlink_antenna: downlink_station.antenna,
@@ -1396,6 +1400,7 @@ function Link() {
             downlink_xpol_loss: downlink_xpolLoss.toFixed(2),
             downlink_atmLoss: downlink_atmLoss.toFixed(2),
             downlink_eirp: carrier_eirp_down_at_loc.toFixed(2),
+            saturated_eirp_at_loc: saturated_eirp_down_at_loc.toFixed(2),
             downlink_gt: ant_gt.toFixed(2),
             downlink_path_loss: downlink_path_loss.toFixed(2),
             downlink_condition: condition.downlink,
@@ -1624,11 +1629,15 @@ function Link() {
 
     // Return system temperature = ((Tant + Tfeed) / IFL) + Tlna
     function system_temp(antenna_temp) {
-        var sigma_f = Math.pow(10, -ifl / 10);
+        // temp at before feed
+        var sigma_f = Math.pow(10, ifl / 10);
         var tf = 290; // Feed ambient temperature
-        // the -ifl at the end makes it the Temp at before feed
-        // without -ifl it is temp at before reciever
-        return lna_noise + (1 - sigma_f) * tf + sigma_f * antenna_temp - ifl;
+        return antenna_temp + (sigma_f-1) * tf + sigma_f * lna_noise;
+
+        // temp at after feed
+        //var sigma_f = Math.pow(10, -ifl / 10);
+        //var tf = 290; // Feed ambient temperature
+        //return lna_noise + (1 - sigma_f) * tf + sigma_f * antenna_temp;
     }
 
     // Calculate antenna gain from normal formula from given diameter (m) and frequency (GHz)
@@ -1865,11 +1874,11 @@ function Link() {
             else if (_.has(channel, 'ci_uplink_adj_cell_50') && _.has(channel, 'ci_uplink_adj_cell_eoc')) {
                 // If location is between peak and 50%, C/I = C/I at 50% plus the distance between 50% and that location
                 // (if closer to peak, C/I is better)
-                if (location.contour <= channel.contour_50) {
+                if (location.contour >= channel.contour_50) {
                     ci = channel.ci_uplink_adj_cell_50 + (location.contour - channel.contour_50);
                 }
                 // If location is between 50% and EOC, C/I = linear interpolation of C/I at 50% and C/I at EOC
-                else if (location.contour > channel.contour_50 && location.contour <= channel.contour_eoc) {
+                else if (location.contour < channel.contour_50 && location.contour >= channel.contour_eoc) {
                     ci = linearInterpolation(location.contour, channel.contour_50, channel.contour_eoc, channel.ci_uplink_adj_cell_50, channel.ci_uplink_adj_cell_eoc);
                 }
                 // If location is beyond EOC, C/I = C/I at EOC minus the distance between EOC and that location
@@ -1890,17 +1899,17 @@ function Link() {
             else if (_.has(channel, 'ci_downlink_adj_cell_50') && _.has(channel, 'ci_downlink_adj_cell_eoc')) {
                 // If location is between peak and 50%, C/I = C/I at 50% plus the distance between 50% and that location
                 // (if closer to peak, C/I is better)
-                if (location.contour <= channel.contour_50) {
+                if (location.contour >= channel.contour_50) {
                     ci = channel.ci_downlink_adj_cell_50 + (location.contour - channel.contour_50);
                 }
                 // If location is between 50% and EOC, C/I = linear interpolation of C/I at 50% and C/I at EOC
-                else if (location.contour > channel.contour_50 && location.contour <= channel.contour_eoc) {
+                else if (location.contour < channel.contour_50 && location.contour >= channel.contour_eoc) {
                     ci = linearInterpolation(location.contour, channel.contour_50, channel.contour_eoc, channel.ci_downlink_adj_cell_50, channel.ci_downlink_adj_cell_eoc);
                 }
                 // If location is beyond EOC, C/I = C/I at EOC minus the distance between EOC and that location
                 // (if farther from EOC, C/I is worse)
                 else {
-                    ci = channel.ci_downlink_adj_cell_eoc - (location.contour - channel.contour_eoc);
+                    ci = channel.ci_downlink_adj_cell_eoc + (location.contour - channel.contour_eoc);
                 }
             }
             else {

@@ -96,42 +96,42 @@ Meteor.methods({
                     {"num_carriers": "two", "ibo": -3.5, "obo": -2.1, "intermod": 21},
                     {"num_carriers": "multi", "ibo": -5.5, "obo": -3.5, "intermod": 20}
                 ]},
-                {"name": "K03", "satellite": "Thaicom 6", "uplink_cf": 14.394, "downlink_cf": 12.646, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K03", "dynamic_range": 30, "mode": "ALC", "sfd": -82, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
+                {"name": "K03", "satellite": "Thaicom 6", "uplink_cf": 14.394, "downlink_cf": 12.646, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K03", "dynamic_range": 30, "mode": "ALC", "sfd": -74, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": 0, "intermod": 30},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 25},
                     {"num_carriers": "multi", "ibo": 0, "obo": -5, "intermod": 20}
                 ]},
-                {"name": "K01", "satellite": "Thaicom 6", "uplink_cf": 14.477, "downlink_cf": 12.729, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K01", "dynamic_range": 30, "mode": "ALC", "sfd": -82, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
+                {"name": "K01", "satellite": "Thaicom 6", "uplink_cf": 14.477, "downlink_cf": 12.729, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K01", "dynamic_range": 30, "mode": "ALC", "sfd": -74, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": 0, "intermod": 30},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 25},
                     {"num_carriers": "multi", "ibo": 0, "obo": -5, "intermod": 20}
                 ]},
-                {"name": "K04", "satellite": "Thaicom 6", "uplink_cf": 14.352, "downlink_cf": 12.604, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K04", "dynamic_range": 30, "mode": "ALC", "sfd": -82, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
+                {"name": "K04", "satellite": "Thaicom 6", "uplink_cf": 14.352, "downlink_cf": 12.604, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K04", "dynamic_range": 30, "mode": "ALC", "sfd": -74, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": 0, "intermod": 30},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 25},
                     {"num_carriers": "multi", "ibo": 0, "obo": -5, "intermod": 20}
                 ]},
-                {"name": "K02", "satellite": "Thaicom 6", "uplink_cf": 14.435, "downlink_cf": 12.687, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K02", "dynamic_range": 30, "mode": "ALC", "sfd": -82, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
+                {"name": "K02", "satellite": "Thaicom 6", "uplink_cf": 14.435, "downlink_cf": 12.687, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K02", "dynamic_range": 30, "mode": "ALC", "sfd": -74, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": 0, "intermod": 30},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 25},
                     {"num_carriers": "multi", "ibo": 0, "obo": -5, "intermod": 20}
                 ]},
-                {"name": "K05", "satellite": "Thaicom 6", "uplink_cf": 14.311, "downlink_cf": 12.563, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K05", "dynamic_range": 30, "mode": "ALC", "sfd": -82, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
+                {"name": "K05", "satellite": "Thaicom 6", "uplink_cf": 14.311, "downlink_cf": 12.563, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K05", "dynamic_range": 30, "mode": "ALC", "sfd": -74, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": 0, "intermod": 30},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 25},
                     {"num_carriers": "multi", "ibo": 0, "obo": -5, "intermod": 20}
                 ]},
-                {"name": "K06", "satellite": "Thaicom 6", "uplink_cf": 14.269, "downlink_cf": 12.521, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K06", "dynamic_range": 30, "mode": "ALC", "sfd": -82, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
+                {"name": "K06", "satellite": "Thaicom 6", "uplink_cf": 14.269, "downlink_cf": 12.521, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K06", "dynamic_range": 30, "mode": "ALC", "sfd": -74, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": 0, "intermod": 30},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 25},
                     {"num_carriers": "multi", "ibo": 0, "obo": -5, "intermod": 20}
                 ]},
-                {"name": "K07", "satellite": "Thaicom 6", "uplink_cf": 14.216, "downlink_cf": 12.468, "bandwidth": 54, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K07", "dynamic_range": 30, "mode": "ALC", "sfd": -82, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
+                {"name": "K07", "satellite": "Thaicom 6", "uplink_cf": 14.216, "downlink_cf": 12.468, "bandwidth": 54, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K07", "dynamic_range": 30, "mode": "ALC", "sfd": -74, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": 0, "intermod": 30},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 25},
                     {"num_carriers": "multi", "ibo": 0, "obo": -5, "intermod": 20}
                 ]},
-                {"name": "K08", "satellite": "Thaicom 6", "uplink_cf": 14.154, "downlink_cf": 12.406, "bandwidth": 54, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K08", "dynamic_range": 30, "mode": "ALC", "sfd": -82, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
+                {"name": "K08", "satellite": "Thaicom 6", "uplink_cf": 14.154, "downlink_cf": 12.406, "bandwidth": 54, "type": "broadcast", "uplink_beam": "Ku", "gt_peak": 10.77, "uplink_pol": "H", "downlink_beam": "Ku", "saturated_eirp_peak": 56.84, "downlink_pol": "V", "transponder": "K08", "dynamic_range": 30, "mode": "ALC", "sfd": -74, "designed_deepin": 22, "current_num_carriers": "single", "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": 0, "intermod": 30},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 25},
                     {"num_carriers": "multi", "ibo": 0, "obo": -5, "intermod": 20}

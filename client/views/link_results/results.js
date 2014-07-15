@@ -130,12 +130,12 @@ Template.results.broadbandResult = function(){
         var re = results[i];
         if(!_.isEmpty(re.fwd)){
             var fwd_obj = CreateResultObject(re.fwd,"forward");
-            fwd.push(_.extend(fwd_obj,{case_num: re.case_num}));
+            fwd.push(_.extend(fwd_obj,{case_num: re.case_num, request_id: this._id}));
 
         }
         if(!_.isEmpty(re.rtn)){
             var rtn_obj = CreateResultObject(re.rtn,"return");
-            rtn.push(_.extend(rtn_obj,{case_num: re.case_num}));
+            rtn.push(_.extend(rtn_obj,{case_num: re.case_num, request_id: this._id}));
         }
     }
     return {
@@ -158,18 +158,19 @@ Template.results.broadbandResult = function(){
             uplink_antenna: clear.uplink_antenna.size,
             downlink_antenna: clear.downlink_antenna.size,
             clear_data_rate: clear.data_rate,
-            clear_ebe: (clear.mcg.spectral_efficiency * clear.roll_off_factor).toFixed(2),
+            clear_ebe: (clear.mcg.spectral_efficiency / clear.roll_off_factor).toFixed(2),
             clear_mcg: clear.mcg.name,
             clear_bandwidth: clear.occupied_bandwidth,
             rain_data_rate: rain.data_rate,
-            rain_ebe: (rain.mcg.spectral_efficiency * rain.roll_off_factor).toFixed(2),
+            rain_ebe: (rain.mcg.spectral_efficiency / rain.roll_off_factor).toFixed(2),
             rain_mcg: rain.mcg.name,
             rain_bandwidth: rain.occupied_bandwidth,
             hpa_power: clear.hpa_power,
             cn_total: clear.cn_total,
             link_margin: clear.link_margin,
             link_availability: rain.link_availability,
-            roll_off_factor: clear.roll_off_factor
+            roll_off_factor: clear.roll_off_factor,
+            pass: clear.pass
         };
 
         if(path=="return"){
@@ -275,7 +276,7 @@ Template.results.conventionalResult = function () {
             eb_no_threshold: eb_no(clear.mcg.spectral_efficiency, clear.mcg.es_no).toFixed(2),
             bandwidth: clear.roundup_bandwidth,
             uplink_ifl: clear.uplink_hpa.ifl,
-            hpa_power: clear.hpa_power,
+            operating_hpa_power: clear.operating_hpa_power,
             cn_total: clear.cn_total,
             eb_no: eb_no(clear.mcg.spectral_efficiency, clear.cn_total).toFixed(2),
             eb_no_margin: clear.link_margin,

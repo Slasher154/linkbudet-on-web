@@ -29,7 +29,7 @@
         <td>{{occupied_bandwidth}}</td>
         <td>{{data_rate}}</td>
         <td>{{power_util_percent}}</td>
-        <td>{{hpa_power}}</td>
+        <td>{{operating_hpa_power}}</td>
         {{#with ../[1]}}
         <td>{{uplink_availability}}</td>
         <td>{{downlink_availability}}</td>
@@ -85,7 +85,7 @@
     <tr>
         <td>Noise Bandwidth</td>
         <td>{{noise_bandwidth}}</td>
-        <td>dB</td>
+        <td>MHz</td>
     </tr>
     <tr>
         <td>C/N Up</td>
@@ -153,11 +153,6 @@
         <td>{{carrier_pfd}}</td>
         <td>dBW/m^2</td>
     </tr>
-    <tr>
-        <td>OBO per carrier</td>
-        <td>{{carrier_obo}}</td>
-        <td>dB</td>
-    </tr>
     {{/condensedTable}}
 </div>
 <!-- Downlink -->
@@ -190,9 +185,14 @@
         <td>dB/K</td>
     </tr>
     <tr>
-        <td>EIRP down at location per carrier</td>
-        <td>{{downlink_eirp}}</td>
+        <td>Saturated EIRP at location</td>
+        <td>{{saturated_eirp_at_loc}}</td>
         <td>dBW</td>
+    </tr>
+    <tr>
+        <td>OBO per carrier</td>
+        <td>{{carrier_obo}}</td>
+        <td>dB</td>
     </tr>
     <tr>
         <td>Path Loss</td>
@@ -217,7 +217,7 @@
     <tr>
         <td>Noise bandwidth</td>
         <td>{{noise_bandwidth}}</td>
-        <td>dB</td>
+        <td>MHz</td>
     </tr>
     <tr>
         <td>C/N Downlink</td>

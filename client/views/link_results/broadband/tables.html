@@ -1,7 +1,7 @@
 <template name="forwardResultTable">
     {{#condensedTable rows=tableRows}}
         {{#each this}}
-        <tr>
+        <tr class="{{rowClass pass}}">
             <td>{{downlink_antenna}}</td>
             <td>{{downlink_location}}</td>
             <td>{{channel}}</td>
@@ -13,6 +13,7 @@
             <td>{{rain_ebe}}</td>
             <td>{{rain_data_rate}}</td>
             <td>{{link_availability}}</td>
+            <td><a href="{{pathFor 'linkDetail' _id=request_id case_num=case_num}}">Detail</a></td>
         </tr>
         {{/each}}
     {{/condensedTable}}
@@ -21,7 +22,7 @@
 <template name="returnResultTable">
     {{#condensedTable rows=tableRows}}
     {{#each this}}
-    <tr>
+    <tr class="{{rowClass pass}}">
         <td>{{uplink_antenna}}</td>
         <td>{{buc}}</td>
         <td>{{uplink_location}}</td>
@@ -34,6 +35,7 @@
         <td>{{rain_ebe}}</td>
         <td>{{rain_data_rate}}</td>
         <td>{{link_availability}}</td>
+        <td><a href="{{pathFor 'linkDetail' _id=request_id case_num=case_num}}">Detail</a></td>
     </tr>
     {{/each}}
     {{/condensedTable}}
