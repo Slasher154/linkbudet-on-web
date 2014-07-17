@@ -7,7 +7,7 @@ Template.results.request_name = function() {
 }
 
 Template.results.assumptions = function () {
-    console.log('Result id = ' + this._id);
+    //console.log('Result id = ' + this._id);
     var assumption = LinkRequests.findOne({_id: this._id}).assumptions;
 
     // Set the display text for assumption in title, detail pair
@@ -157,8 +157,8 @@ Template.results.broadbandResult = function(){
         var clear = _.where(result, {uplink_condition: "clear", downlink_condition: "clear"})[0];
         var rain = _.where(result, {uplink_condition: "rain", downlink_condition: "rain"})[0];
 
-        console.log("Clear result = " + JSON.stringify(clear));
-        console.log("Rain result = " + JSON.stringify(rain));
+        //console.log("Clear result = " + JSON.stringify(clear));
+        //console.log("Rain result = " + JSON.stringify(rain));
 
         var obj = {
             channel: clear.channel,
@@ -203,6 +203,7 @@ Template.results.conventionalResult = function () {
     // We will loop all the adjacent interference cases and keep the overlap frequency in this array in order to find the frequency
     // of "no interference" cases at last (if any)
     var adjacent_overlapped_freq = [];
+    var overlapped_channels = [];
 
     for (var i = 0; i < result.length; i++) {
         var re = result[i];
@@ -218,7 +219,7 @@ Template.results.conventionalResult = function () {
 
             // check if result has return link or adjacent satellite for both forward is not the same case
             if (!_.isEqual(_.pluck(fwd_clear.ci_downlink_adj_sat_obj, 'name'), _.pluck(rtn_clear.ci_downlink_adj_sat_obj, 'name'))) {
-                console.log('Case no. ' + i + ' has different adj.intf case.');
+                //console.log('Case no. ' + i + ' has different adj.intf case.');
                 continue; // skip this case and continue to the next result
             }
         }
@@ -248,7 +249,7 @@ Template.results.conventionalResult = function () {
         // if intf is undefined, it means there is no group for this yet
         // so we create new group
         if (_.isUndefined(intf)) {
-            console.log('Create new group for interferences ' + intf_name);
+            //console.log('Create new group for interferences ' + intf_name);
 
             // Get the overlap frequency obj
             // Example of return results
@@ -257,29 +258,46 @@ Template.results.conventionalResult = function () {
             //    overlapped_range: [3855,3856,3857]
             //}
             var overlap = GetOverlapFrequency(fwd_clear.channel,fwd_clear.ci_downlink_adj_sat_obj);
-            console.log("Overlap range " + overlap.overlapped_range.join(','));
             adjacent_overlapped_freq = adjacent_overlapped_freq.concat(overlap.overlapped_range);
-            console.log("Adj overlap freq = " + adjacent_overlapped_freq.join(','));
+
+            var intf_obj = intf_name == "no interference" ? [] : _.map(fwd_clear.ci_downlink_adj_sat_obj, function(item){ return {channel:item.channel,satellite:item.satellite};});
 
             data.push({
                 intf: intf_name,
                 has_intf: intf_name != "no interference",
                 fwd: [fwd_result_obj],
                 rtn: [rtn_result_obj],
-                caption: OverlapFrequencyCaption(overlap.overlapped_obj)
+                intf_obj: intf_obj
+                //caption: OverlapFrequencyCaption(overlap.overlapped_obj)
             });
+
+            if(intf_name != "no interference"){
+                _.each(fwd_clear.ci_downlink_adj_sat_obj, function(item){
+                    if(!(_.where(overlapped_channels,{channel:item.channel,satellite:item.satellite}).length)){
+                        overlapped_channels.push({channel:item.channel,satellite:item.satellite});
+                    }
+                });
+            }
+
         }
         // push the result of fwd_result_obj and rtn_result_obj
         else {
-            console.log('Push this result into interference group ' + intf_name);
+            //console.log('Push this result into interference group ' + intf_name);
             intf.fwd.push(fwd_result_obj);
             intf.rtn.push(rtn_result_obj);
         }
 
+        // push the overlapped channels, we will use this channels to find the freq/bandwidth for each case
+
+
+
     }
 
-    // Check if there is no interference cases, if yes, we need to find its frequency range, which equals to the portion which is not occupied by adjacent satellite interferences
-
+    // loop through each interference case to get its frequency range and bandwidth
+    _.each(data, function(item){
+        _.extend(item,{caption:OverlapFrequencyCaption(assumption.satellite,assumption.channels[0],item.intf_obj,overlapped_channels)});
+    });
+    /*
     var no_intf = _.find(data, function (item) {
         return item.intf == "no interference";
     });
@@ -296,12 +314,13 @@ Template.results.conventionalResult = function () {
         _.extend(no_intf,{caption:OverlapFrequencyCaption(no_intf_ranges)});
         console.log("No Intf = " + no_intf.caption);
     }
+    */
 
     return data;
 
     // return array of object of start, stop frequency and bandwidth of overlapping part of channel and given adjacent satellite channels
     function GetOverlapFrequency(channel, adjacent_satellite_channels){
-        console.log(JSON.stringify(adjacent_satellite_channels));
+        //console.log(JSON.stringify(adjacent_satellite_channels));
         if(!adjacent_satellite_channels[0].interference){
             return {
                 overlapped_obj: [],
@@ -321,7 +340,7 @@ Template.results.conventionalResult = function () {
             var adj_channel_freq_range = _.range(adj_chan_start_freq_mhz, adj_chan_stop_freq_mhz);
             intersected_freq = _.intersection(intersected_freq, adj_channel_freq_range);
         })
-        console.log("Intersected freq = " + intersected_freq.join(','));
+        //console.log("Intersected freq = " + intersected_freq.join(','));
 
         // Extract the continuous ranges from the array
         return {
@@ -331,12 +350,65 @@ Template.results.conventionalResult = function () {
 
     }
 
-    function OverlapFrequencyCaption(overlap_obj){
+    function WriteCaption(overlap_obj){
         var text = [];
         _.each(overlap_obj, function(item){
             text.push("Frequency: " + item.start_freq + "-" + item.stop_freq + " MHz (BW " + item.bandwidth + " MHz)");
         })
         return text.join(" | ");
+    }
+
+    function OverlapFrequencyCaption(satellite,channel, adj_channels, all_adj_channels){
+        var interested_channel = Channels.findOne({satellite:satellite,name:channel});
+        var interested_freq_range = MakeFrequencyRange(interested_channel);
+
+        // if the adj_channels is blank (no interference case), we union all adj_channels and find difference from main channel
+        if(adj_channels.length == 0){
+            var interfered_freq = [];
+            _.each(all_adj_channels, function(item){
+                var adj_chan =  Channels.findOne({satellite:item.satellite,name:item.channel});
+                if(interfered_freq.length == 0) { interfered_freq = MakeFrequencyRange(adj_chan); }
+                else{ interfered_freq = _.union(interfered_freq,MakeFrequencyRange(adj_chan)); }
+            })
+            //console.log("No Interfered freq = " + _.difference(interested_freq_range, interfered_freq).join(','));
+            return WriteCaption(ExtractFrequencyRanges(_.difference(interested_freq_range, interfered_freq)));
+        }
+
+        // find the intersection range of interest adjacent channels
+        else {
+            var intersected_freq = [];
+            _.each(adj_channels, function (item) {
+                var adj_chan = Channels.findOne({satellite: item.satellite, name: item.channel});
+                if (intersected_freq.length == 0) {
+                    intersected_freq = MakeFrequencyRange(adj_chan);
+                }
+                else {
+                    intersected_freq = _.intersection(intersected_freq, MakeFrequencyRange(adj_chan));
+                }
+            });
+            //console.log('Intersected freq = ' + intersected_freq.join(','));
+
+            // find the difference of intersection freq range with other channels
+            var other_chans = _.reject(all_adj_channels, function (item) {
+                return _.where(adj_channels, item).length;
+            });
+            var reduced_freq = intersected_freq;
+
+            _.each(other_chans, function (item) {
+                var other_chan = Channels.findOne({satellite: item.satellite, name: item.channel});
+                reduced_freq = _.difference(reduced_freq, MakeFrequencyRange(other_chan));
+
+            });
+            //console.log("Interested Freq " + interested_freq_range.join(','));
+            //console.log("Reduced Freq = " + reduced_freq.join(','));
+            return WriteCaption(ExtractFrequencyRanges(_.intersection(interested_freq_range,reduced_freq)));
+        }
+    }
+    
+    function MakeFrequencyRange(channel){
+        var start_freq = channel.downlink_cf * 1000 - (channel.bandwidth / 2);
+        var stop_freq = (channel.downlink_cf * 1000 + (channel.bandwidth / 2));
+        return _.range(start_freq, stop_freq);
     }
 
     // Return arrays of continuous range from given array
@@ -369,7 +441,7 @@ Template.results.conventionalResult = function () {
             }
             else{}
         }
-        console.log(JSON.stringify(ranges));
+        //console.log(JSON.stringify(ranges));
         return ranges;
     }
 
@@ -378,8 +450,8 @@ Template.results.conventionalResult = function () {
         var clear = _.where(result, {uplink_condition: "clear", downlink_condition: "clear"})[0];
         var rain = _.where(result, {uplink_condition: "rain", downlink_condition: "rain"})[0];
 
-        console.log("Clear result = " + JSON.stringify(clear));
-        console.log("Rain result = " + JSON.stringify(rain));
+        //console.log("Clear result = " + JSON.stringify(clear));
+        //console.log("Rain result = " + JSON.stringify(rain));
 
 
         return {
