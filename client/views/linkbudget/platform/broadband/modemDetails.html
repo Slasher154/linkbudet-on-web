@@ -7,14 +7,19 @@
                 <li>{{type}}</li>
                 <ul>
                     <li>{{app.name}}</li>
-                    <li>ACM: {{app.acm}}</li>
+                    {{#if app.acm}}
+                    <li>ACM: Available</li>
+                    {{else}}
+                    <li>ACM: Not Available</li>
+                    {{/if}}
                     <li>Link margin: {{app.link_margin}}</li>
-                    <li>Roll-off: {{app.roll_off_factor.[0]}}</li>
+                    <li>Roll-off: {{app.roll_off_factor}}</li>
                 </ul>
                 {{/each}}
             </ul>
         </div>
     </div>
+    <!--
     {{#if isAcm}}
     <div class="checkbox">
         <label>
@@ -22,4 +27,5 @@
         </label>
     </div>
     {{/if}}
+    -->
 </template>

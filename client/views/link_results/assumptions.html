@@ -6,7 +6,7 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                {{#each this}}
+                {{#each assumptions_keys_value}}
                 <th>
                     {{title}}
                 </th>
@@ -15,14 +15,19 @@
         </thead>
         <tbody>
         <tr>
-            {{#each this}}
+            {{#each assumptions_keys_value}}
             <td>{{detail}}</td>
             {{/each}}
         </tr>
         </tbody>
     </table>
-
-
+    {{#if isConventionalSatellite satellite}}
+    <!-- Information for criteria for the link to pass -->
+    <div class="alert alert-info alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        The link <strong>passes</strong> if Eb/No margin is higher than {{link_margin}} dB, the link <strong>fails</strong> otherwise.
+    </div>
+    {{/if}}
 
 
 

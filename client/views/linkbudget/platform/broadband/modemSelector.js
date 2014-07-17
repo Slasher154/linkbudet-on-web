@@ -2,7 +2,8 @@
  * Created by Dome on 4/23/14 AD.
  */
 Template.modemSelector.modems = function(){
-    var modems = _.groupBy(Modems.find().fetch(),function(item){ return item.vendor; });
+    // Don't select modem with BC applications (mainly Standard DVB-S1, and DVB-S2)
+    var modems = _.groupBy(Modems.find({"applications.0.type":{$not: "Broadcast"}}).fetch(),function(item){ return item.vendor; });
     var grouped_modems = [];
     for(var prop in modems){
         grouped_modems.push({
@@ -10,7 +11,7 @@ Template.modemSelector.modems = function(){
             modem: modems[prop]
         })
     }
-    return grouped_modems;
+    return _.sortBy(grouped_modems, function(item){ return item.vendor;});
 }
 
 Template.modemSelector.events({

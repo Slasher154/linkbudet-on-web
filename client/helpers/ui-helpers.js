@@ -92,6 +92,11 @@ if (Meteor.isClient){
     UI.registerHelper('isAdmin', function(){
         return IsAdmin(Meteor.userId());
     })
+
+    // return true if the given satellite is conventional
+    UI.registerHelper('isConventionalSatellite', function(satellite){
+        return Satellites.findOne({name:satellite}).type === "Conventional";
+    })
 }
 
 function log10(num) {

@@ -53,6 +53,10 @@ Meteor.publish('singleRequest', function(id){
     return LinkRequests.find({_id:id});
 })
 
+Meteor.publish('channelFrequency', function(){
+    return Channels.find({},{fields:{name:1,uplink_cf:1,downlink_cf:1,bandwidth:1,satellite:1}});
+})
+
 Meteor.publish('requestsBySatellite', function(sat){
     //var sat = Satellites.findOne({_id:id});
     // return only request of this user

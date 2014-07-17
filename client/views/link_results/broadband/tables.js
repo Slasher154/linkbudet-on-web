@@ -4,9 +4,9 @@
 
 Template.forwardResultTable.tableRows = function(){
     var rows = [
-        "Antenna Size (m)",
-        "Downlink Location",
         "Beam",
+        "Downlink Location",
+        "Antenna Size (m)",
         "Occupied Bandwidth (MHz)",
         "MCG Clear Sky",
         "EBE Clear Sky (bps/Hz)",
@@ -24,10 +24,10 @@ Template.forwardResultTable.tableRows = function(){
 
 Template.returnResultTable.tableRows = function(){
     var rows = [
+        "Beam",
+        "Uplink Location",
         "Antenna Size (m)",
         "BUC (W)",
-        "Uplink Location",
-        "Beam",
         "Occupied Bandwidth (MHz)",
         "MCG Clear Sky",
         "EBE Clear Sky (bps/Hz)",

@@ -84,6 +84,11 @@ Template.results.assumptions = function () {
         push("Fix MCGs", assumption.rtn_fix_mcgs.join(','));
     }
 
+    // Link Margin
+    if (_.has(assumption, 'link_margin')){
+        push("Link margin (dB)", assumption.link_margin);
+    }
+
 
     // Bandwidth
     if (_.has(assumption, 'bandwidths')) {
@@ -105,7 +110,11 @@ Template.results.assumptions = function () {
         push("Bandwidth", text);
     }
 
-    return data;
+    return {
+        assumptions_keys_value: data,
+        satellite: assumption.satellite,
+        link_margin: assumption.link_margin
+    };
 
     function push(title, detail) {
         data.push({title: title, detail: detail});
@@ -191,6 +200,10 @@ Template.results.conventionalResult = function () {
 
     var data = [];
 
+    // We will loop all the adjacent interference cases and keep the overlap frequency in this array in order to find the frequency
+    // of "no interference" cases at last (if any)
+    var adjacent_overlapped_freq = [];
+
     for (var i = 0; i < result.length; i++) {
         var re = result[i];
 
@@ -236,11 +249,24 @@ Template.results.conventionalResult = function () {
         // so we create new group
         if (_.isUndefined(intf)) {
             console.log('Create new group for interferences ' + intf_name);
+
+            // Get the overlap frequency obj
+            // Example of return results
+            //{
+            //    overlapped_obj: [{start_freq: 3855, stop_freq: 3857, bandwidth: 2}],
+            //    overlapped_range: [3855,3856,3857]
+            //}
+            var overlap = GetOverlapFrequency(fwd_clear.channel,fwd_clear.ci_downlink_adj_sat_obj);
+            console.log("Overlap range " + overlap.overlapped_range.join(','));
+            adjacent_overlapped_freq = adjacent_overlapped_freq.concat(overlap.overlapped_range);
+            console.log("Adj overlap freq = " + adjacent_overlapped_freq.join(','));
+
             data.push({
                 intf: intf_name,
                 has_intf: intf_name != "no interference",
                 fwd: [fwd_result_obj],
-                rtn: [rtn_result_obj]
+                rtn: [rtn_result_obj],
+                caption: OverlapFrequencyCaption(overlap.overlapped_obj)
             });
         }
         // push the result of fwd_result_obj and rtn_result_obj
@@ -252,9 +278,100 @@ Template.results.conventionalResult = function () {
 
     }
 
-    console.log("Interference groups = " + JSON.stringify(data));
+    // Check if there is no interference cases, if yes, we need to find its frequency range, which equals to the portion which is not occupied by adjacent satellite interferences
+
+    var no_intf = _.find(data, function (item) {
+        return item.intf == "no interference";
+    });
+    if (!_.isUndefined(no_intf)) {
+        var chan = Channels.findOne({name:assumption.channels[0]});
+        var chan_start_freq_mhz = chan.downlink_cf * 1000 - (chan.bandwidth / 2);
+        var chan_stop_freq_mhz = (chan.downlink_cf * 1000 + (chan.bandwidth / 2));
+        var channel_freq_range = _.range(chan_start_freq_mhz, chan_stop_freq_mhz);
+        console.log('Chan freq_range = ' + channel_freq_range.join(','));
+        // Get the difference between the frequency range of adjacent satellites and this transponder to retrieve the no interference portion
+        var no_intf_ranges = ExtractFrequencyRanges(_.difference(channel_freq_range, adjacent_overlapped_freq));
+
+        // Set the caption of this "no interference" case
+        _.extend(no_intf,{caption:OverlapFrequencyCaption(no_intf_ranges)});
+        console.log("No Intf = " + no_intf.caption);
+    }
 
     return data;
+
+    // return array of object of start, stop frequency and bandwidth of overlapping part of channel and given adjacent satellite channels
+    function GetOverlapFrequency(channel, adjacent_satellite_channels){
+        console.log(JSON.stringify(adjacent_satellite_channels));
+        if(!adjacent_satellite_channels[0].interference){
+            return {
+                overlapped_obj: [],
+                overlapped_range: []
+            }
+        }
+        var chan = Channels.findOne({name: channel});
+        var chan_start_freq_mhz = chan.downlink_cf * 1000 - (chan.bandwidth / 2);
+        var chan_stop_freq_mhz = (chan.downlink_cf * 1000 + (chan.bandwidth / 2));
+        var channel_freq_range = _.range(chan_start_freq_mhz, chan_stop_freq_mhz);
+
+        var intersected_freq = channel_freq_range;
+        _.each(adjacent_satellite_channels, function(item){
+            var adj_chan = Channels.findOne({satellite:item.satellite,name:item.channel});
+            var adj_chan_start_freq_mhz = adj_chan.downlink_cf * 1000 - (adj_chan.bandwidth / 2);
+            var adj_chan_stop_freq_mhz = (adj_chan.downlink_cf * 1000 + (adj_chan.bandwidth / 2));
+            var adj_channel_freq_range = _.range(adj_chan_start_freq_mhz, adj_chan_stop_freq_mhz);
+            intersected_freq = _.intersection(intersected_freq, adj_channel_freq_range);
+        })
+        console.log("Intersected freq = " + intersected_freq.join(','));
+
+        // Extract the continuous ranges from the array
+        return {
+            overlapped_obj: ExtractFrequencyRanges(intersected_freq),
+            overlapped_range: intersected_freq
+        }
+
+    }
+
+    function OverlapFrequencyCaption(overlap_obj){
+        var text = [];
+        _.each(overlap_obj, function(item){
+            text.push("Frequency: " + item.start_freq + "-" + item.stop_freq + " MHz (BW " + item.bandwidth + " MHz)");
+        })
+        return text.join(" | ");
+    }
+
+    // Return arrays of continuous range from given array
+    // Ex. if given array is [1,2,3,4,7,8,9] => [{ start_freq: 1, stop_freq: 4, bandwidth: 3 }, { start_freq: 7, stop_freq: 9, bandwidth: 3}]
+    function ExtractFrequencyRanges(arr, step){
+        var step = typeof step == "undefined" ? 1 : step;
+        var ranges = [];
+        var obj = {
+            start_freq: 0,
+            stop_freq: 0,
+            bandwidth: 0
+        }
+        for(var i = 0; i < arr.length; i++){
+            var freq = arr[i]
+            if(obj.start_freq == 0){
+                obj.start_freq = freq;
+            }
+            // if this is not last portion of freq and differences between this freq and next freq is more than 1 (not continuous) or this is last portion of bandwidth already
+            // it's the end of range so we push it to array
+            else if(i == arr.length -1 || arr[i+1] - freq != step){
+                obj.stop_freq = freq + 1;
+                obj.bandwidth = obj.stop_freq - obj.start_freq
+                ranges.push({
+                    start_freq: obj.start_freq,
+                    stop_freq: obj.stop_freq,
+                    bandwidth: obj.bandwidth
+                });
+                // reset the object
+                obj = { start_freq:0, stop_freq:0, bandwidth: 0};
+            }
+            else{}
+        }
+        console.log(JSON.stringify(ranges));
+        return ranges;
+    }
 
     function CreateLinkObject(result) {
         // return the necessary information to show in the table result

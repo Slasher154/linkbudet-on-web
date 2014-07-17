@@ -154,7 +154,7 @@ Meteor.methods({
                     {"name": "MF-TDMA", "type": "return", "acm": false, "link_margin": 2, "minimum_symbol_rate": 1, "maximum_symbol_rate": 7500, "symbol_rates": [], "roll_off_factor": 1.2, "mcgs": [
                         {"name": "QPSK-2D16S-170B-1/2", "spectral_efficiency": 0.972, "es_no": 3.6},
                         {"name": "QPSK-2D16S-438B-2/3", "spectral_efficiency": 1.308, "es_no": 5},
-                        {"name": "QPSK-2D16S-170B-3/4", "spectral_efficiency": 144, "es_no": 5.9},
+                        {"name": "QPSK-2D16S-170B-3/4", "spectral_efficiency": 1.44, "es_no": 5.9},
                         {"name": "QPSK-2D16S-438B-4/5", "spectral_efficiency": 1.572, "es_no": 6.6},
                         {"name": "QPSK-2D16S-438B-6/7", "spectral_efficiency": 1.68, "es_no": 7.5},
                         {"name": "QPSK-2D16S-100B-2/3", "spectral_efficiency": 1.692, "es_no": 9.3},
@@ -171,24 +171,6 @@ Meteor.methods({
                         {"name": "QPSK 7/8 RS", "spectral_efficiency": 1.75, "es_no": 8.48}
                     ]}
                 ], "name": "Standard DVB-S1", "vendor": "Standard"},
-                { "applications": [
-                    {"name": "DVB-S2", "type": "Broadcast", "acm": false, "link_margin": 2, "minimum_symbol_rate": 1000, "maximum_symbol_rate": 121500, "symbol_rates": [], "roll_off_factor": 1.05, "mcgs": [
-                        {"name": "QPSK 1/2", "spectral_efficiency": 1, "es_no": 2.29},
-                        {"name": "QPSK 3/5", "spectral_efficiency": 1.2, "es_no": 3.69},
-                        {"name": "QPSK 2/3", "spectral_efficiency": 1.33, "es_no": 4.39},
-                        {"name": "QPSK 3/4", "spectral_efficiency": 1.5, "es_no": 5.29},
-                        {"name": "QPSK 4/5", "spectral_efficiency": 1.6, "es_no": 6.18},
-                        {"name": "QPSK 5/6", "spectral_efficiency": 1.67, "es_no": 6.49},
-                        {"name": "QPSK 8/9", "spectral_efficiency": 1.78, "es_no": 7.70},
-                        {"name": "QPSK 9/10", "spectral_efficiency": 1.80, "es_no": 7.91},
-                        {"name": "8PSK 3/5", "spectral_efficiency": 1.8, "es_no": 6.99},
-                        {"name": "8PSK 2/3", "spectral_efficiency": 2, "es_no": 7.89},
-                        {"name": "8PSK 3/4", "spectral_efficiency": 2.25, "es_no": 9.41},
-                        {"name": "8PSK 5/6", "spectral_efficiency": 2.5, "es_no": 10.85},
-                        {"name": "8PSK 8/9", "spectral_efficiency": 2.67, "es_no": 12.19},
-                        {"name": "8PSK 9/10", "spectral_efficiency": 2.7, "es_no": 12.47}
-                    ]}
-                ], "name": "Standard DVB-S2", "vendor": "Standard"},
                 {  "name": "IPSTAR", "vendor": "IPSTAR", "applications": [
                     { "name": "TOLL", "type": "forward", "acm": true, "link_margin": 2, "minimum_symbol_rate": 6750, "maximum_symbol_rate": 54000, "symbol_rates": [ 6750, 13500, 20250, 27000, 33750, 40500, 47250, 54000 ], "roll_off_factor": 1, "mcgs": [
                         { "name": "QPSK325", "spectral_efficiency": 0.65, "es_no": 1.73, "bit_rate_per_slot": 8.14 },

@@ -353,7 +353,7 @@ Template.index.events({
             }
 
             // check if calculate at fixed MCG is selected
-            fixMcg = $('#fixMcg').is(':checked');
+            fixMcg = false || $('#fixMcg').is(':checked');
             console.log('Fix MCG: ' + fixMcg)
 
             // add elements into assumption object

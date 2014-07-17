@@ -1260,6 +1260,9 @@ function Link() {
             diameter: downlink_station.antenna.size,
             orbital_slot: orbital_slot
         });
+
+        // Find the start frequency, stop frequency and bandwidth of this interference range and add it to the C/I downlink object
+
         var ci_downlink_adj_sat = ci_downlink_adj_sat_obj.ci;
 
         // C/I Intermod from satellite
@@ -1826,7 +1829,9 @@ function Link() {
                         ci_objects.push({
                             interference: true,
                             name: intf.satellite + " " + intf.name,
-                            value: c_intf.toFixed(2)
+                            value: c_intf.toFixed(2),
+                            satellite: intf.satellite,
+                            channel: intf.name
                         });
 
                         ci = cnOperation(ci, c_intf);
@@ -2282,7 +2287,7 @@ function Link() {
         }
         else {
             //  very low elevation angles
-            slant_path = 2 * (rain_height - stat_height) / (sqrt(Math.pow(Math.sin(ele_rad), 2) + 2 * (rain_height - stat_height) / 8500) + Math.sin(ele_rad));
+            slant_path = 2 * (rain_height - stat_height) / (Math.sqrt(Math.pow(Math.sin(ele_rad), 2) + 2 * (rain_height - stat_height) / 8500) + Math.sin(ele_rad));
         }
         // Determine horizontal projection to ground of slant path length.  (this is the LG in the ITU REC)
         // Step-3:
@@ -2689,7 +2694,7 @@ function GetAdjacentSatelliteChannels(channel, path) {
             var right_freq = item[path + "_cf"] + (item.bandwidth / 2000);
             return left_freq < freq && freq < right_freq;
         });
-        // if no interfered channels is found on this particular freq, the funciton returns empty array
+        // if no interfered channels is found on this particular freq, the function returns empty array
         var id_arr = _.pluck(interfered_channels, '_id');
         var count = 0;
         for (var j = 0; j < bandwidth_slices.length; j++) {
@@ -2728,6 +2733,10 @@ function GetAdjacentSatelliteChannels(channel, path) {
 
     }
 
+}
+
+function linearInterpolation(x, x1, x2, fx1, fx2) {
+    return ((fx2 - fx1) / (x2 - x1)) * (x - x1) + fx1;
 }
 
 function LogTitle(string) {

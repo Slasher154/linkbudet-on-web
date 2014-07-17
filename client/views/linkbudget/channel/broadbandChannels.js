@@ -7,7 +7,8 @@ Template.broadbandChannels.channels = function () {
     if (!country) {
         return [];
     }
-    var channels = Channels.find({country: country}, {fields: {name: 1}}).fetch();
+    // TODO: Enable BC-Beam
+    var channels = Channels.find({country: country,type:{$not:{$in:["broadcast"]}}}, {fields: {name: 1}}).fetch();
     return {
         value: _.uniq(_.pluck(channels, 'name'))
     }
