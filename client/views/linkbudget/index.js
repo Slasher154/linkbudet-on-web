@@ -414,7 +414,9 @@ Template.index.events({
         })
         console.log(JSON.stringify(assumptions));
 
+        NProgress.start();
         Meteor.call('link_calc', assumptions, function(error, message) {
+            NProgress.done();
             if (error){
                 alert(error.reason);
             } else {

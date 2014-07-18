@@ -7,12 +7,14 @@
     "accounts-admin-ui-bootstrap-3": {},
     "leaflet": {},
     "Bootstrap3-Typeahead": {},
-    "bootstrap-select": {},
     "npm": {},
     "pdfjs": {},
     "pdfkit": {},
     "collectionFS": {},
     "accounts-ui-bootstrap-3-blaze": {},
-    "headers": {}
+    "headers": {},
+    "nprogress": {},
+    "bootstrap-select": {},
+    "bootstrap-3": {}
   }
 }
