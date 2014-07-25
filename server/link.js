@@ -1766,90 +1766,116 @@ function Link() {
         var ci = 30; //default value
 
         // if the channel database specifies this value (such as IPSTAR channels), use this value
-        ci = _.has(channel, 'ci_' + path + '_adj_sat') ? channel['ci_' + path + '_adj_sat'] : ci;
+        //ci = _.has(channel, 'ci_' + path + '_adj_sat') ? channel['ci_' + path + '_adj_sat'] : ci;
 
-        // if the input interference channel is blank (no adj.sat intf), put the object to adj.
-        if (interference_channels.length == 0) {
-            ci_objects.push({
-                interference: false,
-                name: "no interference",
-                value: ci
-            });
-        }
+        // ------------------------------ Separate by IPSTAR and Conventional --------------------------
 
-        else {
-            // loop through interfered channels
-            // intf = interference in short
-            for (var i = 0; i < interference_channels.length; i++) {
-                var intf = interference_channels[i];
-                if (_.isEmpty(intf)) {
+        if(Satellites.findOne({name:channel.satellite}).type == "Broadband"){
+            if (_.has(channel,'eirp_density_adjacent_satellite_' + path)){
+
+                if(channel['eirp_density_adjacent_satellite_' + path] == -100){
+                    ci = 50;
                     ci_objects.push({
                         interference: false,
                         name: "no interference",
-                        value: 50
+                        value: ci
                     });
-                    continue;
                 }
-                else {
-                    var eirp_density = data.eirp_density, diameter = data.diameter, orbital_slot = data.orbital_slot;
-
-                    var intf_sat = Satellites.findOne({name: intf.satellite});
-                    var deg_diff = (Math.abs((orbital_slot - intf_sat.orbital_slot)) - 0.15) * 1.1; // Topocentric Angle | from P'Oui, 8 July 2014
-
-                    console.log('Finding interferences from satellite ' + intf.satellite + ' channel: ' + intf.name + ' at ' + intf_sat.orbital_slot + ' degrees');
-
-                    // find the gain rejection ratio (relative gain)
-                    var grr = gain_rejection_ratio(channel[path + '_cf'], diameter, deg_diff);
-                    console.log('GRR of ' + diameter + ' m. antenna at ' + deg_diff + ' degrees = ' + grr + ' dB');
-
-                    // find the EIRP of the location on that satellite from the database
-                    var loc = Locations.findOne({name: location.name});
-
-                    // location is not found
-                    if (!location) continue;
-
-                    var loc_data = _.where(loc.data, {beam: intf[path + '_beam'], satellite: intf.satellite, type: path})[0];
-
-                    // location is found, but this location is not under this beam contour
-                    if (!loc_data) continue;
-
-                    // compare with EIRP down of adjacent satellite channels
-                    if (path === "downlink") {
-
-                        console.log('The location ' + loc.name + ' has value on beam ' + loc_data.beam + ' = ' + loc_data.value);
-
-                        // find the output backoff of the interfered channels
-                        var intf_obo = _.where(intf.backoff_settings, {num_carriers: intf.current_num_carriers})[0].obo;
-
-                        // find EIRP density of interfered channels at that location
-                        var intf_eirp_density = loc_data.value + intf_obo - 10 * log10(intf.bandwidth * Math.pow(10, 6));
-
-                        console.log("EIRP density for " + intf.satellite + ' ' + intf.name + ' = ' + intf_eirp_density + ' dBW');
-
-                        // return C/I = our eirp density - intf eirp density + GRR + polarization improvement
-                        var c_intf = eirp_density - intf_eirp_density + grr + pol_improvement(channel[path + '_pol'], intf[path + '_pol']);
-
-                        console.log("C/I for " + channel.satellite + ' ' + channel.name + ' = ' + c_intf + ' dB');
-
-                        ci_objects.push({
-                            interference: true,
-                            name: intf.satellite + " " + intf.name,
-                            value: c_intf.toFixed(2),
-                            satellite: intf.satellite,
-                            channel: intf.name
-                        });
-
-                        ci = cnOperation(ci, c_intf);
-
-                    }
-
-
+                else{
+                    var deg_diff = Math.abs(data.orbital_slot - channel.adjacent_satellite_orbital_slot);
+                    ci = data.eirp_density - channel['eirp_density_adjacent_satellite_' + path] + gain_rejection_ratio(channel[path + '_cf'],data.diameter,deg_diff) + gain_improvment(data.diameter, deg_diff);
+                    ci_objects.push({
+                        interference: true,
+                        name: "Interference from slot " + channel.adjacent_satellite_orbital_slot,
+                        value: ci
+                    });
                 }
 
 
             }
         }
 
+        else{
+            // if the input interference channel is blank (no adj.sat intf), put the object to adj.
+            if (interference_channels.length == 0) {
+                ci_objects.push({
+                    interference: false,
+                    name: "no interference",
+                    value: ci
+                });
+            }
+
+            else {
+                // loop through interfered channels
+                // intf = interference in short
+                for (var i = 0; i < interference_channels.length; i++) {
+                    var intf = interference_channels[i];
+                    if (_.isEmpty(intf)) {
+                        ci_objects.push({
+                            interference: false,
+                            name: "no interference",
+                            value: 50
+                        });
+                        continue;
+                    }
+                    else {
+                        var eirp_density = data.eirp_density, diameter = data.diameter, orbital_slot = data.orbital_slot;
+
+                        var intf_sat = Satellites.findOne({name: intf.satellite});
+                        var deg_diff = (Math.abs((orbital_slot - intf_sat.orbital_slot)) - 0.15) * 1.1; // Topocentric Angle | from P'Oui, 8 July 2014
+
+                        console.log('Finding interferences from satellite ' + intf.satellite + ' channel: ' + intf.name + ' at ' + intf_sat.orbital_slot + ' degrees');
+
+                        // find the gain rejection ratio (relative gain)
+                        var grr = gain_rejection_ratio(channel[path + '_cf'], diameter, deg_diff);
+                        console.log('GRR of ' + diameter + ' m. antenna at ' + deg_diff + ' degrees = ' + grr + ' dB');
+
+                        // find the EIRP of the location on that satellite from the database
+                        var loc = Locations.findOne({name: location.name});
+
+                        // location is not found
+                        if (!location) continue;
+
+                        var loc_data = _.where(loc.data, {beam: intf[path + '_beam'], satellite: intf.satellite, type: path})[0];
+
+                        // location is found, but this location is not under this beam contour
+                        if (!loc_data) continue;
+
+                        // compare with EIRP down of adjacent satellite channels
+                        if (path === "downlink") {
+
+                            console.log('The location ' + loc.name + ' has value on beam ' + loc_data.beam + ' = ' + loc_data.value);
+
+                            // find the output backoff of the interfered channels
+                            var intf_obo = _.where(intf.backoff_settings, {num_carriers: intf.current_num_carriers})[0].obo;
+
+                            // find EIRP density of interfered channels at that location
+                            var intf_eirp_density = loc_data.value + intf_obo - 10 * log10(intf.bandwidth * Math.pow(10, 6));
+
+                            console.log("EIRP density for " + intf.satellite + ' ' + intf.name + ' = ' + intf_eirp_density + ' dBW');
+
+                            // return C/I = our eirp density - intf eirp density + GRR + polarization improvement
+                            var c_intf = eirp_density - intf_eirp_density + grr + pol_improvement(channel[path + '_pol'], intf[path + '_pol']);
+
+                            console.log("C/I for " + channel.satellite + ' ' + channel.name + ' = ' + c_intf + ' dB');
+
+                            ci_objects.push({
+                                interference: true,
+                                name: intf.satellite + " " + intf.name,
+                                value: c_intf.toFixed(2),
+                                satellite: intf.satellite,
+                                channel: intf.name
+                            });
+
+                            ci = cnOperation(ci, c_intf);
+
+                        }
+
+
+                    }
+                }
+            }
+        }
 
         ci_objects.ci = ci;
 
@@ -1927,6 +1953,30 @@ function Link() {
         }
 
         return ci;
+    }
+
+    // Return Gain Improvement for standard antennas
+    function gain_improvment(size, deg_diff){
+        var gain_improvement = 0;
+        var gain_improvement_obj = GainImprovements.findOne({size:size});
+        if(gain_improvement_obj){
+            var gain_data = gain_improvement_obj.data;
+            // the object with minimum degrees which is more than our degree diff
+            var min_data = _.min(_.filter(gain_data,function(item2){ return item2.degrees > deg_diff}), function(item){return item.degrees;});
+            // the object with maximum degrees which is less than our degree diff
+            var max_data = _.max(_.filter(gain_data,function(item2){ return item2.degrees < deg_diff}), function(item){return item.degrees;});
+            if(deg_diff < max_data.degrees){
+                // do nothing
+            }
+            else if(deg_diff > min_data.degrees){
+                gain_improvement = min_data.value;
+            }
+            else{
+                gain_improvement = linearInterpolation(deg_diff,min_data.degrees, max_data.degrees, min_data.value, max_data.value);
+            }
+        }
+
+        return gain_improvement;
     }
 
     // Return Gain rejection ratio from given frequency, antenna size and degree difference

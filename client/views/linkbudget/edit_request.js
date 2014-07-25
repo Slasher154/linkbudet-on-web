@@ -5,6 +5,8 @@
 Template.editRequest.rendered = function () {
     var assumption = LinkRequests.findOne({_id: this.data._id}).assumptions;
 
+    console.log(assumption);
+
     // Clear all sessions to prevent undesired effects
     Session.keys = {};
 
@@ -207,7 +209,6 @@ Template.editRequest.rendered = function () {
 
     function TriggerFixMcg(){
         setTimeout(function(){
-            console.log('set fix mcg');
             if(assumption.fwd_fix_mcgs.length > 0){
                 $('.fix-mcg[name=fwd-mcg-options]').trigger('click');
                 // select the fixed modcods checkboxes

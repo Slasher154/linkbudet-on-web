@@ -15,7 +15,7 @@
     <div class="btn-group" data-toggle="buttons">
         {{#each value}}
         <label class="btn btn-default">
-            <input type="radio" value="{{this}}"> {{this}}
+            <input type="radio" name="{{this}}" value="{{this}}"> {{this}}
         </label>
         {{/each}}
     </div>
@@ -26,7 +26,7 @@
     <div class="btn-group" data-toggle="buttons">
         {{#each value}}
         <label class="btn btn-default">
-            <input type="checkbox" value="{{this}}"> {{this}}
+            <input type="checkbox" name="{{this}}" value="{{this}}"> {{this}}
         </label>
         {{/each}}
     </div>
