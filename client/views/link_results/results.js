@@ -6,6 +6,10 @@ Template.results.request_name = function() {
     return LinkRequests.findOne({_id: this._id}).assumptions.request_name;
 }
 
+Template.results._id = function(){
+    return this._id;
+}
+
 Template.results.assumptions = function () {
     //console.log('Result id = ' + this._id);
     var assumption = LinkRequests.findOne({_id: this._id}).assumptions;

@@ -1784,10 +1784,12 @@ function Link() {
                 else{
                     var deg_diff = Math.abs(data.orbital_slot - channel.adjacent_satellite_orbital_slot);
                     ci = data.eirp_density - channel['eirp_density_adjacent_satellite_' + path] + gain_rejection_ratio(channel[path + '_cf'],data.diameter,deg_diff) + gain_improvment(data.diameter, deg_diff);
+                    console.log('eirp den = ' + data.eirp_density + ' eirp_den_sat = ' + channel['eirp_density_adjacent_satellite_'+ path] + ' grr = ' + gain_rejection_ratio(channel[path + '_cf'],data.diameter,deg_diff) + ' gain improve = ' + gain_improvment(data.diameter, deg_diff));
+
                     ci_objects.push({
                         interference: true,
                         name: "Interference from slot " + channel.adjacent_satellite_orbital_slot,
-                        value: ci
+                        value: ci.toFixed(2)
                     });
                 }
 
@@ -1957,14 +1959,18 @@ function Link() {
 
     // Return Gain Improvement for standard antennas
     function gain_improvment(size, deg_diff){
+        console.log('find gain improve of size = ' + size + ' diff = ' + deg_diff);
         var gain_improvement = 0;
         var gain_improvement_obj = GainImprovements.findOne({size:size});
         if(gain_improvement_obj){
             var gain_data = gain_improvement_obj.data;
+            console.log('Gain data = ' + JSON.stringify(gain_data));
             // the object with minimum degrees which is more than our degree diff
             var min_data = _.min(_.filter(gain_data,function(item2){ return item2.degrees > deg_diff}), function(item){return item.degrees;});
+            console.log('Min data = ' + JSON.stringify(min_data));
             // the object with maximum degrees which is less than our degree diff
             var max_data = _.max(_.filter(gain_data,function(item2){ return item2.degrees < deg_diff}), function(item){return item.degrees;});
+            console.log('Max data = ' + JSON.stringify(max_data));
             if(deg_diff < max_data.degrees){
                 // do nothing
             }

@@ -79,6 +79,10 @@ if (Meteor.isClient){
     UI.registerHelper('isNotEmpty', function(object){
         return !_.isEmpty(object);
     })
+
+    UI.registerHelper('isNotEmptyArray', function(arr){
+        return arr.length > 0;
+    })
     UI.registerHelper('toDateString', function(date_in_milliseconds){
         return new Date(date_in_milliseconds).toLocaleString("en-GB"); // dd//mm/yyyy
     })
