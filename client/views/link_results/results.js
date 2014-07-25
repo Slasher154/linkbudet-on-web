@@ -76,12 +76,12 @@ Template.results.assumptions = function () {
 
     // Forward Fix MCGs
     if (_.has(assumption, 'fwd_fix_mcgs')) {
-        push("Fix MCGs", assumption.fwd_fix_mcgs.join(','));
+        push("Forward MCGs", assumption.fwd_fix_mcgs.join(','));
     }
 
     // Return Fix MCGs
     if (_.has(assumption, 'rtn_fix_mcgs')) {
-        push("Fix MCGs", assumption.rtn_fix_mcgs.join(','));
+        push("Return MCGs", assumption.rtn_fix_mcgs.join(','));
     }
 
     // Link Margin

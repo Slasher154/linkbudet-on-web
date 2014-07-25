@@ -213,12 +213,14 @@ function LinkBudget() {
                                         console.log('Finding channel for name = ' + channels[i] + ' satellite = ' + data.satellite);
                                         var rtn_channel = Channels.findOne({satellite: data.satellite, type: {$in: ['return', 'broadcast']}, name: channels[i]});
                                         var rtn_downlink_adjacent_sat_channels = GetAdjacentSatelliteChannels(rtn_channel, "downlink");
-                                        var rtn_fix_mcgs = [
-                                            {}
-                                        ]; // it will always be array with 1 empty object as of now
-
-                                        input.channel = rtn_channel;
-                                        input.bw = data.bandwidths[i3].rtn; // use the return bandwidth
+                                        // Set FWD MCGs to be fixed if user input (as of now, only conventional BC allows fix MCG)
+                                        var rtn_mcgs = [];
+                                        if (_.has(data, 'rtn_fix_mcgs') && data.rtn_fix_mcgs.length > 0) {
+                                            rtn_mcgs = data.rtn_fix_mcgs;
+                                        }
+                                        else {
+                                            rtn_mcgs.push({}); // put blank object to indicates no fix MCG
+                                        }
 
                                         // loop through each condition of downlink adjacent satellite interferences
                                         for (var i9 = 0; i9 < rtn_downlink_adjacent_sat_channels.length; i9++) {
@@ -227,13 +229,16 @@ function LinkBudget() {
                                             console.log('Start loop return downlink adj.sat : ' + (i9 + 1) + ' of ' + rtn_downlink_adjacent_sat_channels.length);
 
                                             // loop through return fix mcg
-                                            for (var i10 = 0; i10 < rtn_fix_mcgs.length; i10++) {
+                                            for (var i10 = 0; i10 < rtn_mcgs.length; i10++) {
 
                                                 console.log('Start loop return mcg');
-                                                var rtn_mcg = rtn_fix_mcgs[i10];
+                                                var rtn_mcg = rtn_mcgs[i10];
                                                 if (!_.isEmpty(rtn_mcg)) {
                                                     input.fix_mcg = rtn_mcg;
                                                 }
+
+                                                input.channel = rtn_channel;
+                                                input.bw = data.bandwidths[i3].rtn; // use the return bandwidth
 
                                                 // loop buc if any (IPSTAR satellite link budget will find calculate for each BUC, while conventional VSAT assume BUC power is enough)
                                                 for (var i5 = 0; i5 < bucs.length; i5++) {

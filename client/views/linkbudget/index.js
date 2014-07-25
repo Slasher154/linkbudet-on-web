@@ -51,10 +51,13 @@ Template.index.events({
             var platform;
             var selectedConventionalPlatform;
             var selectedBcPlatform;
-            var selectedMcgs = [];
+            var fwdSelectedMcgs = [];
+            var rtnSelectedMcgs = [];
             var selectedBt;
             var selectedVsatModem;
             var linkMargin;
+            var fixMcg = false;
+            
 
             // check if any channel is selected
             channels = $('.conventionalChannels').find('label.active').map(function () {
@@ -135,11 +138,11 @@ Template.index.events({
                     platform = Modems.findOne({name:"Standard " + selectedBcPlatform});
                 }
 
-                selectedMcgs = $('.bcMcg').find(':checked').map(function () {
+                fwdSelectedMcgs = $('.bcMcg').find(':checked').map(function () {
                     return $(this).val();
                 }).get();
-                console.log('Select MCGs: ' + selectedMcgs.join(','));
-                if (selectedMcgs.length <= 0) {
+                console.log('Select MCGs: ' + fwdSelectedMcgs.join(','));
+                if (fwdSelectedMcgs.length <= 0) {
                     alert('Please select at least 1 MCG.');
                     return false;
                 }
@@ -173,6 +176,28 @@ Template.index.events({
                 }
                 else{
                     platform = Modems.findOne({_id:selectedVsatModem});
+
+                    var fwd_mcg_choice = $('input[name=fwd-mcg-options]:checked').val();
+                    var rtn_mcg_choice = $('input[name=rtn-mcg-options]:checked').val();
+
+                    if(fwd_mcg_choice != rtn_mcg_choice){
+                        alert('Both forward and return mcg options must be the same.');
+                        return false;
+                    }
+
+                    if(fwd_mcg_choice == 'fix-mcg'){
+                        fwdSelectedMcgs = $('fwd-mcgs').find(':checked').map(function () {
+                            return $(this).val();
+                        }).get();
+
+                        fixMcg = true;
+                    }
+                    if(rtn_mcg_choice == 'fix-mcg'){
+                        rtnSelectedMcgs = $('rtn-mcgs').find(':checked').map(function () {
+                            return $(this).val();
+                        }).get();
+                    }
+
                 }
 
                 linkMargin = $('#link-margin').val();
@@ -192,7 +217,8 @@ Template.index.events({
                 remote_antennas: remote_antennas,
                 remote_locations: remote_locations,
                 platform: platform,
-                fwd_fix_mcgs: selectedMcgs,
+                fwd_fix_mcgs: fwdSelectedMcgs,
+                rtn_fix_mcgs: rtnSelectedMcgs,
                 bt: selectedBt,
                 modem: selectedVsatModem,
                 link_margin: linkMargin
@@ -352,10 +378,31 @@ Template.index.events({
                 return false;
             }
 
+            var fwd_mcg_choice = $('input[name=fwd-mcg-options]:checked').val();
+            var rtn_mcg_choice = $('input[name=rtn-mcg-options]:checked').val();
+
+            if(fwd_mcg_choice != rtn_mcg_choice){
+                alert('Both forward and return mcg options must be the same.');
+                return false;
+            }
+
+            if(fwd_mcg_choice == 'fix-mcg'){
+                fwdSelectedMcgs = $('.fwd-mcgs').find(':checked').map(function () {
+                    return $(this).val();
+                }).get();
+
+                fixMcg = true;
+            }
+            if(rtn_mcg_choice == 'fix-mcg'){
+                rtnSelectedMcgs = $('.rtn-mcgs').find(':checked').map(function () {
+                    return $(this).val();
+                }).get();
+            }
+            /*
             // check if calculate at fixed MCG is selected
             fixMcg = false || $('#fixMcg').is(':checked');
             console.log('Fix MCG: ' + fixMcg)
-
+            */
             // add elements into assumption object
             _.extend(assumptions,{
                 country: country,
@@ -368,6 +415,8 @@ Template.index.events({
                 recommendBuc: recommendBuc,
                 bucs: selectedBucs,
                 platform: modem,
+                fwd_fix_mcgs: fwdSelectedMcgs,
+                rtn_fix_mcgs: rtnSelectedMcgs,
                 no_acm: fixMcg
             })
         }
