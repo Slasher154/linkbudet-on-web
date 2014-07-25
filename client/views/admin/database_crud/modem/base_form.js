@@ -93,3 +93,22 @@ Template.mcgBaseForm.events({
         $(e.currentTarget).parents('.form-group').remove();
     }
 })
+
+Template.modemBaseForm.events({
+    'click .add-message': function(e){
+        e.preventDefault();
+        var beforeNode = $(e.currentTarget).parents('form').find('.warning-message-form:last').next().get(0);
+        if(_.isUndefined(beforeNode)){
+            beforeNode = $(e.currentTarget).parents('form').find('.form-group:eq(1)').next().get(0);
+        }
+        UI.insert(UI.render(Template.warningMessagesForm),$('form').get(0),beforeNode);
+    }
+})
+
+Template.warningMessagesForm.events({
+    'click .remove-message': function(e){
+        e.preventDefault();
+        // Remove the row
+        $(e.currentTarget).parents('.form-group').remove();
+    }
+})

@@ -1,0 +1,100 @@
+<template name="contours">
+    <h1>Beam Contours of Thaicom Satellites</h1>
+
+    <div class="row">
+        <div class="col-lg-9">
+            {{# panelPrimary title="Maps" icon="map-marker"}}
+            <div id="map" style="height:500px"></div>
+            {{/panelPrimary}}
+        </div>
+
+        <div class="col-lg-3">
+            <div id="beamSelection">
+                {{# panelPrimary title="Beam selection" icon=""}}
+                <form role="form" id="beam-selection">
+
+                    <div class="form-group">
+                        <label>Type</label>
+                        <select id="typePicker" class="form-control">
+                            <option value="downlink">EIRP</option>
+                            <option value="uplink">G/T</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Satellite</label>
+                        <select id="satellitePicker" class="form-control">
+                            <option value="">Select satellite</option>
+                            {{#each satellites}}
+                            <option value="{{this}}">{{this}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+
+
+                </form>
+                {{/panelPrimary}}
+            </div>
+
+            {{ >addMarker}}
+        </div>
+    </div>
+</template>
+
+<template name="conventionalContourPanel">
+    <div class="form-group beam-country">
+        <label>Beam</label>
+        <select id="beamPicker" class="form-control">
+            <option value="">Select beam</option>
+            {{#each beams}}
+            <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select>
+    </div>
+</template>
+
+<template name="broadbandContourPanel">
+    <div class="form-group beam-country">
+        <label>Country</label>
+        <select id="countryPicker" class="form-control">
+            <option value="">Select country</option>
+            {{#each countries}}
+            <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select>
+    </div>
+</template>
+
+<template name="beamList">
+    <div class="form-group beam-country beam-list">
+        <label>Beam List</label>
+
+        <div class="checkbox">
+            {{#each beams}}
+            {{#if selected}}
+            <label>
+            <input name="{{name}}" type="checkbox" checked>{{name}}</label>
+            {{else}}
+            <label>
+            <input name="{{name}}" type="checkbox">{{name}}</label>
+            {{/if}}
+            {{/each}}
+        </div>
+        <p class="help-block">** The line shown in the map is EOC contour.</p>
+    </div>
+</template>
+
+<template name="addMarker">
+    {{#panelPrimary title="Add marker" icon=""}}
+    <div class="form-group">
+        <label>Latitude</label>
+        <input type="text" class="lat form-control" placeholder="Latitude">
+    </div>
+    <div class="form-group">
+        <label>Longitude</label>
+        <input type="text" class="lon form-control" placeholder="Longitude">
+    </div>
+    <button type="button" class="btn btn-primary add-marker">Add marker</button>
+    <button type="button" class="btn btn-danger clear-markers">Clear markers</button>
+    <p class="help-block">Left clicking on the map will also add the marker at that point.</p>
+    {{/panelPrimary}}
+</template>

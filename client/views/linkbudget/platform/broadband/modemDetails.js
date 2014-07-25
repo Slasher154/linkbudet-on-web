@@ -1,6 +1,11 @@
 /**
  * Created by Dome on 4/25/14 AD.
  */
+
+Template.modemDetails.modemId = function(){
+    return Session.get('modemId');
+}
+
 Template.modemDetails.apps = function(){
     var modem = Modems.findOne({_id:Session.get('modemId')})
     var apps = [];

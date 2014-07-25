@@ -10,6 +10,16 @@ Template.modemEdit.events({
         var name = $('#name').val();
         var vendor = $('#vendor').find('option:selected').val();
 
+        // warning messages
+        var warning_messages = [];
+        var msg_count = $('.warning-message').length;
+        for(var j = 0; j < msg_count; j++){
+            var msg = $('.warning-message:eq(' + j + ')').val();
+            if( msg != ""){
+                warning_messages.push(msg);
+            }
+        }
+
         // find the number of application by count the app-name text box
         var app_count = $('.app-name').length;
 
@@ -87,6 +97,7 @@ Template.modemEdit.events({
             $set: {
                 name: name,
                 vendor: vendor,
+                warning_messages: warning_messages,
                 applications: apps
             }
         }, function(error){

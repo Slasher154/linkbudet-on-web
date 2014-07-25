@@ -18,6 +18,7 @@ Template.conventional.events({
             var beam = Channels.findOne({'uplink_beam': selectedBeam});
             // check if selected beam is C-Band
             Session.set('isCBand', beam.uplink_cf < 8);
+            Session.set('isKuBand', beam.uplink_cf > 8 && beam.uplink_cf < 15);
 
             // Check if user selects C-Band and already input hub or remote antenna less than 1.8m
             var hub_size = $('#hub-size').val();

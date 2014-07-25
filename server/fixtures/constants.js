@@ -11,6 +11,7 @@ Meteor.methods({
             Constants.insert({title:"Loss between feed and LNA/B", value:0.3, name:"ifl"});
             Constants.insert({title:"Uplink IFL Loss", value: 2, name: "uplink_ifl"});
             Constants.insert({title:"Uplink HPA Obo", value: 4, name:"hpa_obo"})
+            Constants.insert({title:"Conventional Uplink HPA Intermodulation", value: 25, name:"conventional_uplink_intermod"});
             Constants.insert({title:"LNA/B Noise Temperature", value:50, name:"lna_noise"});
             Constants.insert({title:"C-Band Uplink Default Link Availability", value:99.99, name:"c_band_uplink_availability"})
             Constants.insert({title:"C-Band Downlink Default Link Availability", value:99.99, name:"c_band_downlink_availability"})

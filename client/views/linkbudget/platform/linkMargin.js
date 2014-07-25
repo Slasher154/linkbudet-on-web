@@ -16,7 +16,7 @@ Template.linkMargin.events({
             if(Session.get('isCBand') && link_margin < 2){
                 alert('We do not recommend link margin < 2dB for C-Band')
             }
-            else if(link_margin < 5){
+            else if(Session.get('isKuBand') && link_margin < 5){
                 alert('We do not recommend link margin < 5 dB for Ku-Band');
             }
         }

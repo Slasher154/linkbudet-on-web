@@ -5,6 +5,7 @@
 Template.modemInsert.modem = function(){
     return {
         // insert 1 blank application to display the application base form in the insert page
+        warning_messages: [],
         applications: [
             {
                 name: "",
@@ -31,6 +32,16 @@ Template.modemInsert.events({
         // validate and insert modem
         var name = $('#name').val();
         var vendor = $('#vendor').find('option:selected').val();
+
+        // warning messages
+        var warning_messages = [];
+        var msg_count = $('.warning-message').length;
+        for(var j = 0; j < msg_count; j++){
+            var msg = $('.warning-message:eq(' + j + ')').val();
+            if( msg != ""){
+                warning_messages.push(msg);
+            }
+        }
 
         // find the number of application by count the app-name text box
         var app_count = $('.app-name').length;
@@ -103,6 +114,7 @@ Template.modemInsert.events({
         Modems.insert({
             name: name,
             vendor: vendor,
+            warning_messages: warning_messages,
             applications: apps
         }, function(error, _id){
             if(error){
