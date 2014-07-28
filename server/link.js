@@ -2,6 +2,8 @@
  * Created by Dome on 5/19/14 AD.
  */
 
+var warning_messages = [];
+
 Meteor.methods({
     'link_calc': function (assumptions) {
         var lb = new LinkBudget();
@@ -13,6 +15,8 @@ Meteor.methods({
             requestor_name: ToTitleCase(Meteor.user().fullname),
             requested_date: Date.parse(current_timestamp.toString())
         }
+        // extend the object with warning messages
+        _.extend(link_req_obj,{warning_messages:warning_messages});
         // push the case number into the result
         for (var i = 0; i < link_req_obj.results.length; i++) {
             _.extend(link_req_obj.results[i], {"case_num": i + 1});
@@ -97,6 +101,9 @@ function LinkBudget() {
                 platform: data.platform,
                 unit: data.unit
             }
+
+            // Add platform warning messages
+            AddWarningMessages(data.platform.warning_messages);
 
             // check if user specifies to remove ACM function (select fix MCG at platform for IPSTAR satellite)
             if (_.has(data, 'no_acm')) {
@@ -1345,6 +1352,9 @@ function Link() {
             console.log('Num of channels = ' + num_channels);
 
             data_rate = ((num_channels - 1) * 252 * mcg.bit_rate_per_slot + 250 * bit_rate_channel_0) / 1000;
+
+            var data_rate_ipstar_channel = data_rate / num_channels;
+            _.extend(result,{data_rate_ipstar_channel: data_rate_ipstar_channel.toFixed(2)});
         }
 
         if(application.name == "STAR"){
@@ -2802,6 +2812,25 @@ function linearInterpolation(x, x1, x2, fx1, fx2) {
 
 function LogTitle(string) {
     console.log('---------------------- ' + string + ' ----------------------');
+}
+
+function AddWarningMessages(messages){
+    if(_.isArray(messages)){
+        _.each(messages,function(item){
+            AddMessage(item);
+        })
+    }
+
+    else{
+        AddMessage(messages);
+    }
+
+
+    function AddMessage(message){
+        if(!_.contains(warning_messages,message)){
+            warning_messages.push(message);
+        }
+    }
 }
 
 Meteor.methods({

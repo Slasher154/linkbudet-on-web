@@ -22,4 +22,15 @@
             {{/if}}
         </div>
     </div>
+    {{#if isNotEmptyArray warning_messages}}
+    <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h6>Remarks</h6>
+        <ol>
+        {{#each warning_messages}}
+        <li>{{this}}</li>
+        {{/each}}
+        </ol>
+    </div>
+    {{/if}}
 </template>

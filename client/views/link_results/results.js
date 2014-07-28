@@ -10,6 +10,10 @@ Template.results._id = function(){
     return this._id;
 }
 
+Template.results.warning_messages = function(){
+    return LinkRequests.findOne({_id: this._id}).warning_messages;
+}
+
 Template.results.assumptions = function () {
     //console.log('Result id = ' + this._id);
     var assumption = LinkRequests.findOne({_id: this._id}).assumptions;
@@ -75,6 +79,7 @@ Template.results.assumptions = function () {
 
     // Platform
     if (_.has(assumption, 'platform')) {
+        Session.set('result_platform', assumption.platform.name);
         push("Platform", assumption.platform.name);
     }
 
@@ -191,6 +196,12 @@ Template.results.broadbandResult = function(){
                 buc: clear.uplink_hpa.size
             })
         }
+
+        if(_.has(clear,'data_rate_ipstar_channel')){
+            _.extend(obj,{clear_data_rate_ipstar_channel:clear.data_rate_ipstar_channel});
+            _.extend(obj,{rain_data_rate_ipstar_channel:rain.data_rate_ipstar_channel});
+        }
+
 
         return obj;
     }
@@ -396,7 +407,7 @@ Template.results.conventionalResult = function () {
         //console.log("Rain result = " + JSON.stringify(rain));
 
 
-        return {
+        var obj = {
             case_name: clear.channel + " : " + clear.downlink_location.name,
             uplink_location: clear.uplink_location.name,
             downlink_location: clear.downlink_location.name,
@@ -419,6 +430,8 @@ Template.results.conventionalResult = function () {
             roll_off_factor: clear.roll_off_factor,
             pass: clear.pass
         };
+
+        return obj;
 
     }
 
