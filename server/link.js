@@ -1005,7 +1005,23 @@ function Link() {
         });
         var uplink_otherLoss = uplink_xpolLoss + uplink_pointingLoss;
         var uplink_spreadingLoss = spreadingLoss(uplink_slant_range);
-        var uplink_gt = channel.gt_peak + uplink_station.location.contour;
+        var uplink_contour = uplink_station.location.contour;
+
+        var gain_variation = 0;
+        var gain_variation_diff = 0;
+
+        // For IPSTAR satellite, applies gain variation
+        if(satellite.name == "IPSTAR" && _.contains(["return"],channel.type)){
+            if(_.contains(["328","514","608"],channel.uplink_beam)){ // shape beam
+                gain_variation = -0.0015 * Math.pow(uplink_contour,3) - 0.0163 * Math.pow(uplink_contour,2) + 0.1827 * uplink_contour - 0.1737;
+            }
+            else{
+                gain_variation = -0.0019 * Math.pow(uplink_contour,2) + 0.2085 * uplink_contour - 0.5026;
+            }
+            gain_variation_diff = gain_variation > -1.4 ? 0 : 1.4 + gain_variation;
+        }
+
+        var uplink_gt = channel.gt_peak + uplink_contour + gain_variation_diff;
 
         var operating_sfd = 0, operating_pfd_per_carrier = 0, eirp_up = 0, carrier_pfd = 0, carrier_output_backoff = 0;
 
@@ -1183,12 +1199,28 @@ function Link() {
             availability: downlink_availability
         });
         var downlink_otherLoss = downlink_xpolLoss + downlink_pointingLoss;
+        var downlink_contour = downlink_station.location.contour;
 
         // Find saturated EIRP at location for debug purpose (no backoff per carrier)
-        var saturated_eirp_down_at_loc = channel.saturated_eirp_peak + downlink_station.location.contour;
+        var saturated_eirp_down_at_loc = channel.saturated_eirp_peak + downlink_contour;
+        
+        // For IPSTAR satellite, applies gain variation
+        if(satellite.name == "IPSTAR" && _.contains(["forward","broadcast"],channel.type)){
+            if(_.contains(["328","514","608"],channel.downlink_beam)){ // shape beam
+                gain_variation = -0.0022 * Math.pow(downlink_contour,3) - 0.0383 * Math.pow(downlink_contour,2) - 0.0196 * downlink_contour - 0.2043;
+            }
+            else{
+                gain_variation = -0.0006 * Math.pow(downlink_contour,2) + 0.1999 * downlink_contour - 0.4185;
+            }
+            gain_variation_diff = gain_variation > -1.1 ? 0 : 1.1 + gain_variation;
+        }
+
+        // Find driven EIRP at location = Saturated EIRP at peak + carrier OBO + Gain Variation + downlink relative contour
+        var driven_eirp_down_at_loc = channel.saturated_eirp_peak + carrier_output_backoff + downlink_contour + gain_variation_diff;
+        console.log('Driven EIRP at loc = ' + driven_eirp_down_at_loc);
 
         // Find EIRP Down at location = Saturated EIRP at peak + carrier OBO + downlink relative contour + other losses (pointing, xpol) + atm loss
-        var carrier_eirp_down_at_loc = channel.saturated_eirp_peak + carrier_output_backoff + downlink_station.location.contour - downlink_otherLoss - downlink_atmLoss;
+        var carrier_eirp_down_at_loc = channel.saturated_eirp_peak + carrier_output_backoff + downlink_contour + gain_variation_diff - downlink_otherLoss - downlink_atmLoss;
 
         // Find G/T of receive antenna
         var ant_gt = 0;
@@ -1241,6 +1273,11 @@ function Link() {
         // If uplink HPA, do not have C/I intermod specified, assume it is 25
         var ci_uplink_intermod = _.has(uplink_station.hpa, 'intermod') ? uplink_station.hpa.intermod : 50;
 
+        // If the HPA has data for rain_fade use that value. (for IPSTAR gateways, this value will become 19 dB at rain fade.
+        if(condition.uplink == "rain" && _.has(uplink_station.hpa, 'intermod_rain')){
+            ci_uplink_intermod = uplink_station.hpa.intermod_rain;
+        }
+
         // Uplink adjacent satellite interferences
         // uplink adjacent satellite interferences
         var ci_uplink_adj_sat_obj = ci_adjacent_satellite({
@@ -1267,7 +1304,7 @@ function Link() {
             path: "downlink",
             channel: channel,
             interference_channels: downlink_adj_sat_interferences,
-            eirp_density: carrier_eirp_down_at_loc - 10 * log10(bandwidth * Math.pow(10, 6)),
+            eirp_density: driven_eirp_down_at_loc - 10 * log10(bandwidth * Math.pow(10, 6)), // use driven eirp to find C/I
             location: downlink_station.location,
             diameter: downlink_station.antenna.size,
             orbital_slot: orbital_slot
@@ -1395,6 +1432,7 @@ function Link() {
             operating_pfd_per_carrier: operating_pfd_per_carrier.toFixed(2),
             carrier_pfd: carrier_pfd.toFixed(2),
             carrier_obo: carrier_output_backoff.toFixed(2),
+            gain_variation: gain_variation.toFixed(2),
             // uplink
             uplink_antenna: uplink_station.antenna,
             uplink_hpa: uplink_station.hpa,
