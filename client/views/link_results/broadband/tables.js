@@ -19,7 +19,16 @@ Template.forwardResultTable.tableRows = function(){
     if(IsAdmin(Meteor.userId())){
         rows.push("Detail");
     }
+    // Add table row for IPSTAR platform only
+    if(Session.get('result_platform') == 'IPSTAR'){
+        rows.splice(7,0,'Data rate per IPSTAR channel Clear Sky (Mbps)');
+        rows.splice(11,0, 'Data rate per IPSTAR channel Rain Fade (Mbps)')
+    }
     return rows;
+}
+
+Template.forwardResultTable.isToll = function(){
+    return Session.get('result_platform') == 'IPSTAR';
 }
 
 Template.returnResultTable.tableRows = function(){
@@ -53,3 +62,4 @@ Template.returnResultTable.rowClass = function(pass){
     if(pass) {return ""}
     else {return "danger";}
 }
+

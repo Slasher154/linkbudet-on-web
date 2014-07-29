@@ -9,9 +9,15 @@
             <td>{{clear_mcg}}</td>
             <td>{{clear_ebe}}</td>
             <td>{{clear_data_rate}}</td>
+            {{#if isToll}}
+            <td>{{clear_data_rate_ipstar_channel}}</td>
+            {{/if}}
             <td>{{rain_mcg}}</td>
             <td>{{rain_ebe}}</td>
             <td>{{rain_data_rate}}</td>
+            {{#if isToll}}
+            <td>{{rain_data_rate_ipstar_channel}}</td>
+            {{/if}}
             <td>{{link_availability}}</td>
             {{#if isAdmin}}
             <td><a href="{{pathFor 'linkDetail' _id=request_id case_num=case_num}}">Detail</a></td>

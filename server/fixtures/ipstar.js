@@ -9,82 +9,82 @@ Meteor.methods({
                 {"_id": "rYBQ4yfJdnhpZF6Jk", "name": "100", "satellite": "IPSTAR", "uplink_cf": 27.086, "downlink_cf": 12.286, "bandwidth": 171, "type": "forward", "uplink_beam": "1V", "gt_peak": 19.01, "uplink_pol": "V", "downlink_beam": "100", "saturated_eirp_peak": 59.23, "downlink_pol": "V", "transponder": "3310L1", "dynamic_range": 25, "mode": "ALC", "sfd": -62.89, "eirp_up_channel": 71.74273412, "country": "India", "contour_50": -2.5, "contour_eoc": -4.89, "default_gateway": "1V", "lat": 36.24, "lon": 77.02, "ci_downlink_adj_cell_50": 22.5, "ci_downlink_adj_cell_eoc": 19.79, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 29.77, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "dPb4Zqb5nvGQGXnY8", "name": "101", "satellite": "IPSTAR", "uplink_cf": 27.465, "downlink_cf": 12.665, "bandwidth": 171, "type": "forward", "uplink_beam": "1V", "gt_peak": 19.01, "uplink_pol": "V", "downlink_beam": "101", "saturated_eirp_peak": 60.13, "downlink_pol": "V", "transponder": "3310L1", "dynamic_range": 25, "mode": "ALC", "sfd": -62.89, "eirp_up_channel": 71.74273412, "country": "India", "contour_50": -2.5, "contour_eoc": -4.95, "default_gateway": "1V", "lat": 31.75, "lon": 77.35, "ci_downlink_adj_cell_50": 21.5, "ci_downlink_adj_cell_eoc": 15.35, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 29.77, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "WJqLgcCAgqkxAHx8D", "name": "102", "satellite": "IPSTAR", "uplink_cf": 27.086, "downlink_cf": 12.286, "bandwidth": 171, "type": "forward", "uplink_beam": "1H", "gt_peak": 18.87, "uplink_pol": "H", "downlink_beam": "102", "saturated_eirp_peak": 59.83, "downlink_pol": "V", "transponder": "3310N1", "dynamic_range": 25, "mode": "ALC", "sfd": -63, "eirp_up_channel": 71.74273412, "country": "India", "contour_50": -2.2, "contour_eoc": -4.42, "default_gateway": "1H", "lat": 27.79, "lon": 76.2, "ci_downlink_adj_cell_50": 17.6, "ci_downlink_adj_cell_eoc": 15.45, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 32.26, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "dqd8WLwRehF2ReNSH", "name": "103", "satellite": "IPSTAR", "uplink_cf": 27.275, "downlink_cf": 12.475, "bandwidth": 171, "type": "forward", "uplink_beam": "1V", "gt_peak": 19.01, "uplink_pol": "V", "downlink_beam": "103", "saturated_eirp_peak": 59.63, "downlink_pol": "V", "transponder": "3310L1", "dynamic_range": 25, "mode": "ALC", "sfd": -62.89, "eirp_up_channel": 71.74273412, "country": "India", "contour_50": -2.4, "contour_eoc": -4.74, "default_gateway": "1V", "lat": 26.39, "lon": 83.2, "ci_downlink_adj_cell_50": 18.3, "ci_downlink_adj_cell_eoc": 15.46, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 29.77, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "5qguYLLzvkqtYB4c9", "name": "104", "satellite": "IPSTAR", "uplink_cf": 29.965, "downlink_cf": 12.665, "bandwidth": 171, "type": "forward", "uplink_beam": "1V", "gt_peak": 19.01, "uplink_pol": "V", "downlink_beam": "104", "saturated_eirp_peak": 60.33, "downlink_pol": "V", "transponder": "3310L2", "dynamic_range": 25, "mode": "ALC", "sfd": -62.89, "eirp_up_channel": 72.74273412, "country": "India", "contour_50": -2.3, "contour_eoc": -4.64, "default_gateway": "1V", "lat": 24.45, "lon": 90, "ci_downlink_adj_cell_50": 19, "ci_downlink_adj_cell_eoc": 15.35, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 29.77, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "NMSFQxhinX28HyKJa", "name": "105", "satellite": "IPSTAR", "uplink_cf": 29.775, "downlink_cf": 12.475, "bandwidth": 171, "type": "forward", "uplink_beam": "1V", "gt_peak": 19.01, "uplink_pol": "V", "downlink_beam": "105", "saturated_eirp_peak": 60.73, "downlink_pol": "V", "transponder": "3310L2", "dynamic_range": 25, "mode": "ALC", "sfd": -62.89, "eirp_up_channel": 72.74273412, "country": "India", "contour_50": -2.1, "contour_eoc": -4.44, "default_gateway": "1V", "lat": 26.57, "lon": 94.09, "ci_downlink_adj_cell_50": 19.1, "ci_downlink_adj_cell_eoc": 16.52, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 29.77, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "BrPWJR3ChRnqSHNwu", "name": "106", "satellite": "IPSTAR", "uplink_cf": 27.275, "downlink_cf": 12.475, "bandwidth": 171, "type": "forward", "uplink_beam": "1H", "gt_peak": 18.87, "uplink_pol": "H", "downlink_beam": "106", "saturated_eirp_peak": 59.93, "downlink_pol": "V", "transponder": "3310N1", "dynamic_range": 25, "mode": "ALC", "sfd": -63, "eirp_up_channel": 71.74273412, "country": "India", "contour_50": -2.2, "contour_eoc": -4.4, "default_gateway": "1H", "lat": 24.62, "lon": 73.2, "ci_downlink_adj_cell_50": 18.1, "ci_downlink_adj_cell_eoc": 15.23, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 32.26, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "jA2Jozcfj9z7RGB3j", "name": "107", "satellite": "IPSTAR", "uplink_cf": 29.965, "downlink_cf": 12.665, "bandwidth": 171, "type": "forward", "uplink_beam": "1H", "gt_peak": 18.87, "uplink_pol": "H", "downlink_beam": "107", "saturated_eirp_peak": 60.43, "downlink_pol": "V", "transponder": "3310N2", "dynamic_range": 25, "mode": "ALC", "sfd": -63, "eirp_up_channel": 72.74273412, "country": "India", "contour_50": -2.3, "contour_eoc": -4.65, "default_gateway": "1H", "lat": 23.24, "lon": 80.5, "ci_downlink_adj_cell_50": 17.2, "ci_downlink_adj_cell_eoc": 14.99, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 32.26, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "ySCTvqZZR3tatkDkw", "name": "108", "satellite": "IPSTAR", "uplink_cf": 29.586, "downlink_cf": 12.286, "bandwidth": 171, "type": "forward", "uplink_beam": "1V", "gt_peak": 19.01, "uplink_pol": "V", "downlink_beam": "108", "saturated_eirp_peak": 59.93, "downlink_pol": "V", "transponder": "3310L2", "dynamic_range": 25, "mode": "ALC", "sfd": -62.89, "eirp_up_channel": 72.74273412, "country": "India", "contour_50": -2, "contour_eoc": -4.17, "default_gateway": "1V", "lat": 21.97, "lon": 86.5, "ci_downlink_adj_cell_50": 17.1, "ci_downlink_adj_cell_eoc": 15.47, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 29.77, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "bfdxxQmPM8uQqxLpM", "name": "109", "satellite": "IPSTAR", "uplink_cf": 27.465, "downlink_cf": 12.665, "bandwidth": 171, "type": "forward", "uplink_beam": "1H", "gt_peak": 18.87, "uplink_pol": "H", "downlink_beam": "109", "saturated_eirp_peak": 60.03, "downlink_pol": "V", "transponder": "3310N1", "dynamic_range": 25, "mode": "ALC", "sfd": -63, "eirp_up_channel": 71.74273412, "country": "India", "contour_50": -2.2, "contour_eoc": -4.46, "default_gateway": "1H", "lat": 21.71, "lon": 69.76, "ci_downlink_adj_cell_50": 20.6, "ci_downlink_adj_cell_eoc": 14.85, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 32.26, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "vArZRpCGh2KkFH7Qj", "name": "110", "satellite": "IPSTAR", "uplink_cf": 29.586, "downlink_cf": 12.286, "bandwidth": 171, "type": "forward", "uplink_beam": "1H", "gt_peak": 18.87, "uplink_pol": "H", "downlink_beam": "110", "saturated_eirp_peak": 59.73, "downlink_pol": "V", "transponder": "3310N2", "dynamic_range": 25, "mode": "ALC", "sfd": -63, "eirp_up_channel": 72.74273412, "country": "India", "contour_50": -1.9, "contour_eoc": -3.98, "default_gateway": "1H", "lat": 20.28, "lon": 77.6, "ci_downlink_adj_cell_50": 17.1, "ci_downlink_adj_cell_eoc": 15.49, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 32.26, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "vTBQYcqPiTYBaLBWv", "name": "111", "satellite": "IPSTAR", "uplink_cf": 29.775, "downlink_cf": 12.475, "bandwidth": 171, "type": "forward", "uplink_beam": "1H", "gt_peak": 18.87, "uplink_pol": "H", "downlink_beam": "111", "saturated_eirp_peak": 60.13, "downlink_pol": "V", "transponder": "3310N2", "dynamic_range": 25, "mode": "ALC", "sfd": -63, "eirp_up_channel": 72.74273412, "country": "India", "contour_50": -2.1, "contour_eoc": -4.35, "default_gateway": "1H", "lat": 18.86, "lon": 83.8, "ci_downlink_adj_cell_50": 17, "ci_downlink_adj_cell_eoc": 15.1, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 32.26, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "EDFut8m7dPDgMjBbj", "name": "112", "satellite": "IPSTAR", "uplink_cf": 29.775, "downlink_cf": 12.475, "bandwidth": 171, "type": "forward", "uplink_beam": "2V", "gt_peak": 19.08, "uplink_pol": "V", "downlink_beam": "112", "saturated_eirp_peak": 61.19, "downlink_pol": "V", "transponder": "32900", "dynamic_range": 25, "mode": "ALC", "sfd": -62.66, "eirp_up_channel": 74.74273412, "country": "India", "contour_50": -2.1, "contour_eoc": -4.33, "default_gateway": "2V", "lat": 17.38, "lon": 74.15, "ci_downlink_adj_cell_50": 18.5, "ci_downlink_adj_cell_eoc": 13.45, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 30.39, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "ayDy6sqzL24vbY58W", "name": "113", "satellite": "IPSTAR", "uplink_cf": 27.465, "downlink_cf": 12.665, "bandwidth": 171, "type": "forward", "uplink_beam": "2V", "gt_peak": 19.08, "uplink_pol": "V", "downlink_beam": "113", "saturated_eirp_peak": 60.13, "downlink_pol": "V", "transponder": "3310P1", "dynamic_range": 25, "mode": "ALC", "sfd": -62.66, "eirp_up_channel": 73.74273412, "country": "India", "contour_50": -2.3, "contour_eoc": -4.66, "default_gateway": "2V", "lat": 16.06, "lon": 80.63, "ci_downlink_adj_cell_50": 20.7, "ci_downlink_adj_cell_eoc": 14.23, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 30.39, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "mFHdFMe7y4cCuH83m", "name": "114", "satellite": "IPSTAR", "uplink_cf": 27.086, "downlink_cf": 12.286, "bandwidth": 171, "type": "forward", "uplink_beam": "2V", "gt_peak": 19.08, "uplink_pol": "V", "downlink_beam": "114", "saturated_eirp_peak": 59.83, "downlink_pol": "V", "transponder": "3310P1", "dynamic_range": 25, "mode": "ALC", "sfd": -62.66, "eirp_up_channel": 73.74273412, "country": "India", "contour_50": -1.8, "contour_eoc": -3.85, "default_gateway": "2V", "lat": 13.1, "lon": 77.43, "ci_downlink_adj_cell_50": 22.7, "ci_downlink_adj_cell_eoc": 15.66, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 30.39, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "eD7Wxv2WqCZiLyn6H", "name": "115", "satellite": "IPSTAR", "uplink_cf": 27.275, "downlink_cf": 12.475, "bandwidth": 171, "type": "forward", "uplink_beam": "2V", "gt_peak": 19.08, "uplink_pol": "V", "downlink_beam": "115", "saturated_eirp_peak": 59.93, "downlink_pol": "V", "transponder": "3310P1", "dynamic_range": 25, "mode": "ALC", "sfd": -62.66, "eirp_up_channel": 73.74273412, "country": "India", "contour_50": -2.2, "contour_eoc": -4.32, "default_gateway": "2V", "lat": 9.08, "lon": 78.42, "ci_downlink_adj_cell_50": 23.7, "ci_downlink_adj_cell_eoc": 19.2, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 30.39, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "8eHjA67oDRNtjmFLk", "name": "201", "satellite": "IPSTAR", "uplink_cf": 29.586, "downlink_cf": 12.286, "bandwidth": 171, "type": "forward", "uplink_beam": "17H", "gt_peak": 17.82, "uplink_pol": "H", "downlink_beam": "201", "saturated_eirp_peak": 59.83, "downlink_pol": "V", "transponder": "3310P2", "dynamic_range": 25, "mode": "ALC", "sfd": -65.75, "eirp_up_channel": 77.74273412, "country": "Myanmar", "contour_50": -1.9, "contour_eoc": -3.98, "default_gateway": "17H", "lat": 21.56, "lon": 95.9, "ci_downlink_adj_cell_50": 18.4, "ci_downlink_adj_cell_eoc": 14.46, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 26.3, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
@@ -299,7 +299,7 @@ Meteor.methods({
                 {"_id": "FEk5PYeTWG58FcRLm", "name": "403", "satellite": "IPSTAR", "uplink_cf": 29.919, "downlink_cf": 12.619, "bandwidth": 262.5, "type": "forward", "uplink_beam": "7V", "gt_peak": 20.04, "uplink_pol": "V", "downlink_beam": "403", "saturated_eirp_peak": 63, "downlink_pol": "V", "transponder": "3290C1", "dynamic_range": 25, "mode": "ALC", "sfd": -60.69, "eirp_up_channel": 76.60406609, "country": "Japan", "contour_50": -2.4, "contour_eoc": -4.53, "default_gateway": "7V", "lat": 34.4, "lon": 134.95, "ci_downlink_adj_cell_50": 18.5, "ci_downlink_adj_cell_eoc": 13.3, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 29.83, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "fLjehMeuvxwxbJSuR", "name": "404", "satellite": "IPSTAR", "uplink_cf": 27.131, "downlink_cf": 12.331, "bandwidth": 262.5, "type": "forward", "uplink_beam": "7V", "gt_peak": 20.04, "uplink_pol": "V", "downlink_beam": "404", "saturated_eirp_peak": 60.99, "downlink_pol": "V", "transponder": "3310F1", "dynamic_range": 25, "mode": "ALC", "sfd": -60.69, "eirp_up_channel": 75.60406609, "country": "Japan", "contour_50": -2.1, "contour_eoc": -4.24, "default_gateway": "7V", "lat": 32.06, "lon": 130.46, "ci_downlink_adj_cell_50": 18.4, "ci_downlink_adj_cell_eoc": 13.27, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 29.83, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
@@ -409,22 +409,22 @@ Meteor.methods({
                 {"_id": "r2XHgaQgbv47cDx6H", "name": "701", "satellite": "IPSTAR", "uplink_cf": 27.275, "downlink_cf": 12.475, "bandwidth": 171, "type": "forward", "uplink_beam": "12V", "gt_peak": 21.97, "uplink_pol": "V", "downlink_beam": "701", "saturated_eirp_peak": 63.3, "downlink_pol": "V", "transponder": "3310K1", "dynamic_range": 25, "mode": "ALC", "sfd": -60.53, "eirp_up_channel": 77.74273412, "country": "Philippines", "contour_50": -2.5, "contour_eoc": -4.91, "default_gateway": "12V", "lat": 16.2, "lon": 121.29, "ci_downlink_adj_cell_50": 20.9, "ci_downlink_adj_cell_eoc": 17.79, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 30.69, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "pfmyhrkCGKJngdwxL", "name": "702", "satellite": "IPSTAR", "uplink_cf": 27.465, "downlink_cf": 12.665, "bandwidth": 171, "type": "forward", "uplink_beam": "12V", "gt_peak": 21.97, "uplink_pol": "V", "downlink_beam": "702", "saturated_eirp_peak": 62.29, "downlink_pol": "V", "transponder": "3310K1", "dynamic_range": 25, "mode": "ALC", "sfd": -60.53, "eirp_up_channel": 77.74273412, "country": "Philippines", "contour_50": -2.6, "contour_eoc": -4.93, "default_gateway": "12V", "lat": 12.14, "lon": 122.99, "ci_downlink_adj_cell_50": 24.8, "ci_downlink_adj_cell_eoc": 20.52, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 30.69, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "K5H7aq3EzFt8wmZ2L", "name": "703", "satellite": "IPSTAR", "uplink_cf": 27.086, "downlink_cf": 12.286, "bandwidth": 171, "type": "forward", "uplink_beam": "12V", "gt_peak": 21.97, "uplink_pol": "V", "downlink_beam": "703", "saturated_eirp_peak": 61.19, "downlink_pol": "V", "transponder": "3310K1", "dynamic_range": 25, "mode": "ALC", "sfd": -60.53, "eirp_up_channel": 77.74273412, "country": "Philippines", "contour_50": -2.1, "contour_eoc": -4.22, "default_gateway": "12V", "lat": 7.92, "lon": 124.62, "ci_downlink_adj_cell_50": 26.1, "ci_downlink_adj_cell_eoc": 20.99, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 30.69, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "Eq763LWSQsoZe7LRk", "name": "112-2", "satellite": "IPSTAR", "uplink_cf": 28.475, "downlink_cf": 11.075, "bandwidth": 250, "type": "forward", "uplink_beam": "2V", "gt_peak": 19.08, "uplink_pol": "V", "downlink_beam": "112-2", "saturated_eirp_peak": 60.9, "downlink_pol": "V", "transponder": "3280K1", "dynamic_range": 25, "mode": "ALC", "sfd": -61.01, "eirp_up_channel": 75.8921731, "country": "India", "contour_50": -1.8, "contour_eoc": -3.58, "default_gateway": "2V", "lat": 18.05, "lon": 74, "ci_downlink_adj_cell_50": 28.59, "ci_downlink_adj_cell_eoc": 26.84, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 30.39, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 17},
-                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 20}
+                    {"num_carriers": "multi", "ibo": 0, "obo": -6, "intermod": 26}
                 ]},
                 {"_id": "nWWATYE9KvuSL5Hod", "name": "207-2", "satellite": "IPSTAR", "uplink_cf": 28.475, "downlink_cf": 11.075, "bandwidth": 250, "type": "forward", "uplink_beam": "3V", "gt_peak": 22.72, "uplink_pol": "V", "downlink_beam": "207-2", "saturated_eirp_peak": 61.6, "downlink_pol": "V", "transponder": "3280H1", "dynamic_range": 25, "mode": "ALC", "sfd": -58.09, "eirp_up_channel": 75.8921731, "country": "Thailand", "contour_50": -2, "contour_eoc": -3.86, "default_gateway": "3V", "lat": 13.75, "lon": 100.57, "ci_downlink_adj_cell_50": 20.65, "ci_downlink_adj_cell_eoc": 18.79, "ci_downlink_adj_sat": 25, "ci_uplink_adj_cell": 25.14, "current_num_carriers": "multi", "ci_uplink_adj_sat": 25, "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": -3, "intermod": 17},
