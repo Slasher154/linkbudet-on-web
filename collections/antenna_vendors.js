@@ -1,14 +1,14 @@
 /**
- * Created by Dome on 5/22/14 AD.
+ * Created by Dome on 7/29/14 AD.
  */
 
-Antennas = new Meteor.Collection('antennas');
+AntennaVendors = new Meteor.Collection('antenna_vendors');
 
-Antennas.allow({
+AntennaVendors.allow({
     insert: function(userId, doc){
-        var modem = Modems.findOne({name:doc.name});
-        if(modem){
-            throw new Meteor.Error(403, "This antenna already exists in the database");
+        var vendor = AntennaVendors.findOne({name:doc.name});
+        if(vendor){
+            throw new Meteor.Error(403, "This vendor already exists in the database");
         }
         return IsAdmin(userId);
     },
@@ -17,7 +17,7 @@ Antennas.allow({
     },
     remove: function(userId, doc){
         // Cannot delete standard modems
-        if(doc.vendor === "Standard"){
+        if(doc.name === "Standard"){
             throw new Meteor.Error(403, "Cannot delete standard antenna.");
         }
         return IsAdmin(userId);

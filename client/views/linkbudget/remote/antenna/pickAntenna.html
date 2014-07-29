@@ -6,7 +6,11 @@
         <br/>
         <select class="form-control selectpicker" id="antennaPicker" multiple>
             {{#each antennas}}
-            <option value="{{_id}}">{{name}}</option>
+            <optgroup label="{{vendor}}">
+                {{#each antenna}}
+                <option value="{{_id}}">{{name}}</option>
+                {{/each}}
+            </optgroup>
             {{/each}}
         </select>
 

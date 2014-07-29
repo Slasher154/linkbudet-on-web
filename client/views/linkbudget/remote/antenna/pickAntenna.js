@@ -2,9 +2,15 @@
  * Created by Dome on 4/22/14 AD.
  */
 Template.pickAntenna.antennas = function () {
-    //TODO: Change to set value to ID
-    return Antennas.find();
-
+    var antennas = _.groupBy(Antennas.find().fetch(),function(item){ return item.vendor; });
+    var grouped_antennas = [];
+    for(var prop in antennas){
+        grouped_antennas.push({
+            vendor: prop,
+            antenna: antennas[prop]
+        })
+    }
+    return _.sortBy(grouped_antennas, function(item){ return item.vendor;});
 }
 
 Template.pickAntenna.events({

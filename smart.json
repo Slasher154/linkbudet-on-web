@@ -15,6 +15,7 @@
     "headers": {},
     "nprogress": {},
     "bootstrap-select": {},
-    "bootstrap-3": {}
+    "bootstrap-3": {},
+    "publish-with-relations": {}
   }
 }

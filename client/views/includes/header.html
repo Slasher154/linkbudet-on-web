@@ -14,11 +14,18 @@
                 <ul class="nav navbar-nav">
                     {{#if currentUser}}
                     <li><a href="{{pathFor 'index'}}">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Maps <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+
+                        </ul>
+                    </li>
                     <!--
                     <li><a href="{{pathFor 'about'}}">About</a></li>
                     <li><a href="{{pathFor 'contact'}}">Contact</a></li>
                     <li><a href="{{pathFor 'maps'}}">Maps</a></li>
                     -->
+                    <!-- View Request for each satellites -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">View Requests <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -28,6 +35,8 @@
                             <li><a href="{{pathFor 'allRequests' sat='ipstar' }}">IPSTAR</a></li>
                         </ul>
                     </li>
+                    <!-- View Job reports -->
+                    <li><a href="{{pathFor 'allJobReports'}}">Job Reports</a></li>
                     <!-- Only admin can view this database section -->
                     {{#if isAdmin}}
                     <li class="dropdown">
@@ -40,21 +49,16 @@
                             <li><a href="{{pathFor 'modemViewAll' }}">View all</a></li>
                             <li><a href="{{pathFor 'modemInsert' }}">Insert</a></li>
                             <li role="presentation" class="divider"></li>
-                            <li role="presentation" class="dropdown-header">Modem Vendors</li>
-                            <li><a href="{{pathFor 'modemVendorViewAll' }}">View all</a></li>
-                            <li><a href="{{pathFor 'modemVendorInsert' }}">Insert</a></li>
+                            <li role="presentation" class="dropdown-header">Antennas</li>
+                            <li><a href="{{pathFor 'antennaViewAll' }}">View all</a></li>
+                            <li><a href="{{pathFor 'antennaInsert' }}">Insert</a></li>
                             <li role="presentation" class="divider"></li>
                             <li role="presentation" class="dropdown-header">Locations</li>
                             <li><a href="{{pathFor 'locationViewAll' }}">View all</a></li>
                             <li><a href="{{pathFor 'locationInsert' }}">Insert</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Maps <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
 
-                        </ul>
-                    </li>
 
                     {{/if}}
                     <li><a href="#">{{currentUser.fullname}}</a></li>

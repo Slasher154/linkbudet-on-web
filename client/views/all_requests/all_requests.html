@@ -5,7 +5,8 @@
         <thead>
         <tr>
             <th>Name</th>
-            <th>Request time</th>
+            <th>Requested Time </th>
+            <th>Generate PDF</th>
         </tr>
         </thead>
 
@@ -14,6 +15,7 @@
         <tr>
             <td><a href="{{pathFor 'results'}}">{{assumptions.request_name}}</a></td>
             <td>{{toDateString requested_date}}</td>
+            <td><a href="#" value={{_id}} class="btn btn-success generate-pdf">Generate PDF</a></td>
         </tr>
         {{/each}}
         </tbody>

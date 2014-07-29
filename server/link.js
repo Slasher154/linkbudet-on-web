@@ -67,7 +67,7 @@ function LinkBudget() {
             // check if user selects recommend antenna, if yes, calculates all standard antenna, from biggest to smallest
             if (_.has(data, 'recommendAntenna') && data.recommendAntenna) {
                 console.log('User has selected recommend antenna.');
-                remote_antennas = Antennas.find({$query: {type: 'standard'}, $orderby: { size: -1}});
+                remote_antennas = Antennas.find({$query: {vendor: 'standard'}, $orderby: { size: -1}});
             }
             else {
                 remote_antennas = data.remote_antennas;
@@ -1715,7 +1715,7 @@ function Link() {
         var obo = _.has(hpa, 'obo') ? hpa.obo : 0.5;
         var ant_gain = 0;
         if (_.has(antenna, 'tx_gain')) {
-            ant_gain = antenna_gain_at_frequency(antenna.tx_gain.value, antenna.tx_gain.freq, freq, antenna.size);
+            ant_gain = antenna_gain_at_ffrequency(antenna.tx_gain.value, antenna.tx_gain.freq, freq, antenna.size);
         }
         else {
             ant_gain = antenna_gain(antenna.size, freq);

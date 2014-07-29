@@ -67,6 +67,19 @@ Meteor.publish('modem_vendors', function(){
     return ModemVendors.find({$query:{},$orderby:{name:1}});
 })
 
+Meteor.publish('antenna_vendors', function(){
+    return AntennaVendors.find({$query:{},$orderby:{name:1}});
+})
+
 Meteor.publish('test_results', function(){
     return TestContourResults.find();
+})
+
+Meteor.publish('reportsByUser', function(){
+    // return only reports created by this user
+    return JobReports.find({$query:{creator_id: this.userId},$orderby:{year:-1, index: -1}});
+})
+
+Meteor.publish('jobReports', function(){
+    return JobReportsPdfs.find({});
 })

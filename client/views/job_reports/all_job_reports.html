@@ -1,0 +1,27 @@
+<template name="allJobReports">
+        <h1>All Job Reports</h1>
+
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Satellite</th>
+                <th>Request Name</th>
+                <th>Created Time</th>
+                <th>File</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {{#each jobs}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{assumptions.satellite}}</td>
+                <td>{{assumptions.request_name}}</td>
+                <td>{{toDateString created_date}}</td>
+                <td><a href="{{jobUrl pdf_id}}">Download</a></td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+</template>

@@ -9,7 +9,7 @@ Meteor.methods({
         _.each(standard_size, function(num){
             Antennas.insert({
                 name: num + " m",
-                type: 'Standard',
+                vendor: 'Standard',
                 size: num
             });
         });
