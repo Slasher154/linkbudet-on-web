@@ -43,3 +43,6 @@
 /inject-initial
 /nprogress
 /publish-with-relations
+/iron-layout
+/iron-core
+/iron-dynamic-template

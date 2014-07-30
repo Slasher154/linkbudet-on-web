@@ -7,7 +7,7 @@ Template.modemViewAll.tableRows = function(){
 }
 
 Template.modemViewAll.modems = function(){
-    return Modems.find().fetch();
+    return Modems.find({},{sort:{name:1}}).fetch();
 }
 
 
