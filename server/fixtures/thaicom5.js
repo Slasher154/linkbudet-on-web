@@ -170,12 +170,12 @@ Meteor.methods({
                     {"num_carriers": "single", "ibo": 0, "obo": 0, "intermod": 25},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 25},
                     {"num_carriers": "multi", "ibo": 0, "obo": -5, "intermod": 20}
-                ]},
+                ]},/*
                 {"name": "K8V", "satellite": "Thaicom 5", "uplink_cf": 14.10284, "downlink_cf": 12.35484, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Steerable KU", "gt_peak": 10.66, "uplink_pol": "H", "downlink_beam": "Steerable KU", "saturated_eirp_peak": 55.01, "downlink_pol": "V", "transponder": "K8V", "dynamic_range": 29, "mode": "ALC", "sfd": -62, "designed_deepin": 14, "current_num_carriers": "single", "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": 0, "intermod": 25},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 25},
                     {"num_carriers": "multi", "ibo": 0, "obo": -5, "intermod": 20}
-                ]},
+                ]},*/
                 {"name": "K9H", "satellite": "Thaicom 5", "uplink_cf": 14.10284, "downlink_cf": 12.35484, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Thailand KU", "gt_peak": 10.18, "uplink_pol": "V", "downlink_beam": "Thailand KU", "saturated_eirp_peak": 56.96, "downlink_pol": "H", "transponder": "K9H", "dynamic_range": 29, "mode": "ALC", "sfd": -62, "designed_deepin": 14, "current_num_carriers": "single", "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": 0, "intermod": 25},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 25},
@@ -205,7 +205,7 @@ Meteor.methods({
                     {"num_carriers": "single", "ibo": 0, "obo": 0, "intermod": 25},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 25},
                     {"num_carriers": "multi", "ibo": 0, "obo": -5, "intermod": 20}
-                ]},
+                ]}/*,
                 {"name": "K12V", "satellite": "Thaicom 5", "uplink_cf": 14.20659, "downlink_cf": 12.45859, "bandwidth": 36, "type": "broadcast", "uplink_beam": "Steerable KU", "gt_peak": 10.66, "uplink_pol": "H", "downlink_beam": "Steerable KU", "saturated_eirp_peak": 55.01, "downlink_pol": "V", "transponder": "K12V", "dynamic_range": 29, "mode": "ALC", "sfd": -62, "designed_deepin": 14, "current_num_carriers": "single", "backoff_settings": [
                     {"num_carriers": "single", "ibo": 0, "obo": 0, "intermod": 25},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 25},
@@ -220,7 +220,7 @@ Meteor.methods({
                     {"num_carriers": "single", "ibo": 0, "obo": 0, "intermod": 25},
                     {"num_carriers": "two", "ibo": 0, "obo": -3, "intermod": 25},
                     {"num_carriers": "multi", "ibo": 0, "obo": -5, "intermod": 20}
-                ]}
+                ]}*/
             ]
             db.channels.update({satellite:"Thaicom 5"},{$set:{'backoff_settings.0.intermod':25}},{multi:true})
             _.each(data, function (x) {
@@ -229,3 +229,4 @@ Meteor.methods({
         })();
     }
 })
+

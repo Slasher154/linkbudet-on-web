@@ -700,6 +700,7 @@ function LinkBudget() {
 
         mylink.setCondition(both_fade);
         mylink.setRequiredMargin(0); // Set link margin = 0 for both fade
+        console.log("set required margin to 0 dB");
         console.log('------------------------------------');
         console.log('Run link at both fade');
         console.log('------------------------------------');
@@ -1508,7 +1509,7 @@ function Link() {
     function getLowerMcgThanClearSky(input_mcg) {
         // Assume the MCG in the application is sorted from lowest to highest efficiency
         var mcgs = _.filter(application.mcgs, function (mcg) {
-            return mcg.spectral_efficiency < input_mcg.spectral_efficiency;
+            return mcg.spectral_efficiency <= input_mcg.spectral_efficiency;
         });
         // Return sorted mcg by spectral efficiency
         return _.sortBy(mcgs, function (num) {
@@ -1813,12 +1814,19 @@ function Link() {
         var path = data.path, channel = data.channel, interference_channels = data.interference_channels, location = data.location;
         var ci = 30; //default value
 
-        // if the channel database specifies this value (such as IPSTAR channels), use this value
-        //ci = _.has(channel, 'ci_' + path + '_adj_sat') ? channel['ci_' + path + '_adj_sat'] : ci;
+        //if the channel database specifies this value (IPSTAR Forward Ka uplink and IPSTAR Return Ka downlink)
+        if(_.has(channel,'ci_' + path + '_adj_sat')){
+            ci = channel['ci_' + path + '_adj_sat'];
+            ci_objects.push({
+                interference: false,
+                name: "no interference",
+                value: ci
+            });
+        }
 
         // ------------------------------ Separate by IPSTAR and Conventional --------------------------
 
-        if(Satellites.findOne({name:channel.satellite}).type == "Broadband"){
+        else if(Satellites.findOne({name:channel.satellite}).type == "Broadband"){
             if (_.has(channel,'eirp_density_adjacent_satellite_' + path)){
 
                 if(channel['eirp_density_adjacent_satellite_' + path] == -100){
