@@ -1,9 +1,9 @@
 <template name="linkDetail">
-<h2>Link from A to B</h2>
+<h2>Link from Hub to Remote</h2>
 {{ >linkDetailTable fwd}}
 <hr>
 {{#if isNotEmpty rtn}}
-<h2>Link from B to A</h2>
+<h2>Link from Remote to Hub</h2>
 {{ >linkDetailTable rtn}}
 {{/if}}
 </template>

@@ -1,5 +1,7 @@
 <template name="results">
     <h1>Link budget result: {{request_name}} <a href="{{pathFor 'editRequest' _id=_id}}" class="btn btn-success pull-right">Edit request</a></h1>
+    <!-- Requestor name -->
+    <h4><em>Requested by {{requestor_name}}</em></h4>
     <div class="alert alert-warning alert-dismissable">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         This link calculation program is still in the beta version. The results displayed on this page cannot be committed as Thaicom link calculation by any means.

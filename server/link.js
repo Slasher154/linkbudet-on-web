@@ -520,7 +520,7 @@ function LinkBudget() {
         if (_.has(channel, 'default_gateway')) {
             var gateway = Gateways.findOne({name: channel.default_gateway});
             downlink_ant.size = gateway.ant_size;
-            downlink_loc = {lat: gateway.lat, lon: gateway.lon, contour: -1, name: gateway.city + " Gateway"}; // Assume -1 dB relative contour at this stage
+            downlink_loc = {lat: gateway.lat, lon: gateway.lon, contour: 0, name: gateway.city + " Gateway"}; // Assume 0 dB relative contour at this stage
             uplink_avail = gateway.remote_availability; // default availability from database
             downlink_avail = gateway.gateway_availability; // default availability from database
 
@@ -1117,11 +1117,20 @@ function Link() {
 
             // Check if the uplink HPA is BUC type. If yes, use the uplink power of that BUC (use 100% of BUC power instead of show the result of desired EIRP level)
             if (_.has(uplink_station.hpa, 'category') && uplink_station.hpa.category.toLowerCase() == 'buc') {
+                console.log("This is BUC.")
                 // check if eirp of this buc & antenna can reach the desired level
                 var eirp_up_from_buc = eirp_uplink(uplink_station.hpa, uplink_station.antenna, uplink_freq);
+
                 if (eirp_up > eirp_up_from_buc) {
+                    console.log("EIRP Up of " + eirp_up + " dBW is more than EIRP up from BUC which is " + eirp_up_from_buc + " dBW");
                     eirp_up = eirp_up_from_buc;
                 }
+                else{
+                    console.log("EIRP Up of " + eirp_up + " dBW is less than EIRP up from BUC which is " + eirp_up_from_buc + " dBW");
+                }
+            }
+            else{
+                console.log("This is not a BUC.")
             }
 
             // Find carrier PFD. This may not equal to operating pfd in case of overused power or the BUC power is not enough to get to designed point
@@ -1716,11 +1725,12 @@ function Link() {
         var obo = _.has(hpa, 'obo') ? hpa.obo : 0.5;
         var ant_gain = 0;
         if (_.has(antenna, 'tx_gain')) {
-            ant_gain = antenna_gain_at_ffrequency(antenna.tx_gain.value, antenna.tx_gain.freq, freq, antenna.size);
+            ant_gain = antenna_gain_at_frequency(antenna.tx_gain.value, antenna.tx_gain.freq, freq, antenna.size);
         }
         else {
             ant_gain = antenna_gain(antenna.size, freq);
         }
+        console.log("HPA size = " + hpa.size + " IFL = " + ifl + " obo = " + obo + " ant_gain = " + ant_gain);
         return 10 * log10(hpa.size) - ifl - obo + ant_gain;
     }
 
