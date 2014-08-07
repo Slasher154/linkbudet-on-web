@@ -16,6 +16,7 @@
     "nprogress": {},
     "bootstrap-select": {},
     "bootstrap-3": {},
-    "publish-with-relations": {}
+    "publish-with-relations": {},
+    "marked": {}
   }
 }

@@ -115,3 +115,12 @@
     <p class="form-control-static">{{ >UI.contentBlock}}</p>
 </template>
 
+<template name="markdownManual">
+    <div class="well">
+        {{#markdown}}
+        {{ >UI.contentBlock}}
+        {{/markdown}}
+    </div>
+</template>
+
+

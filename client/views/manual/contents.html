@@ -1,0 +1,29 @@
+<template name="manual">
+{{#markdownManual}}
+###Normal user guide
+* [General FAQs]()
+* Conventional Satellite
+ * [Input parameter guide][conventional-input]
+ * [How to read the result]()
+ * [Generate the official PDF document]()
+* IPSTAR Satellite
+ * [Input parameter guide][broadband-input]
+ * [How to read the result]()
+ * [Generate the official PDF document]()
+{{#if isAdmin}}
+###Admin guide
+* Managing database
+ * [Satellite]()
+ * [Channel]()
+ * [Location]()
+ * [Modem]()
+ * [Antenna]()
+ * [BUC]()
+ * [Constants]()
+{{/if}}
+
+[conventional-input]: {{pathFor 'conventionalInputParameterGuide'}}
+[broadband-input]: {{pathFor 'broadbandInputParameterGuide'}}
+
+{{/markdownManual}}
+</template>

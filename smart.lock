@@ -18,13 +18,19 @@
       "nprogress": {},
       "bootstrap-select": {},
       "bootstrap-3": {},
-      "publish-with-relations": {}
+      "publish-with-relations": {},
+      "marked": {}
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
         "tag": "v0.8.1",
         "commit": "74e867557fd9cb81173e048e5f81cf4a0a1160a8"
+      },
+      "spin": {
+        "git": "https://github.com/SachaG/meteor-spin.git",
+        "tag": "v2.0.3",
+        "commit": "23c1145472a710d5c93fa4beaca4e576caeb2f24"
       },
       "errors": {
         "git": "https://github.com/tmeasday/meteor-errors.git",
@@ -101,6 +107,11 @@
         "tag": "v0.1.5",
         "commit": "98213e9f056b139597c99fb9ec2884ae6be76d91"
       },
+      "marked": {
+        "git": "https://github.com/chuangbo/meteor-marked.git",
+        "tag": "v0.3.3",
+        "commit": "a0966771f9108835755368d0879429675d7e0db4"
+      },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",
         "tag": "v0.2.0",
@@ -108,13 +119,13 @@
       },
       "cfs-base-package": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-base-package.git",
-        "tag": "v0.0.23",
-        "commit": "82bc49b4b8f66572b5551098e674e3a3b6c42ea3"
+        "tag": "v0.0.24",
+        "commit": "edc2f16b48cc1ebcf6ea4d278cbd0c41bb4e67bc"
       },
       "cfs-file": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-file.git",
-        "tag": "v0.1.8",
-        "commit": "0b576c546cc38efad02877d160c9852914574b02"
+        "tag": "v0.1.9",
+        "commit": "2f22329ee524adad18b8a27ed574ac26478b3ebe"
       },
       "cfs-collection": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-collection.git",
@@ -208,8 +219,8 @@
       },
       "cfs-gridfs": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-gridfs.git",
-        "tag": "v0.0.23",
-        "commit": "c8c319b5cab50acfa79e95cea0dbc5548d78f361"
+        "tag": "v0.0.24",
+        "commit": "46be5cbc2339783f59f0b2e38caa0c7bba88eba1"
       },
       "power-queue": {
         "git": "https://github.com/CollectionFS/Meteor-power-queue.git",
