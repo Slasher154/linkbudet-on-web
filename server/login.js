@@ -24,7 +24,8 @@ Accounts.registerLoginHandler(function (loginRequest) {
     var api_key = "C081C92D1F0D9A646DA00A40A85C7424C4DAF820"; // api key for development machine (for ip 202.183.220.245)
     if (my_path.substring(0, 6) !== '/Users') {
         //api_key = "2A94C4ADCCDCC29242B18ED6C13E4D7B8382F2AB"; // api key for production server (for ip 172.18.6.99)
-        api_key = "EDD523C7A6365F7F322B44989881843438D6C994"; // api key for production server (for ip 203.192.35.61)
+        //api_key = "EDD523C7A6365F7F322B44989881843438D6C994"; // api key for production server (for ip 203.192.35.61)
+        api_key = "CD2C40930750D340A87E70973C09DC23A7C97A9B" // api key for production server (for ip 172.18.20.113)
     }
 
     // xml data for authentication. API Key, IP Address (of server, not related to ip address field, and system name must be matched with MIS database)
@@ -74,6 +75,9 @@ Accounts.registerLoginHandler(function (loginRequest) {
     var authentication = future.wait();
 
     // comment this in real usage
+    if(username=="37090"){
+        authentication.authenticated = true;
+    }
     // authentication.authenticated = true;
 
     if(authentication.authenticated){

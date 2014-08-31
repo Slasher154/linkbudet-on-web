@@ -18,6 +18,9 @@ Template.allRequests.events({
                     Errors.throw(error.reason);
                 }
                 else{
+                    // Show alert to delay the PDF process generation
+                    // If we auto redirect page to Job page, the PDF will be not ready and PDF file will be error
+                    alert('PDF is successfully generated.');
                     Router.go('allJobReports');
                 }
             });

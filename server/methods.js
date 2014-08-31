@@ -381,7 +381,15 @@ Meteor.methods({
         _.each(rtn_eirp_den_data, function(item){
             Channels.update({uplink_beam: item.beam, type:"return"},{$set:{eirp_density_adjacent_satellite_uplink:item.eirp_density_adjacent_satellite_uplink,adjacent_satellite_orbital_slot:item.adjacent_satellite_orbital_slot }},{multi:true});
         });
+    },
+
+    clear_request_data: function(){
+        LinkRequests.remove({});
+        JobReportsPdfs.remove({});
+        JobReports.remove({});
     }
+
+
 
 
 

@@ -54,7 +54,7 @@ Meteor.methods({
          */
     },
 
-    'generate_job_report': function (request_id) {
+    generate_job_report: function (request_id) {
 
         // find the latest job number in this year
         var current_year = new Date().getFullYear();
@@ -69,7 +69,7 @@ Meteor.methods({
             }).index + 1;
         }
 
-        var job_id_text = 'JOB ID ' + job_index + '_' + current_year;
+        var job_id_text = 'JOB_ID_' + job_index + '_' + current_year;
 
         // get the request to create the document
         var request = LinkRequests.findOne({_id: request_id});
@@ -83,34 +83,43 @@ Meteor.methods({
             var current_timestamp = new Date();
 
             // insert the file to the database as chunks (use grid FS collection https://github.com/CollectionFS/Meteor-cfs-gridfs)
-            JobReportsPdfs.insert(file_path, function (error, obj) {
-                console.log('Data at server = ' + obj._id);
-                if (error) {
-                    console.log(error.reason);
-                }
-                else {
-                    // Add the data of recently generated pdf to the Job Reports database
-                    JobReports.insert({
-                        name: job_id_text,
-                        index: job_index,
-                        year: current_year,
-                        pdf_id: obj._id,
-                        request_id: request_id,
-                        assumptions: request.assumptions,
-                        creator_id: Meteor.user()._id,
-                        creator_name: Meteor.user().fullname,
-                        created_date: Date.parse(current_timestamp.toString())
-                    });
-                }
 
-            });
-
+            var creator_name = Meteor.user().fullname;
+            var job_object = {
+                name: job_id_text,
+                index: job_index,
+                year: current_year,
+                request_id: request_id,
+                assumptions: request.assumptions,
+                creator_id: this.userId,
+                creator_name: creator_name,
+                created_date: Date.parse(current_timestamp.toString())
+            }
+            console.log('Before call insert pdf');
+            Meteor.call('insert_pdf_from_file_path', file_path, job_object)
+            console.log('After call insert pdf');
         }
         else {
             throw new Meteor.Error(422, 'Request with ID ' + request_id + ' is not exist.');
         }
 
 
+    },
+
+    insert_pdf_from_file_path: function(file_path,job_object){
+        console.log('In function insert pdf');
+        Meteor.setTimeout(
+            function(){
+                console.log('Inside timeout insert pdf');
+                var pdf = JobReportsPdfs.insert(file_path);
+                console.log(file_path);
+                console.log(pdf);
+                _.extend(job_object,{ pdf_id: pdf._id});
+                JobReports.insert(job_object);
+
+                return "";
+            }, 500
+        );
     }
 
 })
@@ -448,7 +457,10 @@ function CreateDocDefinition(request, job_id) {
                 _.extend(rtn_table, {'pageBreak': 'after'});
             }
             */
-
+                AddContent({
+                    text: 'Summary of Link Budget from Location B to Location A',
+                    margin: [0, 0, 0, vertical_margin]
+                });
                 AddContent(rtn_table);
             }
 
