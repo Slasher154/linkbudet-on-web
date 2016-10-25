@@ -64,7 +64,7 @@
 
  There is some bug when we extend the carrier but the new carrier got the status 'Extended', which means it is not active anymore. So the new carrier disappeared from the system. We need to bring it back by changing the status of the carrier to 'Active'.
 
- 1. Log in to the database (see previous topic).
+ 1. Log in to the database.
  2. Select table 'ipstar' on the left panel, then select table 'carrier'
  3. Select tab 'SQL' on the top menu bar and run the following query (_xxx\_yyyy_ is CTP name)
 
@@ -74,7 +74,7 @@
 
  **Update 1 carrier: **
  `Update carrier set status = 'Active' where id = xxxx`
- where xxxx = carrier ID
+ where `xxxx` = carrier ID
 
  **Update all carriers in CTP: ** `Update carrier join ctp on ctp.id = carrier.ctp_id set status = 'Active' where ctp.name = 'xxx_yyyy' `
 
@@ -101,6 +101,54 @@
   `delete from ctp where name = 'xxx_yyyy' and revision = z;`
 
    xxx_yyyy = CTP Name (without rev.x for the revision) and z = revision no. (rev.1 = 1)
+
+* **Include other department to create CTP**
+
+ If you want to let other department to create/review/approve CTP, add the role `ctp` to that department
+
+ 1. Log in to the database
+ 2. Select the database 'main'on the left panel, then select table 'dept'
+ 3. Find the department you want to add the CTP role, double click its record in the column role to edit the data and add `,ctp` at the end. (at the time of writing, CSD and CND are only two departments with CTP role)
+
+
+###Edit the source code and upload it to the server
+
+Following procedures describe how to edit the source code in the CTP website in the case that the problem cannot be solved by changing the database. If the instructions in the subsequenct sections say 'Open project', it refers to these steps.
+
+1. Log into Thanat's PC with his username `thanatv@thaicom.net` and his password
+2. Open Visual Studio 2010
+3. In the recent projects panel, select 'cedweb'. This will bring you to the all codes of CTP website project
+4. Edit the source code as you want
+5. On the rightmost panel, which lists all the files in the project, right click at the project name 'cedweb' and select 'Publish'.
+6. The box with FTP parameters will appear (parameters are recorded), select OK to publish all files (will overwrite what is already on the server) via FTP.
+
+###List of problems which could be solved by editing the source code
+
+* **Add email in the email alert list when new CTP-R comes to our system**
+
+1. Open project.
+2. On the file list panel, go to Domains >> Ipstar >> Emails >> RequestNotificationMail.cs
+3. On the line 21, you will see `Recipients.Add(Global.CtpDept.Email);`, which is CSD's email. Add the same code for your emails such as `Recipients.Add("thanatv@thaicom.net");` underneath.
+
+* **Add email in the email alert list when new CTP-R is approved.**
+
+1. Open project.
+2. On the file list panel, go to Domains >> Ipstar >> Emails >> ApproveCtprNotificationMail.cs
+3. On the line 15, you will see `Recipients.Add(Global.CtpDept.Email);`, which is CSD's email. Add the same code for your emails such as `Recipients.Add("thanatv@thaicom.net");` underneath.
+
+* **Add email in the email alert list when CTP is completed.**
+
+1. Open project.
+2. On the file list panel, go to Domains >> Ipstar >> Emails >> CTPSubmissionMail.cs
+3. On the line 15, you will see `Recipients.Add(Global.CtpDept.Email);`, which is CSD's email. Add the same code for your emails such as `Recipients.Add("thanatv@thaicom.net");` underneath.
+
+* **Add email in the email alert list for weekly expired carrier reminder**
+
+1. Open project.
+2. On the file list panel, go to Domains >> Ipstar >> Emails >> ExpiredCarriersReminderMail.cs
+3. On the line 37 and 62, you will see `Recipients.Add(Global.CtpDept.Email);`, which is CSD's email. Add the same code for your emails such as `Recipients.Add("thanatv@thaicom.net");` underneath.
+
+**Don't forget to publish to FTP after finish code editing.**
 
 
     {{/markdownManual}}
