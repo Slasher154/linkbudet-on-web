@@ -1459,9 +1459,10 @@ function Link() {
             cn_uplink: cn_uplink.toFixed(2),
             // downlink
             downlink_antenna: downlink_station.antenna,
-            antenna_temp: ant_temp.toFixed(2),
-            system_temp: sys_temp.toFixed(2),
-            ant_gain: ant_gain.toFixed(2),
+            // Following 3 parameters are aAvailable only if G/T is not specified in the antenna spec
+            antenna_temp: _.has(downlink_station.antenna, 'gt') ? 'N/A' : ant_temp.toFixed(2),
+            system_temp: _.has(downlink_station.antenna, 'gt') ? 'N/A' : sys_temp.toFixed(2),
+            ant_gain: _.has(downlink_station.antenna, 'gt') ? 'N/A' : ant_gain.toFixed(2),
             downlink_pointing_loss: downlink_pointingLoss.toFixed(2),
             downlink_xpol_loss: downlink_xpolLoss.toFixed(2),
             downlink_atmLoss: downlink_atmLoss.toFixed(2),

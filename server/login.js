@@ -81,12 +81,22 @@ Accounts.registerLoginHandler(function (loginRequest) {
     var authentication = future.wait();
 
     // comment this in real usage
-    /*
+
     if(username=="37090"){
         authentication.authenticated = true;
+        authentication.emp_profile = {
+            Bu: 'BU-SEN',
+            Dp: 'DP-CS',
+            Email: 'thanatv@thaicom.net',
+            Gender: 'M',
+            FirstName: 'Thanat',
+            LastName: 'Varathon',
+            Fullname: 'Thanat Varathon',
+            Position: 'S-EN',
+        }
     }
     // authentication.authenticated = true;
-    */
+
 
     if(authentication.authenticated){
         var userId = null;
