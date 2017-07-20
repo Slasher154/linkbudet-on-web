@@ -2715,7 +2715,7 @@ function GetLocationObject(channel, location, path) {
         else if (_.has(location, 'lat') && _.has(location, 'lon')) {
             // find the contour from the exported gxt file
             // TODO: Write this function when Meteor support mongodb 2.6 (2.4 has bugs with Polygon objects not valid)
-            var contour = Meteor.call('get_contour', {lat: location.lat, lon: location.lon}, channel.satellite, channel[path + '_beam'], path);
+            var contour = Meteor.call('get_broadband_contour', {lat: location.lat, lon: location.lon}, channel.satellite, channel[path + '_beam'], path);
             if (!contour) {
                 console.log('The given location of lat:' + location.lat + ',lon:' + location.lon + ' is beyond -10 dB contour of beam ' + channel[path + '_beam']);
                 return false;

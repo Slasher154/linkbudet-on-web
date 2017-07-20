@@ -13,7 +13,7 @@
       "pdfjs": {},
       "pdfkit": {},
       "collectionFS": {},
-      "accounts-ui-bootstrap-3-blaze": {},
+      "accounts-ui-bootstrap-3": {},
       "headers": {},
       "nprogress": {},
       "bootstrap-select": {},
@@ -77,10 +77,10 @@
         "tag": "v0.4.8",
         "commit": "fea890b1e27799ccc9f71046748fb23a84330a16"
       },
-      "accounts-ui-bootstrap-3-blaze": {
-        "git": "https://github.com/rajit/meteor-accounts-ui-bootstrap-3.git",
-        "tag": "v0.3.10",
-        "commit": "2cf78b49529e62060da086ca0e861fabcbc84928"
+      "accounts-ui-bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
+        "tag": "v0.3.5",
+        "commit": "bbd0a8a46ae02526c2ebfee05fa8075d8d04a9ba"
       },
       "headers": {
         "git": "https://github.com/gadicohen/meteor-headers.git",

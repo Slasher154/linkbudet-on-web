@@ -19,6 +19,11 @@
             <td>{{rain_data_rate_ipstar_channel}}</td>
             {{/if}}
             <td>{{link_availability}}</td>
+            {{#if pass}}
+            <td class="success">Pass</td>
+            {{else}}
+            <td class="danger">Fail</td>
+            {{/if}}
             {{#if isAdmin}}
             <td><a href="{{pathFor 'linkDetail' _id=request_id case_num=case_num}}">Detail</a></td>
             {{/if}}
@@ -43,6 +48,11 @@
         <td>{{rain_ebe}}</td>
         <td>{{rain_data_rate}}</td>
         <td>{{link_availability}}</td>
+         {{#if pass}}
+            <td class="success">Pass</td>
+            {{else}}
+            <td class="danger">Fail</td>
+            {{/if}}
         {{#if isAdmin}}
         <td><a href="{{pathFor 'linkDetail' _id=request_id case_num=case_num}}">Detail</a></td>
         {{/if}}

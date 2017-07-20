@@ -14,7 +14,8 @@ Template.forwardResultTable.tableRows = function(){
         "MCG Rain Fade",
         "EBE Rain Fade (bps/Hz)",
         "Data Rate Rain Fade (Mbps)",
-        "Total Link Availability (%)"
+        "Total Link Availability (%)",
+        "Pass/Fail"
     ];
     if(IsAdmin(Meteor.userId())){
         rows.push("Detail");
@@ -44,7 +45,8 @@ Template.returnResultTable.tableRows = function(){
         "MCG Rain Fade",
         "EBE Rain Fade (bps/Hz)",
         "Data Rate Rain Fade (Mbps)",
-        "Total Link Availability (%)"
+        "Total Link Availability (%)",
+        "Pass/Fail"
     ];
     if(IsAdmin(Meteor.userId())){
         rows.push("Detail");

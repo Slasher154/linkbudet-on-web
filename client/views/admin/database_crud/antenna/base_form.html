@@ -34,7 +34,7 @@
         {{#if view_mode}}
         {{#static}}{{rx_gain.value}}{{/static}}
         {{else}}
-        <input type="number" class="form-control" id="rx_gain_value" placeholder="Rx Gain" value="{{rx_gain.value}}">
+        <input type="number" step="0.01" class="form-control" id="rx_gain_value" placeholder="Rx Gain" value="{{rx_gain.value}}">
         {{/if}}
         {{/formGroup}}
 
@@ -42,7 +42,7 @@
         {{#if view_mode}}
         {{#static}}{{rx_gain.freq}}{{/static}}
         {{else}}
-        <input type="number" class="form-control" id="rx_gain_freq" placeholder="Rx mid-band frequency" value="{{rx_gain.freq}}">
+        <input type="number" step="0.01" class="form-control" id="rx_gain_freq" placeholder="Rx mid-band frequency" value="{{rx_gain.freq}}">
         {{/if}}
         {{/formGroup}}
 
@@ -50,7 +50,7 @@
         {{#if view_mode}}
         {{#static}}{{tx_gain.value}}{{/static}}
         {{else}}
-        <input type="number" class="form-control" id="tx_gain_value" placeholder="Tx Gain" value="{{tx_gain.value}}">
+        <input type="number" step="0.01" class="form-control" id="tx_gain_value" placeholder="Tx Gain" value="{{tx_gain.value}}">
         {{/if}}
         {{/formGroup}}
 
@@ -58,7 +58,7 @@
         {{#if view_mode}}
         {{#static}}{{tx_gain.freq}}{{/static}}
         {{else}}
-        <input type="number" class="form-control" id="tx_gain_freq" placeholder="Tx mid-band frequency" value="{{tx_gain.freq}}">
+        <input type="number" step="0.01" class="form-control" id="tx_gain_freq" placeholder="Tx mid-band frequency" value="{{tx_gain.freq}}">
         {{/if}}
         {{/formGroup}}
 
@@ -70,7 +70,7 @@
         {{#if view_mode}}
         {{#static}}{{gt}}{{/static}}
         {{else}}
-        <input type="number" class="form-control" id="gt" placeholder="G/T" value="{{gt}}">
+        <input type="number" step="0.01" class="form-control" id="gt" placeholder="G/T" value="{{gt}}">
         {{/if}}
         {{/formGroup}}
 

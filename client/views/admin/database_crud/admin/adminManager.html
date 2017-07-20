@@ -1,0 +1,27 @@
+<template name="adminManager">
+    <h1>All admins</h1>
+    
+    {{#databaseTable rows=tableRows}}
+    {{#each users}}
+    <tr>
+        <td>{{fullname}}</td>
+        <td>{{dp}}</td>
+        <td>
+        	{{#if isUserAdmin _id}}
+        	Admin (       
+        	<a href="#" value={{_id}} class="demote">Remove from Admin</a>)
+        	{{else}}
+        	<a href="#" value={{_id}} class="promote">Make Admin</a>
+        	{{/if}}
+        	<!--
+            <a href="{{pathFor 'modemView'}}"><i class="glyphicon glyphicon-search"></i></a>
+            <a href="{{pathFor 'modemEdit'}}"><i class="glyphicon glyphicon-edit"></i></a>
+            <a href="{{pathFor 'modemDuplicate'}}"><i class="glyphicon glyphicon-paperclip"></i></a>
+            <a href="#" value={{_id}} class="remove"><i class="glyphicon glyphicon-remove"></i></a>
+            -->
+        </td>
+    </tr>
+    {{/each}}
+    {{/databaseTable}}
+    
+</template>

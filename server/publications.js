@@ -83,3 +83,5 @@ Meteor.publish('reportsByUser', function(){
 Meteor.publish('jobReports', function(){
     return JobReportsPdfs.find({});
 })
+
+

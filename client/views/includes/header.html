@@ -53,6 +53,9 @@
                             <li role="presentation" class="dropdown-header">Locations</li>
                             <li><a href="{{pathFor 'locationViewAll' }}">View all</a></li>
                             <li><a href="{{pathFor 'locationInsert' }}">Insert</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation" class="dropdown-header">Admin</li>
+                            <li><a href="{{pathFor 'adminManager' }}">Admin Manager</a></li>.
                         </ul>
                     </li>
 
@@ -61,9 +64,16 @@
                     <li><a href="#">{{currentUser.fullname}}</a></li>
                     {{/if}}
                 </ul>
+                <!--
                 <ul class="nav navbar-nav navbar-right">
                     {{> loginButtons }}
                 </ul>
+                -->
+                {{#if currentUser}}
+                <ul class="nav navbar-nav navbar-right">
+                    <button id="logout" class="btn btn-default">Logout</button>
+                </ul>
+                {{/if}}
             </div>
             <!--/.nav-collapse -->
             </div>

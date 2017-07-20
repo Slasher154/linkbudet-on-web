@@ -179,6 +179,8 @@ Template.index.events({
 
                     var fwd_mcg_choice = $('input[name=fwd-mcg-options]:checked').val();
                     var rtn_mcg_choice = $('input[name=rtn-mcg-options]:checked').val();
+                    console.log('VSAT FWD MCG type: ' + fwd_mcg_choice);
+                    console.log('VSAT RTN MCG type: ' + rtn_mcg_choice);
 
                     if(fwd_mcg_choice != rtn_mcg_choice){
                         alert('Both forward and return mcg options must be the same.');
@@ -186,17 +188,19 @@ Template.index.events({
                     }
 
                     if(fwd_mcg_choice == 'fix-mcg'){
-                        fwdSelectedMcgs = $('fwd-mcgs').find(':checked').map(function () {
+                        fwdSelectedMcgs = $('.fwd-mcgs').find(':checked').map(function () {
                             return $(this).val();
                         }).get();
 
                         fixMcg = true;
                     }
+                    console.log('Select FWD MCGs: ' + fwdSelectedMcgs.join(','));
                     if(rtn_mcg_choice == 'fix-mcg'){
-                        rtnSelectedMcgs = $('rtn-mcgs').find(':checked').map(function () {
+                        rtnSelectedMcgs = $('.rtn-mcgs').find(':checked').map(function () {
                             return $(this).val();
                         }).get();
                     }
+                    console.log('Select RTN MCGs: ' + rtnSelectedMcgs.join(','));
 
                 }
 

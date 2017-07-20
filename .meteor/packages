@@ -17,7 +17,6 @@ bootstrap-3
 collectionFS
 cfs-filesystem
 cfs-gridfs
-accounts-ui-bootstrap-3-blaze
 http
 headers
 bootstrap-select

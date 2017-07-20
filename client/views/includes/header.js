@@ -20,3 +20,12 @@ Template.header.thaicom5id = function(){
     console.log(JSON.stringify(sat));
     return sat._id;
 }
+
+Template.header.events({
+  'click #logout': function(event, template) {
+    console.log('Logout clicked');
+    Meteor.logout(function() {
+      Router.go('index');
+    });
+  }
+});

@@ -387,6 +387,16 @@ Meteor.methods({
         LinkRequests.remove({});
         JobReportsPdfs.remove({});
         JobReports.remove({});
+    },
+
+    promote_to_admin: function(userId) {
+        console.log('Promoting ' + userId + ' to admin.');
+         Roles.addUsersToRoles(userId, ['admin']);
+    },
+
+    demote_from_admin: function(userId) {
+        console.log('Demoting ' + userId + ' from admin.');
+         Roles.removeUsersFromRoles(userId, 'admin');
     }
 
 
